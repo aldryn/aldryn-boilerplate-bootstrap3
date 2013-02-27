@@ -1,0 +1,14 @@
+name: 'Divio Boilerplate'
+url: 'https://github.com/divio'
+version: '0.0.1'
+description: 'This is the standardsite Divio boilerplate.'
+author:
+    name: 'Angelo Dini'
+    url: 'http://www.divio.ch'
+license:
+    name: 'BSD'
+    text: 'literal-include LICENSE.txt'
+templates:
+- ['fullwidth.html', 'full width']
+- ['sidebar_left.html', 'sidebar left']
+- ['sidebar_right.html', 'sidebar right']

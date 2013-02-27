@@ -1,0 +1,27 @@
+-f http://simple.crate.io/
+--extra-index-url https://divio:wlkdjeorijlerf@pkg.divio.ch/simple/
+Django
+South
+cmsplugin-filer
+django-admin-shortcuts
+djangocms-admin-style
+django-classy-tags
+django-cms==2.3.5
+django-contactform
+django-filer
+django-hvad
+django-login-as
+django-mptt==0.5.2
+django-polymorphic
+django-sekizai
+djangocms-text-ckeditor
+django-siteinfo
+django-taggit
+easy-thumbnails
+html5lib
+lxml
+premailer
+wsgiref
+dploi-fabric
+Pillow
+gunicorn

@@ -1,0 +1,42 @@
+{% extends "base_root.html" %}
+{% load i18n static try_to_include cms_tags menu_tags %}
+{% load url from future %}
+
+{% block body_class %}tpl-base{% endblock %}
+
+{% block extend_root %}
+{% block header %}
+<!-- start: header -->
+<header class="header" role="banner"></header>
+<!-- end: header -->
+{% endblock header %}
+
+{% block breadcrumb %}
+{% if not request.current_page.is_home %}
+<!-- start: breadcrumb -->
+<nav class="breadcrumb" role="navigation"></nav>
+<!-- end: breadcrumb -->
+{% endif %}
+{% endblock breadcrumb %}
+
+{% block messages %}
+	{% include "includes/messages.html" %}
+{% endblock messages %}
+
+{% block extend_base %}
+<!-- start: content -->
+<hr class="visuallyhidden" />
+<h1 class="visuallyhidden" id="content">{% trans "Content:" %} {% page_attribute title %}</h1>
+{% block content %}{% endblock content %}
+<p>hello world</p>
+<!-- end: content -->
+{% endblock extend_base %}
+
+{% block footer %}
+<!-- start: footer -->
+<hr class="visuallyhidden" />
+<h2 class="visuallyhidden" id="footer">{% trans "Footer:" %}</h2>
+<footer class="footer" role="contentinfo"></footer>
+<!-- end: footer -->
+{% endblock footer %}
+{% endblock extend_root %}

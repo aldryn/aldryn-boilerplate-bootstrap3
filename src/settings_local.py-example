@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+from settings import *
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+INTERNAL_IPS = ['127.0.0.1', 'localhost',]
+
+CACHE_BACKEND = 'db://dbcache'
+SECRET_KEY = 'q2w26ur9&@*!m@fvbd69f(9kop=**aziixl8k8@)8de@qt5^*t'
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2', # django.db.backends.sqlite3
+#        'HOST': 'localhost',
+#        'NAME': '', #tmp/database.sqlite
+#        'USER': 'postgres',
+#        'PASSWORD': '',
+#    },
+#}
+
+#INSTALLED_APPS.extend([
+#    'debug_toolbar',
+#])
+#INSTALLED_APPS.remove('south')
+#MIDDLEWARE_CLASSES.extend([
+#    'debug_toolbar.middleware.DebugToolbarMiddleware',
+#])

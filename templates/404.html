@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block body_class %}404{% endblock %}
+
+{% block title %}{% trans "404 - Page not found" %}{% endblock %}
+
+{% block col_content %}
+<h1>{% trans "404 - Page not found" %}</h1>
+<p>{% trans "We're sorry, but the requested page could not be found." %}</p>
+{% endblock col_content %}

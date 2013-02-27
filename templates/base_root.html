@@ -1,0 +1,60 @@
+{% load i18n static cms_tags sekizai_tags %}<!doctype html><html lang="{{ LANGUAGE_CODE }}">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+	<!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]-->
+	<title>{% block title %}{% endblock title %}</title>
+	<!-- meta tags -->
+	{% block meta_tags %}
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="description" content="{% page_attribute "meta_description" %}" />
+	<meta name="keywords" content="{% page_attribute "meta_keywords" %}" />
+	{% endblock meta_tags %}
+	<!-- link icons -->
+	<link rel="apple-touch-icon" href="{% static "favicon_apple.png" %}">
+	<link rel="icon" href="{% static "favicon.png" %}">
+	<link rel="image_src" href="{% static "favicon.png" %}" />
+	<!--[if IE]><link rel="shortcut icon" href="{% static "favicon.ico" %}"><![endif]-->
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="{% if not request.GET.mobile %}{% static "css/base.css" %}{% else %}{% static "css/base-classic.css" %}{% endif %}" />
+	<!--[if lte IE 8]>
+	<script src="{% static "js/libs/html5.min.js" %}"></script>
+	<script src="{% static "js/libs/respond.min.js" %}"></script>
+	<![endif]-->
+	{% block extrahead %}{% endblock extrahead %}
+	{% render_block "css" %}
+	{{ TEMPLATE_API_REGISTRY.render_head }}
+</head>
+<body id="top" class="no-js {% block body_class %}root{% endblock %} lang-{{ LANGUAGE_CODE }}">
+<!--[if lte IE 7]><div class="ie7"><![endif]-->
+<!--[if IE 8]><div class="ie8"><![endif]-->
+<!--[if IE 9]><div class="ie9"><![endif]-->
+{% block cms_toolbar %}{% cms_toolbar %}{% endblock %}
+
+<!-- start: base -->
+{% block extend_root %}{% endblock %}
+<!-- end: base -->
+
+<!--[if lte IE 9]></div><![endif]-->
+<!-- start: javascript -->
+{% if debug %}
+<script src="{% static "js/libs/jquery.min.js" %}"></script>
+<script src="{% static "js/plugins/cl.debug.js" %}"></script>{% else %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{% static "js/libs/jquery.min.js" %}"><\/script>')</script>{% endif %}
+<script src="{% static "js/base.js" %}"></script>
+{% render_block "js" %}
+{% if GOOGLE_ANALYTICS_ID %}{% include "includes/analytics.html" %}{% endif %}
+{{ TEMPLATE_API_REGISTRY.render_tail }}
+<!-- end: javascript -->
+<noscript><p class="noscript">{% trans "Please activate JavaScript to enable all features." %}</p></noscript>
+<!--[if lte IE 7 ]>
+<p class="chromeframe">
+{% blocktrans %}You are using an <strong>outdated</strong> browser.
+Please <a href="http://browsehappy.com/">upgrade your browser</a>
+or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+to improve your experience.{% endblocktrans %}
+</p>
+<![endif]-->
+</body>
+</html>

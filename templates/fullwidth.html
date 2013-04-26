@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% load i18n cms_tags %}
 
-{% block body_class %}tpl-full-width{% endblock %}
+{% block body_class %}tpl-fullwidth{% endblock %}
 
 {% block content %}
 <div class="container-24 clearfix">
 	<div class="grid-24">
-		{% with 940 as width %}{% placeholder content_primary %}{% endwith %}
+		{% block content_primary %}{% with 940 as width %}{% placeholder content_primary %}{% endwith %}{% endblock content_primary %}
 	</div>
 </div>
 {% endblock content %}

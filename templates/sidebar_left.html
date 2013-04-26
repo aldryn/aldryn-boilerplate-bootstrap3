@@ -5,15 +5,14 @@
 
 {% block content %}
 <div class="container-24 clearfix">
-	<div class="grid-18 float-right">
+	<div class="grid-18 push-6">
 		{% block content_primary %}
-			{% block page_title %}<h2 class="page-title">{% page_attribute title %}</h2>{% endblock page_title %}
+			{% block page_title %}<h2>{% page_attribute title %}</h2>{% endblock page_title %}
 			{% with 700 as width %}{% placeholder content_primary %}{% endwith %}
 		{% endblock content_primary %}
 	</div>
-	<aside class="grid-6 sidebar float-left">
+	<aside class="grid-6 sidebar pull-18">
 		{% block content_secondary %}
-			{% show_menu 0 0 0 0 "includes/menu/navigation_title.html" %}
 			<!-- sub navigation -->
 			<nav class="subnav">
 				<ul>{% spaceless %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endspaceless %}</ul>

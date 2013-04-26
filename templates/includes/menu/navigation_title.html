@@ -1,5 +1,0 @@
-{% if children %}
-{% for child in children %}
-{% if child.ancestor or child.selected %}<p class="navigation-title"><a href="{{ child.get_absolute_url }}">{{ child.get_menu_title }}</a></p><div class="clear"></div>{% endif %}
-{% endfor %}
-{% endif %}

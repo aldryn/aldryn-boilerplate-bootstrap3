@@ -1,5 +1,5 @@
 {% extends "base_root.html" %}
-{% load i18n static try_to_include cms_tags menu_tags %}
+{% load i18n static cms_tags menu_tags %}
 {% load url from future %}
 
 {% block body_class %}tpl-base{% endblock %}
@@ -34,30 +34,12 @@
 				<ul>{% spaceless %}{% show_menu 0 1 100 100 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
 			</nav>
 			{% endblock mainnav %}
+
+			{% block langnav %}
+			<nav class="langnav"><ul>{% language_chooser "includes/menu/langnav.html" %}</ul></nav>
+			{% endblock langnav %}
 		</div>
 	</div>
-	{% block toolbar %}
-	<div class="toolbar" role="banner">
-		<div class="container-24 clearfix">
-			<div class="grid-24 relative">
-				<div class="toolbar-inner">
-					{% block metanav %}
-					<nav class="metanav" role="navigation">
-						<ul>
-							{% spaceless %}
-							{% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
-							{% endspaceless %}
-						</ul>
-					</nav>
-					{% endblock metanav %}
-					{% block usernav %}<nav class="usernav"><ul>{% try_to_include "includes/menu/usernav.html" %}</ul></nav>{% endblock usernav %}
-					{% block extranav %}<nav class="extranav"><ul>{% try_to_include "includes/menu/extranav.html" %}</ul></nav>{% endblock extranav %}
-					{% block langnav %}<nav class="langnav"><ul>{% language_chooser "includes/menu/langnav.html" %}</ul></nav>{% endblock langnav %}
-				</div>
-			</div>
-		</div>
-	</div>
-	{% endblock toolbar %}
 </header>
 <!-- end: header -->
 {% endblock header %}

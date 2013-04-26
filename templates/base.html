@@ -53,15 +53,6 @@
 					{% block usernav %}<nav class="usernav"><ul>{% try_to_include "includes/menu/usernav.html" %}</ul></nav>{% endblock usernav %}
 					{% block extranav %}<nav class="extranav"><ul>{% try_to_include "includes/menu/extranav.html" %}</ul></nav>{% endblock extranav %}
 					{% block langnav %}<nav class="langnav"><ul>{% language_chooser "includes/menu/langnav.html" %}</ul></nav>{% endblock langnav %}
-					{% block search %}
-					<form action="{% url 'shop_search' %}" method="get" class="frm frm-search">
-						<fieldset>
-							<legend>{% trans "Search" %}</legend>
-							<label><input type="search" class="input-text" name="q" value="{{ request.GET.q }}" placeholder="{% trans "Search" %}" maxlength="300" /></label>
-							<label><input type="submit" class="btn-search" /></label>
-						</fieldset>
-					</form>
-					{% endblock search %}
 				</div>
 			</div>
 		</div>

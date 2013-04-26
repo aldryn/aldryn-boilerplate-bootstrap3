@@ -1,4 +1,4 @@
-# Divio Standardsite
+# Divio Boilerplate
 # Copyright Divio AG
 # https://github.com/divio
 

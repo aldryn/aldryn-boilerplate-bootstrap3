@@ -1,9 +1,9 @@
 name: 'Divio Boilerplate'
 url: 'https://github.com/divio'
-version: '0.0.2'
-description: 'This is the standardsite Divio boilerplate.'
+version: '1.0.0'
+description: 'This is the Divio boilerplate.'
 author:
-    name: 'Angelo Dini'
+    name: 'Divio AG'
     url: 'http://www.divio.ch'
 license:
     name: 'BSD'

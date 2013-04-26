@@ -1,0 +1,11 @@
+@mixin site-retina() {
+//######################################################################################################################
+// #RETINA#
+
+.header .logo-main a { background-image:url('../img/logo-main@2x.png'); background-size:200px; }
+.subnav ul li a span { background-image:url('../img/icons/arrow-subnav@2x.png'); background-size:10px; }
+.subnav ul li a span:hover { background-image:url('../img/icons/arrow-subnav-active@2x.png'); background-size:10px; }
+.mainnav-knob { background-image:url('../img/mainnav-mobile@2x.png'); background-size:30px; }
+
+// end of mixin
+}

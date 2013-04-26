@@ -1,0 +1,5 @@
+{% load i18n menu_tags %}
+
+{% for language in languages %}
+<option {% ifequal current_language language.0 %}selected="selected"{% endifequal %} value="{% page_language_url language.0 %}" class="lang_{{ language.0 }} {% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}">{{ language.1 }}</option>
+{% endfor %}

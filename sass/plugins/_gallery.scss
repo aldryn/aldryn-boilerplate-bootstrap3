@@ -1,0 +1,64 @@
+@mixin plugin-gallery() {
+//######################################################################################################################
+// #GALLERY#
+
+.gallery {
+	margin: 0 0 20px 0; position: relative;
+	.wrapper { position: relative; height: 289px; margin: 0 0 10px 0; overflow: hidden; }
+	.viewport {
+		position: absolute; top: 0; right: 0; left: 0;
+		> * { display: block; display: none; position: absolute; top: 0; right: 0; left: 0; }
+		> * .active { display: block; }
+		a img { display: block; max-width: 100%; margin: 0 auto;  }
+	}
+	.trigger-left, .trigger-right {
+		position: absolute; top: 50%; margin-top: -13px; z-index: 10;
+		a {
+			display: block; width: 20px; height: 26px; background-position: 50% 50%; background-repeat: no-repeat;
+			@include hide-text(); @include opacity(0.5);
+			&:hover, &:active, &:focus { @include opacity(1); }
+		}
+	}
+	.trigger-left { left: 10px; }
+	.trigger-right { right: 10px; }
+	.trigger-left a { background-image: url('../img/plugins/gallery/arrow-left.png'); }
+	.trigger-right a { background-image: url('../img/plugins/gallery/arrow-right.png'); }
+	nav a {
+		@include inline-block();  padding: 5px; width: 45px; height: 45px; margin: 0 8px 8px 0; background: #fff;
+		border: 3px solid #e6e6e6;
+		img { display: block; max-width: 100%; max-height: 100%; }
+		&.active, &:hover, &:focus { border-color: #3d3d3d; }
+	}
+}
+
+// end of mixin
+}
+
+@mixin plugin-gallery-tablet() {
+//######################################################################################################################
+// #GALLERY#
+
+.gallery {
+	.wrapper { height: 289px; }
+	nav a {
+		&.last { margin-right: 0; margin-left: 1px; }
+	}
+}
+
+// end of mixin
+}
+
+@mixin plugin-gallery-desktop() {
+//######################################################################################################################
+// #GALLERY#
+
+.gallery {
+	.wrapper { height: 380px; }
+	nav a {
+		width: 60px; height: 60px; margin: 0 16px 16px 0;
+		&.last { margin-left: 0; }
+	}
+}
+
+// end of mixin
+}

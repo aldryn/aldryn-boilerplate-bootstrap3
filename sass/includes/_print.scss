@@ -1,0 +1,15 @@
+@mixin site-print() {
+//######################################################################################################################
+// #PRINT#
+
+a[href]:after { content:""; }
+.clearfix:after { clear:both; display:block; width:0; height:0; overflow:hidden; visibility:hidden; }
+
+.print { display:block !important; position:static; left:0; }
+.no-print { display:none; }
+
+//######################################################################################################################
+// #PRINT/custom#
+
+// end of mixin
+}

@@ -1,0 +1,16 @@
+{% load menu_tags cache %}
+
+{% for child in children %}
+<li class="child{% spaceless %}
+	{% endspaceless %}{% if child.ancestor %} ancestor{% endif %}{% spaceless %}
+	{% endspaceless %}{% if child.selected %} active{% endif %}{% spaceless %}
+	{% endspaceless %}{% if child.children %} children{% endif %}{% spaceless %}
+	{% endspaceless %}{% if forloop.first %} first{% endif %}{% spaceless %}
+	{% endspaceless %}{% if forloop.last %} last{% endif %}{% spaceless %}">
+	<a href="{{ child.get_absolute_url }}"><span>{{ child.get_menu_title }}</span></a>{% if child.children %}
+	<ul>
+		{% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
+	</ul>
+	{% endif %}
+</li>
+{% endspaceless %}{% endfor %}

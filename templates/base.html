@@ -1,0 +1,148 @@
+{% extends "base_root.html" %}
+{% load i18n static try_to_include cms_tags menu_tags %}
+{% load url from future %}
+
+{% block body_class %}tpl-base{% endblock %}
+
+{% block extend_root %}
+{% block header %}
+<!-- start: header -->
+<header class="header" role="banner">
+	<div class="container-24 clearfix">
+		{% comment %}logo should be placed absolute in this container to support seo positioning{% endcomment %}
+		<div class="grid-24 relative">
+			<h1 class="logo-main">
+				<a href="/"><img src="{% static "img/logo-main.png" %}" alt="{{ site_settings.site.name }}" /></a>
+			</h1>
+
+			<!-- start: wai -->
+			<hr class="visuallyhidden" />
+			<h2 class="visuallyhidden">{% trans "Shortcuts:" %}</h2>
+			<ul class="skip-links" role="navigation">
+				<li><a href="/" title="[Alt + 0]" accesskey="0">{% trans "Go to home" %}</a></li>
+				<li><a href="#navigation" title="[Alt + 1]" accesskey="1">{% trans "Jump to navigation" %}</a></li>
+				<li><a href="#content" title="[Alt + 2]" accesskey="2">{% trans "Jump to content" %}</a></li>
+				<li><a href="#footer" title="[Alt + 3]" accesskey="3">{% trans "Contact" %}</a></li>
+			</ul>
+			<hr class="visuallyhidden" />
+			<!-- end: wai -->
+
+			{% block mainnav %}
+			<h2 class="visuallyhidden" id="navigation">{% trans "Navigation:" %}</h2>
+			<div class="mainnav-knob"></div>
+			<nav class="mainnav" role="navigation">
+				<ul>{% spaceless %}{% show_menu 0 1 100 100 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
+			</nav>
+			{% endblock mainnav %}
+		</div>
+	</div>
+	{% block toolbar %}
+	<div class="toolbar" role="banner">
+		<div class="container-24 clearfix">
+			<div class="grid-24 relative">
+				<div class="toolbar-inner">
+					{% block metanav %}
+					<nav class="metanav" role="navigation">
+						<ul>
+							{% spaceless %}
+							{% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
+							{% endspaceless %}
+						</ul>
+					</nav>
+					{% endblock metanav %}
+					{% block usernav %}<nav class="usernav"><ul>{% try_to_include "includes/menu/usernav.html" %}</ul></nav>{% endblock usernav %}
+					{% block extranav %}<nav class="extranav"><ul>{% try_to_include "includes/menu/extranav.html" %}</ul></nav>{% endblock extranav %}
+					{% block langnav %}<nav class="langnav"><ul>{% language_chooser "includes/menu/langnav.html" %}</ul></nav>{% endblock langnav %}
+					{% block search %}
+					<form action="{% url 'shop_search' %}" method="get" class="frm frm-search">
+						<fieldset>
+							<legend>{% trans "Search" %}</legend>
+							<label><input type="search" class="input-text" name="q" value="{{ request.GET.q }}" placeholder="{% trans "Search" %}" maxlength="300" /></label>
+							<label><input type="submit" class="btn-search" /></label>
+						</fieldset>
+					</form>
+					{% endblock search %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock toolbar %}
+</header>
+<!-- end: header -->
+{% endblock header %}
+
+{% block breadcrumb %}
+{% if not request.current_page.is_home %}
+<!-- start: breadcrumb -->
+<nav class="breadcrumb" role="navigation">
+	<div class="container-24 clearfix">
+		<div class="grid-24">
+			<ol>
+				{% block extend_breadcrumb %}
+					<li class="title">{% trans "You are here: " %}</li>
+					{% spaceless %}{% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}{% endspaceless %}
+				{% endblock extend_breadcrumb %}
+			</ol>
+		</div>
+	</div>
+</nav>
+<!-- end: breadcrumb -->
+{% endif %}
+{% endblock breadcrumb %}
+
+{% block messages %}
+	{% include "includes/messages.html" %}
+{% endblock messages %}
+
+{% block extend_base %}
+<!-- start: content -->
+<hr class="visuallyhidden" />
+<h1 class="visuallyhidden" id="content">{% trans "Content:" %} {% page_attribute title %}</h1>
+{% block feature %}
+<div class="feature">
+	<div class="container-24 clearfix">
+		<div class="grid-24">
+			{% with 940 as width %}{% placeholder feature %}{% endwith %}
+		</div>
+	</div>
+</div>
+{% endblock %}
+{% block content %}{% endblock content %}
+<!-- end: content -->
+{% endblock extend_base %}
+
+{% block footer %}
+<!-- start: footer -->
+<hr class="visuallyhidden" />
+<h2 class="visuallyhidden" id="footer">{% trans "Footer:" %}</h2>
+<footer class="footer" role="contentinfo">
+	<div class="container-24 clearfix">
+		<div class="grid-24">
+			<nav class="footnav clearfix">
+				<ul class="left">
+					{% spaceless %}
+						{% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
+					{% endspaceless %}
+				</ul>
+				<ul class="right">
+					<li>
+						{% if not request.GET.classic %}
+						<a href="?classic=true">{% trans "Switch to classic" %}</a>
+						{% else %}
+						<a href="?classic">{% trans "Switch to responsive" %}</a>
+						{% endif %}
+					</li>
+					<li><a href="#top">{% trans "Top" %}</a></li>
+				</ul>
+			</nav>
+			<p class="copyright">
+				{% trans "Copyright" %} &copy; {% now "Y" %}
+				<a href="http://www.divio.ch/" target="_blank">{% trans "Divio AG" %}</a>.
+				{% trans "All rights reserved" %}.
+			</p>
+		</div>
+	</div>
+</footer>
+<!-- end: footer -->
+{% endblock footer %}
+{% endblock extend_root %}

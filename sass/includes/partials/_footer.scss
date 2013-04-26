@@ -2,21 +2,6 @@
 //######################################################################################################################
 // #FOOTER#
 
-.footer { color:#808080; padding:25px 0; margin:50px 0 0 0; border-top:1px solid #e0e0e0; background-color:#f0f0f0; }
-.footer {
-	a { color:#000; }
-	a:focus, a:active, a:focus { text-decoration:underline; }
-
-	.copyright { font-size:12px; line-height:lh(12px); margin:0; }
-
-	.footnav { font-size:12px; line-height:12px; }
-	.footnav {
-		ul { list-style-type:none; padding:0; margin:0 0 10px; }
-		li { @include inline-block(); padding:0 0 0 10px; margin:0 0 0 10px; border-left:1px solid #b3b3b3; }
-		li:first-child { border:none; padding-left:0; margin-left:0; }
-	}
-}
-
 // end of mixin
 }
 

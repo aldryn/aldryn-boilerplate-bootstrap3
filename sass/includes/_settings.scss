@@ -69,10 +69,7 @@ $experimental-support-for-pie:	true;
 
 //######################################################################################################################
 // #BASE/imports#
-@import "plugins/_gallery";
-@import "plugins/_lightbox";
-@import "plugins/_shop";
-@import "plugins/_videojs";
+// @import "plugins/_lightbox";
 
 //######################################################################################################################
 // #BASE/mobile#
@@ -95,10 +92,6 @@ $experimental-support-for-pie:	true;
 	@include site-forms();
 	@include site-custom();
 	// load plugins
-	@include plugin-shop();
-	@include plugin-gallery();
-	@include plugin-lightbox();
-	@include plugin-videojs();
 
 // end of mixin
 }
@@ -125,9 +118,6 @@ $experimental-support-for-pie:	true;
 	@include site-forms-tablet();
 	@include site-custom-tablet();
 	// load plugins
-	@include plugin-shop-tablet();
-	@include plugin-gallery-tablet();
-	@include plugin-lightbox-tablet();
 
 // end of mixin
 }
@@ -154,9 +144,6 @@ $experimental-support-for-pie:	true;
 	@include site-forms-desktop();
 	@include site-custom-desktop();
 	// load plugins
-	@include plugin-shop-desktop();
-	@include plugin-gallery-desktop();
-	@include plugin-lightbox-desktop();
 
 // end of mixin
 }

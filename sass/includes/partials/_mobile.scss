@@ -12,30 +12,5 @@
 	th, tr, td { display:block; }
 }
 
-// #MOBILE-ONLY/mainnav#
-.mainnav { position:absolute; left:-9999px; top:-32px; z-index:1000; overflow:auto;
-	padding:0; margin:0 0 0 -10px; height:9999px;
-	background:#3f3e3e; @include box-shadow(inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25));
-}
-.mainnav {
-	ul, li { list-style-type:none; padding:0; margin:0; }
-
-	ul { border-bottom:1px solid #474747; }
-	li { border-top:1px solid #474747; }
-
-	li a { display:block; color:#ccc; padding:10px 30px; }
-	li a:hover { color:#fff; text-decoration:none; background:#474747; }
-
-	li li a { padding-left:45px; }
-
-	.active a { color:#fff; font-weight:bold; }
-	.active li a { color:#ccc; font-weight:normal; }
-}
-.mainnav-knob { cursor:pointer; width:30px; height:30px; position:relative; top:-31px; z-index:1001;
-	background:url('../img/mainnav-mobile.png') no-repeat left top; }
-.mainnav-knob:hover { background-position:left -30px; }
-.mainnav-overlay { position:fixed; right:0; top:0; z-index:9999;
-	width:30%; height:100%; background:transparent; }
-
 // end of mixin
 }

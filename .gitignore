@@ -1,5 +1,3 @@
-*.pyc
-*.pyo
 *~
 .hg
 .git
@@ -11,13 +9,4 @@
 .installed.cfg
 .mr.developer.cfg
 .idea
-
-/tmp
-/env
 .sass-cache
-
-/src/settings_local*.py
-/requirements_local*.txt
-
-/requirements_local.txt-example
-/locale/

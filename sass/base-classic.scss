@@ -16,8 +16,10 @@
 
 //######################################################################################################################
 // #BASE/retina#
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-	   only screen and (min-resolution: 144dpi), print {
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
 	@include site-retina();
 }
 

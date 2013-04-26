@@ -11,9 +11,9 @@
 
 .btn, input.btn, button.btn {
 	font:normal 400 #{$input-font-size}/#{$input-line-height} $font-family;
+
 	@include inline-block(); text-decoration:none !important;
-	padding:6px 15px; margin:0 0 10px;
-	border:$color-border; background:$color-background;
+	padding:6px 15px; margin:0 0 10px; border:$color-border; background:$color-background;
 	@include border-radius(3px);
 
 	&:hover, &:focus, &:active {}

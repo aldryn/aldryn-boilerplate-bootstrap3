@@ -25,6 +25,7 @@ body { font:normal 400 #{$font-size}/#{$line-height} $font-family; min-width:320
 a { color:$color-link; text-decoration:none; }
 a:hover { color:darken($color-link, 10%); text-decoration:underline; }
 a:focus, a:active { color:darken($color-link, 20%); }
+a[href^=tel] { color:$font-color; }
 
 // #BASE/vertical-rythm#
 h1, h2, h3, h4, h5, h6 { color:$color-title; font-weight:400; margin:0 0 $line-height; }
@@ -37,7 +38,7 @@ abbr { font-variant:small-caps; }
 iframe { border:none; }
 
 // #BASE/elements#
-table { width:100%; }
+table { width:100%; border-collapse:collapse; border-spacing:0; }
 
 // #BASE/compatibility#
 .noscript, .chromeframe { position:absolute; left:0; top:0; width:100%;

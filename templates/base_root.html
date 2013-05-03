@@ -22,7 +22,6 @@
 	<!-- stylesheets -->
 	{% if not request.GET.classic %}{% compress css %}<link rel="stylesheet" href="{% static "css/base.css" %}" />{% endcompress %}
 	{% else %}{% compress css %}<link rel="stylesheet" href="{% static "css/base-classic.css" %}" />{% endcompress %}{% endif %}
-	{% endspaceless %}
 	<!--[if lte IE 8]>
 	<link rel="stylesheet" href="{% static "css/base-classic.css" %}" />
 	<script src="{% static "js/libs/html5.min.js" %}"></script>

@@ -20,7 +20,8 @@
 	<link rel="image_src" href="{% static "favicon.png" %}" />
 	<!--[if IE]><link rel="shortcut icon" href="{% static "favicon.ico" %}"><![endif]-->
 	<!-- stylesheets -->
-	<link rel="stylesheet" href="{% if not request.GET.classic %}{% static "css/base.css" %}{% else %}{% static "css/base-classic.css" %}{% endif %}" />{% spaceless %}
+	{% if not request.GET.classic %}{% compress css %}<link rel="stylesheet" href="{% static "css/base.css" %}" />{% endcompress %}
+	{% else %}{% compress css %}<link rel="stylesheet" href="{% static "css/base-classic.css" %}" />{% endcompress %}{% endif %}
 	{% endspaceless %}
 	<!--[if lte IE 8]>
 	<link rel="stylesheet" href="{% static "css/base-classic.css" %}" />

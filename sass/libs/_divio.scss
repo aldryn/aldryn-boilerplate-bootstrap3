@@ -193,7 +193,7 @@ form {
 	// input helpers
 	.input-text { width:$input-width; }
 	.input-select { width:$input-width + 14; }
-	.input-radiocheck { border:none; background:none; position:relative; top:round(-$font-size / 6); }
+	.input-radiocheck { position:relative; top:round(-$font-size / 6); }
 	.input-radiocheck-aligned { float:left; margin:7px 3px 25px 0 !important; }
 	.input-error { border:1px solid $color-error; @include box-shadow(inset 0px 0px 2px $color-error); }
 

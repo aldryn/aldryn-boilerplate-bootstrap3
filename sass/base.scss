@@ -10,9 +10,7 @@
 
 //######################################################################################################################
 // #BASE/responsive#
-@media only screen and (min-width: $responsive-mobile), print {
-	@include responsive-mobile();
-}
+@include responsive-mobile();
 @media only screen and (min-width: $responsive-tablet), print {
 	@include responsive-tablet();
 }

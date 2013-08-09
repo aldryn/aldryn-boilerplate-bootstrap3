@@ -2,12 +2,11 @@
 // #GLOBAL INCLUDES#
 
 // importing libraries
-@import "libs/_libs", "libs/_960gs", "libs/_divio";
+@import "libs/normalize", "libs/960gs", "libs/divio";
 @import "compass/css3", "compass/utilities";
 // importing project partials
 @import "includes/partials/header","includes/partials/footer", "includes/partials/forms", "includes/partials/mobile",
-		"includes/partials/retina";
-@import "includes/print";
+		"includes/partials/retina", "includes/partials/fonts", "includes/partials/print";
 @import "includes/custom";
 
 //######################################################################################################################
@@ -86,6 +85,7 @@ $experimental-support-for-pie:	true;
 	.hidden-desktop { display:block; }
 
 	// load includes
+	@include site-fonts();
 	@include site-header();
 	@include site-footer();
 	@include site-forms();

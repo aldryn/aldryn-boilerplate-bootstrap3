@@ -34,7 +34,7 @@ CSS / SCSS
 * Use **tabs** and **not** spaces
 * Use **dashes** to separate names, **not** camelCase or underscore
 * Use **dashes** for scss file naming
-* Use **double-quotes** `"` for all text values
+* Use **double-quotes** ``"`` for all text values
 * Use ``_custom.scss`` for custom css files, don't create additional files
 * Use the single-line style instad of block-style and group:
 
@@ -52,8 +52,8 @@ JavaScript
 
 * Use **tabs** and **not** spaces
 * Use camelCase for variables and **not** underscores or dashes
-* Use **dott** annotation `.` for javascript file naming
-* Use **single-quotes** `'` for **all** values
+* Use **dott** annotation ``.`` for javascript file naming
+* Use **single-quotes** ``'`` for **all** values
 * Use ``base.js`` for global and general functions and don't add any more js files to the root
 * Use the frameworks prefix inside the ``plugins`` folder
 * JS should validate JS Lint

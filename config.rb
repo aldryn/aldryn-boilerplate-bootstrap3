@@ -1,7 +1,7 @@
 # COMPASS SETTINGS
 
 http_path = "" # use if other than /
-sass_dir = "sass"
+sass_dir = "private/sass"
 css_dir = "static/css"
 images_dir = "static/img"
 javascripts_dir = "static/js"

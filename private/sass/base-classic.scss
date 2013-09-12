@@ -6,20 +6,13 @@
 
 //######################################################################################################################
 // #SETTINGS#
-@import "includes/_settings.scss";
+@import "includes/settings";
 
 //######################################################################################################################
-// #BASE/responsive#
+// #BASE/classic#
 @include responsive-mobile();
-@media only screen and (min-width: $responsive-tablet), print {
-	@include responsive-tablet();
-}
-@media only screen and (min-width: $responsive-desktop), print {
-	@include responsive-desktop();
-}
-@media only screen and (max-width: $responsive-tablet - 1) {
-	@include responsive-mobile-only();
-}
+@include responsive-tablet();
+@include responsive-desktop();
 
 //######################################################################################################################
 // #BASE/retina#

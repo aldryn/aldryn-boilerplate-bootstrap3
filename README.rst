@@ -23,7 +23,8 @@ HTML
 * Use **double-quotes** `"` for all attributes including django-template tags
 * HTML **has to validate** using `W3C <http://www.w3.org/2001/sw/BestPractices/>`_ guidelines
 * HTML should be modular and reusable, do not use easy names like "job" or "item" on top level. Use "plugin-jobs" instead
-* Keep `{% forloop %}` or `{% if %}` and the following html on the same tab level
+* Keep all html on the same level after a django template block except for `{% forloop %}` or `{% if %}`
+* In general **code readability first**
 
 
 CSS / SCSS
@@ -57,3 +58,27 @@ JavaScript
 * Use `base.js` for global and general functions and don't add any more js files to the root
 * Use the frameworks prefix inside the `plugins` folder
 * JS should validate JS Lint
+* Keep <script> and the following starting enclosure on the same level
+* Separate all script tags within a ´{% addtoblock "js" %}´
+
+Eaxample
+--------
+
+```
+{% block content %}
+<div class="plugin-blog">
+{% if true %}
+	<p>Hello World</p>
+{% endif %}
+</div>
+{% endblock content %}
+
+{% addtoblock "js" %}<script src="{% static "js/libs/class.min.js" %}"></script>{% endaddtoblock "js" %}
+{% addtoblock "js" %}
+<script>
+jQuery(document).ready(function ($) {
+
+});
+</script>
+{% endaddtoblock %}
+```

@@ -18,7 +18,6 @@ HTML
 ----
 
 * Use **tabs** and **not** spaces
-* Use **dashes** to separate names, **not** camelCase or underscore
 * Use **underscore** for html file naming
 * Use **double-quotes** `"` for all attributes including django-template tags
 * HTML **has to validate** using `W3C <http://www.w3.org/2001/sw/BestPractices/>`_ guidelines
@@ -39,10 +38,10 @@ CSS / SCSS
 * Use `_custom.scss` for custom css files, don't create additional files
 * Use the single-line style instad of block-style and group:
 
-	#. color, font-size, line-height, font-*
-	#. width, height, padding, margin
-	#. padding, background
-	#. includes
+    #. color, font-size, line-height, font-*
+    #. width, height, padding, margin
+    #. padding, background
+    #. includes
 
 * Whenever possible, define setting variables inside `_settings.scss`
 * Whenever possible, try to avoid referencing css using their parent like div.container
@@ -66,19 +65,19 @@ Eaxample
 
 .. code:: html
 
-	{% block content %}
-	<div class="plugin-blog">
-	{% if true %}
-		<p>Hello World</p>
-	{% endif %}
-	</div>
-	{% endblock content %}
+    {% block content %}
+    <div class="plugin-blog">
+    {% if true %}
+        <p>Hello World</p>
+    {% endif %}
+    </div>
+    {% endblock content %}
 
-	{% addtoblock "js" %}<script src="{% static "js/libs/class.min.js" %}"></script>{% endaddtoblock "js" %}
-	{% addtoblock "js" %}
-	<script>
-	jQuery(document).ready(function ($) {
-
-	});
-	</script>
-	{% endaddtoblock %}
+    {% addtoblock "js" %}<script src="{% static "js/libs/class.min.js" %}"></script>{% endaddtoblock "js" %}
+    {% addtoblock "js" %}
+    <script>
+    jQuery(document).ready(function ($) {
+        alert('hello world');
+    });
+    </script>
+    {% endaddtoblock %}

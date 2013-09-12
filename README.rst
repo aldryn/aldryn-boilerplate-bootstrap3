@@ -64,21 +64,21 @@ JavaScript
 Eaxample
 --------
 
-```
-{% block content %}
-<div class="plugin-blog">
-{% if true %}
-	<p>Hello World</p>
-{% endif %}
-</div>
-{% endblock content %}
+.. code:: html
 
-{% addtoblock "js" %}<script src="{% static "js/libs/class.min.js" %}"></script>{% endaddtoblock "js" %}
-{% addtoblock "js" %}
-<script>
-jQuery(document).ready(function ($) {
+	{% block content %}
+	<div class="plugin-blog">
+	{% if true %}
+		<p>Hello World</p>
+	{% endif %}
+	</div>
+	{% endblock content %}
 
-});
-</script>
-{% endaddtoblock %}
-```
+	{% addtoblock "js" %}<script src="{% static "js/libs/class.min.js" %}"></script>{% endaddtoblock "js" %}
+	{% addtoblock "js" %}
+	<script>
+	jQuery(document).ready(function ($) {
+
+	});
+	</script>
+	{% endaddtoblock %}

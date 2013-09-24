@@ -24,6 +24,7 @@ HTML
 * HTML should be modular and reusable, do not use easy names like "job" or "item" on top level. Use "plugin-jobs" instead
 * Keep all html on the same level after a django template block except for ``{% forloop %}`` or ``{% if %}``
 * In general **code readability first**
+* All templates should be placed within the roots ``templates`` folder
 
 
 CSS / SCSS
@@ -59,6 +60,24 @@ JavaScript
 * JS should validate JS Lint
 * Keep <script> and the following starting enclosure on the same level
 * Separate all script tags within a ´{% addtoblock "js" %}´
+* Do not add spaces when writing ``if(true) {} else {}`` or ``function helloWorld() {}``
+* Always use semicolons and full brackets except for if shortcut ``var i = (true) ? 'yes' : 'no';`` or
+    single lines ``if(index <= 0) index = 0;``
+
+Backend
+-------
+
+Everyone should be able to setup a project using:
+
+* Initialize the project using ``make init``
+* Update the project using ``make update``
+* Run the project using ``make run``
+* Compile required parts using ``make *`` replace * by the module like css, html etc.
+
+The project initialization should ideally setup everything including database and files.
+Update should replace old data with new and ensure that everything works. In generall setup
+waiting times are **bad**.
+
 
 Eaxample
 --------

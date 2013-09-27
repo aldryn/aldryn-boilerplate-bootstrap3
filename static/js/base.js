@@ -23,7 +23,7 @@ Cl.Base = {
 		// add default jquery plugins
 		if($.fn.autoPopUp) $('.popup').autoPopUp();
 		if($.fn.mailCrypte) $('.mailcrypte').mailCrypte();
-		if($.fn.fieldLabel) $('[placeholder]').fieldLabel();
+		if($.fn.fieldLabel && document.createElement("input").placeholder === undefined) $('[placeholder]').fieldLabel();
 
 		// add mobile specific handlers
 		if(Cl.Utils.mobile()) this.mobile();

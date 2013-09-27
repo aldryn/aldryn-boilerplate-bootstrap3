@@ -50,7 +50,7 @@ $.fn.autoPopUp = function (options) {
 
 /*!
  * Auto input fill-in
- * @version: 0.6.4
+ * @version: 0.6.5
  * @param: label (if true than labeltext on parent else rel attribut on this)
  * @param: strip (replacement text)
  * @param: add (add additional information)
@@ -81,7 +81,7 @@ $.fn.fieldLabel = function (options) {
 			label = label.replace(options.strip, '');
 			label += options.add;
 
-		if($(this).attr('value') === undefined) $(this).attr('value', label);
+		if($(this).attr('value') === '') $(this).attr('value', label);
 
 		$(this).bind('click', function (e) {
 			if($(this).attr('value') == label) hide($(this), e, label);

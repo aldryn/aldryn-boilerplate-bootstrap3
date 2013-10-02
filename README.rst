@@ -36,7 +36,7 @@ CSS / SCSS
 * Use **dashes** to separate names, **not** camelCase or underscore
 * Use **dashes** for scss file naming
 * Use **double-quotes** ``"`` for all text values
-* Use ``_custom.scss`` for custom css files, don't create additional files
+* Use ``_custom.scss`` for custom css files, avoid creating additional files
 * Use the single-line style instad of block-style and group:
 
     #. color, font-size, line-height, font-*
@@ -55,14 +55,15 @@ JavaScript
 * Use camelCase for variables and **not** underscores or dashes
 * Use **dott** annotation ``.`` for javascript file naming
 * Use **single-quotes** ``'`` for **all** values
-* Use ``base.js`` for global and general functions and don't add any more js files to the root
+* Use ``base.js`` for global and general functions and avoid adding js files to the root
 * Use the frameworks prefix inside the ``plugins`` folder
 * JS should validate JS Lint
 * Keep <script> and the following starting enclosure on the same level
-* Separate all script tags within a ´{% addtoblock "js" %}´
+* Separate all script tags within a ``{% addtoblock "js" %}``
 * Do not add spaces when writing ``if(true) {} else {}`` or ``function helloWorld() {}``
-* Always use semicolons and full brackets except for if shortcut ``var i = (true) ? 'yes' : 'no';`` or
+* Always use semicolons and full brackets except shortcuts like ``var i = (true) ? 'yes' : 'no';`` or
     single lines ``if(index <= 0) index = 0;``
+* Never use $ for variable names like ``var $el = $('.el');``
 
 Backend
 -------
@@ -72,12 +73,11 @@ Everyone should be able to setup a project using:
 * Initialize the project using ``make init``
 * Update the project using ``make update``
 * Run the project using ``make run``
-* Compile required parts using ``make *`` replace * by the module like css, html etc.
+* Compile css using ``make css``
 
 The project initialization should ideally setup everything including database and files.
 Update should replace old data with new and ensure that everything works. In generall setup
 waiting times are **bad**.
-
 
 Eaxample
 --------

@@ -49,8 +49,8 @@
 <script>new Cl.Debug();</script>
 {% endif %}
 {% render_block "js" %}
-{% if GOOGLE_ANALYTICS_ID %}{% include "includes/analytics.html" %}{% endif %}
-<!-- end: javascript -->
+{% block extrafoot %}{% endblock %}
+{% include "includes/analytics.html" %}
 <noscript><p class="noscript">{% trans "Please activate JavaScript to enable all features." %}</p></noscript>
 <!--[if lte IE 7 ]>
 <p class="chromeframe">

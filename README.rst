@@ -39,12 +39,10 @@ CSS / SCSS
 * Use **double-quotes** ``"`` for all text values
 * Use ``_custom.scss`` for custom css files, avoid creating additional files
 * Use the single-line style instad of block-style and group:
-
     #. color, font-size, line-height, font-*
     #. width, height, padding, margin
     #. padding, background
     #. includes
-
 * Whenever possible, define setting variables inside ``_settings.scss``
 * Whenever possible, try to avoid referencing css using their parent like div.container
 * CSS has not to validate due to several backwards-compatibility reasons
@@ -63,8 +61,7 @@ JavaScript
 * Keep <script> and the following starting enclosure on the same level
 * Separate all script tags within a ``{% addtoblock "js" %}``
 * Do not add spaces when writing ``if(true) {} else {}`` or ``function helloWorld() {}``
-* Always use semicolons and full brackets except shortcuts like ``var i = (true) ? 'yes' : 'no';`` or
-    single lines ``if(index <= 0) index = 0;``
+* Always use semicolons and full brackets except shortcuts like ``var i = (true) ? 'yes' : 'no';`` or single lines ``if(index <= 0) index = 0;``
 * Never use $ for variable names like ``var $el = $('.el');``
 
 

@@ -48,17 +48,13 @@
 {% block breadcrumb %}
 {% if not request.current_page.is_home %}
 <!-- start: breadcrumb -->
-<nav class="breadcrumb" role="navigation">
-	<div class="container-24 clearfix">
-		<div class="grid-24">
-			<ol>
-				{% block extend_breadcrumb %}
-					<li class="title">{% trans "You are here: " %}</li>
-					{% spaceless %}{% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}{% endspaceless %}
-				{% endblock extend_breadcrumb %}
-			</ol>
-		</div>
-	</div>
+<nav class="breadcrumb container-24 clearfix" role="navigation">
+	<ol class="grid-24">
+		{% block extend_breadcrumb %}
+			<li class="title">{% trans "You are here: " %}</li>
+			{% spaceless %}{% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}{% endspaceless %}
+		{% endblock extend_breadcrumb %}
+	</ol>
 </nav>
 <!-- end: breadcrumb -->
 {% endif %}
@@ -72,15 +68,6 @@
 <!-- start: content -->
 <hr class="visuallyhidden" />
 <h1 class="visuallyhidden" id="content">{% trans "Content:" %} {% page_attribute title %}</h1>
-{% block feature %}
-<div class="feature">
-	<div class="container-24 clearfix">
-		<div class="grid-24">
-			{% with 940 as width %}{% placeholder feature %}{% endwith %}
-		</div>
-	</div>
-</div>
-{% endblock %}
 {% block content %}{% endblock content %}
 <!-- end: content -->
 {% endblock extend_base %}

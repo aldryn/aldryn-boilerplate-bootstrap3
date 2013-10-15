@@ -1,5 +1,5 @@
 <!doctype html>{% load i18n static cms_tags sekizai_tags compress %}
-<html>
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
 	<meta charset="utf-8" />
 	<title>{% block title %}{% page_attribute page_title %}{% if site_settings.site.name %} - {{ site_settings.site.name }}{% endif %}{% endblock title %}</title>

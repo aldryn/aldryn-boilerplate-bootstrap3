@@ -1,7 +1,7 @@
 name: 'Divio Boilerplate'
+description: 'This is the Divio boilerplate.'
 url: 'https://github.com/divio'
 version: '1.1.0'
-description: 'This is the Divio boilerplate.'
 author:
     name: 'Divio AG'
     url: 'http://www.divio.ch'

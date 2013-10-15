@@ -6,19 +6,16 @@
 {% block content %}
 <div class="container-24 clearfix">
 	<div class="grid-18">
-		{% block content_primary %}
-			{% block page_title %}<h2>{% page_attribute title %}</h2>{% endblock page_title %}
-			{% with 700 as width %}{% placeholder content_primary %}{% endwith %}
-		{% endblock content_primary %}
+		{% with 700 as width %}{% placeholder content %}{% endwith %}
 	</div>
 	<aside class="grid-6 sidebar">
-		{% block content_secondary %}
-			<!-- sub navigation -->
-			<nav class="subnav">
-				<ul>{% spaceless %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
-			</nav>
-			{% with 220 as width %}{% placeholder content_secondary %}{% endwith %}
-		{% endblock content_secondary %}
+		{% block subnav %}
+		<!-- sub navigation -->
+		<nav class="subnav">
+			<ul>{% spaceless %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
+		</nav>
+		{% endblock subnav %}
+		{% with 220 as width %}{% placeholder sidebar %}{% endwith %}
 	</aside>
 </div>
 {% endblock content %}

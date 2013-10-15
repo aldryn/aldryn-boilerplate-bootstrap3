@@ -4,18 +4,20 @@
 {% block body_class %}tpl-sidebar-left{% endblock %}
 
 {% block content %}
-<div class="container-24 clearfix">
-	<div class="grid-18 push-6">
-		{% with 700 as width %}{% placeholder content %}{% endwith %}
+<div class="content">
+	<div class="container-24 clearfix">
+		<div class="grid-18 push-6">
+			{% with 700 as width %}{% placeholder content %}{% endwith %}
+		</div>
+		<aside class="grid-6 sidebar pull-18">
+			{% block subnav %}
+			<!-- sub navigation -->
+			<nav class="subnav">
+				<ul>{% spaceless %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
+			</nav>
+			{% endblock subnav %}
+			{% with 220 as width %}{% placeholder sidebar %}{% endwith %}
+		</aside>
 	</div>
-	<aside class="grid-6 sidebar pull-18">
-		{% block subnav %}
-		<!-- sub navigation -->
-		<nav class="subnav">
-			<ul>{% spaceless %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
-		</nav>
-		{% endblock subnav %}
-		{% with 220 as width %}{% placeholder sidebar %}{% endwith %}
-	</aside>
 </div>
 {% endblock content %}

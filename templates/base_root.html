@@ -9,20 +9,14 @@
 	<meta name="keywords" content="{% page_attribute "meta_keywords" %}" />
 	<!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
 	{% endblock meta_tags %}
-	<!-- link icons -->
-	<link rel="apple-touch-icon" href="{% static "favicon_apple.png" %}">
-	<link rel="icon" href="{% static "favicon.png" %}">
+	<link rel="apple-touch-icon" href="{% static "favicon.png" %}" />
+	<link rel="icon" href="{% static "favicon.png" %}" />
 	<link rel="image_src" href="{% static "favicon.png" %}" />
-	<!--[if IE]><link rel="shortcut icon" href="{% static "favicon.ico" %}"><![endif]-->
-	<!-- stylesheets -->
-	{% if not request.GET.classic %}{% compress css %}<link rel="stylesheet" href="{% static "css/base.css" %}" />{% endcompress %}
-	{% else %}{% compress css %}<link rel="stylesheet" href="{% static "css/base-classic.css" %}" />{% endcompress %}{% endif %}
-	<!--[if lte IE 8]>
-	<link rel="stylesheet" href="{% static "css/base-classic.css" %}" />
-	<script src="{% static "js/libs/html5.min.js" %}"></script>
-	<![endif]-->
-	{% block extrahead %}{% endblock extrahead %}
+	<!--[if IE]><link rel="shortcut icon" href="{% static "favicon.ico" %}" /><![endif]-->
+	<link rel="stylesheet" href="{% static "css/base.css" %}" />
+	<!--[if lte IE 8]><script src="{% static "js/libs/html5.min.js" %}"></script><![endif]-->
 	{% render_block "css" %}
+	{% block extrahead %}{% endblock %}
 </head>
 <body id="top" class="no-js {% block body_class %}tpl-root{% endblock %} lang-{{ LANGUAGE_CODE }}">
 {% block cms_toolbar %}{% cms_toolbar %}{% endblock %}

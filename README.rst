@@ -49,6 +49,7 @@ CSS / SCSS
 * Whenever possible, try to avoid referencing css using their parent like div.container
 * CSS has not to validate due to several backwards-compatibility reasons
 
+
 JavaScript
 ----------
 
@@ -66,6 +67,7 @@ JavaScript
     single lines ``if(index <= 0) index = 0;``
 * Never use $ for variable names like ``var $el = $('.el');``
 
+
 Backend
 -------
 
@@ -79,6 +81,17 @@ Everyone should be able to setup a project using:
 The project initialization should ideally setup everything including database and files.
 Update should replace old data with new and ensure that everything works. In generall setup
 waiting times are **bad**.
+
+
+Folders
+-------
+
+We always use libs, modules and plugins as a main feature to separate files. The difference between them are:
+
+* **libs** represent libraries that work independent from one another
+* **moudles** are pieces of a webseite that contain business logic and can be decoupled
+* **plugins** can be easily plugged in and out without breaking the website
+
 
 Eaxample
 --------

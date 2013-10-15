@@ -1,12 +1,12 @@
 {% load i18n menu_tags %}
 
 {% if languages|length > 1 %}
-{% for language in languages %}
-<li class="lang {% spaceless %}
-	{% endspaceless %}{% ifequal current_language language.0 %} active{% endifequal %}{% spaceless %}
-	{% endspaceless %}{% if forloop.first %} first{% endif %}{% spaceless %}
-	{% endspaceless %}{% if forloop.last %} last{% endif %}{% spaceless %}">
-	<a href="{% page_language_url language.0 %}" title="{% trans "Change to language:" %} {{ language.1 }}">{{ language.0 }}</a>
-</li>
-{% endspaceless %}{% endfor %}
+	{% for language in languages %}
+		<li class="lang
+			{% ifequal current_language language.0 %} active{% endifequal %}
+			{% if forloop.first %} first{% endif %}
+			{% if forloop.last %} last{% endif %}">
+			<a href="{% page_language_url language.0 %}" title="{% trans "Change to language:" %} {{ language.1 }}">{{ language.0 }}</a>
+		</li>
+	{% endfor %}
 {% endif %}

@@ -22,6 +22,7 @@ HTML
 * Use **double-quotes** `"` for all attributes including django-template tags
 * HTML **has to validate** using `W3C <http://www.w3.org/2001/sw/BestPractices/>`_ guidelines
 * HTML should be modular and reusable, do not use easy names like "job" or "item" on top level. Use "plugin-jobs" instead
+* Use XML syntax and close all elements using </tag> or />
 * Keep all html on the same level after a django template block except for ``{% forloop %}`` or ``{% if %}``
 * In general **code readability first**
 * All templates should be placed within the roots ``templates`` folder

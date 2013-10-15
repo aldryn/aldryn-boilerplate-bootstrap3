@@ -38,15 +38,15 @@ CSS / SCSS
 * Use **dashes** for scss file naming
 * Use **double-quotes** ``"`` for all text values
 * Use ``_custom.scss`` for custom css files, avoid creating additional files
+* Whenever possible, define setting variables inside ``_settings.scss``
+* Whenever possible, try to avoid referencing css using their parent like div.container
+* CSS has not to validate due to several backwards-compatibility reasons
+
 * Use the single-line style instad of block-style and group:
     #. color, font-size, line-height, font-*
     #. width, height, padding, margin
     #. padding, background
     #. includes
-* Whenever possible, define setting variables inside ``_settings.scss``
-* Whenever possible, try to avoid referencing css using their parent like div.container
-* CSS has not to validate due to several backwards-compatibility reasons
-
 
 JavaScript
 ----------

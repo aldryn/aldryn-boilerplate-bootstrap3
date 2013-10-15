@@ -1,6 +1,6 @@
-@mixin site-forms() {
+@media all {
 //######################################################################################################################
-// #FORMS#
+// #MOBILE#
 
 .frm {
 	// add styles here
@@ -9,33 +9,33 @@
 //##################################################
 // #FORMS/buttons#
 
-.btn, input.btn, button.btn {
+.btn {
 	font:normal 400 #{$input-font-size}/#{$input-line-height} $font-family;
-
-	@include inline-block(); text-decoration:none !important;
-	padding:6px 15px; margin:0 0 10px; border:$color-border; background:$color-background;
+	color:$font-color; text-decoration:none !important;
+	padding:6px 15px; margin:0 0 10px;
+	border:$color-border; background:$color-background;
+	@include inline-block();
 	@include border-radius(3px);
 
 	&:hover, &:focus, &:active {}
-	&:active {}
 }
 
-.btn-small, input.btn-small, button.btn-small { font-size:13px; }
-.btn-large, input.btn-large, button.btn-large { font-size:18px; }
+.btn-small { font-size:12px; }
+.btn-large { font-size:18px; }
 
-// end of mixin
+// end of mobile
 }
 
-@mixin site-forms-tablet() {
+@media (min-width: $responsive-tablet) {
 //######################################################################################################################
-// #FORMS#
+// #TABLET#
 
-// end of mixin
+// end of tablet
 }
 
-@mixin site-forms-desktop() {
+@media (min-width: $responsive-desktop) {
 //######################################################################################################################
-// #FORMS#
+// #DESKTOP#
 
-// end of mixin
+// end of desktop
 }

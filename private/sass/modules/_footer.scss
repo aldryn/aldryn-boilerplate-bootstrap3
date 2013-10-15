@@ -1,20 +1,20 @@
-@mixin site-header() {
+@media all {
 //######################################################################################################################
-// #HEADER#
+// #MOBILE#
 
-// end of mixin
+// end of mobile
 }
 
-@mixin site-header-tablet() {
+@media (min-width: $responsive-tablet) {
 //######################################################################################################################
-// #HEADER#
+// #TABLET#
 
-// end of mixin
+// end of tablet
 }
 
-@mixin site-header-desktop() {
+@media (min-width: $responsive-desktop) {
 //######################################################################################################################
-// #HEADER#
+// #DESKTOP#
 
-// end of mixin
+// end of desktop
 }

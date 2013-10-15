@@ -1,6 +1,6 @@
 //##################################################
 // #DIVIO FRAMEWORK#
-// v1.1.0
+// v1.2.0
 
 // em calculation
 @function em($target, $context: $font-size) {
@@ -211,6 +211,45 @@ form {
 	.btn-disabled { @include opacity(0.5); cursor:auto !important; }
 
 	.text-info { display:block; margin:-5px 0 10px; }
+}
+
+//######################################################################################################################
+// #RESPONSIVE#
+
+// set custom helpers
+@media (max-width: $responsive-tablet) {
+	.visible-phone { display:block; }
+	.visible-tablet { display:none; }
+	.visible-desktop { display:none; }
+	.hidden-phone { display:none; }
+	.hidden-tablet { display:block; }
+	.hidden-desktop { display:block; }
+}
+@media (min-width: $responsive-tablet) and (max-width: $responsive-desktop) {
+	.visible-phone { display:none; }
+	.visible-tablet { display:block; }
+	.visible-desktop { display:none; }
+	.hidden-phone { display:block; }
+	.hidden-tablet { display:none; }
+	.hidden-desktop { display:block; }
+}
+@media (min-width: $responsive-desktop) {
+	.visible-phone { display:none; }
+	.visible-tablet { display:none; }
+	.visible-desktop { display:block; }
+	.hidden-phone { display:block; }
+	.hidden-tablet { display:block; }
+	.hidden-desktop { display:none; }
+}
+
+//######################################################################################################################
+// #PRINT#
+@media print {
+	a[href]:after { content:""; }
+	.clearfix:after { clear:both; display:block; width:0; height:0; overflow:hidden; visibility:hidden; }
+
+	.visible-print { display:block !important; position:static; left:0; }
+	.hidden-print { display:none; }
 }
 
 // end of mixin

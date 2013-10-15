@@ -1,10 +1,8 @@
-@mixin site-fonts() {
+@media all {
 //######################################################################################################################
 // #FONTS#
 
-/*
-@import url("//fast.fonts.com/t/1.css?apiType=css&projectid=dac1e962-dc40-492d-a752-57eab53d7063");
-
+/* use this only if your fonts are hostet locally, otherwise remove
 @font-face {
 font-family:"frutiger";
 font-weight:normal;
@@ -35,5 +33,5 @@ src:url("../fonts/fbd7c0fb-f004-4e83-81d2-1d400413a873.eot?#iefix") format("eot"
 }
 */
 
-// end of mixin
+// end of fonts
 }

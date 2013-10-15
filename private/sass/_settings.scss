@@ -1,0 +1,101 @@
+//######################################################################################################################
+// #GLOBAL INCLUDES#
+@import "libs/normalize", "libs/960gs", "libs/divio";
+@import "compass/css3", "compass/utilities";
+
+//######################################################################################################################
+// #GLOBAL VARIABLES#
+
+// fonts
+$font-family:					"PT Sans","Helvetica Neue",Helvetica,sans-serif;
+$font-color:					#666;
+$font-size:						14px;
+$line-height:					lh($font-size); // calculating line-height: round($font-size * 1.5)
+
+// theming
+$content-space:					30px;
+$content-border:				#eee;
+$content-box:					#f0f0f0;
+
+// colors primary
+$color-primary:					#ff9100;
+$color-secondary:				#4d4d4d;
+$color-link:					$color-primary;
+$color-title:					$color-secondary;
+
+$color-grey-light:				#ccc;
+$color-grey:					#666;
+$color-grey-dark:				#999;
+
+// colors messages
+$color-muted:					#006699;
+$color-info:					#006699;
+$color-error:					#d92400;
+$color-warning:					#e5d200;
+$color-success:					#00cc00;
+
+// colors misc
+$color-background:				#f0f0f0;
+$color-border:					#e0e0e0;
+$color-even:					#e6e6e6;
+$color-odd:						#e9e9e9;
+
+// icons
+$icon-size:						16px;
+$icon-space:					5px;
+
+// forms
+$input-font-size:				14px;
+$input-font-color:				#555;
+$input-line-height:				18px; // should not pass 18px!
+
+$input-width:					200px;
+$input-border:					#ccc;
+$input-background:				#f7f7f7;
+
+$form-ratio-left:				25%;
+$form-ratio-right:				70%;
+$form-ratio-space:				5%; // needs to add to 100%
+
+// responsive
+$responsive-tablet:				720px; // required in px
+$responsive-desktop:			960px; // required in px
+
+//######################################################################################################################
+// #IMPORTS#
+// @import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+// @import "modules/fonts"; // use this file if you need to host your files locally instead of the above line
+
+// importing frameworks
+@include normalize();
+@include divio-boilerplate();
+
+// importing modules
+@import "modules/header";
+@import "modules/footer";
+@import "modules/forms";
+@import "modules/mobile";
+@import "modules/custom";
+@import "modules/standardsite";
+
+// importing plugins
+@import "plugins/retina";
+@import "plugins/print";
+// @import "plugins/lightbox";
+
+//######################################################################################################################
+// #GRID#
+$ninesixty-columns:			24;
+$ninesixty-class-separator: "-";
+
+// #GRID/responsive#
+@media (min-width: $responsive-tablet) and (max-width: $responsive-desktop) {
+	$ninesixty-gutter-width: 10px;
+	$ninesixty-grid-width:	 720px;
+	@include grid-system-complete($ninesixty-columns);
+}
+@media (min-width: $responsive-desktop) {
+	$ninesixty-gutter-width: 20px;
+	$ninesixty-grid-width:	 960px;
+	@include grid-system-complete($ninesixty-columns);
+}

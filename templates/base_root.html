@@ -25,17 +25,14 @@
 	{% render_block "css" %}
 </head>
 <body id="top" class="no-js {% block body_class %}tpl-root{% endblock %} lang-{{ LANGUAGE_CODE }}">
-<!--[if lte IE 7]><div class="ie7"><![endif]-->
+{% block cms_toolbar %}{% cms_toolbar %}{% endblock %}
+<!--[if lte IE 7]><div class="ie"><![endif]-->
 <!--[if IE 8]><div class="ie8"><![endif]-->
 <!--[if IE 9]><div class="ie9"><![endif]-->
-{% block cms_toolbar %}{% cms_toolbar %}{% endblock %}
 
-<!-- start: base -->
 {% block extend_root %}{% endblock %}
-<!-- end: base -->
 
 <!--[if lte IE 9]></div><![endif]-->
-<!-- start: javascript -->
 {% compress js %}
 <script src="{% static "js/libs/jquery.min.js" %}"></script>
 <script src="{% static "js/libs/class.min.js" %}"></script>

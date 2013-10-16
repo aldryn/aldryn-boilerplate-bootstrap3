@@ -21,6 +21,7 @@ HTML
 * Use **underscore** for html file naming
 * Use **double-quotes** `"` for all attributes including django-template tags
 * HTML **has to validate** using `W3C <http://www.w3.org/2001/sw/BestPractices/>`_ guidelines
+* HTML should validate the WCAG 2.0 A guidelines
 * HTML should be modular and reusable, do not use easy names like "job" or "item" on top level. Use "plugin-jobs" instead
 * Use XML syntax and close all elements using </tag> or />
 * Keep all html on the same level after a django template block except for ``{% forloop %}`` or ``{% if %}``
@@ -41,6 +42,7 @@ CSS / SCSS
 * Whenever possible, define setting variables inside ``_settings.scss``
 * Whenever possible, try to avoid referencing css using their parent like div.container
 * CSS has not to validate due to several backwards-compatibility reasons
+* Use progressibe enhancement for older browsers
 * Use the single-line style instad of block-style and group:
 
 #. color, font-size, line-height, font-*
@@ -58,12 +60,14 @@ JavaScript
 * Use **single-quotes** ``'`` for **all** values
 * Use ``base.js`` for global and general functions and avoid adding js files to the root
 * Use the frameworks prefix inside the ``plugins`` folder
-* JS should validate JS Lint
+* Use the singleton pattern to structure code
+* JavaScript should validate JS Lint
 * Keep <script> and the following starting enclosure on the same level
 * Separate all script tags within a ``{% addtoblock "js" %}``
 * Do not add spaces when writing ``if(true) {} else {}`` or ``function helloWorld() {}``
 * Always use semicolons and full brackets except shortcuts like ``var i = (true) ? 'yes' : 'no';`` or single lines ``if(index <= 0) index = 0;``
 * Never use $ for variable names like ``var $el = $('.el');``
+* Ensure that JavaScript widgets don't create distrubances while the dom is loading
 
 
 Backend
@@ -79,6 +83,9 @@ Everyone should be able to setup a project using:
 The project initialization should ideally setup everything including database and files.
 Update should replace old data with new and ensure that everything works. In generall setup
 waiting times are **bad**.
+
+Ensure that the X-UA-Compatible headers are set like:
+``response.headers['X-UA-Compatible'] = 'IE=edge,chrome=1'``
 
 
 Folders

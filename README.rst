@@ -41,6 +41,7 @@ CSS / SCSS
 * Use ``_custom.scss`` for custom css files, avoid creating additional files
 * Whenever possible, define setting variables inside ``_settings.scss``
 * Whenever possible, try to avoid referencing css using their parent like div.container
+* Whenever possible, use full words instead of shorthands like ``count`` instead of cnt
 * CSS has not to validate due to several backwards-compatibility reasons
 * Use progressibe enhancement for older browsers
 * Use the single-line style instad of block-style and group:
@@ -62,6 +63,7 @@ JavaScript
 * Use the frameworks prefix inside the ``plugins`` folder
 * Use the singleton pattern to structure code
 * JavaScript should validate JS Lint
+* Whenever possible, use full words instead of shorthands like ``count`` instead of cnt
 * Keep <script> and the following starting enclosure on the same level
 * Separate all script tags within a ``{% addtoblock "js" %}``
 * Do not add spaces when writing ``if(true) {} else {}`` or ``function helloWorld() {}``

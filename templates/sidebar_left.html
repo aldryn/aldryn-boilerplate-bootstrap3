@@ -5,11 +5,11 @@
 
 {% block extend_base %}
 <div class="content">
-	<div class="container-24 clearfix">
-		<div class="grid-18 push-6">
+	<div class="row">
+		<div class="large-18 push-6 column">
 			{% with 700 as width %}{% placeholder content %}{% endwith %}
 		</div>
-		<aside class="grid-6 sidebar pull-18">
+		<aside class="large-6 pull-18 column sidebar">
 			{% block subnav %}
 			<!-- sub navigation -->
 			<nav class="subnav">

@@ -2,9 +2,9 @@
 // #CL EXTENSION#
 Cl.Utils = {
 
-	init: function () {
+	document: function () {
 		// remove no-js class if javascript is activated
-		$(document.body).removeClass('no-js');
+		$(document.body).removeClass('noscript');
 
 		// adds dynamic print functionality to a class
 		$('.print-js').bind('click', function (e) {

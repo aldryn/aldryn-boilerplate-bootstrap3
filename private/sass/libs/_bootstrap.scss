@@ -1,0 +1,223 @@
+//##################################################
+// #DIVIO BOOTSTRAP#
+// v2.0.0
+
+@mixin bootstrap() {
+//######################################################################################################################
+// #BASE#
+body { font:normal 400 #{$font-size}/#{$line-height} $font-family; min-width:320px;
+	color:$font-color; background-color:$color-background; }
+
+// #BASE/normalize#
+a { color:$color-link; }
+a:hover { color:darken($color-link, 10%); }
+a:focus, a:active { color:darken($color-link, 20%); }
+a[href^=tel] { color:$font-color; }
+
+h1, h2, h3, h4, h5, h6 { color:$color-title; margin-top:$line-space; margin-bottom:$line-space; }
+ul, ol, p, blockquote, pre, table, dl, form { padding-top:$line-space; padding-bottom:$line-space; margin-top:0; margin-bottom:0; }
+ul, ol { padding-left:$line-space; margin-left:$line-space; }
+ul ul, ol ol { padding-top:0; padding-bottom:0; }
+hr { height:1px; margin:$line-space 0; overflow:hidden; border:none; background-color:$color-border; }
+abbr[title] { cursor:help; }
+code, kbd, pre, samp { font-family:$font-family-code; }
+mark { background-color:$color-link; color:white; }
+iframe { border:none; }
+
+// #BASE/responsive#
+img { -ms-interpolation-mode:bicubic; }
+img, object, embed { max-width:100%; height:auto; }
+object, embed { height:100%; }
+#map_canvas, .map_canvas { img, embed, object { max-width:none !important; } }
+
+// #BASE/compatibility#
+p.noscript, p.chromeframe { position:absolute; left:0; top:0; width:100%;
+	color:white; text-align:center; padding:$line-space 0; margin:0;
+	border:1px solid #933; background:#c33; }
+p.noscript a, p.chromeframe a { color:white; font-weight:bold; }
+
+// #BASE/helpers#
+.halfspace { padding-top:round($line-space/2); padding-bottom:round($line-space/2); }
+.nospace { padding:0; margin:0; }
+.nowrap { white-space:nowrap; }
+.space, .spacer { height:$line-space*2; }
+
+.uppercase { text-transform:uppercase; }
+.lowercase { text-transform:lowercase; }
+
+.float-left { float:left; }
+.float-right { float:right; }
+.float-none { float:none; }
+
+// #BASE/helpers/fonts#
+@each $item in 16,18,20,24,28,32 {
+	.size-#{$item} { font-size:#{$item}px; line-height:120%; }
+}
+
+// #BASE/helpers/clearfix#
+.clearfix { *zoom:1;
+	&:before, &:after { content:" "; display:table; }
+	&:after { clear:both; }
+}
+.clear { clear:both; overflow:hidden; visibility:hidden; display:block; width:0; height:0; }
+
+// #BASE/helpers/text#
+.lead { font-size:150%; line-height:lh(150% / 1.5); padding-top:0; }
+.legal { font-size:80%; line-height:120%; }
+.highlight { color:$color-primary; }
+
+.text-left { text-align:left; }
+.text-center { text-align:center; }
+.text-right { text-align:right; }
+
+.text-muted { color:$color-muted; }
+.text-info { color:$color-info; }
+.text-success { color:$color-success; }
+.text-warning { color:$color-warning; }
+.text-error { color:$color-error; }
+
+.hide-text { @include hide-text(); }
+
+// #BASE/helpers/images#
+.image-left { float:left; }
+.image-right { float:right; }
+.image-responsive { max-width:100%; height:auto; }
+
+// #BASE/helpers/tables#
+.text-top { vertical-align:top; }
+.text-bottom { vertical-align:bottom; }
+
+// #BASE/helpers/lists#
+.list-reset { list-style-type:none; padding:0; margin:0; li { padding:0; margin:0; } }
+
+// #BASE/helpers/others#
+.inline { @include inline-block(); }
+.block { display:block; }
+.relative { position:relative; }
+.hidden { /* use hidden="hidden" */ }
+
+// #BASE/accessibility#
+.skip-links { @extend .list-reset;
+	a { position:absolute; left:-9999px; &:focus { left:0; } }
+}
+.visuallyhidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+	overflow:hidden; clip:rect(0, 0, 0, 0); border:0; }
+
+//######################################################################################################################
+// #FORMS#
+form {
+	fieldset { padding:0; margin:0; border:none; }
+	label { cursor:pointer; }
+	ol { @extend .list-reset; }
+	label abbr { border:none; color:$color-primary; }
+	input[type="text"], input[type="password"], textarea { @include appearance(none); }
+	select[multiple] { height:auto; }
+}
+
+// #FORMS/helpers#
+.form { @extend .clearfix;
+	input:not([type="submit"]), select, textarea { font:normal 400 #{$input-font-size}/#{$input-line-height} $font-family;
+		color:$input-font-color; padding:$input-padding; margin:0; border:1px solid $input-border; background:$input-background;
+		@include inline-block(); @include border-radius($input-radius); }
+	select { width:$input-width - 25px; border:1px solid $input-border; }
+	textarea { width:$input-width; }
+	input[disabled], button[disabled], a.btn-disabled { @include opacity(0.5); cursor:auto !important; }
+	ol > li { margin-top:$line-space; margin-bottom:$line-space; }
+
+	// horizontal floated style
+	.form-horizontal {
+		ol > li { @extend .clearfix; }
+		ol > li > label { float:left; width:$form-ratio-left; padding-right:$form-ratio-space;
+			text-align:right; padding-top:round($font-size / 4); }
+		ol > li > .field { float:left; width:$form-ratio-right; }
+		ol > li > .field img { vertical-align:top; }
+	}
+
+	// helpers
+	.input-text { width:$input-width; }
+	.input-select { width:$input-width + 14; }
+	.input-radiocheck { position:relative; top:round(-$font-size / 6); }
+	.input-aligned { position:relative; padding-left:20px; @include inline-block();
+		input { position:absolute; left:0; top:5px; } }
+
+	.input-mini { width:round(0.3 * $input-width); } select.input-mini { width:round(0.3 * $input-width) + 14; }
+	.input-small { width:round(0.5 * $input-width); } select.input-small { width:round(0.5 * $input-width) + 14; }
+	.input-medium { width:round(0.8 * $input-width); } select.input-medium { width:round(0.8 * $input-width) + 14; }
+	.input-large { width:round(1.2 * $input-width); } select.input-large { width:round(1.2 * $input-width) + 14; }
+	.input-block { width:100%; @include box-sizing(border-box); }
+
+	// errors
+	.text-error {
+		input, textarea, select { border:1px solid $color-error; background-color:tint($color-error, 98%); }
+	}
+}
+
+// #FORMS/buttons#
+.btn {
+	font:normal 400 #{$input-font-size}/#{$input-line-height} $font-family;
+	color:$input-font-color; text-decoration:none;
+	padding:$input-padding; margin:0; border:$input-border; background:$input-background;
+	@include inline-block(); @include border-radius($input-radius);
+}
+.btn { cursor:pointer; white-space:nowrap; }
+.btn-small { font-size:80%; }
+.btn-large { font-size:120% }
+
+//######################################################################################################################
+// #RESPONSIVE#
+@media (max-width: $responsive-tablet) {
+	.visible-phone { display:block; }
+	.visible-tablet { display:none; }
+	.visible-desktop { display:none; }
+	.hidden-phone { display:none; }
+	.hidden-tablet { display:block; }
+	.hidden-desktop { display:block; }
+}
+@media (min-width: $responsive-tablet) and (max-width: $responsive-desktop) {
+	.visible-phone { display:none; }
+	.visible-tablet { display:block; }
+	.visible-desktop { display:none; }
+	.hidden-phone { display:block; }
+	.hidden-tablet { display:none; }
+	.hidden-desktop { display:block; }
+}
+@media (min-width: $responsive-desktop) {
+	.visible-phone { display:none; }
+	.visible-tablet { display:none; }
+	.visible-desktop { display:block; }
+	.hidden-phone { display:block; }
+	.hidden-tablet { display:block; }
+	.hidden-desktop { display:none; }
+}
+
+//######################################################################################################################
+// #PRINT#
+@media print {
+	* { color:black !important; text-shadow:none !important; background:transparent !important; box-shadow:none !important; }
+	@page { margin:2cm 1cm; }
+	a[href]:after { content:""; }
+	.pagebreak-after  { page-break-after:always; } // always || avoid
+	.pagebreak-before { page-break-before:always; } // always || avoid
+	.visible-print { display:block !important; position:static; left:0; }
+	.hidden-print { display:none !important; }
+}
+
+// end of mixin
+}
+
+// em calculation
+@function em($target, $context: $font-size) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0em;
+}
+
+// line height calculation
+@function lh($line-height, $line-height-ratio: 1.5) {
+	@if $line-height == 0 { @return 0 }
+	@return round($line-height * $line-height-ratio);
+}
+
+// add micro-clearfix which doesnt add overflow:hidden
+@mixin micro-clearfix() {
+	@extend .clearfix;
+}

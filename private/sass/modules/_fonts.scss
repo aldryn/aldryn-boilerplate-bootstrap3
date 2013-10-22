@@ -1,8 +1,11 @@
 @media all {
 //######################################################################################################################
 // #FONTS#
+// use this code for services like google webfonts or fonts.com
+// @import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
 
-/* use this only if your fonts are hostet locally, otherwise remove
+// use this code if you are hosting the webfonts yourself
+/*
 @font-face {
 font-family:"frutiger";
 font-weight:normal;

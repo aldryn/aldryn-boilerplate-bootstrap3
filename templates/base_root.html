@@ -14,14 +14,14 @@
 	<link rel="image_src" href="{% static "favicon.png" %}" />
 	<!--[if IE]><link rel="shortcut icon" href="{% static "favicon.ico" %}" /><![endif]-->
 	<link rel="stylesheet" href="{% static "css/base.css" %}" />
+	{% render_block "css" %}
+	{% block extrahead %}{% endblock %}
 	<!--[if lte IE 8]>
 	<script src="{% static "js/libs/html5.min.js" %}"></script>
 	<script src="{% static "js/libs/respond.min.js" %}"></script>
 	<![endif]-->
-	{% render_block "css" %}
-	{% block extrahead %}{% endblock %}
 </head>
-<body id="top" class="no-js {% block body_class %}tpl-root{% endblock %} lang-{{ LANGUAGE_CODE }}">
+<body id="top" class="noscript {% block body_class %}tpl-root{% endblock %} lang-{{ LANGUAGE_CODE }}">
 {% block cms_toolbar %}{% cms_toolbar %}{% endblock %}
 <!--[if lte IE 7]><div class="ie"><![endif]-->
 <!--[if IE 8]><div class="ie8"><![endif]-->

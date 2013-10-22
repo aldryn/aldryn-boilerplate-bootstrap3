@@ -2,27 +2,6 @@
 //######################################################################################################################
 // #MOBILE#
 
-.frm {
-	// add styles here
-}
-
-//##################################################
-// #FORMS/buttons#
-
-.btn {
-	font:normal 400 #{$input-font-size}/#{$input-line-height} $font-family;
-	color:$font-color; text-decoration:none !important;
-	padding:6px 15px; margin:0 0 10px;
-	border:$color-border; background:$color-background;
-	@include inline-block();
-	@include border-radius(3px);
-
-	&:hover, &:focus, &:active {}
-}
-
-.btn-small { font-size:12px; }
-.btn-large { font-size:18px; }
-
 // end of mobile
 }
 

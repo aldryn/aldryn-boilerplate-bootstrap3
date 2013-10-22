@@ -64,13 +64,13 @@
 	{% include "includes/messages.html" %}
 {% endblock messages %}
 
-{% block extend_base %}
 <!-- start: content -->
 <hr class="visuallyhidden" />
 <h1 class="visuallyhidden" id="content">{% trans "Content:" %} {% page_attribute title %}</h1>
-{% block content %}{% endblock content %}
-<!-- end: content -->
+{% block extend_base %}
+	{% block content %}{% endblock content %}
 {% endblock extend_base %}
+<!-- end: content -->
 
 {% block footer %}
 <!-- start: footer -->

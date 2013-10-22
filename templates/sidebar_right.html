@@ -4,22 +4,20 @@
 {% block body_class %}tpl-sidebar-right{% endblock %}
 
 {% block extend_base %}
-<div class="content">
-	<div class="row">
-		<div class="large-18">
-			{% with 700 as width %}{% placeholder content %}{% endwith %}
-		</div>
-		<aside class="large-6 sidebar">
-			{% block subnav %}
-			<!-- sub navigation -->
-			<nav class="subnav">
-				<ul>{% spaceless %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
-			</nav>
-			{% endblock subnav %}
-			{% block content %}
-			{% with 220 as width %}{% placeholder sidebar %}{% endwith %}
-			{% endblock content %}
-		</aside>
+<div class="row">
+	<div class="large-18">
+		{% with 700 as width %}{% placeholder content %}{% endwith %}
 	</div>
+	<aside class="large-6 sidebar">
+		{% block subnav %}
+		<!-- sub navigation -->
+		<nav class="subnav">
+			<ul>{% spaceless %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
+		</nav>
+		{% endblock subnav %}
+		{% block content %}
+		{% with 220 as width %}{% placeholder sidebar %}{% endwith %}
+		{% endblock content %}
+	</aside>
 </div>
 {% endblock extend_base %}

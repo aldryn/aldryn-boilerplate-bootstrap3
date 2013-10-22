@@ -4,13 +4,11 @@
 {% block body_class %}tpl-fullwidth{% endblock %}
 
 {% block extend_base %}
-<div class="content">
-	<div class="row">
-		<div class="large-24 column">
-			{% block content %}
-			{% with 940 as width %}{% placeholder content %}{% endwith %}
-			{% endblock content %}
-		</div>
+<div class="row">
+	<div class="large-24 column">
+		{% block content %}
+		{% with 940 as width %}{% placeholder content %}{% endwith %}
+		{% endblock content %}
 	</div>
 </div>
 {% endblock extend_base %}

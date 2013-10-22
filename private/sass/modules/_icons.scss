@@ -16,9 +16,10 @@
 
 // #ICONS/helpers#
 .icon:before { font:normal normal normal $icon-size/1 "icons";
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	position:relative; left:0; top:$icon-offset;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	speak:none;
 }
 
 // #ICONS/icons#

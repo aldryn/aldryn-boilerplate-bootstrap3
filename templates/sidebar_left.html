@@ -6,7 +6,9 @@
 {% block extend_base %}
 <div class="row">
 	<div class="large-18 push-6 column">
+		{% block content %}
 		{% with 700 as width %}{% placeholder content %}{% endwith %}
+		{% endblock content %}
 	</div>
 	<aside class="large-6 pull-18 column sidebar">
 		{% block subnav %}
@@ -15,9 +17,9 @@
 			<ul>{% spaceless %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
 		</nav>
 		{% endblock subnav %}
-		{% block content %}
+		{% block sidebar %}
 		{% with 220 as width %}{% placeholder sidebar %}{% endwith %}
-		{% endblock content %}
+		{% endblock sidebar %}
 	</aside>
 </div>
 {% endblock extend_base %}

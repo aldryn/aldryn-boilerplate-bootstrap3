@@ -4,6 +4,7 @@
 <nav class="{{ class }}" role="navigation">
 <ul>
 {% endif %}
+
 {% for child in children %}
 <li class="child
 	{% if child.ancestor %} ancestor{% endif %}
@@ -18,7 +19,8 @@
 	{% endif %}
 </li>
 {% endfor %}
+
 {% if children and class %}
-</nav>
 </ul>
+</nav>
 {% endif %}

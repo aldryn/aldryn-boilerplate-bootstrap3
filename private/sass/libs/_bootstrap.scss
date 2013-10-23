@@ -14,8 +14,8 @@ a:hover { color:darken($color-link, 10%); }
 a:focus, a:active { color:darken($color-link, 20%); }
 a[href^=tel] { color:$font-color; }
 
-h1, h2, h3, h4, h5, h6 { color:$color-title; margin-top:$line-space; margin-bottom:$line-space; }
-ul, ol, p, blockquote, pre, table, dl, form { padding-top:$line-space; padding-bottom:$line-space; margin-top:0; margin-bottom:0; }
+h1, h2, h3, h4, h5, h6,
+ul, ol, p, blockquote, pre, table, dl, form { margin-top:$line-space; margin-bottom:$line-space; }
 ul, ol { padding-left:$line-space; margin-left:$line-space; }
 ul ul, ol ol { padding-top:0; padding-bottom:0; }
 hr { height:1px; margin:$line-space 0; overflow:hidden; border:none; background-color:$color-border; }

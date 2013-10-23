@@ -23,7 +23,9 @@
 // importing custom modules
 @import "modules/custom";
 // @import "modules/standardsite";
+// add more modules here
+@import "modules/retina";
+@import "modules/print";
 // importing plugins
-@import "plugins/retina";
-@import "plugins/print";
+// add more plugins here
 // @import "plugins/lightbox";

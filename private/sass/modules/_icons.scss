@@ -23,15 +23,17 @@
 }
 
 // #ICONS/icons#
-.icon-info:before { content:"\e000"; }
-.icon-question:before { content:"\e001"; }
-.icon-warning:before { content:"\e002"; }
-.icon-accept:before { content:"\e003"; }
-.icon-deny:before { content:"\e004"; }
-.icon-arrow-top:before { content:"\e005"; }
-.icon-arrow-right:before { content:"\e006"; }
-.icon-arrow-bottom:before { content:"\e007"; }
-.icon-arrow-left:before { content:"\e008"; }
+.icon-info:before { content:"a"; }
+.icon-question:before { content:"b"; }
+.icon-warning:before { content:"c"; }
+.icon-accept:before { content:"d"; }
+.icon-close:before { content:"e"; }
+.icon-arrow-top:before { content:"f"; }
+.icon-arrow-right:before { content:"g"; }
+.icon-arrow-bottom:before { content:"h"; }
+.icon-arrow-left:before { content:"i"; }
+.icon-expand:before { content:"j"; }
+.icon-collapse:before { content:"k"; }
 
 // end of fonts
 }

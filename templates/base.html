@@ -31,9 +31,7 @@
 			{% block mainnav %}
 			<h2 class="visuallyhidden" id="navigation">{% trans "Navigation:" %}</h2>
 			<div class="mainnav-knob"></div>
-			<nav class="mainnav" role="navigation">
-				<ul>{% spaceless %}{% show_menu 0 1 100 100 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
-			</nav>
+			{% with class="mainnav" %}{% show_menu 0 1 100 100 "includes/menu/navigation.html" %}{% endwith %}
 			{% endblock mainnav %}
 
 			{% block langnav %}
@@ -67,9 +65,11 @@
 <!-- start: content -->
 <hr class="visuallyhidden" />
 <h1 class="visuallyhidden" id="content">{% trans "Content:" %} {% page_attribute title %}</h1>
+<div class="content">
 {% block extend_base %}
 	{% block content %}{% endblock content %}
 {% endblock extend_base %}
+</div>
 <!-- end: content -->
 
 {% block footer %}

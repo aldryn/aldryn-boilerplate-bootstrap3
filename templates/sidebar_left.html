@@ -12,11 +12,9 @@
 	</div>
 	<aside class="large-6 pull-18 column sidebar">
 		{% block subnav %}
-		<!-- sub navigation -->
-		<nav class="subnav">
-			<ul>{% spaceless %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
-		</nav>
+		{% with class="subnav" %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endwith %}
 		{% endblock subnav %}
+
 		{% block sidebar %}
 		{% with 220 as width %}{% placeholder sidebar %}{% endwith %}
 		{% endblock sidebar %}

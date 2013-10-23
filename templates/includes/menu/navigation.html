@@ -1,5 +1,9 @@
 {% load menu_tags cache %}
 
+{% if children and class %}
+<nav class="{{ class }}" role="navigation">
+<ul>
+{% endif %}
 {% for child in children %}
 <li class="child
 	{% if child.ancestor %} ancestor{% endif %}
@@ -14,3 +18,7 @@
 	{% endif %}
 </li>
 {% endfor %}
+{% if children and class %}
+</nav>
+</ul>
+{% endif %}

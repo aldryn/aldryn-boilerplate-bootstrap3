@@ -12,8 +12,7 @@
 	</div>
 	<aside class="large-8 pull-16 column sidebar">
 		{% block subnav %}
-		<h2>{% trans "Navigation" %}</h2>
-		{% with class="subnav" %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endwith %}
+		{% with class="subnav" title="true" %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endwith %}
 		{% endblock subnav %}
 
 		{% block sidebar %}

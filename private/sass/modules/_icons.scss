@@ -20,6 +20,9 @@
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
 	speak:none;
+	// prevent underline
+	display:inline-block; // use native inline-block
+	text-decoration:none;
 }
 
 // #ICONS/icons#

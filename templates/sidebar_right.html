@@ -5,18 +5,19 @@
 
 {% block extend_base %}
 <div class="row">
-	<div class="large-18 column">
+	<div class="large-16 column">
 		{% block content %}
-		{% with 700 as width %}{% placeholder content %}{% endwith %}
+		{% with 620 as width %}{% placeholder content %}{% endwith %}
 		{% endblock content %}
 	</div>
-	<aside class="large-6 column sidebar">
+	<aside class="large-8 column sidebar">
 		{% block subnav %}
+		<h2>{% trans "Navigation" %}</h2>
 		{% with class="subnav" %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endwith %}
 		{% endblock subnav %}
 
 		{% block sidebar %}
-		{% with 220 as width %}{% placeholder sidebar %}{% endwith %}
+		{% with 300 as width %}{% placeholder sidebar %}{% endwith %}
 		{% endblock sidebar %}
 	</aside>
 </div>

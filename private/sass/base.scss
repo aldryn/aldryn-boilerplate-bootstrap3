@@ -7,11 +7,13 @@
 //######################################################################################################################
 // #IMPORTS#
 @import "settings.scss";
+@import "compass/css3";
+@import "compass/utilities";
 
 // importing frameworks
-@include normalize();
-@include bootstrap();
-@include foundation();
+@import "libs/normalize";
+@import "libs/bootstrap";
+@import "libs/foundation";
 
 // importing standard modules
 @import "modules/icons";
@@ -22,10 +24,12 @@
 @import "modules/mobile";
 // importing custom modules
 @import "modules/custom";
-// @import "modules/standardsite";
-// add more modules here
+@import "modules/standardsite";
 @import "modules/retina";
 @import "modules/print";
+
 // importing plugins
-// add more plugins here
-// @import "plugins/lightbox";
+@import "plugins/blog";
+@import "plugins/events";
+@import "plugins/news";
+@import "plugins/faq";

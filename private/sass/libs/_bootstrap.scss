@@ -2,7 +2,6 @@
 // #DIVIO BOOTSTRAP#
 // v2.0.0
 
-@mixin bootstrap() {
 //######################################################################################################################
 // #BASE#
 body { font:normal 400 #{$font-size}/#{$line-height} $font-family; min-width:320px;
@@ -200,9 +199,6 @@ form {
 	.pagebreak-before { page-break-before:always; } // always || avoid
 	.visible-print { display:block !important; position:static; left:0; }
 	.hidden-print { display:none !important; }
-}
-
-// end of mixin
 }
 
 // em calculation

@@ -68,11 +68,3 @@ $grid-width: 					960px;
 $grid-columns: 					24;
 $grid-gutter: 					20px;
 $grid-separator: 				"-";
-
-//######################################################################################################################
-// #GLOBAL INCLUDES#
-@import "libs/normalize";
-@import "libs/bootstrap";
-@import "libs/foundation";
-@import "compass/css3";
-@import "compass/utilities";

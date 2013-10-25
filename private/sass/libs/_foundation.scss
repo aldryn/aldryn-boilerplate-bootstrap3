@@ -136,8 +136,8 @@ $opposite-direction:right !default;
 		&.collapse { @include grid-row($behavior:nest-collapse); }
 	}
 }
-// ie fix
-.ie .row { *behavior:url("/static/css/boxsizing.htc"); }
+// ie7 and below fix
+.ie .column, .ie .columns { *behavior:url("/static/css/box-sizing.htc"); }
 
 .column,
 .columns { @include grid-column($columns:$total-columns); @include box-sizing(border-box); }

@@ -50,7 +50,7 @@
 	<ol class="small-24 column">
 		{% block extend_breadcrumb %}
 			<li class="title">{% trans "You are here: " %}</li>
-			{% spaceless %}{% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}{% endspaceless %}
+			{% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}
 		{% endblock extend_breadcrumb %}
 	</ol>
 </nav>
@@ -80,20 +80,9 @@
 	<div class="row">
 		<div class="small-24 column">
 			<nav class="footnav clearfix">
-				<ul class="left">
-					{% spaceless %}
-						{% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
-					{% endspaceless %}
-				</ul>
-				<ul class="right">
-					<li>
-						{% if not request.GET.classic %}
-						<a href="?classic=true">{% trans "Switch to classic" %}</a>
-						{% else %}
-						<a href="?classic">{% trans "Switch to responsive" %}</a>
-						{% endif %}
-					</li>
-					<li><a href="#top">{% trans "Top" %}</a></li>
+				<ul>
+					{% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
+					<li class="right"><a href="#top">{% trans "Top" %}</a></li>
 				</ul>
 			</nav>
 			<p class="copyright">

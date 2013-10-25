@@ -11,10 +11,10 @@ var Cl = window.Cl || {};
 // #BASE#
 (function ($) {
 	// set the correct js path
-	requirejs.config({ 'baseUrl': '/static/js' });
+	requirejs.config({ 'baseUrl': '/static/js/' });
 	// load modules using require
 	require(['modules/cl.utils'], function() {
-		// setup document
+		// removes noscript form body and adds print-js
 		Cl.Utils.document();
 		// handles input placeholder="" attributes
 		Cl.Utils.placeholders();

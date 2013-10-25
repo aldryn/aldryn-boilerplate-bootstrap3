@@ -58,16 +58,13 @@
 {% endif %}
 {% endblock breadcrumb %}
 
-{% block messages %}
-	{% include "includes/messages.html" %}
-{% endblock messages %}
-
 <!-- start: content -->
 <hr class="visuallyhidden" />
 <h1 class="visuallyhidden" id="content">{% trans "Content:" %} {% page_attribute title %}</h1>
 <div class="content">
+{% block messages %}{% include "includes/messages.html" %}{% endblock messages %}
 {% block extend_base %}
-	{% block content %}{% endblock content %}
+	{% block content %}{% endblock %}
 {% endblock extend_base %}
 </div>
 <!-- end: content -->
@@ -76,21 +73,19 @@
 <!-- start: footer -->
 <hr class="visuallyhidden" />
 <h2 class="visuallyhidden" id="footer">{% trans "Footer:" %}</h2>
-<footer class="footer" role="contentinfo">
-	<div class="row">
-		<div class="small-24 column">
-			<nav class="footnav">
-				<ul>
-					{% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
-					<li class="right"><a href="#top">{% trans "Top" %}</a></li>
-				</ul>
-			</nav>
-			<p class="copyright">
-				{% trans "Copyright" %} &copy; {% now "Y" %}
-				<a href="http://www.divio.ch/" target="_blank">{% trans "Divio AG" %}</a>.
-				{% trans "All rights reserved" %}.
-			</p>
-		</div>
+<footer class="footer row" role="contentinfo">
+	<div class="small-24 column">
+		<nav class="footnav">
+			<ul>
+				{% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
+				<li class="right"><a href="#top">{% trans "Top" %}</a></li>
+			</ul>
+		</nav>
+		<p class="copyright">
+			{% trans "Copyright" %} &copy; {% now "Y" %}
+			<a href="http://www.divio.ch/" target="_blank">{% trans "Divio AG" %}</a>.
+			{% trans "All rights reserved" %}.
+		</p>
 	</div>
 </footer>
 <!-- end: footer -->

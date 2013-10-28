@@ -27,7 +27,7 @@ iframe { border:none; }
 img { -ms-interpolation-mode:bicubic; }
 img, object, embed { max-width:100%; height:auto; }
 object, embed { height:100%; }
-#map_canvas, .map_canvas { img, embed, object { max-width:none !important; } }
+#map_canvas, .map_canvas, .google-map-container { img, embed, object { max-width:none !important; } }
 
 // #BASE/compatibility#
 p.noscript, p.chromeframe { position:absolute; left:0; top:0; width:100%;

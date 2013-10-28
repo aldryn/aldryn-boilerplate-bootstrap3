@@ -79,8 +79,8 @@ The project initialization should ideally setup everything including database an
 Update should replace old data with new and ensure that everything works. In generall setup
 waiting times are **bad**.
 
-Eaxample
---------
+Example
+-------
 
 .. code:: html
 

@@ -23,12 +23,9 @@
 @import "modules/mobile";
 // importing custom modules
 @import "modules/custom";
-@import "modules/standardsite";
+// @import "modules/standardsite";
 @import "modules/retina";
 @import "modules/print";
 
 // importing plugins
-@import "plugins/blog";
-@import "plugins/events";
-@import "plugins/news";
-@import "plugins/faq";
+// @import "plugins/lightbox";

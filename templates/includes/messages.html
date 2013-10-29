@@ -1,13 +1,7 @@
 {% if messages %}
-<div class="messages">
+<div class="messages row">
 	{% for message in messages %}
-	<div class="message {% if message.tags %} text-{{ message.tags }}{% endif %}">
-		<div class="container-24 clearfix">
-			<div class="grid-24">
-				<p class="nospace">{{ message }}</p>
-			</div>
-		</div>
-	</div>
+	<p class="message large-24 column{% if message.tags %} text-{{ message.tags }}{% endif %}">{{ message }}</p>
 	{% endfor %}
 </div>
 {% endif %}

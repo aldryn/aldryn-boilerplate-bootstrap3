@@ -1,4 +1,10 @@
 //######################################################################################################################
+// #GLOBAL IMPORTS#
+@import "compass/css3";
+@import "compass/utilities";
+@import "libs/mixins";
+
+//######################################################################################################################
 // #GLOBAL VARIABLES#
 
 // fonts
@@ -68,3 +74,7 @@ $grid-width: 					960px;
 $grid-columns: 					24;
 $grid-gutter: 					20px;
 $grid-separator: 				"-";
+
+// pie settings
+// $pie-behavior:					stylesheet-url("pie.htc");
+// $experimental-support-for-pie:	true;

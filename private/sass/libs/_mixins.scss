@@ -1,0 +1,20 @@
+//######################################################################################################################
+// #DIVIO MIXINS#
+// v2.0.0
+
+// em calculation
+@function em($target, $context: $font-size) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0em;
+}
+
+// line height calculation
+@function lh($line-height, $line-height-ratio: 1.5) {
+	@if $line-height == 0 { @return 0 }
+	@return round($line-height * $line-height-ratio);
+}
+
+// add micro-clearfix which doesnt add overflow:hidden
+@mixin micro-clearfix() {
+	@extend .clearfix;
+}

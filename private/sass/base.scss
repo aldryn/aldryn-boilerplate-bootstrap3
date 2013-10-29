@@ -7,13 +7,12 @@
 //######################################################################################################################
 // #IMPORTS#
 @import "settings.scss";
-@import "compass/css3";
-@import "compass/utilities";
 
 // importing frameworks
 @import "libs/normalize";
 @import "libs/bootstrap";
 @import "libs/foundation";
+// @import "libs/pie";
 
 // importing standard modules
 @import "modules/icons";

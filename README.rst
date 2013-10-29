@@ -100,8 +100,8 @@ We always use libs, modules and plugins as a main feature to separate files. The
 * **plugins** can be easily plugged in and out without breaking the website
 
 
-Eaxample
---------
+Example
+-------
 
 .. code:: html
 

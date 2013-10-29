@@ -3,6 +3,26 @@
 // v2.0.0
 
 //######################################################################################################################
+// #MIXINS#
+
+// em calculation
+@function em($target, $context: $font-size) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0em;
+}
+
+// line height calculation
+@function lh($line-height, $line-height-ratio: 1.5) {
+	@if $line-height == 0 { @return 0 }
+	@return round($line-height * $line-height-ratio);
+}
+
+// add micro-clearfix which doesnt add overflow:hidden
+@mixin micro-clearfix() {
+	@extend .clearfix;
+}
+
+//######################################################################################################################
 // #BASE#
 body { font:normal 400 #{$font-size}/#{$line-height} $font-family; min-width:320px;
 	color:$font-color; background-color:$color-background; }
@@ -199,21 +219,4 @@ form {
 	.pagebreak-before { page-break-before:always; } // always || avoid
 	.visible-print { display:block !important; position:static; left:0; }
 	.hidden-print { display:none !important; }
-}
-
-// em calculation
-@function em($target, $context: $font-size) {
-	@if $target == 0 { @return 0 }
-	@return $target / $context + 0em;
-}
-
-// line height calculation
-@function lh($line-height, $line-height-ratio: 1.5) {
-	@if $line-height == 0 { @return 0 }
-	@return round($line-height * $line-height-ratio);
-}
-
-// add micro-clearfix which doesnt add overflow:hidden
-@mixin micro-clearfix() {
-	@extend .clearfix;
 }

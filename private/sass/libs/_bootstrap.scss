@@ -58,7 +58,7 @@ p.noscript a, p.chromeframe a { color:white; font-weight:bold; }
 .clear { clear:both; overflow:hidden; visibility:hidden; display:block; width:0; height:0; }
 
 // #BASE/helpers/text#
-.lead { font-size:150%; line-height:lh(150% / 1.5); padding-top:0; }
+.lead { font-size:120%; line-height:lh(150% / 1.5); padding-top:0; }
 .legal { font-size:80%; line-height:120%; }
 .highlight { color:$color-primary; }
 

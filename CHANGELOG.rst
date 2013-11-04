@@ -6,7 +6,12 @@ Divio Boilerplate
 -----
 - added foundation grid
 - added twitter bootstrap helpers
-- rewrite most of the divio boilerplate
+- added fontastic as font provider
+- added require.js
+- added respond.js for full responsive support
+- updated libraries such as jquery, class.js and html5.js
+- updated most of the divio boilerplate
+- use of libs/modules/plugins structure
 
 1.0.0
 -----

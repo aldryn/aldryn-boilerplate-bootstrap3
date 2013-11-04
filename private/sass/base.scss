@@ -5,33 +5,27 @@
  */
 
 //######################################################################################################################
-// #SETTINGS#
-@import "includes/settings";
+// #IMPORTS#
+@import "settings.scss";
 
-//######################################################################################################################
-// #BASE/responsive#
-@include responsive-mobile();
-@media only screen and (min-width: $responsive-tablet), print {
-	@include responsive-tablet();
-}
-@media only screen and (min-width: $responsive-desktop), print {
-	@include responsive-desktop();
-}
-@media only screen and (max-width: $responsive-tablet - 1) {
-	@include responsive-mobile-only();
-}
+// importing frameworks
+@import "libs/normalize";
+@import "libs/bootstrap";
+@import "libs/foundation";
+// @import "libs/pie";
 
-//######################################################################################################################
-// #BASE/retina#
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-	@include site-retina();
-}
+// importing standard modules
+@import "modules/icons";
+@import "modules/fonts";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/forms";
+@import "modules/mobile";
+// importing custom modules
+@import "modules/custom";
+// @import "modules/standardsite";
+@import "modules/retina";
+@import "modules/print";
 
-//######################################################################################################################
-// #BASE/print#
-@media print {
-	@include site-print();
-}
+// importing plugins
+// @import "plugins/lightbox";

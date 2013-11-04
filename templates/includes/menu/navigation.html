@@ -1,16 +1,22 @@
-{% load menu_tags cache %}
+{% load i18n menu_tags cache %}
 
 {% for child in children %}
-<li class="child{% spaceless %}
-	{% endspaceless %}{% if child.ancestor %} ancestor{% endif %}{% spaceless %}
-	{% endspaceless %}{% if child.selected %} active{% endif %}{% spaceless %}
-	{% endspaceless %}{% if child.children %} children{% endif %}{% spaceless %}
-	{% endspaceless %}{% if forloop.first %} first{% endif %}{% spaceless %}
-	{% endspaceless %}{% if forloop.last %} last{% endif %}{% spaceless %}">
+{% if class and forloop.first and not forloop.parentloop %}
+{% if title %}<h2>{% trans "Navigation" %}</h2>{% endif %}
+<nav class="{{ class }}" role="navigation">
+<ul>
+{% endif %}
+
+<li class="child{% if child.ancestor %} ancestor{% endif %}{% if child.selected %} active{% endif %}{% if child.children %} children{% endif %}">
 	<a href="{{ child.get_absolute_url }}"><span>{{ child.get_menu_title }}</span></a>{% if child.children %}
 	<ul>
 		{% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
 	</ul>
 	{% endif %}
 </li>
-{% endspaceless %}{% endfor %}
+
+{% if class and forloop.last and not forloop.parentloop %}
+</ul>
+</nav>
+{% endif %}
+{% endfor %}

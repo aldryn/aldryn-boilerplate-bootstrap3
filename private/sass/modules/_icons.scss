@@ -1,0 +1,48 @@
+// @media all {
+//######################################################################################################################
+// #ICONS#
+
+// #ICONS/face#
+@font-face {
+	font-family:"icons";
+	font-weight:normal;
+	font-style: normal;
+	src:url("../fonts/icons.eot");
+	src:url("../fonts/icons.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/icons.ttf") format("truetype"),
+		url("../fonts/icons.woff") format("woff"),
+		url("../fonts/icons.svg#standardsite") format("svg");
+}
+
+// #ICONS/helpers#
+.icon:before { font:normal normal normal $icon-size/1 "icons";
+	position:relative; left:0; top:$icon-offset;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	speak:none;
+	// prevent underline
+	display:inline-block; // use native inline-block
+	text-decoration:none;
+}
+
+// #ICONS/icons#
+.icon-info:before { content:"a"; }
+.icon-question:before { content:"b"; }
+.icon-warning:before { content:"c"; }
+.icon-accept:before { content:"d"; }
+.icon-close:before { content:"e"; }
+.icon-arrow-top:before { content:"f"; }
+.icon-arrow-right:before { content:"g"; }
+.icon-arrow-bottom:before { content:"h"; }
+.icon-arrow-left:before { content:"i"; }
+.icon-expand:before { content:"j"; }
+.icon-collapse:before { content:"k"; }
+.icon-rss:before { content:"l"; }
+.icon-facebook:before { content:"m"; }
+.icon-twitter:before { content:"n"; }
+.icon-google:before { content:"o"; }
+.icon-print:before { content:"p"; }
+.icon-download:before { content:"q"; }
+
+// end of fonts
+// }

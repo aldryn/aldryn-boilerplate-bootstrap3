@@ -1,24 +1,23 @@
-{% extends "base.html" %}
+{% extends "standardsite.html" %}
 {% load i18n cms_tags menu_tags %}
 
 {% block body_class %}tpl-sidebar-left{% endblock %}
 
-{% block content %}
-<div class="container-24 clearfix">
-	<div class="grid-18 push-6">
-		{% block content_primary %}
-			{% block page_title %}<h2>{% page_attribute title %}</h2>{% endblock page_title %}
-			{% with 700 as width %}{% placeholder content_primary %}{% endwith %}
-		{% endblock content_primary %}
+{% block extend_base %}
+<div class="row">
+	<div class="large-17 push-7 column">
+		{% block content %}
+		{% with 660 as width %}{% placeholder content %}{% endwith %}
+		{% endblock content %}
 	</div>
-	<aside class="grid-6 sidebar pull-18">
-		{% block content_secondary %}
-			<!-- sub navigation -->
-			<nav class="subnav">
-				<ul>{% spaceless %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
-			</nav>
-			{% with 220 as width %}{% placeholder content_secondary %}{% endwith %}
-		{% endblock content_secondary %}
+	<aside class="large-7 pull-17 column sidebar">
+		{% block subnav %}
+		{% with class="subnav" title="true" %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endwith %}
+		{% endblock subnav %}
+
+		{% block sidebar %}
+		{% with 260 as width %}{% placeholder sidebar %}{% endwith %}
+		{% endblock sidebar %}
 	</aside>
 </div>
-{% endblock content %}
+{% endblock extend_base %}

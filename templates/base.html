@@ -9,9 +9,9 @@
 {% block header %}
 <!-- start: header -->
 <header class="header" role="banner">
-	<div class="container-24 clearfix">
+	<div class="row">
 		{% comment %}logo should be placed absolute in this container to support seo positioning{% endcomment %}
-		<div class="grid-24 relative">
+		<div class="small-24 column relative">
 			<h1 class="logo-main">
 				<a href="/"><img src="{% static "img/logo-main.png" %}" alt="{{ site_settings.site.name }}" /></a>
 			</h1>
@@ -31,9 +31,7 @@
 			{% block mainnav %}
 			<h2 class="visuallyhidden" id="navigation">{% trans "Navigation:" %}</h2>
 			<div class="mainnav-knob"></div>
-			<nav class="mainnav" role="navigation">
-				<ul>{% spaceless %}{% show_menu 0 1 100 100 "includes/menu/navigation.html" %}{% endspaceless %}</ul>
-			</nav>
+			{% with class="mainnav" %}{% show_menu 0 1 100 100 "includes/menu/navigation.html" %}{% endwith %}
 			{% endblock mainnav %}
 
 			{% block langnav %}
@@ -48,73 +46,46 @@
 {% block breadcrumb %}
 {% if not request.current_page.is_home %}
 <!-- start: breadcrumb -->
-<nav class="breadcrumb" role="navigation">
-	<div class="container-24 clearfix">
-		<div class="grid-24">
-			<ol>
-				{% block extend_breadcrumb %}
-					<li class="title">{% trans "You are here: " %}</li>
-					{% spaceless %}{% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}{% endspaceless %}
-				{% endblock extend_breadcrumb %}
-			</ol>
-		</div>
-	</div>
+<nav class="breadcrumb row" role="navigation">
+	<ol class="small-24 column">
+		{% block extend_breadcrumb %}
+			<li class="title">{% trans "You are here: " %}</li>
+			{% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}
+		{% endblock extend_breadcrumb %}
+	</ol>
 </nav>
 <!-- end: breadcrumb -->
 {% endif %}
 {% endblock breadcrumb %}
 
-{% block messages %}
-	{% include "includes/messages.html" %}
-{% endblock messages %}
-
-{% block extend_base %}
 <!-- start: content -->
 <hr class="visuallyhidden" />
 <h1 class="visuallyhidden" id="content">{% trans "Content:" %} {% page_attribute title %}</h1>
-{% block feature %}
-<div class="feature">
-	<div class="container-24 clearfix">
-		<div class="grid-24">
-			{% with 940 as width %}{% placeholder feature %}{% endwith %}
-		</div>
-	</div>
-</div>
-{% endblock %}
-{% block content %}{% endblock content %}
-<!-- end: content -->
+<div class="content">
+{% block messages %}{% include "includes/messages.html" %}{% endblock messages %}
+{% block extend_base %}
+	{% block content %}{% endblock %}
 {% endblock extend_base %}
+</div>
+<!-- end: content -->
 
 {% block footer %}
 <!-- start: footer -->
 <hr class="visuallyhidden" />
 <h2 class="visuallyhidden" id="footer">{% trans "Footer:" %}</h2>
-<footer class="footer" role="contentinfo">
-	<div class="container-24 clearfix">
-		<div class="grid-24">
-			<nav class="footnav clearfix">
-				<ul class="left">
-					{% spaceless %}
-						{% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
-					{% endspaceless %}
-				</ul>
-				<ul class="right">
-					<li>
-						{% if not request.GET.classic %}
-						<a href="?classic=true">{% trans "Switch to classic" %}</a>
-						{% else %}
-						<a href="?classic">{% trans "Switch to responsive" %}</a>
-						{% endif %}
-					</li>
-					<li><a href="#top">{% trans "Top" %}</a></li>
-				</ul>
-			</nav>
-			<p class="copyright">
-				{% trans "Copyright" %} &copy; {% now "Y" %}
-				<a href="http://www.divio.ch/" target="_blank">{% trans "Divio AG" %}</a>.
-				{% trans "All rights reserved" %}.
-			</p>
-		</div>
+<footer class="footer row" role="contentinfo">
+	<div class="small-24 column">
+		<nav class="footnav">
+			<ul>
+				{% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
+				<li class="right"><a href="#top">{% trans "Top" %}</a></li>
+			</ul>
+		</nav>
+		<p class="copyright">
+			{% trans "Copyright" %} &copy; {% now "Y" %}
+			<a href="http://www.divio.ch/" target="_blank">{% trans "Divio AG" %}</a>.
+			{% trans "All rights reserved" %}.
+		</p>
 	</div>
 </footer>
 <!-- end: footer -->

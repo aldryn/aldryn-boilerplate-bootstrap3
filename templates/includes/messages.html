@@ -1,7 +1,7 @@
 {% if messages %}
-<div class="messages row">
-	{% for message in messages %}
-	<p class="message large-24 column{% if message.tags %} text-{{ message.tags }}{% endif %}">{{ message }}</p>
-	{% endfor %}
+{% for message in messages %}
+<div class="messages {% if message.tags %} text-{{ message.tags }}{% endif %}">
+	<p>{{ message }}</p>
 </div>
+{% endfor %}
 {% endif %}

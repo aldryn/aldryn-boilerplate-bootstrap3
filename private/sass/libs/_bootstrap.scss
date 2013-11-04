@@ -152,8 +152,9 @@ form {
 .btn {
 	font:normal 400 #{$input-font-size}/#{$input-line-height} $font-family;
 	color:$input-font-color; text-decoration:none;
-	padding:$input-padding; margin:0; border:$input-border; background:$input-background;
+	padding:$input-padding; margin:0; border:1px solid $input-border; background:$input-background;
 	@include inline-block(); @include border-radius($input-radius);
+	&:hover { background:darken($input-background, 10%); }
 }
 .btn { cursor:pointer; white-space:nowrap; }
 .btn-small { font-size:80%; }

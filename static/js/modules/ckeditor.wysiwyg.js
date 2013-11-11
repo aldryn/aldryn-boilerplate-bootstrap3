@@ -7,9 +7,9 @@ CKEDITOR.stylesSet.add('default', [
 	{'name': 'Text Lead', 'element': 'p', 'attributes': {'class': 'lead'}},
 	{'name': 'Text Legal', 'element': 'p', 'attributes': {'class': 'legal'}},
 
-	{'name': 'Align Left', 'element': 'p', 'attributes': {'class': 'text-left'}},
-	{'name': 'Align Center', 'element': 'p', 'attributes': {'class': 'text-center'}},
-	{'name': 'Align Right', 'element': 'p', 'attributes': {'class': 'text-right'}},
+	{'name': 'Align Left', 'element': 'p,h1,h2,h3,h4,h5,h6,div', 'attributes': {'class': 'text-left'}},
+	{'name': 'Align Center', 'element': 'p,h1,h2,h3,h4,h5,h6,div', 'attributes': {'class': 'text-center'}},
+	{'name': 'Align Right', 'element': 'p,h1,h2,h3,h4,h5,h6,div', 'attributes': {'class': 'text-right'}},
 
 	/* Inline Styles */
 	{'name': 'Color Muted', 'element': 'span', 'attributes': {'class': 'text-muted'}},

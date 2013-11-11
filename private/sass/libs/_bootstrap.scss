@@ -154,7 +154,7 @@ form {
 	color:$input-font-color; text-decoration:none;
 	padding:$input-padding; margin:0; border:1px solid $input-border; background:$input-background;
 	@include inline-block(); @include border-radius($input-radius);
-	&:hover { background:darken($input-background, 10%); }
+	&:hover { color:$font-color; text-decoration:none; background:darken($input-background, 10%); }
 }
 .btn { cursor:pointer; white-space:nowrap; }
 .btn-small { font-size:80%; }

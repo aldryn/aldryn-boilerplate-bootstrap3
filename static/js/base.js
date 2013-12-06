@@ -9,7 +9,8 @@ var Cl = window.Cl || {};
 
 //######################################################################################################################
 // #BASE#
-(function ($) {
+jQuery(document).ready(function () {
+
 	// set the correct js path
 	requirejs.config({ 'baseUrl': '/static/js/' });
 	// load modules using require
@@ -24,4 +25,5 @@ var Cl = window.Cl || {};
 		$('.popup').autoPopUp();
 		$('.mailcrypte').mailCrypte();
 	});
-}(jQuery));
+
+});

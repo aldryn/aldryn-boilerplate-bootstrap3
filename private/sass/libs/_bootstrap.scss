@@ -102,7 +102,9 @@ p.noscript a, p.chromeframe a { color:white; font-weight:bold; }
 //######################################################################################################################
 // #FORMS#
 form {
-	fieldset { padding:0; margin:0; border:none; }
+	// Google Chrome sets the min-width of a fieldset by default to -webkit-min-content
+	// resetting this by min-width 0
+	fieldset { padding:0; margin:0; border:none; min-width:0; }
 	label { cursor:pointer; }
 	ol { @extend .list-reset; }
 	label abbr { border:none; color:$color-primary; }

@@ -2,6 +2,11 @@
 Divio Boilerplate
 =================
 
+2.0.1
+-----
+- fixed an issue with form fields min-width
+- use relative paths
+
 2.0.0
 -----
 - added foundation grid

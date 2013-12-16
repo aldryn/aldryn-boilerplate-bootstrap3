@@ -137,7 +137,7 @@ $opposite-direction:right !default;
 	}
 }
 // ie7 and below fix
-.ie .column, .ie .columns { *behavior:url("/static/css/box-sizing.htc"); }
+.ie .column, .ie .columns { *behavior:url("../css/box-sizing.htc"); }
 
 .column,
 .columns { @include grid-column($columns:$total-columns); @include box-sizing(border-box); }

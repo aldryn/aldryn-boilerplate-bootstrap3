@@ -12,7 +12,8 @@ var Cl = window.Cl || {};
 jQuery(document).ready(function () {
 
 	// set the correct js path
-	requirejs.config({ 'baseUrl': '/static/js/' });
+	requirejs.config({ 'baseUrl': Cl.static + 'js/' });
+
 	// load modules using require
 	require(['modules/cl.utils'], function() {
 		// removes noscript form body and adds print-js

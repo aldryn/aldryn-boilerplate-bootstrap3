@@ -2,6 +2,12 @@
 Divio Boilerplate
 =================
 
+2.0.2
+-----
+- move settings into separate folder
+- remove version from bootstrap into changelog
+- fixed an issue with retina ddpx
+
 2.0.1
 -----
 - fixed an issue with form fields min-width

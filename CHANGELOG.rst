@@ -2,6 +2,10 @@
 Divio Boilerplate
 =================
 
+Develop
+-------
+- Update boilerplate and added aldryn support
+
 2.0.2
 -----
 - move settings into separate folder

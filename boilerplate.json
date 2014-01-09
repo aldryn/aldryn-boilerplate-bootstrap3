@@ -1,0 +1,35 @@
+{
+	"name": "Divio Boilerplate",
+	"description": "Divio Frontend Setup",
+	"version": "2.0.2.a",
+	"url": "https://github.com/divio",
+	"templates": [
+		["fullwidth.html", "full width"],
+		["sidebar_left.html", "sidebar left"],
+		["sidebar_right.html", "sidebar right"]
+	],
+	"protected": [
+		"templates/base_root.html",
+		"private/sass/libs/_960gs.sass",
+		"private/sass/libs/_bootstrap.scss",
+		"private/sass/libs/_foundation.scss",
+		"private/sass/libs/_mixins.scss",
+		"private/sass/libs/_normalize.scss",
+		"private/sass/libs/_pie.scss",
+		"static/js/libs/class.min.js",
+		"static/js/libs/console.min.js",
+		"static/js/libs/html5.min.js",
+		"static/js/libs/jquery.min.js",
+		"static/js/libs/require.min.js",
+		"static/js/libs/respond.min.js",
+		"static/js/libs/swfobject.min.js"
+	],
+	"author": {
+		"name": "Divio AG",
+		"url": "https://www.divio.ch"
+	},
+	"license": {
+		"name": "BSD",
+		"text": "!literal-include LICENSE.txt"
+	}
+}

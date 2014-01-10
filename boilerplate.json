@@ -1,7 +1,7 @@
 {
 	"name": "Divio Boilerplate",
 	"description": "Divio Frontend Setup",
-	"version": "2.0.2.a",
+	"version": "2.0.2.c",
 	"url": "https://github.com/divio",
 	"templates": [
 		["fullwidth.html", "full width"],
@@ -10,6 +10,14 @@
 	],
 	"protected": [
 		"templates/base_root.html",
+		"templates/404.html",
+		"templates/500.html",
+		"templates/includes/analytics.html",
+		"templates/includes/messages.html",
+		"templates/includes/menu/breadcrumb.html",
+		"templates/includes/menu/langnav.html",
+		"templates/includes/menu/navigation.html",
+		"templates/includes/menu/pagenav.html",
 		"private/sass/libs/_960gs.sass",
 		"private/sass/libs/_bootstrap.scss",
 		"private/sass/libs/_foundation.scss",
@@ -22,7 +30,13 @@
 		"static/js/libs/jquery.min.js",
 		"static/js/libs/require.min.js",
 		"static/js/libs/respond.min.js",
-		"static/js/libs/swfobject.min.js"
+		"static/js/libs/swfobject.min.js",
+		"static/js/modules/ckeditor.wysiwyg.js",
+		"static/js/modules/cl.utils.js",
+		"static/js/plugins/cl.debug.min.js",
+		"static/js/plugins/jquery.mbp.js",
+		"static/css/box-sizing.htc",
+		"static/css/pie.htc"
 	],
 	"author": {
 		"name": "Divio AG",

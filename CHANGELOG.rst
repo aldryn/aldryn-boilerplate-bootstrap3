@@ -5,6 +5,9 @@ Divio Boilerplate
 Develop
 -------
 - Update boilerplate and added aldryn support
+- relocated meta_tags block position
+- relocated extend_breadcrumb block position
+- added title value to title=_("Navigation")
 
 2.0.2
 -----

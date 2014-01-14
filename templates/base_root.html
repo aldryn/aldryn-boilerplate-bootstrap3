@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8" />
 	<title>{% block title %}{% page_attribute page_title %}{% if site_settings.site.name %} - {{ site_settings.site.name }}{% endif %}{% endblock title %}</title>
-	{% block meta_tags %}
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	{% block meta_tags %}
 	<meta name="description" content="{% page_attribute 'meta_description' %}" />
 	<meta name="keywords" content="{% page_attribute 'meta_keywords' %}" />
-	<!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
 	{% endblock meta_tags %}
+	<!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
 	<link rel="apple-touch-icon" href="{% static 'favicon.png' %}" />
 	<link rel="icon" href="{% static 'favicon.png' %}" />
 	<link rel="image_src" href="{% static 'favicon.png' %}" />

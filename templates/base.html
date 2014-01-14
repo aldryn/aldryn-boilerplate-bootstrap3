@@ -48,9 +48,9 @@
 <!-- start: breadcrumb -->
 <nav class="breadcrumb row" role="navigation">
 	<ol class="small-24 column">
+		<li class="title">{% trans "You are here: " %}</li>
 		{% block extend_breadcrumb %}
-			<li class="title">{% trans "You are here: " %}</li>
-			{% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}
+		{% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}
 		{% endblock extend_breadcrumb %}
 	</ol>
 </nav>

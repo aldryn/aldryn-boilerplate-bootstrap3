@@ -2,7 +2,7 @@
 
 {% for child in children %}
 {% if class and forloop.first and not forloop.parentloop %}
-{% if title %}<h2>{% trans "Navigation" %}</h2>{% endif %}
+{% if title %}<h2>{{ title }}</h2>{% endif %}
 <nav class="{{ class }}" role="navigation">
 <ul>
 {% endif %}

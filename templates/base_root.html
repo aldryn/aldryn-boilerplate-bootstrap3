@@ -16,10 +16,8 @@
 	<link rel="stylesheet" href="{% static 'css/base.css' %}" />
 	{% render_block "css" %}
 	{% block extrahead %}{% endblock %}
-	<!--[if lte IE 8]>
-	<script src="{% static 'js/libs/html5.min.js' %}"></script>
-	<script src="{% static 'js/libs/respond.min.js' %}"></script>
-	<![endif]-->
+	<!--[if lte IE 8]><script src="{% static 'js/libs/html5.min.js' %}"></script><![endif]-->
+	<!--[if lte IE 8]><script src="{% static 'js/libs/respond.min.js' %}"></script><![endif]-->
 </head>
 <body id="top" class="noscript {% block body_class %}tpl-root{% endblock %} lang-{{ LANGUAGE_CODE }}">
 {% cms_toolbar %}

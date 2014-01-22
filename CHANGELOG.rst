@@ -2,6 +2,13 @@
 Divio Boilerplate
 =================
 
+2.1.0
+-----
+- added all.scss files for all folders
+- added sites folder for custom changes
+- moved mixins to modules folder
+- removed 960gs
+
 2.0.3
 -----
 - added title value to title=_("Navigation")

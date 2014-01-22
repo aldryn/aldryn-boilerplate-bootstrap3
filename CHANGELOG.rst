@@ -4,14 +4,15 @@ Divio Boilerplate
 
 2.0.3
 -------
-- Update boilerplate and added aldryn support
+- added title value to title=_("Navigation")
+- added additional standard fontastic icons
+- update boilerplate.json
+- update requirejs
+- update respond.js
+- fixed an issue when using htmlmin library
+- fixed an issue where icons are uppercase instead of lowercase
 - relocated meta_tags block position
 - relocated extend_breadcrumb block position
-- added title value to title=_("Navigation")
-- adds a fix when using htmlmin library
-- added additional standard fontastic icons
-- fixed an issue where icons are uppercase instead of lowercase
--
 
 2.0.2
 -----

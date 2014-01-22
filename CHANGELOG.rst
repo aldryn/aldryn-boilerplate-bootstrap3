@@ -8,6 +8,7 @@ Divio Boilerplate
 - added sites folder for custom changes
 - moved mixins to modules folder
 - removed 960gs
+- fixed an issue with favicons on ie8 and 9
 
 2.0.3
 -----

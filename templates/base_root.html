@@ -9,10 +9,10 @@
 	<meta name="keywords" content="{% page_attribute 'meta_keywords' %}" />
 	{% endblock meta_tags %}
 	<!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
-	<link rel="apple-touch-icon" href="{% static 'favicon.png' %}" />
-	<link rel="icon" href="{% static 'favicon.png' %}" />
-	<link rel="image_src" href="{% static 'favicon.png' %}" />
-	<!--[if IE]><link rel="shortcut icon" href="{% static 'favicon.ico' %}" /><![endif]-->
+	<link rel="apple-touch-icon" href="{% static "favicon.png" %}">
+	<link rel="icon" href="{% static "favicon.png" %}?v=1">
+	<link rel="image_src" href="{% static "favicon.png" %}" />
+	<link rel="shortcut icon" type="image/x-icon" href="{% static "favicon.ico" %}" />
 	<link rel="stylesheet" href="{% static 'css/base.css' %}" />
 	{% render_block "css" %}
 	{% block extrahead %}{% endblock %}

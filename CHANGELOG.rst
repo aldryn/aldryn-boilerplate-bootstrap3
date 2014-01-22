@@ -2,12 +2,16 @@
 Divio Boilerplate
 =================
 
-Develop
+2.0.3
 -------
 - Update boilerplate and added aldryn support
 - relocated meta_tags block position
 - relocated extend_breadcrumb block position
 - added title value to title=_("Navigation")
+- adds a fix when using htmlmin library
+- added additional standard fontastic icons
+- fixed an issue where icons are uppercase instead of lowercase
+-
 
 2.0.2
 -----

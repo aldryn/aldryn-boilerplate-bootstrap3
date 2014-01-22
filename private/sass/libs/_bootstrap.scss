@@ -199,3 +199,11 @@ form {
 	.visible-print { display:block !important; position:static; left:0; }
 	.hidden-print { display:none !important; }
 }
+
+//######################################################################################################################
+// #MIXINS#
+
+// add micro-clearfix which doesnt add overflow:hidden
+@mixin micro-clearfix() {
+	@extend .clearfix;
+}

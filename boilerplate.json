@@ -18,12 +18,12 @@
 		"templates/includes/menu/langnav.html",
 		"templates/includes/menu/navigation.html",
 		"templates/includes/menu/pagenav.html",
-		"private/sass/libs/_960gs.sass",
+
 		"private/sass/libs/_bootstrap.scss",
 		"private/sass/libs/_foundation.scss",
-		"private/sass/libs/_mixins.scss",
 		"private/sass/libs/_normalize.scss",
 		"private/sass/libs/_pie.scss",
+
 		"static/js/libs/class.min.js",
 		"static/js/libs/console.min.js",
 		"static/js/libs/html5.min.js",
@@ -35,6 +35,7 @@
 		"static/js/modules/cl.utils.js",
 		"static/js/plugins/cl.debug.min.js",
 		"static/js/plugins/jquery.mbp.js",
+
 		"static/css/box-sizing.htc",
 		"static/css/pie.htc"
 	],

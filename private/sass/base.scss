@@ -6,26 +6,16 @@
 
 //######################################################################################################################
 // #IMPORTS#
-@import "settings/all.scss";
+@import "settings/all";
 
 // importing frameworks
-@import "libs/normalize";
-@import "libs/bootstrap";
-@import "libs/foundation";
-// @import "libs/pie";
+@import "libs/all";
 
-// importing standard modules
-@import "modules/icons";
-@import "modules/fonts";
-@import "modules/header";
-@import "modules/footer";
-@import "modules/forms";
-@import "modules/mobile";
-// importing custom modules
-@import "modules/custom";
-// @import "modules/standardsite";
-@import "modules/retina";
-@import "modules/print";
+// importing modules
+@import "modules/all";
 
 // importing plugins
-// @import "plugins/lightbox";
+@import "plugins/all";
+
+// importing plugins
+@import "theme/all";

@@ -3,12 +3,13 @@ Divio Boilerplate
 =================
 
 2.0.3
--------
+-----
 - added title value to title=_("Navigation")
 - added additional standard fontastic icons
 - update boilerplate.json
 - update requirejs
 - update respond.js
+- update jquery.mbp.js
 - fixed an issue when using htmlmin library
 - fixed an issue where icons are uppercase instead of lowercase
 - relocated meta_tags block position

@@ -63,7 +63,7 @@
         var bodycheck;
 
         // If there's a hash, or addEventListener is undefined, stop here
-        if ( !location.hash && win.addEventListener ) {
+        if ( !win.navigator.standalone && !location.hash && win.addEventListener ) {
 
             // scroll to 1
             window.scrollTo( 0, 1 );
@@ -86,7 +86,7 @@
                         MBP.hideUrlBar();
                     }
                 }, 0);
-            });
+            }, false);
         }
     };
 
@@ -332,22 +332,24 @@
      */
 
     MBP.preventZoom = function() {
-        var formFields = document.querySelectorAll('input, select, textarea');
-        var contentString = 'width=device-width,initial-scale=1,maximum-scale=';
-        var i = 0;
-        var fieldLength = formFields.length;
+        if (MBP.viewportmeta && navigator.platform.match(/iPad|iPhone|iPod/i)) {
+            var formFields = document.querySelectorAll('input, select, textarea');
+            var contentString = 'width=device-width,initial-scale=1,maximum-scale=';
+            var i = 0;
+            var fieldLength = formFields.length;
 
-        var setViewportOnFocus = function() {
-            MBP.viewportmeta.content = contentString + '1';
-        };
+            var setViewportOnFocus = function() {
+                MBP.viewportmeta.content = contentString + '1';
+            };
 
-        var setViewportOnBlur = function() {
-            MBP.viewportmeta.content = contentString + '10';
-        };
+            var setViewportOnBlur = function() {
+                MBP.viewportmeta.content = contentString + '10';
+            };
 
-        for (; i < fieldLength; i++) {
-            formFields[i].onfocus = setViewportOnFocus;
-            formFields[i].onblur = setViewportOnBlur;
+            for (; i < fieldLength; i++) {
+                formFields[i].onfocus = setViewportOnFocus;
+                formFields[i].onblur = setViewportOnBlur;
+            }
         }
     };
 

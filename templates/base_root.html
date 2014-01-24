@@ -18,6 +18,7 @@
 	{% block extrahead %}{% endblock %}
 	<!--[if lte IE 8]><script src="{% static 'js/libs/html5.min.js' %}"></script><![endif]-->
 	<!--[if lte IE 8]><script src="{% static 'js/libs/respond.min.js' %}"></script><![endif]-->
+	{{ ALDRYN_SNAKE.render_head }}
 </head>
 <body id="top" class="noscript {% block body_class %}tpl-root{% endblock %} lang-{{ LANGUAGE_CODE }}">
 {% cms_toolbar %}
@@ -52,5 +53,6 @@
 Please <a href="http://whatbrowser.org/">upgrade your browser</a> to improve your experience.{% endblocktrans %}
 </p>
 <![endif]-->
+{{ ALDRYN_SNAKE.render_tail }}
 </body>
 </html>

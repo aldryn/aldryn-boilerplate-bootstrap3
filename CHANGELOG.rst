@@ -6,6 +6,7 @@ Divio Boilerplate
 -----
 - added all.scss files for all folders
 - added sites folder for custom changes
+- added tpl_home.html
 - moved mixins to modules folder
 - removed 960gs
 - fixed an issue with favicons on ie8 and 9

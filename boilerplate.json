@@ -1,12 +1,13 @@
 {
 	"name": "Divio Boilerplate",
 	"description": "Divio Frontend Setup",
-	"version": "2.1.0.a",
+	"version": "2.1.0.b",
 	"url": "https://github.com/divio",
 	"templates": [
 		["fullwidth.html", "full width"],
 		["sidebar_left.html", "sidebar left"],
-		["sidebar_right.html", "sidebar right"]
+		["sidebar_right.html", "sidebar right"],
+		["tpl_home.html", "home template"]
 	],
 	"protected": [
 		"templates/base_root.html",

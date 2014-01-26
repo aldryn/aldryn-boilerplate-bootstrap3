@@ -2,6 +2,10 @@
 Divio Boilerplate
 =================
 
+2.1.1
+-----
+- added aldryn head and tails to base_root
+
 2.1.0
 -----
 - added all.scss files for all folders

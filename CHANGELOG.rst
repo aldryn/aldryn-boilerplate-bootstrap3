@@ -5,6 +5,7 @@ Divio Boilerplate
 2.1.1
 -----
 - added aldryn head and tails to base_root
+- remove retina logo (needs to be set intentionally)
 
 2.1.0
 -----

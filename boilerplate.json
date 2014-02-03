@@ -1,7 +1,7 @@
 {
 	"name": "Divio Boilerplate",
 	"description": "Divio Frontend Setup",
-	"version": "2.1.1.a",
+	"version": "2.1.1.b",
 	"url": "https://github.com/divio",
 	"templates": [
 		["fullwidth.html", "full width"],

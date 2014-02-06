@@ -14,3 +14,6 @@ output_style = :compressed
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
+
+# encoding
+Encoding.default_external = "UTF-8"

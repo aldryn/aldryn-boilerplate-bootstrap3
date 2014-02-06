@@ -113,7 +113,7 @@ Example
     </div>
     {% endblock content %}
 
-    {% addtoblock "js" %}<script src="{% static "js/libs/class.min.js" %}"></script>{% endaddtoblock "js" %}
+    {% addtoblock "js" %}<script src="{% static "js/libs/class.min.js" %}"></script>{% endaddtoblock %}
     {% addtoblock "js" %}
     <script>
     jQuery(document).ready(function ($) {

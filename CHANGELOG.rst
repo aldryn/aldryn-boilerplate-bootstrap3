@@ -5,6 +5,7 @@ Aldryn Boilerplate
 2.1.2
 -----
 - Rename to aldryn-boilerplate
+- update {% if site_settings.site.name %} to {{ request.site.name }}
 
 2.1.1
 -----

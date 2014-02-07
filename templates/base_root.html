@@ -2,7 +2,7 @@
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
 	<meta charset="utf-8" />
-	<title>{% block title %}{% page_attribute page_title %}{% if site_settings.site.name %} - {{ site_settings.site.name }}{% endif %}{% endblock title %}</title>
+	<title>{% block title %}{% page_attribute page_title %} - {{ request.site.name }}{% endblock title %}</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	{% block meta_tags %}
 	<meta name="description" content="{% page_attribute 'meta_description' %}" />

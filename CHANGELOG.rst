@@ -1,6 +1,10 @@
-=================
-Divio Boilerplate
-=================
+==================
+Aldryn Boilerplate
+==================
+
+2.1.2
+-----
+- Rename to aldryn-boilerplate
 
 2.1.1
 -----

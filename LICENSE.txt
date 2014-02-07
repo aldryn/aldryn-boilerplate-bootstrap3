@@ -1,4 +1,4 @@
-# Divio Boilerplate
+# Aldryn Boilerplate
 # Copyright Divio AG
 # https://github.com/divio
 

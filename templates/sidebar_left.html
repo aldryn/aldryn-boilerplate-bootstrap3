@@ -12,7 +12,8 @@
 	</div>
 	<aside class="large-7 pull-17 column sidebar">
 		{% block subnav %}
-		{% with class="subnav" title=_("Navigation") %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endwith %}
+		{% page_attribute menu_title request.current_page.get_root as subtitle %}
+		{% with class="subnav" title=subtitle %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endwith %}
 		{% endblock subnav %}
 
 		{% block sidebar %}

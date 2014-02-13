@@ -1,7 +1,7 @@
 {
 	"name": "Aldryn Boilerplate",
 	"description": "Aldryn Base Frontend Setup",
-	"version": "2.1.2.b",
+	"version": "2.1.2.c",
 	"url": "https://github.com/divio",
 	"templates": [
 		["fullwidth.html", "full width"],

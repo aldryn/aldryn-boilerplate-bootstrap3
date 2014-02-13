@@ -4,8 +4,9 @@ Aldryn Boilerplate
 
 2.1.2
 -----
-- Rename to aldryn-boilerplate
+- rename to aldryn-boilerplate
 - update {% if site_settings.site.name %} to {{ request.site.name }}
+- update 500.html to only support i18n and static tags
 
 2.1.1
 -----

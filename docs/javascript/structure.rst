@@ -1,3 +1,28 @@
 Structure
 =========
 
+We use ``static/js/base.js`` as a single point of entry. Within this file, we lazy load additional elements using
+require.js.
+
+In addition, we use ``Cl`` as global namespace for all our custom code or addons to keep the global namespace clean.
+Following this guideline, we use as initiation Cl.Base or Cl.Application for our website. See
+``static/js/modules/cl.utils.js`` as example.
+
+Always add the appropriate prefix to the filename. If there are multiple libraries used within the file, the wrapping
+namespace should win. In case of Cl.Utils we use jQuery, MBP and class.js. Cl wins as Cl.Utils is the wrapper.
+
+
+addons/
+-------
+
+Separate modules which are plug-n-play able and add them into this folder. Traditionally the
+`classjs-plugins <https://github.com/FinalAngel/classjs-plugins>`_ are added here.
+
+
+libs/
+-----
+
+We include three major frameworks to help us with JavaScript:
+`jQuery <http://jquery.com>`_,
+`Require.js <http://requirejs.org>`_ and
+`class.js <https://github.com/FinalAngel/classjs>`_

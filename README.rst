@@ -9,42 +9,8 @@ This is the aldryn standard boilerplate.
 Coding Guidelines
 =================
 
-HTML
-----
-
-* Use **tabs** and **not** spaces
-* Use **underscore** for html file naming
-* Use **double-quotes** `"` for all attributes including django-template tags
-* HTML **has to validate** using `W3C <http://www.w3.org/2001/sw/BestPractices/>`_ guidelines
-* HTML should validate the WCAG 2.0 A guidelines
-* HTML should be modular and reusable, do not use easy names like "job" or "item" on top level. Use "plugin-jobs" instead
-* Use XML syntax and close all elements using </tag> or />
-* Keep all html on the same level after a django template block except for ``{% forloop %}`` or ``{% if %}``
-* In general **code readability first**
-* All templates should be placed within the roots ``templates`` folder
 
 
-CSS / SCSS
-----------
-
-* Do **not** add more files into the sass ``partials`` directory, use ``plugins`` instead
-* Do **not** overuse nesting! If you got only one instance, use one line
-* Use **tabs** and **not** spaces
-* Use **dashes** to separate names, **not** camelCase or underscore
-* Use **dashes** for scss file naming
-* Use **double-quotes** ``"`` for all text values
-* Use ``_custom.scss`` for custom css files, avoid creating additional files
-* Whenever possible, define setting variables inside ``_settings.scss``
-* Whenever possible, try to avoid referencing css using their parent like div.container
-* Whenever possible, use full words instead of shorthands like ``count`` instead of cnt
-* CSS has not to validate due to several backwards-compatibility reasons
-* Use progressibe enhancement for older browsers
-* Use the single-line style instad of block-style and group:
-
-#. color, font-size, line-height, font-*
-#. width, height, padding, margin
-#. padding, background
-#. includes
 
 
 JavaScript

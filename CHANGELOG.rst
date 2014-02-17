@@ -2,6 +2,13 @@
 Aldryn Boilerplate
 ==================
 
+2.2.0
+-----
+- added docs
+- changed README.rst to include new docs
+- rename modules/ into layout/
+- rename plugins/ into addons/
+
 2.1.2
 -----
 - rename to aldryn-boilerplate

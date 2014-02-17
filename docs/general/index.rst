@@ -7,3 +7,4 @@ This chapter provides general information about:
     :maxdepth: 2
 
     folder
+    comments

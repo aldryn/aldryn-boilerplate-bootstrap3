@@ -26,17 +26,35 @@ layout/
 Layout specific styles such as header, footer or general forms should be added here. Also specific definitions for
 print, retina or mobile only styles that are used globally should be defined here.
 
-In addition you can set fonts, icons and custom mixins here.
+In addition you can set fonts, icons and custom mixins.
 
 
 libs/
 -----
 
+As foundation, we use normalize.css as many other boilerplates are using in its default state.
+
+We are using the `foundation grid <http://foundation.zurb.com/grid.html>`_ with **24 columns** and a max-width of
+**960px** which offers the most flexible way of designing and a readable code.
+
+We include various helper classes inspired by *bootstrap* within ``private/sass/libs/_bootstrap.scss``.
+It makes sense to read the code as most elements are setup using the settings within
+``private/sass/settings/default.scss``.
+
+These files should generally **not** be overwritten.
+
 
 settings/
 ---------
+
+Control over color, sizes and other settings are found here. These settings have mostly impact on the available
+libraries. You can add additional settings file if required. For example ``private/sass/settings/_shop.scss``.
 
 
 sites/
 ------
 
+If you are working on a theme-based setup or have styles which do not fit into the folders described above, this
+is the appropriate place to add them.
+
+This folder can be freely structured. ``_custom.scss`` can be used for quick fixes or hacks.

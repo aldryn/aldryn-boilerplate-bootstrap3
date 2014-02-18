@@ -24,6 +24,7 @@ Documentation
     general/index
     html/index
     css/index
+    images/index
     javascript/index
 
 .. _Aldryn: http://www.aldryn.com/

@@ -10,3 +10,4 @@ the requirements are:
     guidelines
     structure
     reference
+    mistakes

@@ -4,6 +4,7 @@ Guidelines
 * Use **tabs** and **not** spaces
 * Use **underscores** for html file naming
 * Use **double-quotes** `"` for all attributes including django-template tags
+* Use lowercase for **all** attributes
 * HTML **has to validate** using `W3C <http://www.w3.org/2001/sw/BestPractices/>`_ guidelines
 * HTML should validate the WCAG 2.0 A guidelines
 * HTML should be modular and reusable, do not use easy names like "job" or "item" on top level. Use "addon-jobs" instead
@@ -15,7 +16,7 @@ Guidelines
 
 
 Example
--------
+*******
 
 .. code-block:: html
 
@@ -35,3 +36,13 @@ Example
     });
     </script>
     {% endaddtoblock %}
+
+
+IDs vs Classes
+--------------
+
+You should **always** use classes instead if id's. Classes represent a more OOP approach of adding and removing
+stylesets like ``box box-wide box-hint``.
+
+The ID attribute should be preserved for javascript functionality or for anchor referencing in conjunction with
+hashes.

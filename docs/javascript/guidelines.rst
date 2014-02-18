@@ -19,7 +19,7 @@ Guidelines
 
 
 Example
--------
+*******
 
 .. code-block:: javascript
 

@@ -8,6 +8,7 @@ Aldryn Boilerplate
 - changed README.rst to include new docs
 - rename modules/ into layout/
 - rename plugins/ into addons/
+- fixes an issue with multiple elements on ckeditor.wysiwyg
 
 2.1.2
 -----

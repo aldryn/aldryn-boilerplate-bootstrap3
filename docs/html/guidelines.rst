@@ -46,3 +46,38 @@ stylesets like ``box box-wide box-hint``.
 
 The ID attribute should be preserved for javascript functionality or for anchor referencing in conjunction with
 hashes.
+
+
+Elements
+--------
+
+Try to keep the html structure simple and avoid unnecessary elements. It is sometimes easier to use a single div with
+a single class rather than multiple divs with multiple classes:
+
+.. code-block:: html
+
+    <div class="addon-blog">
+        <h2>My Blog</h2>
+        <p>Hello World</p>
+    </div>
+
+We don't need to add specific classes to the **h2** as we can control the inner style using ``.addon-blog``. However
+more complicated structures such as lead, content, author, metainfos, tags can require their own class names:
+
+.. code-block:: html
+
+    <div class="addon-blog">
+        <h2>My Blog</h2>
+        <p class="blog-lead">Hello World</p>
+        <div class="blog-content">
+            <h3>Details</h3>
+            <p>More</p>
+            <p>Content</p>
+        </div>
+        <div class="blog-author">Dummy Man</div>
+        <ul class="blog-tags tags">
+            <li><a href="#">News</a>
+            <li><a href="#">Blog</a>
+            <li><a href="#">Tags</a>
+        </ul>
+    </div>

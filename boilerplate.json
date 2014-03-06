@@ -34,8 +34,8 @@
 		"static/js/libs/swfobject.min.js",
 		"static/js/modules/ckeditor.wysiwyg.js",
 		"static/js/modules/cl.utils.js",
-		"static/js/plugins/cl.debug.min.js",
-		"static/js/plugins/jquery.mbp.js",
+		"static/js/addons/cl.debug.min.js",
+		"static/js/addons/jquery.mbp.js",
 
 		"static/css/box-sizing.htc",
 		"static/css/pie.htc"

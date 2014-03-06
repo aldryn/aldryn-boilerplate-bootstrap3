@@ -1,7 +1,7 @@
 {
 	"name": "Aldryn Boilerplate",
 	"description": "Aldryn Base Frontend Setup",
-	"version": "2.2.0",
+	"version": "2.2.1",
 	"url": "https://github.com/divio",
 	"templates": [
 		["fullwidth.html", "full width"],
@@ -45,7 +45,6 @@
 		"url": "https://www.divio.ch"
 	},
 	"license": {
-		"name": "BSD",
-		"text": "!literal-include LICENSE.txt"
+		"name": "BSD"
 	}
 }

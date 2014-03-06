@@ -2,6 +2,12 @@
 Aldryn Boilerplate
 ==================
 
+2.2.1
+-----
+- added fix for ff retina rendering whithin ``_retina.scss``
+- update jQuery to version 1.11
+- removed jQuery map file as it is not mandatory anymore
+
 2.2.0
 -----
 - added docs

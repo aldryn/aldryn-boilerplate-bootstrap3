@@ -3,12 +3,13 @@
 <head>
 	<meta charset="utf-8" />
 	<title>{% block title %}{% page_attribute page_title %} - {{ request.site.name }}{% endblock title %}</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	{% block meta_tags %}
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	<meta name="description" content="{% page_attribute 'meta_description' %}" />
 	<meta name="keywords" content="{% page_attribute 'meta_keywords' %}" />
-	{% endblock meta_tags %}
+	<meta name="format-detection" content="telephone=no" />
 	<!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
+	{% endblock meta_tags %}
 	<link rel="apple-touch-icon" href="{% static "favicon.png" %}">
 	<link rel="icon" href="{% static "favicon.png" %}?v=1">
 	<link rel="image_src" href="{% static "favicon.png" %}" />

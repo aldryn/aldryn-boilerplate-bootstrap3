@@ -31,7 +31,9 @@
 			{% block mainnav %}
 			<h2 class="visuallyhidden" id="navigation">{% trans "Navigation:" %}</h2>
 			<div class="mainnav-knob"></div>
+			{% render_model_block request.current_page "changelist" %}
 			{% with class="mainnav" %}{% show_menu 0 1 100 100 "includes/menu/navigation.html" %}{% endwith %}
+			{% endrender_model_block %}
 			{% endblock mainnav %}
 
 			{% block langnav %}

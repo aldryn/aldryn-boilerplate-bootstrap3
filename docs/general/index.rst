@@ -10,7 +10,7 @@ This chapter provides general information about:
     comments
 
 Requirements
-============
+------------
 
 - Sass: http://sass-lang.com/
 - Compass: http://compass-style.org/

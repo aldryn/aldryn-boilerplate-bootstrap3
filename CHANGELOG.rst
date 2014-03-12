@@ -6,6 +6,8 @@ Aldryn Boilerplate
 -----
 - added fix for ff retina rendering whithin ``_retina.scss``
 - update jQuery to version 1.11
+- update docs with requirements
+- update config.rb for local usage
 - removed jQuery map file as it is not mandatory anymore
 
 2.2.0

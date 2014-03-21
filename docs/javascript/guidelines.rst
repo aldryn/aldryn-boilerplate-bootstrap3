@@ -16,6 +16,7 @@ Guidelines
 * Always use semicolons and full brackets except shortcuts like ``var i = (true) ? 'yes' : 'no';`` or single lines ``if(index <= 0) index = 0;``
 * Never use $ for variable names like ``var $el = $('.el');``
 * Ensure that JavaScript widgets don't create distrubances while the dom is loading
+* Please make sure that & has a character reference like "&amp;"
 
 
 Example

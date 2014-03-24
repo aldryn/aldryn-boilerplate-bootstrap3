@@ -16,4 +16,4 @@ output_style = :compressed
 line_comments = false
 
 # encoding
-# Encoding.default_external = "UTF-8"
+Encoding.default_external = "UTF-8"

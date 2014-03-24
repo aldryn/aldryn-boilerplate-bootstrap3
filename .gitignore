@@ -20,3 +20,6 @@
 
 /src/settings_local*.py
 /requirements_local*.txt
+
+/node_modules
+npm-debug.log

@@ -2,6 +2,15 @@
 Aldryn Boilerplate
 ==================
 
+2.3.0 / latest
+--------------
+- added gulp task management
+- added .jshintrc configuration file
+- added package.json for node packaging
+- added basic jasmin tests
+- optimized ks libraries to pass jslint tests
+- moved google analytics code to the head
+
 2.2.1
 -----
 - added fix for ff retina rendering whithin ``_retina.scss``

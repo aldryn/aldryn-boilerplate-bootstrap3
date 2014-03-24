@@ -3,9 +3,11 @@
  * @copyright:	http://www.divio.ch
  */
 
+'use strict';
 //######################################################################################################################
 // #NAMESPACES#
 var Cl = window.Cl || {};
+/* global requirejs */
 
 //######################################################################################################################
 // #BASE#
@@ -15,7 +17,7 @@ jQuery(document).ready(function () {
 	requirejs.config({ 'baseUrl': Cl.static + 'js/' });
 
 	// load modules using require
-	require(['modules/cl.utils'], function() {
+	require(['modules/cl.utils.min'], function() {
 		// removes noscript form body and adds print-js
 		Cl.Utils.document();
 		// handles input placeholder="" attributes

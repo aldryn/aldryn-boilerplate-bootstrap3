@@ -1,5 +1,7 @@
+'use strict';
 //######################################################################################################################
-// #CL EXTENSION#
+/* global Cl */
+/* global MBP */
 Cl.Utils = {
 
 	document: function () {
@@ -23,7 +25,7 @@ Cl.Utils = {
 
 	placeholders: function () {
 		// cancel if the browser actually supports placeholders
-		if(document.createElement('input').placeholder !== undefined) return false;
+		if(document.createElement('input').placeholder !== undefined) { return false; }
 
 		// add plugin
 		$('[placeholder]').fieldLabel();
@@ -32,7 +34,7 @@ Cl.Utils = {
 		$('form').on('submit', function () {
 			$(this).find('[placeholder]').each(function () {
 				var input = $(this);
-				if(input.val() === input.attr('placeholder')) input.val('');
+				if(input.val() === input.attr('placeholder')) { input.val(''); }
 			});
 		});
 	},

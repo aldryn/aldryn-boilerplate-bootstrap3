@@ -1,11 +1,13 @@
 /*!
  * E-Mail encrypte
- * @version: 0.4.0
+ * @version: 0.4.2
  * @param: autoConvert (converts innerHtml to match the email address)
  * @param: attribute (attribute from which the domain name is catched)
  * @example: <a href="#info" rel="divio.ch" class="mailcrypte">E-Mail</a>
  */
 $.fn.mailCrypte = function (options) {
+    'use strict';
+
 	options = $.extend({
 		'autoConvert': true,
 		'attribute': 'data-rel'
@@ -16,18 +18,20 @@ $.fn.mailCrypte = function (options) {
 
 		$(this).attr('href', mailto);
 
-		if(options.autoConvert) $(this).html(mailto.replace('mailto:', ''));
+		if(options.autoConvert) { $(this).html(mailto.replace('mailto:', '')); }
 	});
 };
 
 /*!
  * Pop-Up Generator
- * @version: 0.3.0
+ * @version: 0.3.1
  * @param: width (initial width)
  * @param: height (initial height)
  * @example: <a href="http://www.google.ch" class="popup">Open Pop-Up</a>
  */
 $.fn.autoPopUp = function (options) {
+    'use strict';
+
 	options = $.extend({
 		'width': 750,
 		'height': 500
@@ -48,12 +52,14 @@ $.fn.autoPopUp = function (options) {
 
 /*!
  * Auto input fill-in
- * @version: 0.6.5
+ * @version: 0.6.7
  * @param: label (if true than labeltext on parent else rel attribut on this)
  * @param: strip (replacement text)
  * @param: add (add additional information)
  */
 $.fn.fieldLabel = function (options) {
+    'use strict';
+
 	options = $.extend({
 		'label': false,
 		'strip': '',
@@ -61,14 +67,14 @@ $.fn.fieldLabel = function (options) {
 	}, options);
 
 	function show(el, label) {
-		if(el.attr('value') != '') return false;
+		if(el.attr('value') !== '') { return false; }
 		el.attr('value', label);
 
 		return true;
 	}
 
 	function hide(el, e, label) {
-		if(e.type == 'blur' && el.attr('value') == label) return false;
+		if(e.type === 'blur' && el.attr('value') === label) { return false; }
 		el.attr('value', '');
 
 		return true;
@@ -76,17 +82,17 @@ $.fn.fieldLabel = function (options) {
 
 	return this.each(function () {
 		var label = (options.label) ? $(this).parent().find('label').text() : $(this).attr('placeholder');
-			label = label.replace(options.strip, '');
-			label += options.add;
+		label = label.replace(options.strip, '');
+		label += options.add;
 
-		if($(this).attr('value') === '') $(this).attr('value', label);
+		if($(this).attr('value') === '') { $(this).attr('value', label); }
 
 		$(this).bind('click', function (e) {
-			if($(this).attr('value') == label) hide($(this), e, label);
+			if($(this).attr('value') === label) { hide($(this), e, label); }
 		});
 
 		$(this).bind('blur', function (e) {
-			($(this).attr('value') == label) ? hide($(this), e, label) : show($(this), label);
+			($(this).attr('value') === label) ? hide($(this), e, label) : show($(this), label);
 		});
-	}
-)};
+	});
+};

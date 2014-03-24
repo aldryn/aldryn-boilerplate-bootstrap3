@@ -3,6 +3,7 @@
  */
 
 (function(document) {
+    'use strict';
 
     window.MBP = window.MBP || {};
 
@@ -115,10 +116,18 @@
         event = event || window.event;
 
         switch (event.type) {
-            case 'touchstart': this.onTouchStart(event); break;
-            case 'touchmove': this.onTouchMove(event); break;
-            case 'touchend': this.onClick(event); break;
-            case 'click': this.onClick(event); break;
+            case 'touchstart':
+                this.onTouchStart(event);
+                break;
+            case 'touchmove':
+                this.onTouchMove(event);
+                break;
+            case 'touchend':
+                this.onClick(event);
+                break;
+            case 'click':
+                this.onClick(event);
+                break;
         }
     };
 
@@ -148,7 +157,7 @@
         }
         this.reset(event);
         this.handler.apply(event.currentTarget, [event]);
-        if (event.type == 'touchend') {
+        if (event.type === 'touchend') {
             MBP.preventGhostClick(this.startX, this.startY);
         }
         var pattern = new RegExp(' ?' + this.pressedClass, 'gi');
@@ -201,7 +210,7 @@
     // This bug only affects touch Android 2.3 devices, but a simple ontouchstart test creates a false positive on
     // some Blackberry devices. https://github.com/Modernizr/Modernizr/issues/372
     // The browser sniffing is to avoid the Blackberry case. Bah
-    MBP.dodgyAndroid = ('ontouchstart' in window) && (navigator.userAgent.indexOf('Android 2.3') != -1);
+    MBP.dodgyAndroid = ('ontouchstart' in window) && (navigator.userAgent.indexOf('Android 2.3') !== -1);
 
     MBP.listenForGhostClicks = (function() {
         var alreadyRan = false;
@@ -232,7 +241,7 @@
             try {
                 el.addEventListener(evt, fn, bubble);
             } catch(e) {
-                if (typeof fn == 'object' && fn.handleEvent) {
+                if (typeof fn === 'object' && fn.handleEvent) {
                     el.addEventListener(evt, function(e){
                         // Bind fn as this and set first arg as event object
                         fn.handleEvent.call(fn,e);
@@ -243,7 +252,7 @@
             }
         } else if ('attachEvent' in el) {
             // check if the callback is an object and contains handleEvent
-            if (typeof fn == 'object' && fn.handleEvent) {
+            if (typeof fn === 'object' && fn.handleEvent) {
                 el.attachEvent('on' + evt, function(){
                     // Bind fn as this
                     fn.handleEvent.call(fn);
@@ -260,7 +269,7 @@
             try {
                 el.removeEventListener(evt, fn, bubble);
             } catch(e) {
-                if (typeof fn == 'object' && fn.handleEvent) {
+                if (typeof fn === 'object' && fn.handleEvent) {
                     el.removeEventListener(evt, function(e){
                         // Bind fn as this and set first arg as event object
                         fn.handleEvent.call(fn,e);
@@ -271,8 +280,8 @@
             }
         } else if ('detachEvent' in el) {
             // check if the callback is an object and contains handleEvent
-            if (typeof fn == 'object' && fn.handleEvent) {
-                el.detachEvent("on" + evt, function() {
+            if (typeof fn === 'object' && fn.handleEvent) {
+                el.detachEvent('on' + evt, function() {
                     // Bind fn as this
                     fn.handleEvent.call(fn);
                 });
@@ -281,29 +290,6 @@
             }
         }
     }
-
-    /**
-     * Autogrow
-     * http://googlecode.blogspot.com/2009/07/gmail-for-mobile-html5-series.html
-     */
-
-    MBP.autogrow = function(element, lh) {
-        function handler(e) {
-            var newHeight = this.scrollHeight;
-            var currentHeight = this.clientHeight;
-            if (newHeight > currentHeight) {
-                this.style.height = newHeight + 3 * textLineHeight + 'px';
-            }
-        }
-
-        var setLineHeight = (lh) ? lh : 12;
-        var textLineHeight = element.currentStyle ? element.currentStyle.lineHeight : getComputedStyle(element, null).lineHeight;
-
-        textLineHeight = (textLineHeight.indexOf('px') == -1) ? setLineHeight : parseInt(textLineHeight, 10);
-
-        element.style.overflow = 'hidden';
-        element.addEventListener ? element.addEventListener('input', handler, false) : element.attachEvent('onpropertychange', handler);
-    };
 
     /**
      * Enable CSS active pseudo styles in Mobile Safari
@@ -384,8 +370,8 @@
             link2.setAttribute('href', landscape);
             head.appendChild(link2);
         } else {
-            portrait = pixelRatio === 2 ? "img/startup/startup-retina.png" : "img/startup/startup.png";
-            portrait = screen.height === 568 ? "img/startup/startup-retina-4in.png" : portrait;
+            portrait = pixelRatio === 2 ? 'img/startup/startup-retina.png' : 'img/startup/startup.png';
+            portrait = screen.height === 568 ? 'img/startup/startup-retina-4in.png' : portrait;
             link1 = document.createElement('link');
             link1.setAttribute('rel', 'apple-touch-startup-image');
             link1.setAttribute('href', portrait);

@@ -10,16 +10,17 @@
 	<meta name="format-detection" content="telephone=no" />
 	<!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
 	{% endblock meta_tags %}
-	<link rel="apple-touch-icon" href="{% static "favicon.png" %}">
-	<link rel="icon" href="{% static "favicon.png" %}?v=1">
-	<link rel="image_src" href="{% static "favicon.png" %}" />
-	<link rel="shortcut icon" type="image/x-icon" href="{% static "favicon.ico" %}" />
+	<link rel="apple-touch-icon" href="{% static 'favicon.png' %}">
+	<link rel="icon" href="{% static 'favicon.png' %}?v=1">
+	<link rel="image_src" href="{% static 'favicon.png' %}" />
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
 	<link rel="stylesheet" href="{% static 'css/base.css' %}" />
 	{% render_block "css" %}
 	{% block extrahead %}{% endblock %}
 	<!--[if lte IE 8]><script src="{% static 'js/libs/html5.min.js' %}"></script><![endif]-->
 	<!--[if lte IE 8]><script src="{% static 'js/libs/respond.min.js' %}"></script><![endif]-->
 	{{ ALDRYN_SNAKE.render_head }}
+    {% include "includes/analytics.html" %}
 </head>
 <body id="top" class="noscript {% block body_class %}tpl-root{% endblock %} lang-{{ LANGUAGE_CODE }}">
 {% cms_toolbar %}
@@ -34,19 +35,18 @@
 <script src="{% static 'js/libs/jquery.min.js' %}"></script>
 <script src="{% static 'js/libs/class.min.js' %}"></script>
 <script src="{% static 'js/libs/require.min.js' %}"></script>
-<script src="{% static 'js/plugins/jquery.mbp.js' %}"></script>
-<script src="{% static 'js/plugins/jquery.functions.js' %}"></script>
-<script src="{% static 'js/base.js' %}"></script>
+<script src="{% static 'js/addons/jquery.mbp.min.js' %}"></script>
+<script src="{% static 'js/addons/jquery.functions.min.js' %}"></script>
+<script src="{% static 'js/base.min.js' %}"></script>
 <script>Cl.static = '{{ STATIC_URL }}';</script>
 {% endcompress %}
 {% if debug %}
-<script src="{% static "js/libs/console.min.js" %}"></script>
-<script src="{% static "js/plugins/cl.debug.min.js" %}"></script>
+<script src="{% static 'js/libs/console.min.js' %}"></script>
+<script src="{% static 'js/addons/cl.debug.min.js' %}"></script>
 <script>new Cl.Debug();</script>
 {% endif %}
 {% render_block "js" %}
 {% block extrafoot %}{% endblock %}
-{% include "includes/analytics.html" %}
 <noscript><p class="noscript">{% trans "Please activate JavaScript to enable all features." %}</p></noscript>
 <!--[if lte IE 7 ]>
 <p class="chromeframe">

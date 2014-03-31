@@ -79,7 +79,21 @@ gulp.task('media', function () {
 
 // TASK/django
 gulp.task('runserver', function () {
-    spawn('src/local', ['runserver', '0.0.0.0:'+port]);
+    var rs = spawn('src/local', ['runserver', '0.0.0.0:'+port]);
+    var stdout = '';
+    var stderr = '';
+
+    rs.stdout.setEncoding('utf8');
+    rs.stdout.on('data', function (data) {
+        stdout += data;
+        gutil.log(data);
+    });
+
+    rs.stderr.setEncoding('utf8');
+    rs.stderr.on('data', function (data) {
+        stderr += data;
+        gutil.log(data);
+    });
 });
 
 // RUNNERS
@@ -91,7 +105,7 @@ gulp.task('default', function () {
     gulp.start('compass');
     gulp.start('compress');
     gulp.start('lint');
-    // gulp.start('runserver');
+    gulp.start('runserver');
 
     // add watch tasks
     gulp.watch(patterns.sass, ['compass']);

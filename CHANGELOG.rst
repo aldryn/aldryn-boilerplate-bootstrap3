@@ -7,8 +7,8 @@ Aldryn Boilerplate
 - added gulp task management
 - added .jshintrc configuration file
 - added package.json for node packaging
-- added basic jasmin tests
-- optimized ks libraries to pass jslint tests
+//added basic jasmin tests
+- optimized js libraries to pass jslint tests
 - moved google analytics code to the head
 
 2.2.1

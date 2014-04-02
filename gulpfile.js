@@ -25,7 +25,7 @@ var paths = {
 };
 
 var patterns = {
-    'images': [paths.images+'*', paths.images+'**/*'],
+    'images': [paths.images+'*', paths.images+'**/*', '!'+paths.images+'/dummy/*/**'],
     'js': [paths.js+'*.js', paths.js+'**/*.js', '!'+paths.js+'*.min.js', '!'+paths.js+'**/*.min.js'],
     'media': [paths.media+'**/*'],
     'sass': [paths.sass+'*', paths.sass+'**/*']

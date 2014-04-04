@@ -12,6 +12,8 @@ Documentation
 
 A full documentation can be found on read the docs - http://aldryn-boilerplate.rtfd.org
 
+For extending the documentation, follow the instructions within ``/docs/readme.rst``.
+
 
 Contribute
 ----------

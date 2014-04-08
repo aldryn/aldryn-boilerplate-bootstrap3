@@ -9,3 +9,4 @@ This chapter provides general information about:
     requirements
     folder
     comments
+    oddities

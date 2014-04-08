@@ -1,28 +1,28 @@
 <!doctype html>{% load i18n static cms_tags sekizai_tags compress %}
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
-	<meta charset="utf-8" />
-	<title>{% block title %}{% page_attribute page_title %} - {{ request.site.name }}{% endblock title %}</title>
-	{% block meta_tags %}
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<meta name="description" content="{% page_attribute 'meta_description' %}" />
-	<meta name="keywords" content="{% page_attribute 'meta_keywords' %}" />
-	<meta name="format-detection" content="telephone=no" />
-	{% for meta_tag in meta_tags %}
-	{% if meta_tag.name == "google-site-verification" %}<meta name="{{ meta_tag.name }}" content="{{ meta_tag.content }}" />{% endif %}
-	{% endfor %}
-	<!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
-	{% endblock meta_tags %}
-	<link rel="apple-touch-icon" href="{% static 'favicon.png' %}">
-	<link rel="icon" href="{% static 'favicon.png' %}?v=1">
-	<link rel="image_src" href="{% static 'favicon.png' %}" />
-	<link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
-	<link rel="stylesheet" href="{% static 'css/base.css' %}" />
-	{% render_block "css" %}
-	{% block extrahead %}{% endblock %}
-	<!--[if lte IE 8]><script src="{% static 'js/libs/html5.min.js' %}"></script><![endif]-->
-	<!--[if lte IE 8]><script src="{% static 'js/libs/respond.min.js' %}"></script><![endif]-->
-	{{ ALDRYN_SNAKE.render_head }}
+    <meta charset="utf-8" />
+    <title>{% block title %}{% page_attribute page_title %} - {{ request.site.name }}{% endblock title %}</title>
+    {% block meta_tags %}
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="{% page_attribute 'meta_description' %}" />
+    <meta name="keywords" content="{% page_attribute 'meta_keywords' %}" />
+    <meta name="format-detection" content="telephone=no" />
+    {% for meta_tag in meta_tags %}
+    {% if meta_tag.name == "google-site-verification" %}<meta name="{{ meta_tag.name }}" content="{{ meta_tag.content }}" />{% endif %}
+    {% endfor %}
+    <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
+    {% endblock meta_tags %}
+    <link rel="apple-touch-icon" href="{% static 'favicon.png' %}">
+    <link rel="icon" href="{% static 'favicon.png' %}?v=1">
+    <link rel="image_src" href="{% static 'favicon.png' %}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    {% render_block "css" %}
+    {% block extrahead %}{% endblock %}
+    <!--[if lte IE 8]><script src="{% static 'js/libs/html5.min.js' %}"></script><![endif]-->
+    <!--[if lte IE 8]><script src="{% static 'js/libs/respond.min.js' %}"></script><![endif]-->
+    {{ ALDRYN_SNAKE.render_head }}
     {% include "includes/analytics.html" %}
 </head>
 <body id="top" class="noscript {% block body_class %}tpl-root{% endblock %} lang-{{ LANGUAGE_CODE }}">

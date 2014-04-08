@@ -1,6 +1,6 @@
 /*!
- * @author:	Divio AG
- * @copyright:	http://www.divio.ch
+ * @author:    Divio AG
+ * @copyright: http://www.divio.ch
  */
 
 'use strict';

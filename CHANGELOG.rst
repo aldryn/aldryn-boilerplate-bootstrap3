@@ -5,6 +5,8 @@ Aldryn Boilerplate
 2.3.1 / latest
 --------------
 - added google-verification metatag from meta_tags forloop
+- removed depricated ifequal
+- switched from tabs to spaces
 
 2.3.0
 -----

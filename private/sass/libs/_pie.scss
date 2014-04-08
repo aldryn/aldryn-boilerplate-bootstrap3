@@ -32,8 +32,8 @@ $pie-behavior: stylesheet-url("PIE.htc") !default;
 // The `$position` argument must be some non-static
 // value (absolute, relative, etc.)
 @mixin pie-container($z-index: 0, $position: relative) {
-	z-index: $z-index;
-	position: $position;
+    z-index: $z-index;
+    position: $position;
 }
 
 // PIE elements must have this behavior attached to them.
@@ -49,28 +49,28 @@ $pie-behavior: stylesheet-url("PIE.htc") !default;
 $approach: $pie-default-approach,
 $z-index: 0
 ) {
-	behavior: $pie-behavior;
-	@if $approach == relative {
-		position: relative;
-	}
-	@else if $approach == z-index {
-		z-index: $z-index;
-	}
+    behavior: $pie-behavior;
+    @if $approach == relative {
+        position: relative;
+    }
+    @else if $approach == z-index {
+        z-index: $z-index;
+    }
 }
 
 // a smart mixin that knows to extend or include pie-element according
 // to your stylesheet's configuration variables.
 @mixin pie($base-class: $pie-base-class) {
-	@if $base-class {
-		@extend .#{$base-class};
-	}
-	@else {
-		@include pie-element;
-	}
+    @if $base-class {
+        @extend .#{$base-class};
+    }
+    @else {
+        @include pie-element;
+    }
 }
 
 // Watch `$n` levels of ancestors for changes to their class attribute
 // So that cascading styles will work correctly on the PIE element.
 @mixin pie-watch-ancestors($n) {
-	-pie-watch-ancestors: $n;
+    -pie-watch-ancestors: $n;
 }

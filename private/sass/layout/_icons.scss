@@ -4,26 +4,26 @@
 
 // #ICONS/face#
 @font-face {
-	font-family:"icons";
-	font-weight:normal;
-	font-style: normal;
-	src:url("../fonts/icons.eot");
-	src:url("../fonts/icons.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/icons.ttf") format("truetype"),
-		url("../fonts/icons.woff") format("woff"),
-		url("../fonts/icons.svg#standardsite") format("svg");
+    font-family:"icons";
+    font-weight:normal;
+    font-style: normal;
+    src:url("../fonts/icons.eot");
+    src:url("../fonts/icons.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/icons.ttf") format("truetype"),
+        url("../fonts/icons.woff") format("woff"),
+        url("../fonts/icons.svg#standardsite") format("svg");
 }
 
 // #ICONS/helpers#
 .icon:before { font:normal normal normal $icon-size/1 "icons";
-	position:relative; left:0; top:$icon-offset;
-	-webkit-font-smoothing:antialiased;
-	-moz-osx-font-smoothing:grayscale;
-	text-transform:lowercase;
-	speak:none;
-	// prevent underline
-	display:inline-block; // use native inline-block
-	text-decoration:none;
+    position:relative; left:0; top:$icon-offset;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    text-transform:lowercase;
+    speak:none;
+    // prevent underline
+    display:inline-block; // use native inline-block
+    text-decoration:none;
 }
 
 // #ICONS/icons#

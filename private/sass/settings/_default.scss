@@ -7,73 +7,73 @@
 // #GLOBAL VARIABLES#
 
 // fonts
-$font-family:					"PT Sans", "Helvetica Neue", Helvetica, sans-serif !default;
-$font-color:					#666 !default;
-$font-size:						14px !default;
-$line-height:					20px !default; // calculating line-height: round($font-size * 1.5)
-$line-space:					10px !default;
+$font-family:                   "PT Sans", "Helvetica Neue", Helvetica, sans-serif !default;
+$font-color:                    #666 !default;
+$font-size:                     14px !default;
+$line-height:                   20px !default; // calculating line-height: round($font-size * 1.5)
+$line-space:                    10px !default;
 
-$font-family-code:				Consolas, "Liberation Mono", Courier, monospace !default;
-$font-family-quote:				Georgia, serif !default;
+$font-family-code:              Consolas, "Liberation Mono", Courier, monospace !default;
+$font-family-quote:             Georgia, serif !default;
 
 // colors
-$color-primary:					#ff9100 !default;
-$color-secondary:				#4d4d4d !default;
-$color-link:					$color-primary !default;
-$color-title:					$color-secondary !default;
+$color-primary:                 #ff9100 !default;
+$color-secondary:               #4d4d4d !default;
+$color-link:                    $color-primary !default;
+$color-title:                   $color-secondary !default;
 
 // colors/text
-$color-muted:					#999 !default;
-$color-info:					#3a87ad !default;
-$color-error:					#b94a48 !default;
-$color-warning:					#c09853 !default;
-$color-success:					#468847 !default;
+$color-muted:                   #999 !default;
+$color-info:                    #3a87ad !default;
+$color-error:                   #b94a48 !default;
+$color-warning:                 #c09853 !default;
+$color-success:                 #468847 !default;
 
-$color-grey:					#666 !default;
-$color-grey-light:				#ccc !default;
-$color-grey-dark:				#333 !default;
+$color-grey:                    #666 !default;
+$color-grey-light:              #ccc !default;
+$color-grey-dark:               #333 !default;
 
 // colors/misc
-$color-background:				#f0f0f0 !default;
-$color-border:					#e0e0e0 !default;
-$color-even:					#e6e6e6 !default;
-$color-odd:						#e9e9e9 !default;
+$color-background:              #f0f0f0 !default;
+$color-border:                  #e0e0e0 !default;
+$color-even:                    #e6e6e6 !default;
+$color-odd:                     #e9e9e9 !default;
 
 // icons
-$icon-size:						16px !default;
-$icon-space:					5px !default;
-$icon-offset:					2px !default;
+$icon-size:                     16px !default;
+$icon-space:                    5px !default;
+$icon-offset:                   2px !default;
 
 // forms
-$input-font-size:				$font-size !default;
-$input-font-color:				$font-color !default;
-$input-line-height:				$line-height !default; // should not pass 18px!
-$input-width:					200px !default;
-$input-radius:					3px !default;
-$input-padding:					5px 8px !default;
-$input-border:					#ccc !default;
-$input-background:				#f7f7f7 !default;
+$input-font-size:               $font-size !default;
+$input-font-color:              $font-color !default;
+$input-line-height:             $line-height !default; // should not pass 18px!
+$input-width:                   200px !default;
+$input-radius:                  3px !default;
+$input-padding:                 5px 8px !default;
+$input-border:                  #ccc !default;
+$input-background:              #f7f7f7 !default;
 
 // forms/horizontal
-$form-ratio-left:				25% !default;
-$form-ratio-right:				70% !default;
-$form-ratio-space:				5% !default; // needs to add to 100%
+$form-ratio-left:               25% !default;
+$form-ratio-right:              70% !default;
+$form-ratio-space:              5% !default; // needs to add to 100%
 
 // content
-$content-box-padding:			5px 20px 10px !default;
-$content-box-border:			#f0f0f0 !default;
-$content-box-background:		#f0f0f0 !default;
+$content-box-padding:           5px 20px 10px !default;
+$content-box-border:            #f0f0f0 !default;
+$content-box-background:        #f0f0f0 !default;
 
 // responsive
-$responsive-tablet:				740px; // required in px
-$responsive-desktop:			980px; // required in px
+$responsive-tablet:             740px; // required in px
+$responsive-desktop:            980px; // required in px
 
 // grid
-$grid-width: 					960px;
-$grid-columns: 					24;
-$grid-gutter: 					20px;
-$grid-separator: 				"-";
+$grid-width:                    960px;
+$grid-columns:                  24;
+$grid-gutter:                   20px;
+$grid-separator:                "-";
 
 // pie settings
-// $pie-behavior:					stylesheet-url("pie.htc");
-// $experimental-support-for-pie:	true;
+// $pie-behavior:                    stylesheet-url("pie.htc");
+// $experimental-support-for-pie:    true;

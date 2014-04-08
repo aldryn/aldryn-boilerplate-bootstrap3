@@ -1,7 +1,7 @@
 Guidelines
 ==========
 
-* Use **tabs** and **not** spaces
+* Use **4 space intendation** and **not** tabs
 * Use camelCase for variables and **not** underscores or dashes
 * Use **dott** annotation ``.`` for javascript file naming
 * Use **single-quotes** ``'`` for **all** values

@@ -1,7 +1,7 @@
 Guidelines
 ==========
 
-* Use **tabs** and **not** spaces
+* Use **4 space intendation** and **not** tabs
 * Use **underscores** for scss file naming
 * Use **double-quotes** ``"`` for all text values
 * Use **dashes** to separate class/id names, **not** camelCase or underscore

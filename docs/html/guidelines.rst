@@ -1,7 +1,7 @@
 Guidelines
 ==========
 
-* Use **tabs** and **not** spaces
+* Use **4 space intendation** and **not** tabs
 * Use **underscores** for html file naming
 * Use **double-quotes** `"` for all attributes including django-template tags
 * Use lowercase for **all** attributes

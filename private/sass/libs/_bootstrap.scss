@@ -26,7 +26,7 @@ object, embed { height:100%; }
 #map_canvas, .map_canvas, .google-map-container { img, embed, object { max-width:none !important; } }
 
 // #BASE/compatibility#
-p.noscript, p.chromeframe { position:absolute; left:0; top:0; width:100%;
+p.noscript, p.chromeframe { position:absolute; left:0; top:0; z-index:100; width:100%;
     color:white; text-align:center; padding:$line-space 0; margin:0;
     border:1px solid #933; background:#c33; }
 p.noscript a, p.chromeframe a { color:white; font-weight:bold; }

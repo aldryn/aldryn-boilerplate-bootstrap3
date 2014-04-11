@@ -74,8 +74,8 @@ p.noscript a, p.chromeframe a { color:white; font-weight:bold; }
 .hide-text { @include hide-text(); }
 
 // #BASE/helpers/images#
-.image-left { float:left; }
-.image-right { float:right; }
+.image-left { float:left; padding-right:$line-space; }
+.image-right { float:right; padding-left:$line-space; }
 .image-responsive { max-width:100%; height:auto; }
 
 // #BASE/helpers/tables#

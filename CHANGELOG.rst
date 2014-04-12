@@ -2,11 +2,17 @@
 Aldryn Boilerplate
 ==================
 
-2.3.1 / latest
---------------
+latest
+------
+-
+
+2.3.1
+-----
 - added google-verification metatag from meta_tags forloop
 - removed depricated ifequal
 - switched from tabs to spaces
+- fixed an issue with z-index on noscript class
+- fixed an issue with footer menu naming
 
 2.3.0
 -----

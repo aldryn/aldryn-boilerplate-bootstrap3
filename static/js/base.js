@@ -17,7 +17,7 @@ jQuery(document).ready(function () {
     requirejs.config({ 'baseUrl': Cl.static + 'js/' });
 
     // load modules using require
-    require(['modules/cl.utils.min'], function() {
+    require(['modules/cl.utils'], function() {
         // removes noscript form body and adds print-js
         Cl.Utils.document();
         // handles input placeholder="" attributes

@@ -8,9 +8,9 @@
     <meta name="description" content="{% page_attribute 'meta_description' %}" />
     <meta name="keywords" content="{% page_attribute 'meta_keywords' %}" />
     <meta name="format-detection" content="telephone=no" />
-    {% for meta_tag in meta_tags %}
+    {% for meta_tag in meta_tags %}{% spaceless %}
     {% if meta_tag.name == "google-site-verification" %}<meta name="{{ meta_tag.name }}" content="{{ meta_tag.content }}" />{% endif %}
-    {% endfor %}
+    {% endspaceless %}{% endfor %}
     <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
     {% endblock meta_tags %}
     <link rel="apple-touch-icon" href="{% static 'favicon.png' %}">

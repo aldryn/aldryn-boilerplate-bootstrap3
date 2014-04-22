@@ -5,12 +5,12 @@
 
 {% block extend_base %}
 <div class="row">
-    <div class="large-17 push-7 column">
+    <div class="medium-17 medium-push-7 column">
         {% block content %}
         {% with 660 as width %}{% placeholder content %}{% endwith %}
         {% endblock content %}
     </div>
-    <aside class="large-7 pull-17 column sidebar">
+    <aside class="medium-7 medium-pull-17 column sidebar">
         {% block subnav %}
         {% page_attribute menu_title request.current_page.get_root as subtitle %}
         {% with class="subnav" title=subtitle %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endwith %}

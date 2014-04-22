@@ -2,9 +2,10 @@
 Aldryn Boilerplate
 ==================
 
-latest
-------
--
+2.3.2
+-----
+- added new foundation 5 grid
+- modified templates for foundation 5 grid
 
 2.3.1
 -----

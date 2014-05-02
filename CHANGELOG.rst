@@ -6,6 +6,7 @@ Aldryn Boilerplate
 -----
 - added new foundation 5 grid
 - modified templates for foundation 5 grid
+- disable pie as default
 
 2.3.1
 -----

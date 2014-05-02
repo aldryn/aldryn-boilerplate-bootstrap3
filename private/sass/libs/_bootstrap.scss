@@ -133,6 +133,9 @@ form {
         ol > li > .field img { vertical-align:top; }
     }
 
+    // list reset
+    .field ol, .field ul { @extend .list-reset; }
+
     // helpers
     .input-text { width:$input-width; }
     .input-select { width:$input-width + 14; }

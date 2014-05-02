@@ -122,15 +122,15 @@ form {
     select { width:$input-width - 25px; border:1px solid $input-border; }
     textarea { width:$input-width; }
     input[disabled], button[disabled], a.btn-disabled { @include opacity(0.5); cursor:auto !important; }
-    ol > li { margin-top:$line-space; margin-bottom:$line-space; }
+    ol .item, ol > li { margin-top:$line-space; margin-bottom:$line-space; }
 
     // horizontal floated style
     .form-horizontal {
-        ol > li { @extend .clearfix; }
-        ol > li > label { float:left; width:$form-ratio-left; padding-right:$form-ratio-space;
+        ol .item, ol > li { @extend .clearfix; }
+        ol .item .label, ol > li > label { float:left; width:$form-ratio-left; padding-right:$form-ratio-space;
             text-align:right; padding-top:round($font-size / 4); }
-        ol > li > .field { float:left; width:$form-ratio-right; }
-        ol > li > .field img { vertical-align:top; }
+        ol .item .field, ol > li > label { float:left; width:$form-ratio-right; }
+        ol .item .field img, ol > li > label img { vertical-align:top; }
     }
 
     // list reset

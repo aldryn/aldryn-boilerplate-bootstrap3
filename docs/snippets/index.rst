@@ -8,3 +8,4 @@ code is structured and what the goals are.
     :maxdepth: 1
 
     logo
+    navigation

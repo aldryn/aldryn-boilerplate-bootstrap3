@@ -15,6 +15,7 @@ Markup
   alternative.
 * The **img** is a fallback for print and the no-css view. Mostly it is a helper for accessibility purposes.
 
+
 Style
 *****
 

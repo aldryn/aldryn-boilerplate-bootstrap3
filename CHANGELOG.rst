@@ -2,6 +2,11 @@
 Aldryn Boilerplate
 ==================
 
+develop
+-------
+- added snippets to documentation
+- changed menu's according to the snippet guidelines
+
 2.3.2
 -----
 - added new foundation 5 grid

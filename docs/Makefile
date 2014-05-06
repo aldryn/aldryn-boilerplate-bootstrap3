@@ -164,11 +164,6 @@ run:
 init:
 	##### setup virtualenv
 	test -d $(VENV) || virtualenv env --prompt="(`basename \`pwd\``)"
-	$(PIP) install -r requirements.txt
-	##### done
-
-update:
-	##### update from git
 	git pull origin $(BRANCH)
-	$(PIP) install -r requirements.txt --upgrade
+	$(PIP) install -r requirements.txt
 	##### done

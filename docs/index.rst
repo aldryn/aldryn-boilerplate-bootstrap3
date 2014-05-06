@@ -26,5 +26,6 @@ Documentation
     css/index
     images/index
     javascript/index
+    snippets/index
 
 .. _Aldryn: http://www.aldryn.com/

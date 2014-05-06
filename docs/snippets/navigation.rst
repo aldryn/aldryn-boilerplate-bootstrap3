@@ -13,7 +13,8 @@ Markup
             <li class="child children ancestor">
                 <a href="#"><span>Item</span></a>
                 <ul>
-                    <li class="child active"><a href="#"><span>Item</span></a></li>
+                    <li class="child active first"><a href="#"><span>Item</span></a></li>
+                    <li class="child last"><a href="#"><span>Item</span></a></li>
                 </ul>
             </li>
             <li class="child last"><a href="#"><span>Item</span></a></li>
@@ -23,6 +24,7 @@ Markup
 * **active** is used when the element is selected
 * **ancestor** is used when a child element is active.
 * **children** is used when an element has chuldren
+* **first** and **last** are always appended to the first and last child of the series
 * Additionally you can add **nav** to *mainnav* to have a selector for all navigations e.g.: ``class="nav mainnav"``
 * The naming should always be: ``mainnav, subnav, metanav, footnav...``
 

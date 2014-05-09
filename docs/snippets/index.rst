@@ -9,3 +9,4 @@ code is structured and what the goals are.
 
     logo
     navigation
+    forms

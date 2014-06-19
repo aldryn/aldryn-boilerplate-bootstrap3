@@ -8,8 +8,8 @@
 Welcome
 #######
 
-The most advanced **django-cms** based boilerplate for rapid development. It uses a combination of **Bootstrap**,
-**Foundation** and various frontend best practices. In addition, this boilerplate is compatible with `Aldryn`_.
+The most advanced **django-cms** based boilerplate for rapid development. It uses the **Bootstrap** library as a,
+base and various other frontend best practices. In addition, this boilerplate is compatible with `Aldryn`_.
 
 The latest stable versions is available on github - https://github.com/aldryn/aldryn-boilerplate
 

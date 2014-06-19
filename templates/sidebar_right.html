@@ -5,12 +5,13 @@
 
 {% block extend_base %}
 <div class="row">
-    <div class="medium-17 column">
+    <div class="col-md-16">
         {% block content %}
         {% with 660 as width %}{% placeholder content %}{% endwith %}
         {% endblock content %}
     </div>
-    <aside class="medium-7 column sidebar">
+    <aside class="col-md-8">
+        <h3 class="sr-only">{% trans "Sidebar" %}</h3>
         {% block subnav %}
         {% page_attribute menu_title request.current_page.get_root as subtitle %}
         {% with class="subnav" title=subtitle %}{% show_menu 1 5 0 1 "includes/menu/navigation.html" %}{% endwith %}

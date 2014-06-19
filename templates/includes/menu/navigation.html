@@ -3,20 +3,20 @@
 {% for child in children %}
 {% if class and forloop.first and not forloop.parentloop %}
 <nav class="{{ class }}" role="navigation">
-{% if title %}<h2>{{ title }}</h2>{% endif %}
-<ul>
-{% endif %}
-
-<li class="child{% if child.ancestor %} ancestor{% endif %}{% if child.selected or ative %} active{% endif %}{% if child.children %} children{% endif %}{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}">
-    <a href="{{ child.get_absolute_url }}"><span>{{ child.get_menu_title }}</span></a>{% if child.children %}
+    {% if title %}<h2 class="sr-only">{{ title }}</h2>{% endif %}
     <ul>
-        {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
-    </ul>
     {% endif %}
-</li>
 
-{% if class and forloop.last and not forloop.parentloop %}
-</ul>
+    <li class="child{% if child.ancestor %} ancestor{% endif %}{% if child.selected or ative %} active{% endif %}{% if child.children %} children{% endif %}{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}">
+        <a href="{{ child.get_absolute_url }}"><span>{{ child.get_menu_title }}</span></a>{% if child.children %}
+        <ul>
+            {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
+        </ul>
+        {% endif %}
+    </li>
+
+    {% if class and forloop.last and not forloop.parentloop %}
+    </ul>
 </nav>
 {% endif %}
 {% endfor %}

@@ -5,6 +5,7 @@ The following software should be installed on your system in order to compile th
 
 * Sass: http://sass-lang.com/
 * Compass: http://compass-style.org/
+* Bootstrap: https://github.com/twbs/bootstrap-sass
 
 You can compile/watch using ``compass watch private`` from within the root.
 

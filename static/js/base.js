@@ -25,8 +25,8 @@ jQuery(document).ready(function () {
         // handles the viewport scaling for mobile devices
         Cl.Utils.viewport();
         // load default jquery widgets from addons/jquery.functions.js
-        $('.popup').autoPopUp();
-        $('.mailcrypte').mailCrypte();
+        // $('.popup').autoPopUp();
+        // $('.mailcrypte').mailCrypte();
     });
 
 });

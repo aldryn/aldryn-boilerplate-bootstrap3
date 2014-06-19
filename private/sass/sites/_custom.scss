@@ -1,20 +1,10 @@
-// @media all {
 //######################################################################################################################
-// #MOBILE#
+// #HAPPY CODING#
 
-// end of mobile
-// }
+//##################################################
+// #HELPERS#
+.spacer { height:$line-height-computed; }
+.spacer-xs { height:$line-height-computed / 2; }
+.spacer-lg { height:$line-height-computed * 2; }
 
-@media (min-width: $responsive-tablet) {
-//######################################################################################################################
-// #TABLET#
-
-// end of tablet
-}
-
-@media (min-width: $responsive-desktop) {
-//######################################################################################################################
-// #DESKTOP#
-
-// end of desktop
-}
+// end of happy coding

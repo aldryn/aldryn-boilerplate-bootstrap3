@@ -8,39 +8,39 @@
 {% block toolbar %}{% endblock %}
 {% block header %}
 <!-- start: header -->
-<header class="header" role="banner">
-    <div class="row">
-        {% comment %}logo should be placed absolute in this container to support seo positioning{% endcomment %}
-        <div class="small-24 column relative">
-            <h1 class="logo-main">
-                <a href="/"><img src="{% static "img/logo-main.png" %}" alt="{{ site_settings.site.name }}" /></a>
-            </h1>
+<header class="header container" role="banner">
+    {% comment %}logo should be placed absolute in this container to support seo positioning{% endcomment %}
+    <h1 class="logo-main">
+        <a href="/"><img src="{% static "img/logo-main.png" %}" alt="{{ site_settings.site.name }}" /></a>
+    </h1>
 
-            <!-- start: wai -->
-            <hr class="visuallyhidden" />
-            <h2 class="visuallyhidden">{% trans "Shortcuts:" %}</h2>
-            <ul class="skip-links">
-                <li><a href="/" title="[Alt + 0]" accesskey="0">{% trans "Go to home" %}</a></li>
-                <li><a href="#navigation" title="[Alt + 1]" accesskey="1">{% trans "Jump to navigation" %}</a></li>
-                <li><a href="#content" title="[Alt + 2]" accesskey="2">{% trans "Jump to content" %}</a></li>
-                <li><a href="#footer" title="[Alt + 3]" accesskey="3">{% trans "Contact" %}</a></li>
-            </ul>
-            <hr class="visuallyhidden" />
-            <!-- end: wai -->
+    <!-- start: wai -->
+    <hr class="sr-only" />
+    <h2 class="sr-only">{% trans "Shortcuts:" %}</h2>
+    <ul class="sr-only skip-links">
+        <li><a href="/" title="[Alt + 0]" accesskey="0">{% trans "Go to home" %}</a></li>
+        <li><a href="#navigation" title="[Alt + 1]" accesskey="1">{% trans "Jump to navigation" %}</a></li>
+        <li><a href="#content" title="[Alt + 2]" accesskey="2">{% trans "Jump to content" %}</a></li>
+        <li><a href="#footer" title="[Alt + 3]" accesskey="3">{% trans "Contact" %}</a></li>
+    </ul>
+    <hr class="sr-only" />
+    <!-- end: wai -->
 
-            {% block mainnav %}
-            <h2 class="visuallyhidden" id="navigation">{% trans "Navigation:" %}</h2>
-            <div class="mainnav-knob"></div>
-            {% render_model_block request.current_page "changelist" %}
-            {% with class="mainnav" %}{% show_menu 0 1 100 100 "includes/menu/navigation.html" %}{% endwith %}
-            {% endrender_model_block %}
-            {% endblock mainnav %}
+    {% block mainnav %}
+    <div class="nav nav-main-knob"></div>
+    {% render_model_block request.current_page "changelist" %}
+        {% with class="nav nav-main" title=_('Navigation:') %}
+        {% show_menu 0 1 100 100 "includes/menu/navigation.html" %}
+        {% endwith %}
+    {% endrender_model_block %}
+    {% endblock mainnav %}
 
-            {% block langnav %}
-            <nav class="langnav"><ul>{% language_chooser "includes/menu/langnav.html" %}</ul></nav>
-            {% endblock langnav %}
-        </div>
-    </div>
+    {% block langnav %}
+    <nav class="nav nav-lang">
+        <h2 class="sr-only">{% trans "Language:" %}</h2>
+        <ul>{% language_chooser "includes/menu/langnav.html" %}</ul>
+    </nav>
+    {% endblock langnav %}
 </header>
 <!-- end: header -->
 {% endblock header %}
@@ -48,9 +48,9 @@
 {% block breadcrumb %}
 {% if not request.current_page.is_home %}
 <!-- start: breadcrumb -->
-<nav class="breadcrumb row" role="navigation">
-    <ol class="small-24 column">
-        <li class="title">{% trans "You are here: " %}</li>
+<nav class="breadcrumb container" role="navigation">
+    <h2 class="sr-only">{% trans "You are here:" %}</h2>
+    <ol>
         {% block extend_breadcrumb %}
         {% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}
         {% endblock extend_breadcrumb %}
@@ -61,34 +61,34 @@
 {% endblock breadcrumb %}
 
 <!-- start: content -->
-<hr class="visuallyhidden" />
-<h1 class="visuallyhidden" id="content">{% trans "Content:" %} {% page_attribute title %}</h1>
-<div class="content">
-{% block messages %}{% include "includes/messages.html" %}{% endblock messages %}
-{% block extend_base %}
-    {% block content %}{% endblock %}
-{% endblock extend_base %}
-</div>
+<section class="content container">
+    <hr class="sr-only" />
+    <h2 class="sr-only" id="content">{% page_attribute title %}</h2>
+    {% block messages %}{% include "includes/messages.html" %}{% endblock messages %}
+    {% block extend_base %}
+        {% block content %}{% endblock %}
+    {% endblock extend_base %}
+</section>
 <!-- end: content -->
 
 {% block footer %}
 <!-- start: footer -->
-<hr class="visuallyhidden" />
-<h2 class="visuallyhidden" id="footer">{% trans "Footer:" %}</h2>
-<footer class="footer row" role="contentinfo">
-    <div class="small-24 column">
-        <nav class="footnav">
-            <ul>
-                {% show_menu_below_id "footnav" 0 0 100 100 "includes/menu/navigation.html" %}
-                <li class="right"><a href="#top">{% trans "Top" %}</a></li>
-            </ul>
-        </nav>
-        <p class="copyright">
-            {% trans "Copyright" %} &copy; {% now "Y" %}
-            <a href="http://www.divio.ch/" target="_blank">{% trans "Divio AG" %}</a>.
-            {% trans "All rights reserved" %}.
-        </p>
-    </div>
+<footer class="footer container" role="contentinfo">
+    <hr class="sr-only" />
+    <h2 class="sr-only" id="footer">{% trans "Footer:" %}</h2>
+
+    <nav class="footnav">
+        <h2 class="sr-only">{% trans "Sitemap:" %}</h2>
+        <ul>
+            {% show_menu_below_id "footnav" 0 0 100 100 "includes/menu/navigation.html" %}
+            <li class="right"><a href="#top">{% trans "Top" %}</a></li>
+        </ul>
+    </nav>
+    <p class="copyright">
+        {% trans "Copyright" %} &copy; {% now "Y" %}
+        <a href="http://www.divio.ch/" target="_blank">{% trans "Divio AG" %}</a>.
+        {% trans "All rights reserved" %}.
+    </p>
 </footer>
 <!-- end: footer -->
 {% endblock footer %}

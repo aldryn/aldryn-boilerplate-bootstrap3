@@ -21,10 +21,10 @@ Within ``setting.py`` we can define so called **Templated** which are than avail
 **Page > Templates** UI. These templates can have a different structures. In the boilerplate there are four
 predefined templates:
 
-* home.html
 * fullsize.html
 * sidebar_left.html
 * sidebar_right.html
+* tpl_home.html
 
 When choosing a name, be descriptive about their uses as the customer can set them by himself. If I would add a more
 narrow header option for fullsize, I would simply call it ``fullsize_simple.html``.

@@ -1,41 +1,43 @@
-// @media all {
 //######################################################################################################################
-// #ICONS#
+// #HAPPY CODING#
 
-// #ICONS/face#
+// #ICONS/variables#
+$icon-size:      22px !default;
+$icon-space:     5px !default;
+$icon-offset:    -1px !default;
+
+// #ICONS/font#
 @font-face {
     font-family:"icons";
     font-weight:normal;
     font-style: normal;
-    src:url("../fonts/icons.eot");
-    src:url("../fonts/icons.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/icons.ttf") format("truetype"),
-        url("../fonts/icons.woff") format("woff"),
-        url("../fonts/icons.svg#icons") format("svg"); // #icons has to be equal to the projects name
+    src:url("../fonts/fontastic/icons.eot");
+    src:url("../fonts/fontastic/icons.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/fontastic/icons.ttf") format("truetype"),
+        url("../fonts/fontastic/icons.woff") format("woff"),
+        url("../fonts/fontastic/icons.svg#icons") format("svg"); // #orange has to be equal to the projects name
 }
 
-// #ICONS/helpers#
-.icon:before, .icon:after { font:normal normal normal $icon-size "icons" !important;
+.icon,
+[data-icon]:before,
+[class^="icon-"]:before,
+[class*=" icon-"]:before { font:normal normal normal $icon-size "icons" !important;
     content:attr(data-icon);
     text-transform:none !important;
-    text-decoration:none !important;
     speak:none;
-    line-height:1;
-    @include font-smoothing();
-    @include inline-block();
+    line-height: 1;
     position:relative; top:$icon-offset;
+    @include inline-block();
+    @include font-smoothing();
 }
-.icon:before { padding-right:$icon-space; }
-.icon:after { display:none; }
-.icon-after:before { display:none; }
-.icon-after:after { display:inline-block; padding-left:$icon-space; }
+.icon-left { padding-right:$icon-space; }
+.icon-right { padding-left:$icon-space; }
 
-// #ICONS/icons#
+// #ICONS:start#
 .icon-arrow-top:before { content:"f"; }
 .icon-arrow-right:before { content:"g"; }
 .icon-arrow-bottom:before { content:"h"; }
 .icon-arrow-left:before { content:"i"; }
-
 .icon-accept:before { content:"d"; }
 .icon-close:before { content:"e"; }
 .icon-collapse:before { content:"k"; }
@@ -50,6 +52,6 @@
 .icon-rss:before { content:"l"; }
 .icon-twitter:before { content:"n"; }
 .icon-warning:before { content:"c"; }
+// #ICONS:end#
 
-// end of fonts
-// }
+// end of happy coding

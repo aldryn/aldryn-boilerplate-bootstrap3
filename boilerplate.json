@@ -21,9 +21,6 @@
         "templates/includes/menu/pagenav.html",
 
         "private/sass/libs/_bootstrap.scss",
-        "private/sass/libs/_foundation.scss",
-        "private/sass/libs/_normalize.scss",
-        "private/sass/libs/_pie.scss",
 
         "static/js/libs/class.min.js",
         "static/js/libs/console.min.js",

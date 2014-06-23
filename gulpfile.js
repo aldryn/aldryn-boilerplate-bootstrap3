@@ -6,7 +6,6 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
-var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
 var browser = require('browser-sync');
 

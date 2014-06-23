@@ -8,6 +8,7 @@
 .spacer { height:$line-height-computed; }
 .spacer-xs { height:$line-height-computed / 2; }
 .spacer-lg { height:$line-height-computed * 2; }
+.spacer-zero { margin:0; padding:0; }
 
 // #HELPERS/compatibility#
 p.noscript, p.chromeframe { position:absolute; left:0; top:0; z-index:9999; width:100%;

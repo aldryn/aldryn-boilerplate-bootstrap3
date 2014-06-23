@@ -52,7 +52,7 @@ gulp.task('browser', function() {
     ];
 
     browser.init(files, {
-        proxy: "localhost:8000"
+        proxy: 'localhost:' + process.env.PORT || '8000'
     });
 });
 

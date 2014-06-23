@@ -28,12 +28,6 @@ var patterns = {
     'sass': [paths.sass+'*', paths.sass+'**/*']
 };
 
-// HELPERS
-//##########################################################
-function trim(string) {
-    return string.replace(/(\r\n|\n|\r)/gm,'');
-}
-
 // TASKS
 //##########################################################
 // TASKS/javascript

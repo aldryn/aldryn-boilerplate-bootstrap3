@@ -27,6 +27,8 @@ var patterns = {
     'sass': [paths.sass+'*', paths.sass+'**/*']
 };
 
+var port = process.env.PORT || '8000';
+
 // TASKS
 //##########################################################
 // TASKS/javascript
@@ -45,7 +47,7 @@ gulp.task('browser', function() {
     ];
 
     browser.init(files, {
-        proxy: 'localhost:' + process.env.PORT || '8000'
+        proxy: 'localhost:' + port
     });
 });
 

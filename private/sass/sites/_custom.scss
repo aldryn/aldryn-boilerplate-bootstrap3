@@ -5,10 +5,10 @@
 // #HELPERS#
 
 // #HELPERS/spacer#
-.spacer { height:$line-height-computed; }
-.spacer-xs { height:$line-height-computed / 2; }
-.spacer-lg { height:$line-height-computed * 2; }
-.spacer-zero { margin:0; padding:0; }
+.spacer { margin-top:$line-height-computed / 2; margin-bottom:$line-height-computed / 2; }
+.spacer-xs { margin-top:$line-height-computed / 4; margin-bottom:$line-height-computed / 4; }
+.spacer-lg { margin-top:$line-height-computed; margin-bottom:$line-height-computed; }
+.spacer-zero { margin:0; }
 
 // #HELPERS/compatibility#
 p.noscript, p.chromeframe { position:absolute; left:0; top:0; z-index:9999; width:100%;

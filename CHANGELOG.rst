@@ -6,11 +6,13 @@ Aldryn Boilerplate
 -----
 - switch to twitter bootstrap
 - added more mixins
+- added ``js/libs/bootstra.min.js`` to libraries
 - refactored ``gulpfile.js``
 - refactored settings files
 - refactored html templates for mor ease to follow outline and w3c guidelines
 - file setup change (media queries should now be integrated directly)
 - renamed ``layout/_icons.scss`` to ``layout/iconography.scss``
+- updated js libraries to latest version
 - removed foundation
 - removed divio bootstrap
 - removed pie and normalize in favor of bootstraps integration

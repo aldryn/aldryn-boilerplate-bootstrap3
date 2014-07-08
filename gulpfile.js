@@ -13,11 +13,11 @@ var browser = require('browser-sync');
 //##########################################################
 var paths = {
     'css': './static/css/',
+    'html': './templates/',
     'images': './static/img/',
     'js': './static/js/',
     'media': './tmp/media/',
-    'sass': './private/sass/',
-    'html': './templates/'
+    'sass': './private/sass/'
 };
 
 var patterns = {
@@ -41,13 +41,15 @@ gulp.task('lint', function() {
 // TASK/browser reload
 gulp.task('browser', function() {
     var files = [
-        paths.html+'**/*.html',
         paths.css+'base.css',
-        paths.js+'**/*min.js'
+        paths.html+'**/*.html',
+        paths.js+'**/*.js'
     ];
 
+    // http://www.browsersync.io/docs/options/
     browser.init(files, {
-        proxy: 'localhost:' + port
+        'proxy': '0.0.0.0:' + port,
+        'port': port
     });
 });
 
@@ -64,19 +66,14 @@ gulp.task('media', function () {
         .pipe(gulp.dest(paths.media));
 });
 
+// TASK/watchers
+gulp.task('watch', function() {
+    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint']);
+});
+
 // RUNNERS
 //##########################################################
-gulp.task('default', function () {
-
-    // initial load
-    // gulp.start('static'); start this manually
-    gulp.start('lint');
-    gulp.start('browser');
-
-    // add watch tasks
-    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint']);
-
-});
+gulp.task('default', ['lint', 'browser', 'watch']);
 
 // end of gulpfile.js
 }());

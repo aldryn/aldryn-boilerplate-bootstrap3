@@ -7,7 +7,7 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
 var imagemin = require('gulp-imagemin');
-var browser = require('browser-sync');
+var browserSync = require('browser-sync');
 
 // SETTINGS
 //##########################################################
@@ -47,10 +47,12 @@ gulp.task('browser', function() {
     ];
 
     // http://www.browsersync.io/docs/options/
-    browser.init(files, {
-        'proxy': '0.0.0.0:' + port,
-        'port': port
-    });
+    setTimeout(function () {
+        browserSync.init(files, {
+            'proxy': '0.0.0.0:' + port,
+            'port': port
+        });
+    }, 1000);
 });
 
 // TASK/image preprocessing

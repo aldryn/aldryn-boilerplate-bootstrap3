@@ -36,7 +36,7 @@ Additional libraries such as respond.js or html5.js provide html/css shivs for o
 modules/
 --------
 
-Additional modules which are loaded using **require.js** or other systems should be placed in this folder.
+Additional modules which are loaded using **require.js** or other AMD systems should be placed within this folder.
 
 Addons are typically loaded using *django-sekizai* where modules present an easier way to structure globally required
 JavaScript or an application by itself. Add additional folders to further support organization when required.

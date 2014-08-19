@@ -7,6 +7,7 @@ Aldryn Boilerplate
 - switch to twitter bootstrap
 - added more mixins
 - added ``js/libs/bootstra.min.js`` to libraries
+- added outdated Browser script
 - refactored ``gulpfile.js``
 - refactored settings files
 - refactored html templates for mor ease to follow outline and w3c guidelines

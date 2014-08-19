@@ -13,35 +13,36 @@
 //###########################################################
 // #COLORS#
 
-$brand-primary:         #63ba5f;
+$brand-primary:         #18bc9c;
+$brand-secondary:       #375a7f;
 $brand-success:         #5cb85c;
 $brand-info:            #5bc0de;
 $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
 
-$gray-darker:           #4c4d4d; // lighten(#000, 13.5%) !default; // #222
+$gray-darker:           #3e3e3e; // lighten(#000, 13.5%) !default; // #222
 $gray-dark:             #6a7779; // lighten(#000, 20%) !default;   // #333
-$gray:                  #d2d2d2; // lighten(#000, 33.5%) !default; // #555
+$gray:                  #ccc; // lighten(#000, 33.5%) !default; // #555
 $gray-light:            #e9e9e9; // lighten(#000, 93.5%) !default; // #eee
 $gray-lighter:          #f1f1ed; // lighten(#000, 60%) !default;   // #999
 
 //###########################################################
 // #SCAFFOLDING#
 
-$body-bg:               white;
-$text-color:            black;
+$body-bg:               #fff;
+$text-color:            #666;
 $link-color:            $brand-primary;
 $link-hover-color:      darken($link-color, 15%);
 
 //###########################################################
 // #TYPOGRAPHY#
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, sans-serif;
+$font-family-sans-serif:  "ClearSans", "Helvetica Neue", Helvetica, sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-monospace:   Consolas, "Liberation Mono", Courier, monospace;
 $font-family-base:        $font-family-sans-serif;
 
-$font-size-base:          16px;
+$font-size-base:          14px;
 
 $font-size-h1:            32px;
 $font-size-h2:            28px;
@@ -54,7 +55,7 @@ $font-size-h6:            $font-size-base;
 // #GRID#
 
 $grid-columns:              24;
-$grid-gutter-width:         20px;
+$grid-gutter-width:         40px;
 
 //###########################################################
 // #RESPONSIVE#
@@ -92,3 +93,59 @@ $state-warning-border:           $state-warning-bg; //darken(adjust-hue($state-w
 $state-danger-text:              #ed1c27; //#a94442
 $state-danger-bg:                #fde8e9; //#f2dede
 $state-danger-border:            $state-danger-bg; //darken(adjust-hue($state-danger-bg, -10), 5%);
+
+//###########################################################
+// #NAVBAR#
+
+$navbar-height:                    60px; // 50px !default;
+// $navbar-margin-bottom:             $line-height-computed !default;
+$navbar-border-radius:             $border-radius-base !default;
+// $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
+$navbar-padding-vertical:          20px; // (($navbar-height - $line-height-computed) / 2) !default;
+// $navbar-collapse-max-height:       340px !default;
+
+$navbar-inverse-color:             #999; // #777 !default;
+$navbar-inverse-bg:                #222; // #f8f8f8 !default;
+$navbar-inverse-border:            none; // darken($navbar-default-bg, 6.5%) !default;
+
+// Navbar links
+$navbar-inverse-link-color:                $navbar-inverse-color; // #777 !default;
+$navbar-inverse-link-hover-color:          #18bc9c; // #333 !default;
+$navbar-inverse-link-hover-bg:             transparent !default;
+$navbar-inverse-link-active-color:         #fff; // #555 !default;
+$navbar-inverse-link-active-bg:            darken($navbar-inverse-bg, 5%); // darken($navbar-default-bg, 6.5%) !default;
+// $navbar-inverse-link-disabled-color:       #ccc !default;
+// $navbar-inverse-link-disabled-bg:          transparent !default;
+
+// Inverted navbar toggle
+$navbar-inverse-toggle-hover-bg:            #333 !default;
+$navbar-inverse-toggle-icon-bar-bg:         #fff !default;
+$navbar-inverse-toggle-border-color:        none; // #333 !default;
+
+//###########################################################
+// #DROPDOWNS#
+
+$dropdown-bg:                    white; // #fff !default;
+$dropdown-border:                white; // rgba(0,0,0,.15) !default;
+$dropdown-fallback-border:       white; // #ccc !default;
+// $dropdown-divider-bg:            #e5e5e5 !default;
+
+$dropdown-link-color:            $navbar-inverse-color; // $gray-dark !default;
+$dropdown-link-hover-color:      white; // darken($gray-dark, 5%) !default;
+$dropdown-link-hover-bg:         $navbar-inverse-link-hover-color; // #f5f5f5 !default;
+
+// $dropdown-link-active-color:     $component-active-color !default;
+// $dropdown-link-active-bg:        $component-active-bg !default;
+// $dropdown-link-disabled-color:   $gray-light !default;
+// $dropdown-header-color:          $gray-light !default;
+
+//###########################################################
+// #BREADCRUMB#
+
+// $breadcrumb-padding-vertical:   8px !default;
+// $breadcrumb-padding-horizontal: 15px !default;
+$breadcrumb-bg:                 $gray-light; // #f5f5f5 !default;
+// $breadcrumb-color:              #ccc !default;
+// $breadcrumb-active-color:       $gray-light !default;
+// $breadcrumb-separator:          "/" !default;
+

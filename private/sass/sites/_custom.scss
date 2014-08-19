@@ -17,8 +17,27 @@ p.noscript, p.chromeframe { position:absolute; left:0; top:0; z-index:9999; widt
 p.noscript a, p.chromeframe a { color:white; font-weight:bold; }
 
 .skip-links { @extend .list-unstyled;
-    position:absolute; left:0; top:0; right:0; z-index:9999;
-    a { position:absolute; left:-9999px; color:white; &:focus { left:0; } }
+    position:absolute; left:0; top:$navbar-height; right:0; z-index:9999;
+    a { position:absolute; left:-9999px; color:$gray-darker; &:focus { left:0; } }
 }
+
+// #HELPERS/colors#
+.brand-primary { background-color:$brand-primary; }
+.brand-secondary { background-color:$brand-secondary; }
+.brand-success { background-color:$brand-success; }
+.brand-info { background-color:$brand-info; }
+.brand-warning { background-color:$brand-warning; }
+.brand-danger { background-color:$brand-danger; }
+.brand-muted { background-color:$text-muted; }
+
+.brand-grey-darker { background-color:$gray-darker; }
+.brand-grey-dark { background-color:$gray-dark; }
+.brand-grey { background-color:$gray; }
+.brand-grey-light { background-color:$gray-light; }
+.brand-grey-lighter { background-color:$gray-lighter; }
+
+// #HELPERS/styleguide#
+.styleguide { padding:$line-height-computed 0; }
+.col-linebreak { border-left:1px dotted $gray-light; }
 
 // end of happy coding

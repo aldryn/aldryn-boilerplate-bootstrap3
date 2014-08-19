@@ -8,6 +8,7 @@
 // #NAMESPACES#
 var Cl = window.Cl || {};
 /* global requirejs */
+/* global outdatedBrowser */
 
 //######################################################################################################################
 // #BASE#
@@ -20,13 +21,15 @@ jQuery(document).ready(function () {
     require(['modules/cl.utils'], function() {
         // removes noscript form body and adds print-js
         Cl.Utils.document();
-        // handles input placeholder="" attributes
-        Cl.Utils.placeholders();
-        // handles the viewport scaling for mobile devices
-        Cl.Utils.viewport();
-        // load default jquery widgets from addons/jquery.functions.js
-        // $('.popup').autoPopUp();
-        // $('.mailcrypte').mailCrypte();
+        // INFO: additionally you will be able to use:
+        // Cl.Utils.mobile() for detecting mobile devices
+        // Cl.Utils.tablet() for detecting tablet devices
+    });
+
+    // load outdated browser scropt
+    require(['modules/outdatedBrowser.min'], function () {
+        // DOCS: https://github.com/burocratik/outdated-browser
+        outdatedBrowser();
     });
 
 });

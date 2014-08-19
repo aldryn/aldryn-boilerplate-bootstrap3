@@ -1,9 +1,7 @@
-{% for ance in ancestors %}
-<li class="child">
-    {% if not forloop.last %}
-    <a href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}</a> <span class="separator">&raquo;</span>
-    {% else %}
-    <span class="active">{{ ance.get_menu_title }}</span>
-    {% endif %}
-</li>
+{% for crumb in ancestors %}
+{% if not forloop.last %}
+    <li class="child"><a href="{{ crumb.get_absolute_url }}">{{ crumb.get_menu_title }}</a></li>
+{% else %}
+    <li class="child active">{{ crumb.get_menu_title }}</li>
+{% endif %}
 {% endfor %}

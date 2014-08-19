@@ -1,22 +1,12 @@
 {% load i18n menu_tags cache %}
+{# DOCS: http://django-cms.readthedocs.org/en/latest/advanced/templatetags.html#show-menu-examples #}
 
 {% for child in children %}
-{% if class and forloop.first and not forloop.parentloop %}
-<nav class="{{ class }}" role="navigation">
-    {% if title %}<h2 class="sr-only">{{ title }}</h2>{% endif %}
-    <ul>
-    {% endif %}
-
-    <li class="child{% if child.ancestor %} ancestor{% endif %}{% if child.selected or ative %} active{% endif %}{% if child.children %} children{% endif %}{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}">
-        <a href="{{ child.get_absolute_url }}"><span>{{ child.get_menu_title }}</span></a>{% if child.children %}
-        <ul>
-            {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
-        </ul>
-        {% endif %}
-    </li>
-
-    {% if class and forloop.last and not forloop.parentloop %}
+<li class="child{% if child.ancestor %} ancestor{% endif %}{% if child.selected %} active{% endif %}{% if child.children %} children dropdown{% endif %}{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %}">
+    <a href="{{ child.get_absolute_url }}"{% if child.children and not child.parent %} class="dropdown-toggle" data-toggle="dropdown"{% endif %}><span>{{ child.get_menu_title }}</span>{% if child.children and not child.parent %} <span class="caret"></span>{% endif %}</a>{% if child.children %}
+    <ul{% if child.children and not child.parent %} class="dropdown-menu" role="menu"{% endif %}>
+        {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
     </ul>
-</nav>
-{% endif %}
+    {% endif %}
+</li>
 {% endfor %}

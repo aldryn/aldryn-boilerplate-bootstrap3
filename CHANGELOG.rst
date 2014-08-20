@@ -19,6 +19,7 @@ Aldryn Boilerplate
 - removed pie and normalize in favor of bootstraps integration
 - removed ``layout/_retina.scss``
 - removed ``layout/_mobile.scss``
+- removed console.min.js
 
 2.3.3
 -----

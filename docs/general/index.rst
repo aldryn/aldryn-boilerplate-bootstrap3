@@ -7,6 +7,6 @@ This chapter provides general information about:
     :maxdepth: 2
 
     requirements
+    best-practices
     folder
     comments
-    oddities

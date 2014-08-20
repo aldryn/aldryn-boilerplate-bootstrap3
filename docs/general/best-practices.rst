@@ -13,7 +13,7 @@ Icons
 
 We integrated the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_  library instead of Bootstrap's
 `Glyphicons <http://getbootstrap.com/components/#glyphicons>`_ and stream the ``fa-*`` prefixes to
-``icon-*`` to be more consistend and flexible when using `fontastic.me <http://fontastic.me>`_.
+``icon-*`` to be more consistent and flexible when using `fontastic.me <http://fontastic.me>`_.
 
 Libraries
 ---------

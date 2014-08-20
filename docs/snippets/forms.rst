@@ -2,7 +2,7 @@ Forms
 =====
 
 .. WARNING::
-   This is depricated, please use the bootstrap documentation to build the form!
+   This is deprecated, please use the bootstrap documentation to build the form!
 
 
 Markup

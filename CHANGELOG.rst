@@ -10,13 +10,13 @@ Aldryn Boilerplate
 - added outdated Browser script
 - refactored ``gulpfile.js``
 - refactored settings files
-- refactored html templates for mor ease to follow outline and w3c guidelines
+- refactored html templates for more ease to follow outline and w3c guidelines
 - file setup change (media queries should now be integrated directly)
 - renamed ``layout/_icons.scss`` to ``layout/iconography.scss``
 - updated js libraries to latest version
 - removed foundation
 - removed divio bootstrap
-- removed pie and normalize in favor of bootstraps integration
+- removed pie and normalize in favour of bootstraps integration
 - removed ``layout/_retina.scss``
 - removed ``layout/_mobile.scss``
 - removed console.min.js
@@ -35,7 +35,7 @@ Aldryn Boilerplate
 2.3.1
 -----
 - added google-verification metatag from meta_tags forloop
-- removed depricated ifequal
+- removed deprecated ifequal
 - switched from tabs to spaces
 - fixed an issue with z-index on noscript class
 - fixed an issue with footer menu naming
@@ -45,12 +45,12 @@ Aldryn Boilerplate
 - added gulp task management
 - added .jshintrc configuration file
 - added package.json for node packaging
-- optimized js libraries to pass jslint tests
+- optimised js libraries to pass jslint tests
 - moved google analytics code to the head
 
 2.2.1
 -----
-- added fix for ff retina rendering whithin ``_retina.scss``
+- added fix for ff retina rendering within ``_retina.scss``
 - update jQuery to version 1.11
 - update docs with requirements
 - update config.rb for local usage

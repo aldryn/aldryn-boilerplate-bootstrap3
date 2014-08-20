@@ -8,7 +8,7 @@ it is more readable.
 Sections
 --------
 
-The longblock comment is used to separate sections, for example the mobile/tablet/desktop separation within scss or
+The long block comment is used to separate sections, for example the mobile/tablet/desktop separation within scss or
 base.js.
 
 .. code-block:: javascript

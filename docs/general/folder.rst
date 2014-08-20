@@ -48,7 +48,7 @@ When a structure might get more complicated, make use of grouping and create add
 templates/
 ----------
 
-All django templates should be allocated within the ``templates/`` folder. This also applies for apps or inclusion
+All Django templates should be allocated within the ``templates/`` folder. This also applies for apps or inclusion
 files. When using `Haml <http://haml.info/>`_, set your configuration so the templates get compiled into
 **/templates/**.
 

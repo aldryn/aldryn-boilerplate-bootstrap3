@@ -29,7 +29,9 @@ jQuery(document).ready(function () {
     // load outdated browser scropt
     require(['modules/outdatedBrowser.min'], function () {
         // DOCS: https://github.com/burocratik/outdated-browser
-        outdatedBrowser();
+        outdatedBrowser({
+            'languagePath': ''
+        });
     });
 
 });

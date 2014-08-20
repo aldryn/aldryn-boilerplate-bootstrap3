@@ -22,17 +22,14 @@
 
         "private/sass/libs/_bootstrap.scss",
 
+        "static/js/libs/bootstrap.min.js",
         "static/js/libs/class.min.js",
-        "static/js/libs/console.min.js",
-        "static/js/libs/html5.min.js",
+        "static/js/libs/html5shiv.min.js",
         "static/js/libs/jquery.min.js",
         "static/js/libs/require.min.js",
         "static/js/libs/respond.min.js",
         "static/js/libs/swfobject.min.js",
         "static/js/modules/ckeditor.wysiwyg.js",
-        "static/js/modules/cl.utils.js",
-        "static/js/addons/cl.debug.min.js",
-        "static/js/addons/jquery.mbp.js",
 
         "static/css/box-sizing.htc",
         "static/css/pie.htc"

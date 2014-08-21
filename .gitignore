@@ -22,9 +22,11 @@
 /requirements_local*.txt
 
 /node_modules
+/bower_components
 npm-debug.log
 base.css
 *.css.map
-static/css/bootstrap
+/static/css/bootstrap
+/static/vendor
 
 shippable/

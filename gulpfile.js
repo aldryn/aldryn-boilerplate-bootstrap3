@@ -4,7 +4,6 @@
 'use strict';
 /* global require */
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
@@ -67,6 +66,9 @@ gulp.task('media', function () {
         .pipe(imagemin())
         .pipe(gulp.dest(paths.media));
 });
+
+// TASK/update
+gulp.task('update');
 
 // TASK/watchers
 gulp.task('watch', function() {

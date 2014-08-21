@@ -8,6 +8,9 @@ Aldryn Boilerplate
 - added more mixins
 - added ``js/libs/bootstra.min.js`` to libraries
 - added outdated Browser script
+- added bower
+- added .jshintrc to root
+- added .editorconfig
 - refactored ``gulpfile.js``
 - refactored settings files
 - refactored html templates for more ease to follow outline and w3c guidelines

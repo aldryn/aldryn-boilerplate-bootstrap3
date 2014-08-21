@@ -1,7 +1,7 @@
 /* Default CKEDITOR Styles
  * Added within src/settings.py CKEDITOR_SETTINGS.stylesSet
  */
-CKEDITOR.allElements = ['p','h1','h2','h3','h4','h5','h6','div'];
+CKEDITOR.allElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div'];
 CKEDITOR.stylesSet.add('default', [
     /* Block Styles */
     {'name': 'Text Lead', 'element': CKEDITOR.allElements, 'attributes': {'class': 'lead'}},
@@ -47,8 +47,8 @@ CKEDITOR.stylesSet.add('default', [
     {'name': 'Image Circle', 'element': 'img', 'attributes': {'class': 'img-circle'}},
     {'name': 'Image Thumbnail', 'element': 'img', 'attributes': {'class': 'img-thumbnail'}},
 
-    {'name': 'Pull Left', 'element': ['p','h1','h2','h3','h4','h5','h6','div'], 'attributes': {'class': 'pull-left'}},
-    {'name': 'Pull Right', 'element': ['p','h1','h2','h3','h4','h5','h6','div'], 'attributes': {'class': 'pull-right'}},
+    {'name': 'Pull Left', 'element': CKEDITOR.allElements, 'attributes': {'class': 'pull-left'}},
+    {'name': 'Pull Right', 'element': CKEDITOR.allElements, 'attributes': {'class': 'pull-right'}},
 
     {'name': 'Blockquote Reverse', 'element': 'blockquote', 'attributes': {'class': 'blockquote-reverse'}}
 ]);

@@ -71,7 +71,7 @@ gulp.task('browser', function () {
 
 // TASK/watchers
 gulp.task('watch', function () {
-    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint']);
+    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint'], ['images']);
 });
 
 // RUNNERS

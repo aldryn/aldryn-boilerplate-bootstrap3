@@ -10,6 +10,7 @@ Aldryn Boilerplate
 - added outdated Browser script
 - added bower
 - added .jshintrc to root
+- added .jscsrc to root and jscsrc functions
 - added .editorconfig
 - refactored ``gulpfile.js``
 - refactored settings files

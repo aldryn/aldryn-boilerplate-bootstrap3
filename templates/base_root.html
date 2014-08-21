@@ -4,42 +4,33 @@
     <meta charset="utf-8" />
     <title>{% block title %}{% page_attribute page_title %} - {{ request.site.name }}{% endblock title %}</title>
     {% block meta_tags %}
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% page_attribute 'meta_description' %}" />
     <meta name="keywords" content="{% page_attribute 'meta_keywords' %}" />
-    <meta name="format-detection" content="telephone=no" />
-    {% for meta_tag in meta_tags %}{% spaceless %}
-    {% if meta_tag.name == "google-site-verification" %}<meta name="{{ meta_tag.name }}" content="{{ meta_tag.content }}" />{% endif %}
-    {% endspaceless %}{% endfor %}
-    <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
+    {% for meta_tag in meta_tags %}{% spaceless %}{% if meta_tag.name == "google-site-verification" %}<meta name="{{ meta_tag.name }}" content="{{ meta_tag.content }}" />{% endif %}{% endspaceless %}{% endfor %}
     {% endblock meta_tags %}
-    <link rel="apple-touch-icon" href="{% static 'favicon.png' %}">
-    <link rel="icon" href="{% static 'favicon.png' %}?v=1">
-    <link rel="image_src" href="{% static 'favicon.png' %}" />
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    {% render_block "css" %}
+    <link rel="icon" type="image/png" href="{% static 'favicon.png' %}">
+    <!--[if IE]><link rel="shortcut icon" href="{% static 'favicon.ico' %}"/><![endif]-->
+    {% compress css %}<link rel="stylesheet" href="{% static 'css/base.css' %}" />{% endcompress %}
+    {% render_block  "css" postprocessor "compressor.contrib.sekizai.compress" %}
+    <!--[if lt IE 9]>
+    <script src="{% static 'js/libs/html5shiv.min.js' %}"></script>
+    <script src="{% static 'js/libs/respond.min.js' %}"></script>
+    <![endif]-->
     {% block extrahead %}{% endblock %}
-    <!--[if lte IE 8]><script src="{% static 'js/libs/html5.min.js' %}"></script><![endif]-->
-    <!--[if lte IE 8]><script src="{% static 'js/libs/respond.min.js' %}"></script><![endif]-->
     {{ ALDRYN_SNAKE.render_head }}
     {% include "includes/analytics.html" %}
 </head>
-<body id="top" class="noscript {% block body_class %}tpl-root{% endblock %} lang-{{ LANGUAGE_CODE }}">
+<body id="page-top" class="noscript lang-{{ LANGUAGE_CODE }}{% block body_class %} tpl-root{% endblock %}">
 {% cms_toolbar %}
-<!--[if lte IE 7]><div class="ie"><![endif]-->
-<!--[if IE 8]><div class="ie8"><![endif]-->
-<!--[if IE 9]><div class="ie9"><![endif]-->
 
 {% block extend_root %}{% endblock %}
 
-<!--[if lte IE 9]></div><![endif]-->
 {% compress js %}
 <script src="{% static 'js/libs/jquery.min.js' %}"></script>
+<script src="{% static 'js/libs/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/libs/class.min.js' %}"></script>
 <script src="{% static 'js/libs/require.min.js' %}"></script>
-<script src="{% static 'js/addons/jquery.mbp.js' %}"></script>
-<script src="{% static 'js/addons/jquery.functions.js' %}"></script>
 <script src="{% static 'js/base.js' %}"></script>
 <script>Cl.static = '{{ STATIC_URL }}';</script>
 {% endcompress %}
@@ -50,13 +41,13 @@
 {% endif %}
 {% render_block "js" %}
 {% block extrafoot %}{% endblock %}
-<noscript><p class="noscript">{% trans "Please activate JavaScript to enable all features." %}</p></noscript>
-<!--[if lte IE 7 ]>
-<p class="chromeframe">
-{% blocktrans %}You are using an <strong>outdated</strong> browser.
-Please <a href="http://whatbrowser.org/">upgrade your browser</a> to improve your experience.{% endblocktrans %}
-</p>
-<![endif]-->
 {{ ALDRYN_SNAKE.render_tail }}
+<div class="browser-outdated" id="outdated" hidden="hidden">
+    <noscript><h3>{% trans "Please enable JavaScript" %}</h3></noscript>
+    <h3>{% trans "Your browser is out-of-date!" %}</h3>
+    <p>{% trans "Update your browser to view this website correctly." %}</p>
+    <p><a href="http://outdatedbrowser.com/" class="btn btn-lg btn-outline" id="btnUpdateBrowser">{% trans "Update my browser now" %}</a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
 </body>
 </html>

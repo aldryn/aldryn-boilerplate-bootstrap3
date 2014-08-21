@@ -1,7 +1,7 @@
 Guidelines
 ==========
 
-* Use **4 space intendation** and **not** tabs
+* Use **4 space indentation** and **not** tabs
 * Use **underscores** for html file naming
 * Use **double-quotes** `"` for all attributes including django-template tags
 * Use lowercase for **all** attributes
@@ -42,7 +42,7 @@ IDs vs Classes
 --------------
 
 You should **always** use classes instead if id's. Classes represent a more OOP approach of adding and removing
-stylesets like ``box box-wide box-hint``.
+style sets like ``box box-wide box-hint``.
 
 The ID attribute should be preserved for javascript functionality or for anchor referencing in conjunction with
 hashes.
@@ -62,7 +62,7 @@ a single class rather than multiple divs with multiple classes:
     </div>
 
 We don't need to add specific classes to the **h2** as we can control the inner style using ``.addon-blog``. However
-more complicated structures such as lead, content, author, metainfos, tags can require their own class names:
+more complicated structures such as lead, content, author, meta infos, tags can require their own class names:
 
 .. code-block:: html
 

@@ -1,8 +1,8 @@
 @charset "utf-8";
 /*!
-* @author:    Divio AG
-* @copyright: http://www.divio.ch
-*/
+ * @author:    Divio AG
+ * @copyright: http://www.divio.ch
+ */
 
 //######################################################################################################################
 // #IMPORTS#
@@ -11,11 +11,11 @@
 // importing frameworks
 @import "libs/all";
 
-// importing addons
-@import "addons/all";
-
 // importing modules
 @import "layout/all";
+
+// importing addons
+@import "addons/all";
 
 // importing sites
 @import "sites/all";

@@ -1,20 +1,43 @@
-// @media all {
 //######################################################################################################################
-// #MOBILE#
+// #HAPPY CODING#
 
-// end of mobile
-// }
+//##################################################
+// #HELPERS#
 
-@media (min-width: $responsive-tablet) {
-//######################################################################################################################
-// #TABLET#
+// #HELPERS/spacer#
+.spacer { margin-top:$line-height-computed / 2; margin-bottom:$line-height-computed / 2; }
+.spacer-xs { margin-top:$line-height-computed / 4; margin-bottom:$line-height-computed / 4; }
+.spacer-lg { margin-top:$line-height-computed; margin-bottom:$line-height-computed; }
+.spacer-zero { margin:0; }
 
-// end of tablet
+// #HELPERS/compatibility#
+p.noscript, p.chromeframe { position:absolute; left:0; top:0; z-index:9999; width:100%;
+    color:white; text-align:center; padding:$line-height-computed / 2 0; margin:0;
+    border:5px solid darken($brand-danger, 20%); background:$brand-danger; }
+p.noscript a, p.chromeframe a { color:white; font-weight:bold; }
+
+.skip-links { @extend .list-unstyled;
+    position:absolute; left:0; top:$navbar-height; right:0; z-index:9999;
+    a { position:absolute; left:-9999px; color:$gray-darker; &:focus { left:0; } }
 }
 
-@media (min-width: $responsive-desktop) {
-//######################################################################################################################
-// #DESKTOP#
+// #HELPERS/colors#
+.brand-primary { background-color:$brand-primary; }
+.brand-secondary { background-color:$brand-secondary; }
+.brand-success { background-color:$brand-success; }
+.brand-info { background-color:$brand-info; }
+.brand-warning { background-color:$brand-warning; }
+.brand-danger { background-color:$brand-danger; }
+.brand-muted { background-color:$text-muted; }
 
-// end of desktop
-}
+.brand-grey-darker { background-color:$gray-darker; }
+.brand-grey-dark { background-color:$gray-dark; }
+.brand-grey { background-color:$gray; }
+.brand-grey-light { background-color:$gray-light; }
+.brand-grey-lighter { background-color:$gray-lighter; }
+
+// #HELPERS/styleguide#
+.styleguide { padding:$line-height-computed 0; }
+.col-linebreak { border-left:1px dotted $gray-light; }
+
+// end of happy coding

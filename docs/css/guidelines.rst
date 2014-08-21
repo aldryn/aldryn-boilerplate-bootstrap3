@@ -1,7 +1,7 @@
 Guidelines
 ==========
 
-* Use **4 space intendation** and **not** tabs
+* Use **4 space indentation** and **not** tabs
 * Use **underscores** for scss file naming
 * Use **double-quotes** ``"`` for all text values
 * Use **dashes** to separate class/id names, **not** camelCase or underscore
@@ -19,7 +19,7 @@ Guidelines
 Style
 -----
 
-Use the single-line style instad of block-style and group:
+Use the single-line style instead of block-style and group:
 
 #. color, font-size, line-height, font-* (font relevant data)
 #. width, height, padding, margin (box model relevant date)
@@ -48,12 +48,12 @@ Nesting
 -------
 
 With great power comes great responsibility (just wanted to throw that in here). When writing in **sass** or **less** we
-sometimes forget performance over lazyness. While nesting is very powerfull, we should avoid unnecessary levels or
+sometimes forget performance over laziness. While nesting is very powerful, we should avoid unnecessary levels or
 blocks that can be achieved simpler. A good example is the following code:
 
 .. code-block:: css
 
-    .mainnav {
+    .nav-main {
         ul {
             li {
                 a { color: red; }
@@ -61,17 +61,17 @@ blocks that can be achieved simpler. A good example is the following code:
         }
     }
 
-This can be optimized in various ways. First of all, we dont need the additional nesting. When no other styles are
-needed just simply write compact: ``.mainnav ul li a { color: red; }``
+This can be optimised in various ways. First of all, we don't need the additional nesting. When no other styles are
+needed just simply write compact: ``.nav-main ul li a { color: red; }``
 
-Another optimization is to think about the required decleration levels. Do we really need the *ul li* to declare
-our anchor red? Can it just simply be ``.mainnav a { color: red }``?
+Another optimisation is to think about the required declaration levels. Do we really need the *ul li* to declare
+our anchor red? Can it just simply be ``.nav-main a { color: red }``?
 
 When we are using multiple styles, we might even consider a structure such as:
 
 .. code-block:: css
 
-    .mainnav {
+    .nav-main {
         ul { @extend list-reset; }
         li { padding: 5px 10px; }
         a { color: red; }

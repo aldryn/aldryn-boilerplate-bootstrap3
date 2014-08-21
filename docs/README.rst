@@ -13,4 +13,4 @@ The automated setup takes care of the rest:
 
 When opening localhost:8000 the screen might appear blank. This is due to the fact that the docs/_build folder is
 not yet created. Simply change something within an *.rst file and refresh the page. Livereload will than take care
-of the rest to autorefresh your page on change.
+of the rest to auto refresh your page on change.

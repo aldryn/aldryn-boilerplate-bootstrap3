@@ -1,0 +1,32 @@
+//######################################################################################################################
+// #HAPPY CODING#
+
+* html .browser-outdated { position: absolute; }
+
+.browser-outdated {
+    display:none; position:fixed; top:0; left:0; z-index:9999;
+    width:100%; height:auto; // INFO: do not add paddings or margings on the container
+    text-align:center; text-transform:uppercase;
+    background-color:$brand-danger !important; color:white !important;
+
+    .btn-outline { color:white; border:2px solid white;
+        &:hover { color:$brand-danger; background:white; }
+    }
+
+    .last { position:absolute; right:$line-height-computed; top:$line-height-computed / 2; }
+    .last a {
+        color:white; text-decoration:none; font-size:36px; line-height:1;
+        @include inline-block();
+    }
+
+    // INFO: add spacer in order for cross styling between noscript and out-of-date
+    .btn-outline, noscript h3 { margin-bottom:$line-height-computed; }
+}
+
+// INFO: additionally also implement a warning when JavaScript is disabled
+.noscript .browser-outdated { display:block;
+    p, h3 { display:none; }
+    noscript h3 { display:block; }
+}
+
+// end of happy coding

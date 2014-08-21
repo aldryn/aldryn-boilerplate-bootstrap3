@@ -23,3 +23,8 @@
 
 /node_modules
 npm-debug.log
+base.css
+*.css.map
+static/css/bootstrap
+
+shippable/

@@ -1,14 +1,14 @@
 Reference
 =========
 
-You can use the full power of the `django template language <https://docs.djangoproject.com/en/dev/topics/templates/>`_.
+You can use the full power of the `Django template language <https://docs.djangoproject.com/en/dev/topics/templates/>`_.
 Additionally the following libraries are on your disposal:
 
 
 Django CMS
 ----------
 
-In order for `django-cms <http://docs.django-cms.org/en>`_ to work, you need to include the **css** and **js**
+In order for `Django CMS <http://docs.django-cms.org/en>`_ to work, you need to include the **css** and **js**
 sekizai blocks and add ``{% cms_toolbar %}`` after the closing ``</body>`` tag.
 
 
@@ -20,7 +20,7 @@ Simply add ``{% load sekizai_tags %}`` on top of your file and use ``{% addtoblo
 ``{% addtoblock "css" %}``.
 
 When including a single file, do not add any white spaces or breaks inside. Sekizai validates code for dublicates and
-comfortably only includes one instance. So if you already include jQuery, sekizai will only render it **once**.
+comfortably only includes one instance. So if you already include jQuery, Sekizai will only render it **once**.
 
 The output is rendered within ``{% render_block "css" %}`` and ``{% render_block "js" %}`` in
 ``templates/base_root.html``.

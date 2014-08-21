@@ -16,5 +16,5 @@ Hidden
 
 With modern HTML5 we can use the html attribute``hidden="hidden"`` which is a **softer** ``display: none;``
 and can easy be overwritten using css or JavaScript. This attribute is ideal for hiding elements which should be
-later displayed using JavaScript, as there is no delay in which the element is hidden as for typicall
+later displayed using JavaScript, as there is no delay in which the element is hidden as for typical
 dynamic execution.

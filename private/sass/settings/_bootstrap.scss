@@ -1,0 +1,151 @@
+//######################################################################################################################
+// #GLOBAL IMPORTS#
+@import "compass/css3";
+@import "compass/utilities";
+@import "bootstrap/variables"; // using https://github.com/twbs/bootstrap-sass
+// Override Bootstrap variables here (defaults from bootstrap-sass v3.1.1.1):
+
+// a flag to toggle asset pipeline / compass integration
+// defaults to true if twbs-font-path function is present (no function => twbs-font-path('') parsed as string == right side)
+// in Sass 3.3 this can be improved with: function-exists(twbs-font-path)
+// $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")'))
+
+//###########################################################
+// #COLORS#
+
+$brand-primary:         #18bc9c;
+$brand-secondary:       #375a7f;
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+$gray-darker:           #3e3e3e; // lighten(#000, 13.5%) !default; // #222
+$gray-dark:             #6a7779; // lighten(#000, 20%) !default;   // #333
+$gray:                  #ccc; // lighten(#000, 33.5%) !default; // #555
+$gray-light:            #e9e9e9; // lighten(#000, 93.5%) !default; // #eee
+$gray-lighter:          #f1f1ed; // lighten(#000, 60%) !default;   // #999
+
+//###########################################################
+// #SCAFFOLDING#
+
+$body-bg:               #fff;
+$text-color:            #666;
+$link-color:            $brand-primary;
+$link-hover-color:      darken($link-color, 15%);
+
+//###########################################################
+// #TYPOGRAPHY#
+
+$font-family-sans-serif:  "ClearSans", "Helvetica Neue", Helvetica, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:   Consolas, "Liberation Mono", Courier, monospace;
+$font-family-base:        $font-family-sans-serif;
+
+$font-size-base:          14px;
+
+$font-size-h1:            32px;
+$font-size-h2:            28px;
+$font-size-h3:            24px;
+$font-size-h4:            20px;
+$font-size-h5:            18px;
+$font-size-h6:            $font-size-base;
+
+//###########################################################
+// #GRID#
+
+$grid-columns:              24;
+$grid-gutter-width:         40px;
+
+//###########################################################
+// #RESPONSIVE#
+
+$screen-sm-min:              720px + $grid-gutter-width; // 768
+$screen-md-min:              940px + $grid-gutter-width; // 992
+$screen-lg-min:              1200px + $grid-gutter-width; // 1200
+
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
+$container-tablet:           (($screen-sm-min - $grid-gutter-width));
+$container-sm:               $container-tablet;
+
+$container-large-desktop:    (($screen-lg-min - $grid-gutter-width));
+$container-lg:               $container-large-desktop;
+
+//###########################################################
+// # FORM STATE AND ALERTS #
+// # Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             #459641; //#3c763d
+$state-success-bg:               #e0f1df; //#dff0d8
+$state-success-border:           $state-success-bg; //darken(adjust-hue($state-success-bg, -10), 5%);
+
+$state-info-text:                #ffffff; //#31708f
+$state-info-bg:                  #6a7779; //#d9edf7
+$state-info-border:              $state-info-bg; //darken(adjust-hue($state-info-bg, -10), 7%);
+
+$state-warning-text:             #f47e0b; //#8a6d3b
+$state-warning-bg:               #fdecdb; //#fcf8e3
+$state-warning-border:           $state-warning-bg; //darken(adjust-hue($state-warning-bg, -10), 5%);
+
+$state-danger-text:              #ed1c27; //#a94442
+$state-danger-bg:                #fde8e9; //#f2dede
+$state-danger-border:            $state-danger-bg; //darken(adjust-hue($state-danger-bg, -10), 5%);
+
+//###########################################################
+// #NAVBAR#
+
+$navbar-height:                    60px; // 50px !default;
+// $navbar-margin-bottom:             $line-height-computed !default;
+$navbar-border-radius:             $border-radius-base !default;
+// $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
+$navbar-padding-vertical:          20px; // (($navbar-height - $line-height-computed) / 2) !default;
+// $navbar-collapse-max-height:       340px !default;
+
+$navbar-inverse-color:             #999; // #777 !default;
+$navbar-inverse-bg:                #222; // #f8f8f8 !default;
+$navbar-inverse-border:            none; // darken($navbar-default-bg, 6.5%) !default;
+
+// Navbar links
+$navbar-inverse-link-color:                $navbar-inverse-color; // #777 !default;
+$navbar-inverse-link-hover-color:          #18bc9c; // #333 !default;
+$navbar-inverse-link-hover-bg:             transparent !default;
+$navbar-inverse-link-active-color:         #fff; // #555 !default;
+$navbar-inverse-link-active-bg:            darken($navbar-inverse-bg, 5%); // darken($navbar-default-bg, 6.5%) !default;
+// $navbar-inverse-link-disabled-color:       #ccc !default;
+// $navbar-inverse-link-disabled-bg:          transparent !default;
+
+// Inverted navbar toggle
+$navbar-inverse-toggle-hover-bg:            #333 !default;
+$navbar-inverse-toggle-icon-bar-bg:         #fff !default;
+$navbar-inverse-toggle-border-color:        none; // #333 !default;
+
+//###########################################################
+// #DROPDOWNS#
+
+$dropdown-bg:                    white; // #fff !default;
+$dropdown-border:                white; // rgba(0,0,0,.15) !default;
+$dropdown-fallback-border:       white; // #ccc !default;
+// $dropdown-divider-bg:            #e5e5e5 !default;
+
+$dropdown-link-color:            $navbar-inverse-color; // $gray-dark !default;
+$dropdown-link-hover-color:      white; // darken($gray-dark, 5%) !default;
+$dropdown-link-hover-bg:         $navbar-inverse-link-hover-color; // #f5f5f5 !default;
+
+// $dropdown-link-active-color:     $component-active-color !default;
+// $dropdown-link-active-bg:        $component-active-bg !default;
+// $dropdown-link-disabled-color:   $gray-light !default;
+// $dropdown-header-color:          $gray-light !default;
+
+//###########################################################
+// #BREADCRUMB#
+
+// $breadcrumb-padding-vertical:   8px !default;
+// $breadcrumb-padding-horizontal: 15px !default;
+$breadcrumb-bg:                 $gray-light; // #f5f5f5 !default;
+// $breadcrumb-color:              #ccc !default;
+// $breadcrumb-active-color:       $gray-light !default;
+// $breadcrumb-separator:          "/" !default;
+

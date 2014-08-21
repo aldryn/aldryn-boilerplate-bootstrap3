@@ -6,7 +6,7 @@ Markup
 
 .. code-block:: html
 
-    <nav class="mainnav" role="navigation">
+    <nav class="nav nav-main" role="navigation">
         <ul>
             <li class="child first"><a href="#"><span>Item</span></a></li>
             <li class="child"><a href="#"><span>Item</span></a></li>
@@ -25,8 +25,8 @@ Markup
 * **ancestor** is used when a child element is active.
 * **children** is used when an element has chuldren
 * **first** and **last** are always appended to the first and last child of the series
-* Additionally you can add **nav** to *mainnav* to have a selector for all navigations e.g.: ``class="nav mainnav"``
-* The naming should always be: ``mainnav, subnav, metanav, footnav...``
+* Additionally you can add **nav** to *nav-main* to have a selector for all navigations e.g.: ``class="nav nav-main"``
+* The naming should always be: ``nav-main, nav-sub, nav-meta, nav-foot...``
 
 
 Style
@@ -34,7 +34,7 @@ Style
 
 .. code-block:: scss
 
-    .mainnav { position:absolute; right:10px; top:10; z-index:100;
+    .nav-main { position:absolute; right:10px; top:10; z-index:100;
         ul { @extend .list-reset; }
         li { font-size:16px; line-height:20px; }
         a { display:block; text-decoration:none !important; }

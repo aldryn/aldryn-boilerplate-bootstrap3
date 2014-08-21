@@ -4,20 +4,16 @@
 'use strict';
 /* global require */
 var gulp = require('gulp');
-var gutil = require('gulp-util');
-var compass = require('gulp-compass');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
-var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
-var spawn = require('child_process').spawn;
+var browserSync = require('browser-sync');
 
 // SETTINGS
 //##########################################################
-var port = 8000;
-
 var paths = {
     'css': './static/css/',
+    'html': './templates/',
     'images': './static/img/',
     'js': './static/js/',
     'media': './tmp/media/',
@@ -31,37 +27,32 @@ var patterns = {
     'sass': [paths.sass+'*', paths.sass+'**/*']
 };
 
+var port = process.env.PORT || '8000';
+
 // TASKS
 //##########################################################
-// TASKS/compass
-gulp.task('compass', function() {
-    gulp.src(patterns.sass)
-        .pipe(compass({
-            style: 'compressed',
-            comments: false,
-            css: paths.css,
-            sass: paths.sass
-        }))
-        .on('error', function(error) {
-            gutil.log(error);
-        });
-});
-
 // TASKS/javascript
-gulp.task('compress', function () {
-    gulp.src(patterns.js)
-        .pipe(rename(function (path) {
-            path.extname = '.min.js';
-        }))
-        .pipe(uglify())
-        .pipe(gulp.dest(paths.js));
-});
-
-// TASKS/linting .jshintrc within /static/js
 gulp.task('lint', function() {
     gulp.src(patterns.js.concat([paths.js+'!libs/*.js', './gulpfile.js']))
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'));
+});
+
+// TASK/browser reload
+gulp.task('browser', function() {
+    var files = [
+        paths.css+'base.css',
+        paths.html+'**/*.html',
+        paths.js+'**/*.js'
+    ];
+
+    // http://www.browsersync.io/docs/options/
+    setTimeout(function () {
+        browserSync.init(files, {
+            'proxy': '0.0.0.0:' + port,
+            'port': port
+        });
+    }, 1000);
 });
 
 // TASK/image preprocessing
@@ -77,42 +68,14 @@ gulp.task('media', function () {
         .pipe(gulp.dest(paths.media));
 });
 
-// TASK/django
-gulp.task('runserver', function () {
-    var rs = spawn('src/local', ['runserver', '0.0.0.0:'+port]);
-    var stdout = '';
-    var stderr = '';
-
-    rs.stdout.setEncoding('utf8');
-    rs.stdout.on('data', function (data) {
-        stdout += data;
-        gutil.log(data);
-    });
-
-    rs.stderr.setEncoding('utf8');
-    rs.stderr.on('data', function (data) {
-        stderr += data;
-        gutil.log(data);
-    });
+// TASK/watchers
+gulp.task('watch', function() {
+    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint']);
 });
 
 // RUNNERS
 //##########################################################
-gulp.task('default', function () {
-
-    // initial load
-    gulp.start('static');
-    gulp.start('compass');
-    gulp.start('compress');
-    gulp.start('lint');
-    gulp.start('runserver');
-
-    // add watch tasks
-    gulp.watch(patterns.sass, ['compass']);
-    gulp.watch(patterns.js, ['compress']);
-    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint']);
-
-});
+gulp.task('default', ['lint', 'browser', 'watch']);
 
 // end of gulpfile.js
 }());

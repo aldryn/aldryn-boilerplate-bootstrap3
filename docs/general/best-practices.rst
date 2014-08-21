@@ -26,6 +26,16 @@ We are implementing the following standard libraries in addition to the default 
 * `SWF Object <https://code.google.com/p/swfobject/>`_
 * `HTML5 Shiv <https://code.google.com/p/html5shiv/>`_
 
+We implemented `Bower <http://bower.io/>`_ to help you manage dependencies. Packages are automatically downloaded into
+``/static/vendor/`` but **not** moved to their appropriate folders. This still requires manual work.
+
+Editors
+-------
+
+You can use any editor you want, to make your life a bit easier we implemented `EditorConfig <http://editorconfig.org/>`_
+into the boilerplate's root ``.editorconfig``.
+
+
 Bootstrap Plugins
 -----------------
 

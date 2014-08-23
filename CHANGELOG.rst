@@ -93,6 +93,7 @@ Aldryn Boilerplate
 -----
 - added title value to title=_("Navigation")
 - added additional standard fontastic icons
+- added qunit test system
 - update boilerplate.json
 - update requirejs
 - update respond.js

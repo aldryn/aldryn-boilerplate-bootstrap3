@@ -18,10 +18,11 @@ You will need the following requirements in order to use it:
 
 * Node JS: http://nodejs.org/
 * Node Package Manager: https://www.npmjs.org/
+* Bower: http://bower.io/
 * Gulp JS: http://gulpjs.com/
 
 After all requirements are met, install the packages using the ``npm install`` command from within the boilerplate's
-root.
+root. You can install the bower requirements by running ``bower install``.
 
 You can run **Gulp** commands from within your base folder using ``gulp``. If you would like to
 run specific tasks, consult the **gulpfile.js** within the base folder.

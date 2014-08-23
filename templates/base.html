@@ -36,7 +36,7 @@
                 {% render_model_block request.current_page "changelist" %}
                 <ul class="nav navbar-nav">
                     {% show_menu 0 1 100 100 "includes/menu/navigation.html" %}
-                    <li class="divider"></li>
+                    <li class="divider" role="presentation"><span class="sr-only">{% trans "Separator" %}</span></li>
                     {% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
                     {% language_chooser "includes/menu/langnav.html" "native" %}
                 </ul>

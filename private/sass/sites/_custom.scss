@@ -18,7 +18,7 @@ p.noscript a, p.chromeframe a { color:white; font-weight:bold; }
 
 .skip-links { @extend .list-unstyled;
     position:absolute; left:0; top:$navbar-height; right:0; z-index:9999;
-    a { position:absolute; left:-9999px; color:$gray-darker; &:focus { left:0; } }
+    a { @extend .sr-only; @extend .sr-only-focusable; }
 }
 
 // #HELPERS/colors#

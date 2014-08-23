@@ -71,11 +71,11 @@ gulp.task('browser', function () {
 
 // TASK/watchers
 gulp.task('watch', function () {
-    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint'], ['images']);
+    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint']);
 });
 
 // RUNNERS
 //##########################################################
-gulp.task('default', ['lint', 'images', 'browser', 'watch']);
+gulp.task('default', ['lint', 'browser', 'watch']);
 
 // end of gulpfile.js

@@ -54,3 +54,9 @@ We are implementing the following standard libraries in addition to the default 
 
 We implemented `Bower <http://bower.io/>`_ to help you manage dependencies. Packages are automatically downloaded into
 ``/static/vendor/`` but **not** moved to their appropriate folders. This still requires manual work.
+
+Tests
+-----
+
+We currently implemented a basic test framework within ``static/js/tests`` using QUnit. YOu can simply run tests
+using the Gulp command ``gulp tests``.

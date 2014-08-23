@@ -44,3 +44,10 @@ JavaScript or an application by itself. Add additional folders to further suppor
 .. HINT::
    ``static/js/modules/ckeditor.wysiwyg.js`` is loaded by the djangocms-text-ckeditor module to define additional
    styles for the CKEditor. So it is natural to place this file into the **modules/** folder.
+
+tests/
+------
+
+Using QUnit you can create your JavaScript Unit tests here. This is a very simple setup and the folder structure
+within this area can be customized according to your needs.
+

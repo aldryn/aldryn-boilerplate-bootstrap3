@@ -4,11 +4,13 @@
 /* global require */
 var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
+var csscomb = require('gulp-csscomb');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
+var qunit = require('gulp-qunit');
 
 // SETTINGS
 //##########################################################
@@ -30,14 +32,24 @@ var port = process.env.PORT || '8000';
 
 // TASKS
 //##########################################################
-// TASKS/javascript
+// TASKS/linting
 gulp.task('lint', function () {
     gulp.src(patterns.js.concat([paths.js + '!libs/*.js', './gulpfile.js']))
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(jscs().on('error', function (error) {
+        .pipe(jscs()).on('error', function (error) {
             gutil.log('\n' + error.message);
-        }));
+        });
+});
+
+// TASK/sass prettify
+// TODO: highly experimental
+gulp.task('sass', function () {
+    gulp.src(patterns.sass)
+        .pipe(csscomb())
+        .pipe(gulp.dest(paths.sass)).on('error', function (error) {
+            gutil.log('\n' + error.message);
+        });
 });
 
 // TASK/image preprocessing
@@ -50,7 +62,9 @@ gulp.task('images', function () {
 
     gulp.src(patterns.images)
         .pipe(cache(imagemin(options)))
-        .pipe(gulp.dest(paths.images));
+        .pipe(gulp.dest(paths.images)).on('error', function (error) {
+            gutil.log('\n' + error.message);
+        });
 });
 
 // TASK/browser reload
@@ -67,6 +81,14 @@ gulp.task('browser', function () {
             'proxy': '0.0.0.0:' + port
         });
     }, 1000);
+});
+
+// TASK/runs qunit tests
+gulp.task('tests', function () {
+    gulp.src(paths.js + 'tests/index.html')
+        .pipe(qunit().on('error', function (error) {
+            gutil.log('\n' + error.message);
+        }));
 });
 
 // TASK/watchers

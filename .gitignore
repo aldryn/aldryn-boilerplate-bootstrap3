@@ -24,9 +24,8 @@
 /node_modules
 /bower_components
 npm-debug.log
-base.css
 *.css.map
-/static/css/bootstrap
+/static/css/
 /static/vendor
 
 shippable/

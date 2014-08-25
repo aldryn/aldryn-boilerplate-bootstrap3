@@ -21,7 +21,7 @@
     {{ ALDRYN_SNAKE.render_head }}
     {% include "includes/analytics.html" %}
 </head>
-<body id="page-top" class="noscript lang-{{ LANGUAGE_CODE }}{% block body_class %} tpl-root{% endblock %}">
+<body id="page-top" class="noscript lang-{{ LANGUAGE_CODE }} {% block body_class %}tpl-root{% endblock %}">
 {% cms_toolbar %}
 
 {% block extend_root %}{% endblock %}
@@ -34,11 +34,7 @@
 <script src="{% static 'js/base.js' %}"></script>
 <script>Cl.static = '{{ STATIC_URL }}';</script>
 {% endcompress %}
-{% if debug %}
-<script src="{% static 'js/libs/console.min.js' %}"></script>
-<script src="{% static 'js/addons/cl.debug.min.js' %}"></script>
-<script>new Cl.Debug();</script>
-{% endif %}
+{% if debug %}<script src="{% static 'js/addons/cl.debug.min.js' %}"></script><script>new Cl.Debug();</script>{% endif %}
 {% render_block "js" %}
 {% block extrafoot %}{% endblock %}
 {{ ALDRYN_SNAKE.render_tail }}

@@ -34,12 +34,14 @@
             <nav class="nav navbar-main navbar-right" id="navigation" role="navigation">
                 <h2 class="sr-only">{% trans "Navigation" %}</h2>
                 {% render_model_block request.current_page "changelist" %}
+                {% with dropdown="true" %}
                 <ul class="nav navbar-nav">
                     {% show_menu 0 1 100 100 "includes/menu/navigation.html" %}
                     <li class="divider" role="presentation"><span class="sr-only">{% trans "Separator" %}</span></li>
                     {% show_menu_below_id "meta" 0 0 100 100 "includes/menu/navigation.html" %}
                     {% language_chooser "includes/menu/langnav.html" "native" %}
                 </ul>
+                {% endwith %}
                 {% endrender_model_block %}
             </nav>
             {% endblock navbar %}

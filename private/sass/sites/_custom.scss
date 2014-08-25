@@ -11,13 +11,17 @@
 .spacer-zero { margin:0; }
 
 // #HELPERS/compatibility#
-p.noscript, p.chromeframe { position:absolute; left:0; top:0; z-index:9999; width:100%;
-    color:white; text-align:center; padding:$line-height-computed / 2 0; margin:0;
-    border:5px solid darken($brand-danger, 20%); background:$brand-danger; }
+p.noscript, p.chromeframe {
+    position:absolute; left:0; top:0; z-index:9999;
+    color:white; text-align:center;
+    width:100%; padding:$line-height-computed / 2 0; margin:0;
+    border:5px solid darken($brand-danger, 20%); background:$brand-danger;
+}
 p.noscript a, p.chromeframe a { color:white; font-weight:bold; }
 
-.skip-links { @extend .list-unstyled;
+.skip-links {
     position:absolute; left:0; top:$navbar-height; right:0; z-index:9999;
+    @extend .list-unstyled;
     a { @extend .sr-only; @extend .sr-only-focusable; }
 }
 

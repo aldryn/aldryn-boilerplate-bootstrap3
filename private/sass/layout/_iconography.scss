@@ -80,6 +80,8 @@
 
 //###########################################################
 // #ICONS:start#
+// INFO: use unicode characters for accessibility reasons and use aria-hidden="true" for decorative icons
+// DOCS: http://filamentgroup.com/lab/bulletproof_icon_fonts.html
 .icon-glass:before { content:"\f000"; }
 .icon-music:before { content:"\f001"; }
 .icon-search:before { content:"\f002"; }

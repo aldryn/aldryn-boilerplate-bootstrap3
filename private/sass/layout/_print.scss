@@ -6,5 +6,10 @@
 a[href]:after { content:""; }
 #cms_toolbar { display:none; }
 
+// #CUSTOM#
+.navbar-head { display:block; }
+.navbar-main { display:none; }
+.navbar-head .navbar-brand a { text-indent:0; }
+
 // end of print
 }

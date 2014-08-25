@@ -1,6 +1,4 @@
-require 'bootstrap-sass'
-# Require any additional compass plugins here.
-
+# Encoding.default_external = 'utf-8'
 
 # Set this to the root of your project when deployed:
 http_path = "" # use if other than /
@@ -19,7 +17,6 @@ fonts_dir = "../static/fonts"
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 # line_comments = false
 
-
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:
 # preferred_syntax = :sass
@@ -27,3 +24,6 @@ fonts_dir = "../static/fonts"
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
 sass_options = {:sourcemap => true}
+
+# Require any additional compass plugins here.
+require 'bootstrap-sass'

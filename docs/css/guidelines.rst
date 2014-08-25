@@ -34,7 +34,8 @@ Example
 
 .. code-block:: css
 
-    .addon-blog { color: white; font-size: 16px; line-height: 20px;
+    .addon-blog {
+        color: white; font-size: 16px; line-height: 20px;
         width: 80%; height: 80%; padding: 5px; margin: 0 auto;
         border: 2px solid #ccc; border-top: none; background: #ddd;
         @include border-radius(3px);

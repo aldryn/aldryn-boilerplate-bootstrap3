@@ -8,6 +8,7 @@
     "html5shiv": "~3.7.2",
     "jquery": "<2.0",
     "outdated-browser": "~1.1.0",
+    "qunit": "~1.15.0",
     "requirejs": "~2.1.14",
     "respond": "~1.4.2",
     "swfobject": "*",

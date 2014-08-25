@@ -6,16 +6,18 @@
 {% block extend_base %}
 <div class="container">
     <div class="row">
-        <div class="col-md-16 col-md-push-8">
+        <div class="col-md-17 col-md-push-7">
             {% block content %}
             {% with 940 as width %}{% placeholder content %}{% endwith %}
             {% endblock content %}
         </div>
-        <aside class="col-md-8 col-md-pull-16">
+        <aside class="col-md-7 col-md-pull-17">
             <h3 class="sr-only">{% trans "Sidebar" %}</h3>
             {% block subnav %}
             {% page_attribute menu_title request.current_page.get_root as subtitle %}
+            <ul class="nav navbar-sidenav">
             {% show_menu 1 5 0 1 "includes/menu/navigation.html" %}
+            </ul>
             {% endblock subnav %}
 
             {% block sidebar %}

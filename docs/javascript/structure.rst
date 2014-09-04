@@ -18,6 +18,9 @@ addons/
 Separate modules which are plug-n-play able and add them into this folder. Traditionally the
 `classjs-plugins <https://github.com/FinalAngel/classjs-plugins>`_ are added here.
 
+If you use external addons, such as jquery.select2, ensure that those files get added minified. Try to avoid
+changing the code of external addons as this over complicates the update process if hotfixes are released.
+
 
 libs/
 -----

@@ -18,7 +18,19 @@
 }
 
 // #HELPERS/colors#
-.bg-secondary { background-color:$brand-secondary; }
+.brand-primary { background-color:$brand-primary; }
+.brand-secondary { background-color:$brand-secondary; }
+.brand-success { background-color:$brand-success; }
+.brand-info { background-color:$brand-info; }
+.brand-warning { background-color:$brand-warning; }
+.brand-danger { background-color:$brand-danger; }
+.brand-muted { background-color:$text-muted; }
+
+.brand-gray-darker { background-color:$gray-darker; }
+.brand-gray-dark { background-color:$gray-dark; }
+.brand-gray { background-color:$gray; }
+.brand-gray-light { background-color:$gray-light; }
+.brand-gray-lighter { background-color:$gray-lighter; }
 
 // #HELPERS/styleguide#
 .styleguide { padding:$line-height-computed 0; }

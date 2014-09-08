@@ -18,19 +18,7 @@
 }
 
 // #HELPERS/colors#
-.brand-primary { background-color:$brand-primary; }
-.brand-secondary { background-color:$brand-secondary; }
-.brand-success { background-color:$brand-success; }
-.brand-info { background-color:$brand-info; }
-.brand-warning { background-color:$brand-warning; }
-.brand-danger { background-color:$brand-danger; }
-.brand-muted { background-color:$text-muted; }
-
-.brand-grey-darker { background-color:$gray-darker; }
-.brand-grey-dark { background-color:$gray-dark; }
-.brand-grey { background-color:$gray; }
-.brand-grey-light { background-color:$gray-light; }
-.brand-grey-lighter { background-color:$gray-lighter; }
+.bg-secondary { background-color:$brand-secondary; }
 
 // #HELPERS/styleguide#
 .styleguide { padding:$line-height-computed 0; }

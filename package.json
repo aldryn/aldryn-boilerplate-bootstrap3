@@ -1,8 +1,7 @@
 {
   "name": "package",
-  "repository": {},
-  "version": "0.1.0",
-  "devDependencies": {
+  "private": true,
+  "dependencies": {
     "browser-sync": "~1.3.5",
     "gulp": "~3.8.7",
     "gulp-cached": "~1.0.1",

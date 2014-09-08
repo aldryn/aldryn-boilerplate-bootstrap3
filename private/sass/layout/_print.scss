@@ -4,7 +4,7 @@
 
 // #DEFAULTS#
 a[href]:after { content:""; }
-#cms_toolbar { display:none; }
+#cms_toolbar, .browser-outdated { display:none !important; }
 
 // #CUSTOM#
 .navbar-head { display:block; }

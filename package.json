@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "browser-sync": "~1.3.5",
-    "gulp": "~3.8.7",
+    "gulp": "~3.8.8",
     "gulp-cached": "~1.0.1",
     "gulp-csscomb": "~3.0.2",
     "gulp-jscs": "~1.1.0",

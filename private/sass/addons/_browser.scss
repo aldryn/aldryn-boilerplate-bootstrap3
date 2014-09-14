@@ -4,7 +4,7 @@
 * html .browser-outdated { position: absolute; }
 
 .browser-outdated {
-    display:none; position:fixed; top:0; left:0; z-index:9999;
+    display:none; position:fixed; bottom:0; left:0; z-index:9999;
     width:100%; height:auto; // INFO: do not add paddings or margings on the container
     text-align:center; text-transform:uppercase;
     background-color:$brand-danger !important; color:white !important;

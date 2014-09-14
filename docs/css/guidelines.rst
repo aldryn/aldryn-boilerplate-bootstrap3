@@ -6,6 +6,7 @@ Guidelines
 * Use **double-quotes** ``"`` for all text values
 * Use **dashes** to separate class/id names, **not** camelCase or underscore
 * Do **not** overuse nesting! If you got only one instance, use one line
+* Always add a space after the colon
 * Keep ``sass/layout/`` clean and use the available structure
 * Use ``sass/sites/`` for theme based or specific styles
 * Define settings within ``sass/settings/``

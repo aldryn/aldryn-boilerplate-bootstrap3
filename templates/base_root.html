@@ -21,9 +21,9 @@
     <![endif]-->
     {% block extrahead %}{% endblock %}
     {{ ALDRYN_SNAKE.render_head }}
-    {% include "includes/analytics.html" %}
 </head>
 <body id="page-top" class="noscript lang-{{ LANGUAGE_CODE }} {% block body_class %}tpl-root{% endblock %}">
+{% include "includes/analytics.html" %}
 {% cms_toolbar %}
 
 {% block extend_root %}{% endblock %}

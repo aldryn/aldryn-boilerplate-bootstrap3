@@ -8,6 +8,7 @@ Aldryn Boilerplate
 - added additional spaces to ``ckeditor.wysiwyg.js``
 - changed code to latest css guideline change **use space after colon**
 - updated docs
+- updated to latest cl.debug script
 
 3.0.0
 -----

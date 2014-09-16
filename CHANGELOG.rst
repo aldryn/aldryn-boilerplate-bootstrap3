@@ -2,11 +2,12 @@
 Aldryn Boilerplate
 ==================
 
-3.0.0
+3.0.1
 -----
 - added ``Gemfile`` in order to bundle install requirements locally
 - added additional spaces to ``ckeditor.wysiwyg.js``
 - changed code to latest css guideline change **use space after colon**
+- updated docs
 
 3.0.0
 -----

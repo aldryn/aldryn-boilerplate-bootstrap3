@@ -4,6 +4,10 @@ Aldryn Boilerplate
 
 3.0.0
 -----
+- added ``Gemfile`` in order to bundle install requirements locally
+
+3.0.0
+-----
 - switch to twitter bootstrap
 - added more mixins
 - added ``js/libs/bootstra.min.js`` to libraries

@@ -28,4 +28,5 @@ npm-debug.log
 /static/css/
 /static/vendor
 
-shippable/
+Gemfile.lock
+.bundle/

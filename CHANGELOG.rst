@@ -5,6 +5,7 @@ Aldryn Boilerplate
 3.0.0
 -----
 - added ``Gemfile`` in order to bundle install requirements locally
+- changed code to latest css guideline change **use space after colon**
 
 3.0.0
 -----

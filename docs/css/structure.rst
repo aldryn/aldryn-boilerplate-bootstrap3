@@ -61,8 +61,8 @@ This folder can be freely structured. ``_custom.scss`` can be used for quick fix
 
 .. HINT::
    **Deep Nesting** It can often happen that you end up with large sites files like ``_marketing.scss`` and
-   ``_application.scss``. In order to modularize those files and create a better overview, you can create an additional
-   folder and include all required files within the original scss files. This could endup with a structure as
+   ``_application.scss``. In order to modularise those files and create a better overview, you can create an additional
+   folder and include all required files within the original scss files. This could end up with a structure as
    illustrated underneath.
 
 .. code-block:: text

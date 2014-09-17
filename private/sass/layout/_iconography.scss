@@ -42,7 +42,8 @@
 // List Icons
 .icon-ul { list-style-type: none; padding-left: 0; margin-left: 2.14285714em; }
 .icon-ul > li { position: relative; }
-.icon-li { position: absolute; left: -2.14285714em; top: 0.14285714em;
+.icon-li {
+    position: absolute; left: -2.14285714em; top: 0.14285714em;
     width: 2.14285714em; text-align: center;
 }
 .icon-li.icon-lg { left: -1.85714286em; }
@@ -69,10 +70,11 @@
 
 // Stacked Icons
 .icon-inverse { color: white; }
-.icon-stack { position: relative;
+.icon-stack {
+    display: inline-block;
+    position: relative;
     line-height: 2em; vertical-align: middle;
     width: 2em; height: 2em;
-    display: inline-block;
 }
 .icon-stack-1x,
 .icon-stack-2x { position: absolute; left: 0; width: 100%; text-align: center; }

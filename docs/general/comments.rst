@@ -56,3 +56,9 @@ We also support three types of comments within the code itself:
 .. code-block:: javascript
 
     // DOCS: https://django-cms.readthedocs.org/en/latest/
+
+HTML
+----
+
+Use the django or jinja template comments rather than the native html ones in order to hide developers notes
+from the live production website when the HTML gets shipped.

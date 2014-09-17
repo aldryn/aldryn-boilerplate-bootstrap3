@@ -11,13 +11,13 @@ Where to start
 
 Build your general structure within **base.html**. This includes namely the header and the footer.
 Do not split up header and footer into separate files, you can use django blocks and overwrite default
-behaviours when needed. Additional structure should be defined within the cms templates:
+behaviours when needed. Additional structure should be defined within the CMS templates:
 
 
 Content Management
 ------------------
 
-Within ``setting.py`` we can define so called **Templates** which are than available over django-cms toolbars
+Within ``setting.py`` we can define so called **Templates** which are than available over django CMS toolbars
 **Page > Templates** UI. These templates can have a different structures. In the boilerplate there are four
 predefined templates:
 
@@ -43,3 +43,10 @@ Messages
 You need to be aware of the `django message framework <https://docs.djangoproject.com/en/dev/ref/contrib/messages/>`_
 which displays global notifications or error messages. This file is kept within ``templates/includes/messages.html``
 and included within ``templates/base.html``.
+
+Analytics
+---------
+
+Store all analytics code within the designated file in ``templates/includes/analytics.html`` which will be injected
+right after the opening ``<body>`` tag. Google Analytics is already pre-prepared and will be shown when adding
+the required UA-XXXXX code within the CMS.

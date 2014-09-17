@@ -5,35 +5,35 @@
 // #HELPERS#
 
 // #HELPERS/spacer#
-.spacer { margin-top:$line-height-computed / 2; margin-bottom:$line-height-computed / 2; }
-.spacer-xs { margin-top:$line-height-computed / 4; margin-bottom:$line-height-computed / 4; }
-.spacer-lg { margin-top:$line-height-computed; margin-bottom:$line-height-computed; }
-.spacer-zero { margin:0; }
+.spacer { margin-top: $line-height-computed / 2; margin-bottom: $line-height-computed / 2; }
+.spacer-xs { margin-top: $line-height-computed / 4; margin-bottom: $line-height-computed / 4; }
+.spacer-lg { margin-top: $line-height-computed; margin-bottom: $line-height-computed; }
+.spacer-zero { margin: 0; }
 
 // #HELPERS/accessibility#
 .skip-links {
-    position:absolute; left:0; top:$navbar-height; right:0; z-index:9999;
+    position: absolute; left: 0; top: $navbar-height; right: 0; z-index: 9999;
     @extend .list-unstyled;
     a { @extend .sr-only; @extend .sr-only-focusable; }
 }
 
 // #HELPERS/colors#
-.brand-primary { background-color:$brand-primary; }
-.brand-secondary { background-color:$brand-secondary; }
-.brand-success { background-color:$brand-success; }
-.brand-info { background-color:$brand-info; }
-.brand-warning { background-color:$brand-warning; }
-.brand-danger { background-color:$brand-danger; }
-.brand-muted { background-color:$text-muted; }
+.brand-primary { background-color: $brand-primary; }
+.brand-secondary { background-color: $brand-secondary; }
+.brand-success { background-color: $brand-success; }
+.brand-info { background-color: $brand-info; }
+.brand-warning { background-color: $brand-warning; }
+.brand-danger { background-color: $brand-danger; }
+.brand-muted { background-color: $text-muted; }
 
-.brand-gray-darker { background-color:$gray-darker; }
-.brand-gray-dark { background-color:$gray-dark; }
-.brand-gray { background-color:$gray; }
-.brand-gray-light { background-color:$gray-light; }
-.brand-gray-lighter { background-color:$gray-lighter; }
+.brand-gray-darker { background-color: $gray-darker; }
+.brand-gray-dark { background-color: $gray-dark; }
+.brand-gray { background-color: $gray; }
+.brand-gray-light { background-color: $gray-light; }
+.brand-gray-lighter { background-color: $gray-lighter; }
 
 // #HELPERS/styleguide#
-.styleguide { padding:$line-height-computed 0; }
-.col-linebreak { border-left:1px dotted $gray-light; }
+.styleguide { padding: $line-height-computed 0; }
+.col-linebreak { border-left: 1px dotted $gray-light; }
 
 // end of happy coding

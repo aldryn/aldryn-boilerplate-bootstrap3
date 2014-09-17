@@ -30,7 +30,8 @@ jQuery(document).ready(function () {
     require(['modules/outdatedBrowser.min'], function () {
         // DOCS: https://github.com/burocratik/outdated-browser
         outdatedBrowser({
-            'languagePath': ''
+            'languagePath': '',
+            'lowerThan': 'boxShadow'
         });
     });
 

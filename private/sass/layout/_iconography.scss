@@ -72,7 +72,7 @@
 .icon-stack { position: relative;
     line-height: 2em; vertical-align: middle;
     width: 2em; height: 2em;
-    @include inline-block();
+    display: inline-block;
 }
 .icon-stack-1x,
 .icon-stack-2x { position: absolute; left: 0; width: 100%; text-align: center; }

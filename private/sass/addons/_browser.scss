@@ -16,7 +16,7 @@
     .last { position: absolute; right: $line-height-computed; top: $line-height-computed / 2; }
     .last a {
         color: white; text-decoration: none; font-size: 36px; line-height: 1;
-        @include inline-block();
+        display: inline-block;
     }
 
     // INFO: add spacer in order for cross styling between noscript and out-of-date

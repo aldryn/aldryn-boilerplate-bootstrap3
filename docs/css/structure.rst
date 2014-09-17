@@ -58,3 +58,23 @@ If you are working on a theme-based setup or have styles which do not fit into t
 is the appropriate place to add them.
 
 This folder can be freely structured. ``_custom.scss`` can be used for quick fixes or hacks.
+
+.. HINT::
+   **Deep Nesting** It can often happen that you end up with large sites files like ``_marketing.scss`` and
+   ``_application.scss``. In order to modularize those files and create a better overview, you can create an additional
+   folder and include all required files within the original scss files. This could endup with a structure as
+   illustrated underneath.
+
+.. code-block:: text
+
+    sites/
+    ├─ application/
+    │  ├─ _all.sass
+    │  ├─ _general.sass
+    │  └─ _wizard.sass
+    ├─ marketing/
+    │  ├─ _all.sass
+    │  ├─ _layout.sass
+    │  └─ _addons.sass
+    ├─ _application.scss (imports application/_all.scss)
+    └─ _marketing.scss (imports marketing/_all.scss)

@@ -2,6 +2,11 @@
 Aldryn Boilerplate
 ==================
 
+3.0.2
+-----
+- added BEM naming conventions
+- changed structure of ``layout/_mixins.scss``
+
 3.0.1
 -----
 - added ``Gemfile`` in order to bundle install requirements locally

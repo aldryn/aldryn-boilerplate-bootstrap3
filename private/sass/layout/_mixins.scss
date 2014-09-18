@@ -1,6 +1,9 @@
 //######################################################################################################################
 // #MIXINS#
 
+//###########################################################
+// #FUNCTIONS#
+
 // em calculation
 @function em($target, $context: $font-size) {
     @if $target == 0 { @return 0 }
@@ -12,6 +15,9 @@
     @if $line-height == 0 { @return 0 }
     @return round($line-height * $line-height-ratio);
 }
+
+//###########################################################
+// #CORE MIXINS#
 
 // font-smoothing
 @mixin font-smoothing() {
@@ -25,14 +31,14 @@
 }
 
 // add placeholder font color for input
-@mixin placeholdercolor($color) {
+@mixin placeholder-color($color) {
     &::-webkit-input-placeholder { color: $color; }
     &:-moz-placeholder { color: $color; }
     &::-moz-placeholder { color: $color; }
     &:-ms-input-placeholder { color: $color; }
 }
 
-// Hides text in an element so you can see the background.
+// hides text in an element so you can see the background.
 @mixin hide-text {
     $approximate_em_value: 12px / 1em;
     $wider_than_any_screen: -9999em;
@@ -41,7 +47,7 @@
     text-align: left;
 }
 
-// Keyframe mixin
+// keyframe mixin
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
         @content;
@@ -56,5 +62,8 @@
         @content;
     }
 }
+
+//###########################################################
+// #CUSTOM MIXINS#
 
 // end of mixins

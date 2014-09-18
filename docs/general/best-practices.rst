@@ -1,6 +1,17 @@
 Best Practices
 ==============
 
+Naming
+------
+
+    “There are only two hard things in Computer Science:
+    cache invalidation and naming things
+    – Phil Karlton”
+
+As you can spend hours in sceming name patterns, structure and conventions we only advice to follow the
+`BEM principles <https://bem.info/>`_  but using as a separator **one dash** only and always
+lowercase format: ``blockname-elementname``.
+
 Automation
 ----------
 

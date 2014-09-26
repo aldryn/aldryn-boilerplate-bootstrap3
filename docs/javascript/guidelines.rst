@@ -7,7 +7,7 @@ Guidelines
 * Use **single-quotes** ``'`` for **all** values
 * Use ``base.js`` for global and general functions and avoid adding js files to the root
 * Use the frameworks prefix inside the ``addons`` folder
-* Use the singleton pattern to structure code
+* Use the module and singleton pattern to structure code
 * JavaScript should validate JS Lint
 * Use full words instead of shorthands like ``number`` instead of ``nr``
 * Keep <script> and the following starting enclosure on the same level

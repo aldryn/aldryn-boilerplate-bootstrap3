@@ -1,4 +1,4 @@
-# Encoding.default_external = 'utf-8'
+Encoding.default_external = 'utf-8'
 
 # Set this to the root of your project when deployed:
 http_path = "" # use if other than /

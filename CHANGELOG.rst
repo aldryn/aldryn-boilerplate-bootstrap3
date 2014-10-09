@@ -2,6 +2,10 @@
 Aldryn Boilerplate
 ==================
 
+2.3.4
+-----
+- fixed an issue with missing font-smoothing mixin
+
 2.3.3
 -----
 - added snippets to documentation

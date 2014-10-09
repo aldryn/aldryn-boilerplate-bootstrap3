@@ -2,10 +2,11 @@
 Aldryn Boilerplate
 ==================
 
-develop
--------
+2.3.3
+-----
 - added snippets to documentation
 - changed menu's according to the snippet guidelines
+- fixed an issue with foundations rendering
 
 2.3.2
 -----

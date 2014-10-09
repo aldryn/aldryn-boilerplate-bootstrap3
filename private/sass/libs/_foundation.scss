@@ -38,7 +38,7 @@ $large-up: "(min-width:#{$responsive-desktop})" !default;
 // We use this to prevent styles from being loaded multiple times for compenents that rely on other components.
 $modules: () !default;
 @mixin exports($name) {
-  @if (index($modules, $name) == false) {
+  @if not (index($modules, $name)) {
     $modules: append($modules, $name);
     @content;
   }
@@ -207,7 +207,7 @@ $include-xl-html-grid-classes: false !default;
     .#{$size}-#{$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
   }
 
-  [class*="column"] + [class*="column"]:last-child { float: $opposite-direction; }
+  [class*="column"] + [class*="column"]:last-child { float: left; }
   [class*="column"] + [class*="column"].end { float: $default-float; }
 
 

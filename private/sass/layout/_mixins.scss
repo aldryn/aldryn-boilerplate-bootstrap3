@@ -12,3 +12,9 @@
     @if $line-height == 0 { @return 0 }
     @return round($line-height * $line-height-ratio);
 }
+
+// font-smoothing
+@mixin font-smoothing() {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

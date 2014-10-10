@@ -6,6 +6,7 @@ Aldryn Boilerplate
 -----
 - added BEM naming conventions
 - added a guideline to use ``js-`` prefix for javascript functionality
+- added z-index function helper
 - changed structure of ``layout/_mixins.scss``
 - changed sass file heading end ending comments to be more descriptive
 - removed compress as dependency

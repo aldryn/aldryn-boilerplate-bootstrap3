@@ -6,6 +6,7 @@ Aldryn Boilerplate
 -----
 - added BEM naming conventions
 - changed structure of ``layout/_mixins.scss``
+- changed sass file heading end ending comments to be more descriptive
 
 3.0.1
 -----

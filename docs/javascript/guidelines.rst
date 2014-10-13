@@ -8,7 +8,7 @@ Guidelines
 * Use ``base.js`` for global and general functions and avoid adding js files to the root
 * Use the frameworks prefix inside the ``addons`` folder
 * Use the module and singleton pattern to structure code
-* Use the ``js-`` prefix when working with JS related selectors
+* Use the ``js-`` prefix when working with JS related selectors and do not add stylings to it
 * JavaScript should validate JS Lint
 * Use full words instead of shorthands like ``number`` instead of ``nr``
 * Keep <script> and the following starting enclosure on the same level
@@ -49,6 +49,7 @@ Prefixing
 When using jQuery to refer to a DOM instance, always use the ``js-`` prefix to separate
 styles from JavaScript functionality. For example: ``<div class="addon addon-gallery js-addon-gallery"></div>``.
 
-*addon* and *addon-gallery* define styles according to BEM principles and *js-plugin-gallery*
-refers to the JavaScript functionality attached to the element. Even when removing the js class,
-the addon should still function in theory.
+In this example, *addon* and *addon-gallery* define styles according to BEM principles and *js-plugin-gallery*
+refers to the JavaScript functionality attached to the DOM element.
+
+Even when removing the js class (or just waiting for javascript to kick in), the addon should still look ok.

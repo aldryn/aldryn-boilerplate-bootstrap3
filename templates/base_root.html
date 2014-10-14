@@ -1,4 +1,4 @@
-<!doctype html>{% load i18n static cms_tags sekizai_tags compress %}
+<!doctype html>{% load i18n static cms_tags sekizai_tags %}
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="utf-8" />
@@ -13,8 +13,8 @@
     <link rel="apple-touch-icon" href="{% static 'favicon.png' %}" />
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />
     <!--[if IE]><link rel="shortcut icon" href="{% static 'favicon.ico' %}" /><![endif]-->
-    {% compress css %}<link rel="stylesheet" href="{% static 'css/base.css' %}" />{% endcompress %}
-    {% render_block  "css" postprocessor "compressor.contrib.sekizai.compress" %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    {% render_block  "css" %}
     <!--[if lt IE 9]>
     <script src="{% static 'js/libs/html5shiv.min.js' %}"></script>
     <script src="{% static 'js/libs/respond.min.js' %}"></script>
@@ -28,14 +28,12 @@
 
 {% block extend_root %}{% endblock %}
 
-{% compress js %}
 <script src="{% static 'js/libs/jquery.min.js' %}"></script>
 <script src="{% static 'js/libs/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/libs/class.min.js' %}"></script>
 <script src="{% static 'js/libs/require.min.js' %}"></script>
 <script src="{% static 'js/base.js' %}"></script>
 <script>Cl.static = '{{ STATIC_URL }}';</script>
-{% endcompress %}
 {% if debug %}<script src="{% static 'js/addons/cl.debug.min.js' %}"></script><script>new Cl.Debug();</script>{% endif %}
 {% render_block "js" %}
 {% block extrafoot %}{% endblock %}

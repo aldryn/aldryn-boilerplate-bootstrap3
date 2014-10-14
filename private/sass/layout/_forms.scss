@@ -1,8 +1,14 @@
 //######################################################################################################################
-// #HAPPY CODING#
+// #FORMS#
+
+// all styles related to the global forms should be declared within this file
+// apply the "sites/" nesting described within the documentation if the file is getting to large
 
 //##################################################
 // #HELPERS#
+
+// these helpers are additionally added to extend bootstrap's defaults
+// btn-outline is very handy and generally adds a border and transparency to a button
 
 // #HELPERS/animation#
 .btn { @include transition(background, $speed); }
@@ -28,5 +34,3 @@
         &:hover, &:active, &:focus { color: white; background-color: $btn-danger-border; }
     }
 }
-
-// end of happy coding

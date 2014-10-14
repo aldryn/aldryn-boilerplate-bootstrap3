@@ -1,5 +1,8 @@
 //######################################################################################################################
-// #HAPPY CODING#
+// #ICONOGRAPHY#
+
+// the full set of font awesome is included as default, this allows for a wider choice rather than the Glyphicons
+// for a custom set generate the font using fontastic.me
 
 @font-face {
     font-family: "icons";
@@ -63,7 +66,7 @@
 
 // Rotated & Flipped
 .icon-rotate-90 { @include transform(rotate(90deg)); }
-.icon-rotate-180 { @include transform(rotate(180deg9)); }
+.icon-rotate-180 { @include transform(rotate(180deg)); }
 .icon-rotate-270 { @include transform(rotate(270deg)); }
 .icon-flip-horizontal { @include transform(scale(-1, 1)); }
 .icon-flip-vertical { @include transform(scale(1, -1)); }
@@ -588,5 +591,3 @@
 .icon-share-alt:before { content: "\f1e0"; }
 .icon-share-alt-square:before { content: "\f1e1"; }
 .icon-bomb:before { content: "\f1e2"; }
-
-// end of happy coding

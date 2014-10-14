@@ -2,6 +2,9 @@
 //######################################################################################################################
 // #PRINT#
 
+// this file is intended for all print styles and rules
+// to ensure your website also works when printed
+
 // #DEFAULTS#
 a[href]:after { content: ""; }
 #cms_toolbar, .browser-outdated { display: none !important; }

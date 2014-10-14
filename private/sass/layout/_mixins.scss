@@ -1,6 +1,12 @@
 //######################################################################################################################
 // #MIXINS#
 
+// add your own custom functions or mixins within this file
+// you could even replace compass by using autoprefixer and adding required mixins here
+
+//###########################################################
+// #FUNCTIONS#
+
 // em calculation
 @function em($target, $context: $font-size) {
     @if $target == 0 { @return 0 }
@@ -12,6 +18,9 @@
     @if $line-height == 0 { @return 0 }
     @return round($line-height * $line-height-ratio);
 }
+
+//###########################################################
+// #CORE MIXINS#
 
 // font-smoothing
 @mixin font-smoothing() {
@@ -25,14 +34,14 @@
 }
 
 // add placeholder font color for input
-@mixin placeholdercolor($color) {
+@mixin placeholder-color($color) {
     &::-webkit-input-placeholder { color: $color; }
     &:-moz-placeholder { color: $color; }
     &::-moz-placeholder { color: $color; }
     &:-ms-input-placeholder { color: $color; }
 }
 
-// Hides text in an element so you can see the background.
+// hides text in an element so you can see the background.
 @mixin hide-text {
     $approximate_em_value: 12px / 1em;
     $wider_than_any_screen: -9999em;
@@ -41,7 +50,7 @@
     text-align: left;
 }
 
-// Keyframe mixin
+// keyframe mixin
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
         @content;
@@ -57,4 +66,32 @@
     }
 }
 
-// end of mixins
+// helpers for z-index handling
+// DOCS: http://www.sitepoint.com/better-solution-managing-z-index-sass/
+@function map-has-nested-keys($map, $keys...) {
+    @each $key in $keys {
+        @if not map-has-key($map, $key) {
+            @return false;
+        }
+        $map: map-get($map, $key);
+    }
+
+    @return true;
+}
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+@function z($layers...) {
+    @if not map-has-nested-keys($z-layers, $layers...) {
+        @warn "No layer found for `#{inspect($layers...)}` in $z-layers map. Property omitted.";
+    }
+
+    @return map-deep-get($z-layers, $layers...);
+}
+
+//###########################################################
+// #CUSTOM MIXINS#

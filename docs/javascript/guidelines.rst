@@ -13,6 +13,7 @@ Guidelines
 * Use full words instead of shorthands like ``number`` instead of ``nr``
 * Keep <script> and the following starting enclosure on the same level
 * Separate all script tags within a ``{% addtoblock "js" %}``
+* Do not use inline JS within HTML attributes such as ``onclick=""`` or ``onload=""``
 * Do not add spaces when writing ``if (true) {} else {}`` or ``function helloWorld() {}``
 * Always use semicolons and full brackets except shortcuts like ``var i = (true) ? 'yes' : 'no';`` or single lines ``if(index <= 0) index = 0;``
 * Never use $ for variable names like ``var $el = $('.el');``

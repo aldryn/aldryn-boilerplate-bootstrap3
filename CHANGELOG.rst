@@ -5,6 +5,7 @@ Aldryn Boilerplate
 3.0.3
 -----
 - fixed an issue with icon fonts line-height
+- update javascript guidelines
 
 3.0.2
 -----

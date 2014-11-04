@@ -2,6 +2,10 @@
 Aldryn Boilerplate
 ==================
 
+3.0.3
+-----
+- fixed an issue with icon fonts line-height
+
 3.0.2
 -----
 - added BEM naming conventions

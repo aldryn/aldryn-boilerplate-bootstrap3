@@ -16,6 +16,7 @@ Guidelines
 * Do not use inline JS within HTML attributes such as ``onclick=""`` or ``onload=""``
 * Do not add spaces when writing ``if (true) {} else {}`` or ``function helloWorld() {}``
 * Always use semicolons and full brackets except shortcuts like ``var i = (true) ? 'yes' : 'no';`` or single lines ``if(index <= 0) index = 0;``
+* Always declare variables on top of the functions and not in-between
 * Never use $ for variable names like ``var $el = $('.el');``
 * Never use comma separation for variable declerations like ``var a, b, c;``
 * Ensure that JavaScript widgets don't create disturbances while the DOM is loading

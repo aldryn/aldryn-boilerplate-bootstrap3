@@ -6,6 +6,7 @@ Aldryn Boilerplate
 -----
 - fixed an issue with icon fonts line-height
 - update javascript guidelines
+- update font awesome icons to 4.2.0
 
 3.0.2
 -----

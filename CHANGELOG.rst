@@ -4,9 +4,11 @@ Aldryn Boilerplate
 
 3.0.3
 -----
-- fixed an issue with icon fonts line-height
+- added X-UA-Compatible tag again as validation passes now
 - update javascript guidelines
 - update font awesome icons to 4.2.0
+- fixed an issue with icon fonts line-height
+- fixed an issue with meta tag rendering (still commented as most are invalid)
 
 3.0.2
 -----

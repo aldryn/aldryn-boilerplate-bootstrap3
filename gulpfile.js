@@ -34,7 +34,7 @@ var port = process.env.PORT || '8000';
 //##########################################################
 // TASKS/linting
 gulp.task('lint', function () {
-    gulp.src(patterns.js.concat([paths.js + '!libs/*.js', './gulpfile.js']))
+    gulp.src(patterns.js.concat(['!' + paths.js + 'libs/*.js', './gulpfile.js']))
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
         .pipe(jscs()).on('error', function (error) {

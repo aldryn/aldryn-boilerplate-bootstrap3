@@ -9,6 +9,7 @@ Aldryn Boilerplate
 - update font awesome icons to 4.2.0
 - fixed an issue with icon fonts line-height
 - fixed an issue with meta tag rendering (still commented as most are invalid)
+- fixed an issue with gulp exclusion patterns
 
 3.0.2
 -----

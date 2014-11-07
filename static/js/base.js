@@ -14,25 +14,16 @@ var Cl = window.Cl || {};
 // #BASE#
 jQuery(document).ready(function () {
 
-    // set the correct js path
-    requirejs.config({ 'baseUrl': Cl.static + 'js/' });
+    // removes noscript form body and adds print-js
+    Cl.Utils.document();
+    // INFO: additionally you will be able to use:
+    // Cl.Utils.mobile() for detecting mobile devices
+    // Cl.Utils.tablet() for detecting tablet devices
 
-    // load modules using require
-    require(['modules/cl.utils'], function () {
-        // removes noscript form body and adds print-js
-        Cl.Utils.document();
-        // INFO: additionally you will be able to use:
-        // Cl.Utils.mobile() for detecting mobile devices
-        // Cl.Utils.tablet() for detecting tablet devices
-    });
-
-    // load outdated browser scropt
-    require(['modules/outdatedBrowser.min'], function () {
-        // DOCS: https://github.com/burocratik/outdated-browser
-        outdatedBrowser({
-            'languagePath': '',
-            'lowerThan': 'boxShadow'
-        });
+    // DOCS: https://github.com/burocratik/outdated-browser
+    outdatedBrowser({
+        'languagePath': '',
+        'lowerThan': 'boxShadow'
     });
 
 });

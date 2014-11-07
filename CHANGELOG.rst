@@ -2,6 +2,10 @@
 Aldryn Boilerplate
 ==================
 
+3.1.0
+-----
+- removed requirejs as dependency
+
 3.0.3
 -----
 - added X-UA-Compatible tag again as validation passes now

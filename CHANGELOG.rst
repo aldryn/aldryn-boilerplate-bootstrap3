@@ -7,6 +7,7 @@ Aldryn Boilerplate
 - added X-UA-Compatible tag again as validation passes now
 - update javascript guidelines
 - update font awesome icons to 4.2.0
+- update bootstrap to 3.3.0
 - fixed an issue with icon fonts line-height
 - fixed an issue with meta tag rendering (still commented as most are invalid)
 - fixed an issue with gulp exclusion patterns

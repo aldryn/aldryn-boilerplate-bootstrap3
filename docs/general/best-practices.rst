@@ -58,7 +58,6 @@ Libraries
 We are implementing the following standard libraries in addition to the default requirements from Bootstrap:
 
 * `Class JS <https://github.com/FinalAngel/classjs>`_
-* `Require JS <http://requirejs.org/>`_
 * `Respond JS <https://github.com/scottjehl/Respond>`_
 * `SWF Object <https://code.google.com/p/swfobject/>`_
 * `HTML5 Shiv <https://code.google.com/p/html5shiv/>`_

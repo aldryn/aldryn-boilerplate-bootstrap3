@@ -4,6 +4,8 @@ Aldryn Boilerplate
 
 3.1.0
 -----
+- added temporary support for bower
+- removed ``js/libs`` and link to ``static/vendor`` generated from bower
 - removed requirejs as dependency
 
 3.0.3

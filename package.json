@@ -11,7 +11,8 @@
     "gulp-imagemin": "~1.0.0",
     "gulp-qunit": "~0.3.3",
     "gulp-util": "~3.0.0",
-    "jshint-stylish": "~0.1.5"
+    "jshint-stylish": "~0.1.5",
+    "preen": "~1.1.0"
   },
   "engines": {
     "node": ">=0.9.0"

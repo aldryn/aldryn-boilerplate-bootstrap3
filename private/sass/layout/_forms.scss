@@ -30,7 +30,7 @@
     &.btn-warning { @include button-variant($btn-warning-bg, transparent, $btn-warning-border);
         &:hover, &:active, &:focus { color: white; background-color: $btn-warning-border; }
     }
-    &.btn-danger {  @include button-variant($btn-danger-bg, transparent, $btn-danger-border);
+    &.btn-danger { @include button-variant($btn-danger-bg, transparent, $btn-danger-border);
         &:hover, &:active, &:focus { color: white; background-color: $btn-danger-border; }
     }
 }

@@ -4,12 +4,10 @@ Aldryn Boilerplate
 
 3.0.4
 -----
-- added temporary support for bower
 - update to id decleration guidelines
 - update to css formatting guidelines
 - update to js html injection guideline
 - update to html django block formatting
-- update to jQuery 2.x
 - update bower.json dependencies
 - update packages.json dependencies
 - fixed guideline issues in css

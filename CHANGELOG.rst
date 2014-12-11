@@ -11,6 +11,7 @@ Aldryn Boilerplate
 - update bower.json dependencies
 - update packages.json dependencies
 - fixed guideline issues in css
+- fixed minor html and css mistakes
 - removed requirejs as dependency
 
 3.0.3

@@ -1,0 +1,136 @@
+//######################################################################################################################
+// #FONT-WESOME#
+
+// INFO: using full set from http://fortawesome.github.io/Font-Awesome/
+// INFO: using version 4.2.0
+// DOCS: http://fortawesome.github.io/Font-Awesome/examples/
+
+.icon {
+    display: inline-block;
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    text-rendering: auto;
+    @include font-smoothing();
+}
+
+// Icon Alignment
+.icon-left {
+    padding-right: $line-height-computed / 4;
+}
+.icon-right {
+    padding-left: $line-height-computed / 4;
+}
+
+// Larger Icons
+.icon-lg {
+    font-size: 1.33333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+.icon-2x {
+    font-size: 2em;
+}
+.icon-3x {
+    font-size: 3em;
+}
+.icon-4x {
+    font-size:4em;
+}
+.icon-5x {
+    font-size: 5em;
+}
+
+// Fixed Width Icons
+.icon-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+// List Icons
+.icon-ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 2.14285714em;
+}
+.icon-ul > li {
+    position: relative;
+}
+.icon-li {
+    position: absolute;
+    left: -2.14285714em;
+    top: 0.14285714em;
+    text-align: center;
+    width: 2.14285714em;
+}
+.icon-li.icon-lg {
+    left: -1.85714286em;
+}
+
+// Bordered & Pulled Icons
+.icon-border {
+    padding: .2em .25em .15em;
+    border: solid 0.08em $gray;
+    border-radius: $border-radius-base;
+}
+.icon.pull-left {
+    margin-right: .3em;
+}
+.icon.pull-right {
+    margin-left: .3em;
+}
+
+// Spinning Icons
+.icon-spin {
+    @include animation(spin 2s infinite linear);
+}
+@include keyframes(spin) {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(359deg));
+    }
+}
+
+// Rotated & Flipped
+.icon-rotate-90 {
+    @include transform(rotate(90deg));
+}
+.icon-rotate-180 {
+    @include transform(rotate(180deg));
+}
+.icon-rotate-270 {
+    @include transform(rotate(270deg));
+}
+.icon-flip-horizontal {
+    @include transform(scale(-1, 1));
+}
+.icon-flip-vertical {
+    @include transform(scale(1, -1));
+}
+
+// Stacked Icons
+.icon-inverse {
+    color: white;
+}
+.icon-stack {
+    display: inline-block;
+    position: relative;
+    line-height: 2em; vertical-align: middle;
+    width: 2em; height: 2em;
+}
+.icon-stack-1x,
+.icon-stack-2x {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+.icon-stack-1x {
+    line-height: inherit;
+}
+.icon-stack-2x {
+    font-size: 2em;
+}

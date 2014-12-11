@@ -52,7 +52,8 @@
 // INFO: additionally also implement a warning when JavaScript is disabled
 .noscript .browser-outdated {
     display: block;
-    p, h3 {
+    p,
+    h3 {
         display: none;
     }
     noscript h3 {

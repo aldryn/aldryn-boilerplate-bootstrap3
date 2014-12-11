@@ -44,8 +44,8 @@ IDs vs Classes
 You should **always** use classes instead if id's. Classes represent a more OOP approach of adding and removing
 style sets like ``box box-wide box-hint``.
 
-Try to avoid declaring ID's at all. They should only be used to reference elements such as:
-``<label for="field-username">..</label><input type="text" id="field-username" />``
+Try to avoid declaring ID's at all. They should only be used to reference elements or for in-page navigation such as:
+``<label for="field-username">..</label><input type="text" id="field-username" />`` or ``/some/url#whats-new``
 
 
 Elements

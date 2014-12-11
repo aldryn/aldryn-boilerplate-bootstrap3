@@ -4,7 +4,7 @@ Aldryn Boilerplate
 
 3.0.4
 -----
-- update to id decleration guidelines
+- update to id declaration guidelines
 - update to css formatting guidelines
 - update to js html injection guideline
 - update to html django block formatting

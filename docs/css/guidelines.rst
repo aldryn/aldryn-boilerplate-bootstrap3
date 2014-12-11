@@ -7,7 +7,7 @@ Guidelines
 * Use **dashes** to separate class/id names, **not** camelCase or underscore
 * Do **not** overuse nesting! If you got only one instance, use one line
 * Always add a space after the colon
-* Always write a css rule on the next line
+* Only write one css property per line
 * Keep ``sass/layout/`` clean and use the available structure
 * Use ``sass/sites/`` for theme based or specific styles
 * Define settings within ``sass/settings/``

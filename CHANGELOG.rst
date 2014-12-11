@@ -12,6 +12,7 @@ Aldryn Boilerplate
 - update packages.json dependencies
 - fixed guideline issues in css
 - fixed minor html and css mistakes
+- separated font awesome utilities from iconography
 - removed requirejs as dependency
 
 3.0.3

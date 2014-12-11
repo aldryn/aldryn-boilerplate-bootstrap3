@@ -7,6 +7,7 @@ Aldryn Boilerplate
 - added temporary support for bower
 - update to id decleration guidelines
 - update to css formatting guidelines
+- update to js html injection guideline
 - update to html django block formatting
 - update to jQuery 2.x
 - update bower.json dependencies

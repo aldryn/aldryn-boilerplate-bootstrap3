@@ -11,7 +11,6 @@ var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var qunit = require('gulp-qunit');
-var preen = require('preen');
 
 // SETTINGS
 //##########################################################

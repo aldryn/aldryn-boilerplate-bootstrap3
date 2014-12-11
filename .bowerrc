@@ -1,6 +1,3 @@
 {
-  "directory": "/static/vendor",
-  "scripts": {
-    "postinstall": "node_modules/preen/bin/preen"
-  }
+  "directory": "/static/vendor"
 }

@@ -35,6 +35,8 @@ Use block-style and group elements underneath:
 Combine attributes such as background-image, background-color, background-repeat into
 ``background: #fff url("image.png") no-repeat left top;``.
 
+Also ensure combined css selectors are always on a new line.
+
 Example
 *******
 
@@ -64,7 +66,8 @@ Example
             display: block;
         }
         // pseudo elements
-        &:active {
+        &:active,
+        &:hover {
             color: black;
         }
     }

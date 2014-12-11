@@ -7,25 +7,30 @@ Guidelines
 * Use **dashes** to separate class/id names, **not** camelCase or underscore
 * Do **not** overuse nesting! If you got only one instance, use one line
 * Always add a space after the colon
+* Always write a css rule on the next line
 * Keep ``sass/layout/`` clean and use the available structure
 * Use ``sass/sites/`` for theme based or specific styles
 * Define settings within ``sass/settings/``
 * Avoid referencing css using their parent like div.container
 * Use shorthands for values like ``#ccc`` or ``white``
-* Use full words instead of shorthands like ``number`` and not ``nr``
+* Use full words instead of shorthands like ``number`` instead of ``nr``
 * Use progressive enhancement whenever possible
-* Validation is not required
+* Validation is not required but nice
 
 
 Style
 -----
 
-Use the single-line style instead of block-style and group:
+Use block-style and group elements underneath:
 
+#. extending
+#. visibility, position
 #. color, font-size, line-height, font-* (font relevant data)
 #. width, height, padding, margin (box model relevant date)
 #. border, background (box style data)
 #. includes (compass includes)
+#. media, print (media queries)
+#. :after, :before, :active (pseudo elements)
 
 Combine attributes such as background-image, background-color, background-repeat into
 ``background: #fff url("image.png") no-repeat left top;``.
@@ -36,15 +41,33 @@ Example
 .. code-block:: css
 
     .addon-blog {
-        color: white; font-size: 16px; line-height: 20px;
-        width: 80%; height: 80%; padding: 5px; margin: 0 auto;
-        border: 2px solid #ccc; border-top: none;
+        // extending
+        @extend .list-unstyled;
+        // styles
+        display: inline;
+        position: relative;
+        z-index: 1;
+        color: white;
+        font-size: 16px;
+        line-height: 20px;
+        width: 80%;
+        height: 80%;
+        padding: 5px;
+        margin: 0 auto;
+        border: 2px solid #ccc;
         background: #ddd;
+        // mixins
         @include border-radius(3px);
         @include box-shadow(0 0 2px #eee);
+        // desktop and up
+        @media (min-width: $screen-md-min) {
+            display: block;
+        }
+        // pseudo elements
+        &:active {
+            color: black;
+        }
     }
-
-    .blog-headline { color: #999; font-size: 120%; line-height: 120%; }
 
 
 Nesting
@@ -59,7 +82,9 @@ blocks that can be achieved simpler. A good example is the following code:
     .nav-main {
         ul {
             li {
-                a { color: red; }
+                a {
+                    color: red;
+                }
             }
         }
     }
@@ -75,9 +100,15 @@ When we are using multiple styles, we might even consider a structure such as:
 .. code-block:: css
 
     .nav-main {
-        ul { @extend list-reset; }
-        li { padding: 5px 10px; }
-        a { color: red; }
+        ul {
+            @extend list-reset;
+        }
+        li {
+            padding: 5px 10px;
+        }
+        a {
+            color: red;
+        }
     }
 
 Which makes our code more structured and readable.

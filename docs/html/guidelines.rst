@@ -9,7 +9,7 @@ Guidelines
 * HTML should validate the WCAG 2.0 A guidelines
 * HTML should be modular and reusable, do not use easy names like "job" or "item" on top level. Use "addon-jobs" instead
 * Use XML syntax and close all elements using </tag> or />
-* Keep all html on the same level after a django template block
+* Always use space indendation after django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block ... %}`` and others
 * Ignore to rule on top for ``{% if %}`` or ``{% forloop %}``
 * All templates should be placed within the roots ``templates/`` folder
 * In general **code readability first**
@@ -44,8 +44,8 @@ IDs vs Classes
 You should **always** use classes instead if id's. Classes represent a more OOP approach of adding and removing
 style sets like ``box box-wide box-hint``.
 
-The ID attribute should be preserved for javascript functionality or for anchor referencing in conjunction with
-hashes.
+Try to avoid declaring ID's at all. They should only be used to reference elements or for in-page navigation such as:
+``<label for="field-username">..</label><input type="text" id="field-username" />`` or ``/some/url#whats-new``
 
 
 Elements

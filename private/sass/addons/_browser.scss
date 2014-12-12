@@ -4,30 +4,60 @@
 // this addon adds modified styles to the outdated browser script found on outdatedbrowser.com
 // we specifically added changes to class names and removed id references to be more compliant
 
-* html .browser-outdated { position: absolute; }
+* html .browser-outdated {
+    position: absolute;
+}
 
 .browser-outdated {
-    display: none; position: fixed; bottom: 0; left: 0; z-index: 9999;
-    width: 100%; height: auto; // INFO: do not add paddings or margings on the container
-    text-align: center; text-transform: uppercase;
-    background-color: $brand-danger !important; color: white !important;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    color: white !important;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    height: auto; // INFO: do not add paddings or margings on the container
+    background-color: $brand-danger !important;
 
-    .btn-outline { color: white; border: 2px solid white;
-        &:hover { color: $brand-danger; background: white; }
+    .btn-outline {
+        color: white;
+        border: 2px solid white;
+        &:hover {
+            color: $brand-danger;
+            background: white;
+        }
     }
 
-    .last { position: absolute; right: $line-height-computed; top: $line-height-computed / 2; }
+    .last {
+        position: absolute;
+        top: $line-height-computed / 2;
+        right: $line-height-computed;
+    }
     .last a {
-        color: white; text-decoration: none; font-size: 36px; line-height: 1;
         display: inline-block;
+        color: white;
+        font-size: 36px;
+        line-height: 1;
+        text-decoration: none;
     }
 
     // INFO: add spacer in order for cross styling between noscript and out-of-date
-    .btn-outline, noscript h3 { margin-bottom: $line-height-computed; }
+    .btn-outline,
+    noscript h3 {
+        margin-bottom: $line-height-computed;
+    }
 }
 
 // INFO: additionally also implement a warning when JavaScript is disabled
-.noscript .browser-outdated { display: block;
-    p, h3 { display: none; }
-    noscript h3 { display: block; }
+.noscript .browser-outdated {
+    display: block;
+    p,
+    h3 {
+        display: none;
+    }
+    noscript h3 {
+        display: block;
+    }
 }

@@ -7,12 +7,6 @@ jQuery
 * http://jquery.com
 
 
-Require.js
-----------
-
-* http://requirejs.org
-
-
 class.js
 --------
 

@@ -2,6 +2,19 @@
 Aldryn Boilerplate
 ==================
 
+3.0.4
+-----
+- update to id declaration guidelines
+- update to css formatting guidelines
+- update to js html injection guideline
+- update to html django block formatting
+- update bower.json dependencies
+- update packages.json dependencies
+- fixed guideline issues in css
+- fixed minor html and css mistakes
+- separated font awesome utilities from iconography
+- removed requirejs as dependency
+
 3.0.3
 -----
 - added X-UA-Compatible tag again as validation passes now

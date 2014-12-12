@@ -6,13 +6,23 @@
 // to ensure your website also works when printed
 
 // #DEFAULTS#
-a[href]:after { content: ""; }
-#cms_toolbar, .browser-outdated { display: none !important; }
+a[href]:after {
+    content: "";
+}
+#cms_toolbar, .browser-outdated {
+    display: none !important;
+}
 
 // #CUSTOM#
-.navbar-head { display: block; }
-.navbar-main { display: none; }
-.navbar-head .navbar-brand a { text-indent: 0; }
+.navbar-head {
+    display: block;
+}
+.navbar-main {
+    display: none;
+}
+.navbar-head .navbar-brand a {
+    text-indent: 0;
+}
 
 // end of print
 }

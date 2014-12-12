@@ -9,33 +9,55 @@
 // #HELPERS#
 
 // #HELPERS/spacer#
-.spacer { margin-top: $line-height-computed / 2; margin-bottom: $line-height-computed / 2; }
-.spacer-xs { margin-top: $line-height-computed / 4; margin-bottom: $line-height-computed / 4; }
-.spacer-lg { margin-top: $line-height-computed; margin-bottom: $line-height-computed; }
-.spacer-zero { margin: 0; }
+.spacer {
+    margin-top: $line-height-computed / 2;
+    margin-bottom: $line-height-computed / 2;
+}
+.spacer-xs {
+    margin-top: $line-height-computed / 4;
+    margin-bottom: $line-height-computed / 4;
+}
+.spacer-lg {
+    margin-top: $line-height-computed;
+    margin-bottom: $line-height-computed;
+}
+.spacer-zero {
+    margin: 0;
+}
 
 // #HELPERS/accessibility#
 .skip-links {
-    position: absolute; left: 0; top: $navbar-height; right: 0; z-index: 9999;
     @extend .list-unstyled;
-    a { @extend .sr-only; @extend .sr-only-focusable; }
+    position: absolute;
+    left: 0;
+    top: $navbar-height;
+    right: 0;
+    z-index: 9999;
+    a {
+        @extend .sr-only;
+        @extend .sr-only-focusable;
+    }
 }
 
 // #HELPERS/colors#
-.brand-primary { background-color: $brand-primary; }
-.brand-secondary { background-color: $brand-secondary; }
-.brand-success { background-color: $brand-success; }
-.brand-info { background-color: $brand-info; }
-.brand-warning { background-color: $brand-warning; }
-.brand-danger { background-color: $brand-danger; }
-.brand-muted { background-color: $text-muted; }
+@include bg-variant('.brand-primary', $brand-primary);
+@include bg-variant('.brand-secondary', $brand-secondary);
+@include bg-variant('.brand-success', $brand-success);
+@include bg-variant('.brand-info', $brand-info);
+@include bg-variant('.brand-warning', $brand-warning);
+@include bg-variant('.brand-danger', $brand-danger);
+@include bg-variant('.brand-muted', $text-muted);
 
-.brand-gray-darker { background-color: $gray-darker; }
-.brand-gray-dark { background-color: $gray-dark; }
-.brand-gray { background-color: $gray; }
-.brand-gray-light { background-color: $gray-light; }
-.brand-gray-lighter { background-color: $gray-lighter; }
+@include bg-variant('.brand-gray-darker', $gray-darker);
+@include bg-variant('.brand-gray-dark', $gray-dark);
+@include bg-variant('.brand-gray', $gray);
+@include bg-variant('.brand-gray-light', $gray-light);
+@include bg-variant('.brand-gray-lighter', $gray-lighter);
 
 // #HELPERS/styleguide#
-.styleguide { padding: $line-height-computed 0; }
-.col-linebreak { border-left: 1px dotted $gray-light; }
+.styleguide {
+    padding: $line-height-computed 0;
+}
+.col-linebreak {
+    border-left: 1px dotted $gray-light;
+}

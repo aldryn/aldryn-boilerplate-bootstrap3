@@ -44,7 +44,8 @@
     }
 
     // INFO: add spacer in order for cross styling between noscript and out-of-date
-    .btn-outline, noscript h3 {
+    .btn-outline,
+    noscript h3 {
         margin-bottom: $line-height-computed;
     }
 }

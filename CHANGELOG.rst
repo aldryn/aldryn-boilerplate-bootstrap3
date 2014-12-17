@@ -4,6 +4,7 @@ Aldryn Boilerplate Standard
 
 3.0.5
 -----
+- update version numbers
 - rename to aldryn-boilerplate-standard
 - fixed issues with minification references
 - fixed an issue with namespaces

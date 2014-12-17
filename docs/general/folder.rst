@@ -20,7 +20,7 @@ same level. An example structure would look like:
 
 .. HINT::
    The ``config.rb`` is taken from `Compass <http://compass-style.org/>`_ which can also be used for a native sass
-   setup. However aldryn-boilerplate uses the Compass **SCSS** - format as default.
+   setup. However aldryn-boilerplate-standard uses the Compass **SCSS** - format as default.
 
 
 static/

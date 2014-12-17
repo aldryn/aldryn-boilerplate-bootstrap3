@@ -1,6 +1,12 @@
-==================
-Aldryn Boilerplate
-==================
+===========================
+Aldryn Boilerplate Standard
+===========================
+
+3.0.5
+-----
+- rename to aldryn-boilerplate-standard
+- fixed issues with minification references
+- fixed an issue with namespaces
 
 3.0.4
 -----

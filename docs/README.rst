@@ -1,8 +1,8 @@
-================================
-Aldryn Boilerplate Documentation
-================================
+=========================================
+Aldryn Boilerplate Standard Documentation
+=========================================
 
-A full documentation can be found on read the docs - http://aldryn-boilerplate.rtfd.org
+A full documentation can be found on read the docs - http://aldryn-boilerplate-standard.rtfd.org
 
 To extend and run the documentation, you will have to manually install `Sphinx <http://sphinx-doc.org/>`_.
 The automated setup takes care of the rest:

@@ -1,6 +1,14 @@
-==================
-Aldryn Boilerplate
-==================
+===========================
+Aldryn Boilerplate Standard
+===========================
+
+3.0.5
+-----
+- added IIFE for js code in order to maintain 'use strict'
+- update version numbers
+- rename to aldryn-boilerplate-standard
+- fixed issues with minification references
+- fixed an issue with namespaces
 
 3.0.4
 -----

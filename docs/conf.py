@@ -42,7 +42,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'aldryn-boilerplate'
+project = u'aldryn-boilerplate-standard'
 copyright = u'2014, Divio AG'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -185,7 +185,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'aldryn-boilerplate.tex', u'Aldryn Boilerplate',
+  ('index', 'aldryn-boilerplate-standard.tex', u'Aldryn Boilerplate Standard',
    u'Divio AG', 'manual'),
 ]
 
@@ -215,7 +215,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'aldryn-boilerplate', u'Aldryn Boilerplate',
+    ('index', 'aldryn-boilerplate-standard', u'Aldryn Boilerplate Standard',
      [u'Divio AG'], 1)
 ]
 
@@ -229,8 +229,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'aldryn-boilerplate', u'Aldryn Boilerplate',
-   u'Divio AG', 'aldryn-boilerplate', 'One line description of project.',
+  ('index', 'aldryn-boilerplate-standard', u'Aldryn Boilerplate Standard',
+   u'Divio AG', 'aldryn-boilerplate-standard', 'One line description of project.',
    'Miscellaneous'),
 ]
 

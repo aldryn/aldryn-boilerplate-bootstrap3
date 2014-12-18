@@ -3,11 +3,18 @@
  * @copyright: http://www.divio.ch
  */
 
-'use strict';
 //######################################################################################################################
-// #TESTS#
+// #NAMESPACES#
+// var Cl = window.Cl || {};
 /* global QUnit */
 
-QUnit.test('hello test', function (assert) {
-    assert.ok(true, 'Passed!');
-});
+//######################################################################################################################
+// #TESTS#
+(function () {
+    'use strict';
+
+    QUnit.test('hello test', function (assert) {
+        assert.ok(true, 'Passed!');
+    });
+
+})();

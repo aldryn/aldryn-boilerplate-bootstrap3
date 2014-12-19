@@ -2,7 +2,7 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    = -W
+SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = _build
@@ -77,17 +77,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/aldryn-docs.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/boilerplate.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/aldryn-docs.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/boilerplate.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/aldryn-docs"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/aldryn-docs"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/boilerplate"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/boilerplate"
 	@echo "# devhelp"
 
 epub:
@@ -151,19 +151,3 @@ doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
-
-########################################################################################################################
-##### CUSTOM CONFIGURATION
-VENV = env/bin/activate
-PIP = . $(VENV); env/bin/pip
-BRANCH = master
-# CORE COMMANDS
-run:
-	. $(VENV); sphinx-autobuild . _build/html
-
-init:
-	##### setup virtualenv
-	test -d $(VENV) || virtualenv env --prompt="(`basename \`pwd\``)"
-	git pull origin $(BRANCH)
-	$(PIP) install -r requirements.txt
-	##### done

@@ -166,7 +166,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'aldryn-docsdoc'
+htmlhelp_basename = 'boilerplate'
 
 
 # -- Options for LaTeX output --------------------------------------------------

@@ -151,3 +151,19 @@ doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
+
+########################################################################################################################
+##### CUSTOM CONFIGURATION
+VENV = env/bin/activate
+PIP = . $(VENV); env/bin/pip
+BRANCH = master
+# CORE COMMANDS
+run:
+	. $(VENV); sphinx-autobuild . _build/html
+
+init:
+	##### setup virtualenv
+	test -d $(VENV) || virtualenv env --prompt="(`basename \`pwd\``)"
+	git pull origin $(BRANCH)
+	$(PIP) install -r requirements.txt
+	##### done

@@ -30,4 +30,14 @@ Documentation
     images/index
     javascript/index
 
+
+############
+Contribution
+############
+
+.. toctree::
+    :maxdepth: 2
+
+    README.rst
+
 .. _Aldryn: http://www.aldryn.com/

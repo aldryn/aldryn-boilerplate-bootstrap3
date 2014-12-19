@@ -1,6 +1,6 @@
-=========================================
-Aldryn Boilerplate Standard Documentation
-=========================================
+=============
+Documentation
+=============
 
 A full documentation can be found on read the docs - http://aldryn-boilerplate-standard.rtfd.org
 

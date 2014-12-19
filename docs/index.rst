@@ -12,7 +12,7 @@ The most advanced **django-cms** based boilerplate for rapid development. It use
 `Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile first projects on the web.
 In addition we implement various `best practices <http://aldryn-boilerplate-standard.readthedocs.org/en/latest/general/best-practices.html>`_ from within the front-end community.
 
-This boilerplate is compatible with `Aldryn`_.
+This boilerplate is compatible with `Aldryn <http://www.aldryn.com/>`_.
 
 The latest stable versions is available on GitHub - https://github.com/aldryn/aldryn-boilerplate-standard
 
@@ -40,4 +40,10 @@ Contribution
 
     README.rst
 
-.. _Aldryn: http://www.aldryn.com/
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

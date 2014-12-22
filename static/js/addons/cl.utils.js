@@ -50,7 +50,7 @@ var Cl = window.Cl || {};
 
         // INFO: simple mobile and tablet filter that can be extended
         mobile: function () { return (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i)); },
-        tablet: function () { return (navigator.userAgent.match(/iPad/i)); },
+        tablet: function () { return (navigator.userAgent.match(/iPad/i)); }
 
         // INFO: add here more Utilities required for the project
 

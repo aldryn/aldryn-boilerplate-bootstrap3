@@ -23,12 +23,12 @@ Style
 
 Use block-style and group elements underneath:
 
+#. includes (compass includes)
 #. extending
 #. visibility, position
 #. color, font-size, line-height, font-* (font relevant data)
 #. width, height, padding, margin (box model relevant date)
 #. border, background (box style data)
-#. includes (compass includes)
 #. media, print (media queries)
 #. :after, :before, :active (pseudo elements)
 
@@ -43,6 +43,9 @@ Example
 .. code-block:: css
 
     .addon-blog {
+        // mixins
+        @include border-radius(3px);
+        @include box-shadow(0 0 2px #eee);
         // extending
         @extend .list-unstyled;
         // styles
@@ -58,9 +61,6 @@ Example
         margin: 0 auto;
         border: 2px solid #ccc;
         background: #ddd;
-        // mixins
-        @include border-radius(3px);
-        @include box-shadow(0 0 2px #eee);
         // desktop and up
         @media (min-width: $screen-md-min) {
             display: block;

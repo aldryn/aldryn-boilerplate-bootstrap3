@@ -4,6 +4,7 @@ Aldryn Boilerplate Standard
 
 3.0.6
 -----
+- update to css rule order guidelines
 - stubbing full console api instead of just console.log now in unsupporting browsers
 
 3.0.5

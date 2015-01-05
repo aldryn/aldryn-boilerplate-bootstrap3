@@ -2,6 +2,10 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.0.6
+-----
+- stubbing full console api instead of just console.log now in unsupporting browsers
+
 3.0.5
 -----
 - added IIFE for js code in order to maintain 'use strict'

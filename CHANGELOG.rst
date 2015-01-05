@@ -2,6 +2,10 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.0.6
+-----
+- update to css rule order guidelines
+
 3.0.5
 -----
 - added IIFE for js code in order to maintain 'use strict'

@@ -23,12 +23,12 @@ Style
 
 Use block-style and group elements underneath:
 
+#. includes (compass includes)
 #. extending
 #. visibility, position
 #. color, font-size, line-height, font-* (font relevant data)
 #. width, height, padding, margin (box model relevant date)
 #. border, background (box style data)
-#. includes (compass includes)
 #. media, print (media queries)
 #. :after, :before, :active (pseudo elements)
 

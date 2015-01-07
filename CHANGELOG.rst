@@ -2,6 +2,10 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.0.7
+-----
+- added 120 line rule for javascript
+
 3.0.6
 -----
 - update to css rule order guidelines

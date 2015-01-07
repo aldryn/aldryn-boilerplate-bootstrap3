@@ -5,6 +5,7 @@ Guidelines
 * Use camelCase for variables and **not** underscores or dashes
 * Use **dot** annotation ``.`` for javascript file naming
 * Use **single-quotes** ``'`` for **all** values
+* Use a maximum length of 120 characters for JS code
 * Use ``base.js`` for global and general functions and avoid adding js files to the root
 * Use the frameworks prefix inside the ``addons`` folder
 * Use the module and singleton pattern to structure code

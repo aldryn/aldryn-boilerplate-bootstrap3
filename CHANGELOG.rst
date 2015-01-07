@@ -6,6 +6,7 @@ Aldryn Boilerplate Standard
 -----
 - update to css rule order guidelines
 - stubbing full console api instead of just console.log now in unsupporting browsers
+- fixed an issue where docs did not get rendered anymore on rtfd.org
 
 3.0.5
 -----

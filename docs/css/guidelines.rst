@@ -14,6 +14,7 @@ Guidelines
 * Avoid referencing css using their parent like div.container
 * Use shorthands for values like ``#ccc`` or ``white``
 * Use full words instead of shorthands like ``number`` instead of ``nr``
+* Avoid using universal selectors for maintainability/performance reasons
 * Use progressive enhancement whenever possible
 * Validation is not required but nice
 

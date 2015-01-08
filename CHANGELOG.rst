@@ -5,6 +5,7 @@ Aldryn Boilerplate Standard
 3.0.7
 -----
 - added 120 line rule for javascript
+- update to css guidelines on use of universal selectors
 
 3.0.6
 -----

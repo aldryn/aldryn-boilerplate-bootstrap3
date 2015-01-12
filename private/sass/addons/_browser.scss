@@ -11,14 +11,14 @@
 .browser-outdated {
     display: none;
     position: fixed;
+    z-index: 9999;
     bottom: 0;
     left: 0;
-    z-index: 9999;
+    width: 100%;
+    height: auto; // INFO: do not add paddings or margings on the container
     color: white !important;
     text-align: center;
     text-transform: uppercase;
-    width: 100%;
-    height: auto; // INFO: do not add paddings or margings on the container
     background-color: $brand-danger !important;
 
     .btn-outline {

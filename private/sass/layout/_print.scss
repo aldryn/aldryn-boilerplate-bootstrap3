@@ -9,7 +9,8 @@
 a[href]:after {
     content: "";
 }
-#cms_toolbar, .browser-outdated {
+#cms_toolbar,
+.browser-outdated {
     display: none !important;
 }
 

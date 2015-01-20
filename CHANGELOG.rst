@@ -5,6 +5,7 @@ Aldryn Boilerplate Standard
 3.0.7
 -----
 - added 120 line rule for javascript
+- Update to bootstrap 3.3.2
 
 3.0.6
 -----

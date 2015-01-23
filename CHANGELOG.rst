@@ -9,6 +9,7 @@ Aldryn Boilerplate Standard
 - update to css guidelines on use of universal selectors
 - updated npm dependencies, fixes jscs behaviour
 - update to .csscomb.json to match latest changes in guidelines
+- documentation fixes
 
 3.0.6
 -----

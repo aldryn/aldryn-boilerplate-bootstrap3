@@ -69,12 +69,12 @@ This folder can be freely structured. ``_custom.scss`` can be used for quick fix
 
     sites/
     ├─ application/
-    │  ├─ _all.sass
-    │  ├─ _general.sass
-    │  └─ _wizard.sass
+    │  ├─ _all.scss
+    │  ├─ _general.scss
+    │  └─ _wizard.scss
     ├─ marketing/
-    │  ├─ _all.sass
-    │  ├─ _layout.sass
-    │  └─ _addons.sass
+    │  ├─ _all.scss
+    │  ├─ _layout.scss
+    │  └─ _addons.scss
     ├─ _application.scss (imports application/_all.scss)
     └─ _marketing.scss (imports marketing/_all.scss)

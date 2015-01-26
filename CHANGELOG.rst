@@ -2,6 +2,15 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.0.7
+-----
+- added 120 line rule for javascript
+- update to bootstrap 3.3.2
+- update to css guidelines on use of universal selectors
+- updated npm dependencies, fixes jscs behaviour
+- update to .csscomb.json to match latest changes in guidelines
+- documentation fixes
+
 3.0.6
 -----
 - update to css rule order guidelines

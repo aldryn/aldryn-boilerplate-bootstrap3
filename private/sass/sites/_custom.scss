@@ -29,10 +29,10 @@
 .skip-links {
     @extend .list-unstyled;
     position: absolute;
-    left: 0;
+    z-index: 9999;
     top: $navbar-height;
     right: 0;
-    z-index: 9999;
+    left: 0;
     a {
         @extend .sr-only;
         @extend .sr-only-focusable;
@@ -40,19 +40,19 @@
 }
 
 // #HELPERS/colors#
-@include bg-variant('.brand-primary', $brand-primary);
-@include bg-variant('.brand-secondary', $brand-secondary);
-@include bg-variant('.brand-success', $brand-success);
-@include bg-variant('.brand-info', $brand-info);
-@include bg-variant('.brand-warning', $brand-warning);
-@include bg-variant('.brand-danger', $brand-danger);
-@include bg-variant('.brand-muted', $text-muted);
+@include bg-variant(".brand-primary", $brand-primary);
+@include bg-variant(".brand-secondary", $brand-secondary);
+@include bg-variant(".brand-success", $brand-success);
+@include bg-variant(".brand-info", $brand-info);
+@include bg-variant(".brand-warning", $brand-warning);
+@include bg-variant(".brand-danger", $brand-danger);
+@include bg-variant(".brand-muted", $text-muted);
 
-@include bg-variant('.brand-gray-darker', $gray-darker);
-@include bg-variant('.brand-gray-dark', $gray-dark);
-@include bg-variant('.brand-gray', $gray);
-@include bg-variant('.brand-gray-light', $gray-light);
-@include bg-variant('.brand-gray-lighter', $gray-lighter);
+@include bg-variant(".brand-gray-darker", $gray-darker);
+@include bg-variant(".brand-gray-dark", $gray-dark);
+@include bg-variant(".brand-gray", $gray);
+@include bg-variant(".brand-gray-light", $gray-light);
+@include bg-variant(".brand-gray-lighter", $gray-lighter);
 
 // #HELPERS/styleguide#
 .styleguide {

@@ -2,6 +2,10 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.0.8
+-----
+- removed XHTML syntax guideline
+
 3.0.7
 -----
 - added 120 line rule for javascript

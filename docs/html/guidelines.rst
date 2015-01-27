@@ -8,7 +8,6 @@ Guidelines
 * HTML **has to validate** using `W3C <http://www.w3.org/2001/sw/BestPractices/>`_ guidelines
 * HTML should validate the WCAG 2.0 A guidelines
 * HTML should be modular and reusable, do not use easy names like "job" or "item" on top level. Use "addon-jobs" instead
-* Use XML syntax and close all elements using </tag> or />
 * Always use space indendation after django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block ... %}`` and others
 * Ignore to rule on top for ``{% if %}`` or ``{% forloop %}``
 * All templates should be placed within the roots ``templates/`` folder

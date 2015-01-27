@@ -6,7 +6,6 @@
 // DOCS: http://fortawesome.github.io/Font-Awesome/examples/
 
 .icon {
-    @extend .icon-lg;
     @include font-smoothing();
     display: inline-block;
     font-family: "icons";
@@ -14,6 +13,7 @@
     font-style: normal;
     text-rendering: auto;
     speak: none;
+    transform: translate(0, 0);
 }
 
 // Icon Alignment
@@ -84,9 +84,12 @@
 
 // Spinning Icons
 .icon-spin {
-    @include animation(spin 2s infinite linear);
+    @include animation(icon-spin 2s infinite linear);
 }
-@include keyframes(spin) {
+.icon-pulse {
+    @include animation(icon-spin 1s infinite steps(8));
+}
+@include keyframes(icon-spin) {
     0% {
         @include transform(rotate(0deg));
     }

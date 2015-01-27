@@ -4,6 +4,7 @@ Aldryn Boilerplate Standard
 
 3.0.8
 -----
+- added controbution info and authors
 - updated font awesome icons to 4.3.0
 - removed XHTML syntax guideline
 

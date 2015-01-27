@@ -20,5 +20,5 @@ For extending the documentation, follow the instructions within ``/docs/README.r
 Contribute
 ----------
 
-You are very welcome to help improving the aldryn-boilerplate, especially the documentation.
+You are very welcome to help improving the aldryn-standard-boilerplate, especially the documentation.
 Feel free to fork and send us pull requests.

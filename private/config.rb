@@ -23,7 +23,9 @@ fonts_dir = "../static/fonts"
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
-sass_options = {:sourcemap => true}
+# Generating sourcemaps often results in merge conflicts so it is advisable
+# to leave it turned-off for now.
+sass_options = {:sourcemap => false}
 
 # Require any additional compass plugins here.
 require 'bootstrap-sass'

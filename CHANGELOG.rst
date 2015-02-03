@@ -2,11 +2,14 @@
 Aldryn Boilerplate Standard
 ===========================
 
-3.0.8
+3.0.9
 -----
 - added contribution info and authors
 - updated font awesome icons to 4.3.0
 - removed XHTML syntax guideline
+
+3.0.8
+-----
 - temporary disable .map generation by default
 
 3.0.7

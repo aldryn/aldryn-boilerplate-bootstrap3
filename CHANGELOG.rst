@@ -2,6 +2,10 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.0.10
+------
+- added ckeditor.wysiwyg.js temporarily to js/modules/
+
 3.0.9
 -----
 - added contribution info and authors

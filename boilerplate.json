@@ -2,7 +2,7 @@
     "name": "Aldryn Bootstrap3 Boilerplate (Alpha)",
     "identifier": "bootstrap3",
     "description": "Advanced Django CMS Boilerplate based on Bootstrap",
-    "version": "3.0.10",
+    "version": "3.0.11",
     "url": "https://github.com/divio",
     "templates": [
         ["fullwidth.html", "full width"],

@@ -15,7 +15,7 @@ Contributors
 ------------
 
 Please refere to the section within
-`GitHub <https://github.com/aldryn/aldryn-boilerplate-standard/graphs/contributors/>`_ if outdated:
+`GitHub <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/graphs/contributors/>`_ if outdated:
 
 * Ales Kocjancic
 * Angelo Dini

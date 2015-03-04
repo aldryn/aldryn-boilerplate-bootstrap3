@@ -2,7 +2,7 @@
   "name": "package",
   "private": true,
   "dependencies": {
-    "browser-sync": "^1.8.3",
+    "browser-sync": "^2.2.1",
     "gulp": "~3.8.10",
     "gulp-cached": "~1.0.1",
     "gulp-csscomb": "~3.0.3",

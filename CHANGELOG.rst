@@ -6,6 +6,7 @@ Aldryn Boilerplate Standard
 -----
 - rename to aldryn-boilerplate-bootstrap3
 - update browser-sync to v2
+- update bootstrap settings file to full implementation
 
 3.0.10
 ------

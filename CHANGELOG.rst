@@ -2,6 +2,13 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.1.0
+-----
+- rename to aldryn-boilerplate-bootstrap3
+- update browser-sync to v2
+- update bootstrap settings file to full implementation
+- update to jQuery 2.x
+
 3.0.10
 ------
 - added ckeditor.wysiwyg.js temporarily to js/modules/

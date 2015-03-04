@@ -28,7 +28,7 @@ var patterns = {
     'sass': [paths.sass + '*', paths.sass + '**/*']
 };
 
-var port = process.env.PORT || '8000';
+var port = parseInt(process.env.PORT, 10) || 8000;
 
 // TASKS
 //##########################################################
@@ -78,7 +78,11 @@ gulp.task('browser', function () {
     // DOCS: http://www.browsersync.io/docs/options/
     setTimeout(function () {
         browserSync.init(files, {
-            'proxy': '0.0.0.0:' + port
+            'proxy': '0.0.0.0:' + port,
+            'port': port + 1,
+            'ui': {
+                'port': port + 2
+            }
         });
     }, 1000);
 });

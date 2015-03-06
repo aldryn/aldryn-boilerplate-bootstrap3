@@ -48,9 +48,9 @@ into the boilerplate's root ``.editorconfig``.
 Icons
 -----
 
-We integrated the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_  library instead of Bootstrap's
-`Glyphicons <http://getbootstrap.com/components/#glyphicons>`_ and stream the ``fa-*`` prefixes to
-``icon-*`` to be more consistent and flexible when using `fontastic.me <http://fontastic.me>`_.
+We integrated the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_ library in addition of Bootstrap's
+`Glyphicons <http://getbootstrap.com/components/#glyphicons>`_ icons while disabling the Glyphicons as a default.
+You can reanable them within the `according settings<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/develop/private/sass/libs/_bootstrap.scss#L14>`_.
 
 Libraries
 ---------

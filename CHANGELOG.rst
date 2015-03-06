@@ -2,6 +2,11 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.1.1
+-----
+- use default naming space ``fa-`` for fontawesome
+- update documentation
+
 3.1.0
 -----
 - rename to aldryn-boilerplate-bootstrap3

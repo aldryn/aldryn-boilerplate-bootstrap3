@@ -4,7 +4,8 @@ Aldryn Boilerplate Standard
 
 3.1.2
 -----
-- fix an issue with mobile menu button
+- fix an issue with mobile menu not opening
+- fix an issue with header html outline
 - added additional markup to langnav
 
 3.1.1

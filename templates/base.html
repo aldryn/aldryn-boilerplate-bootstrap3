@@ -13,7 +13,10 @@
         <div class="navbar-header">
             {# INFO: the logo should be placed first for seo reasons #}
             <h1 class="navbar-brand">
-                <a href="/"><img src="{% static "img/logo-main@print.png" %}" alt="{{ site_settings.site.name }}" /></a>
+                <a href="/">
+                    <span class="sr-only">{{ request.site.name }}</span>
+                    <img src="{% static "img/logo-main@print.png" %}" alt="{{ request.site.name }}" />
+                </a>
             </h1>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".js-navbar-header">
                 {% for row in 123|make_list %}<span class="icon-bar"></span>{% endfor %}
@@ -29,7 +32,7 @@
             <li><a href="#footer" title="[Alt + 3]" accesskey="3">{% trans "Contact" %}</a></li>
         </ul>
 
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse js-navbar-header">
             {% block navbar %}
             <nav class="nav navbar-main navbar-right" id="navigation" role="navigation">
                 <h2 class="sr-only">{% trans "Navigation" %}</h2>

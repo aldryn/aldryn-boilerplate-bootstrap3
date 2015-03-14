@@ -73,7 +73,7 @@
 
 <!-- start: content -->
 <hr class="sr-only" />
-<h1 class="sr-only" id="content">{% trans "Content:" %} {% page_attribute title %}</h1>
+<h1 class="sr-only" id="content">{% page_attribute title %}</h1>
 {% block messages %}{% include "includes/messages.html" %}{% endblock messages %}
 {% block feature %}{% placeholder "feature" %}{% endblock feature %}
 {% block extend_base %}
@@ -85,7 +85,7 @@
 {% block footer %}
 <!-- start: footer -->
 <footer class="footer" role="contentinfo">
-    <h2 class="sr-only" id="footer">{% trans "Footer" %}</h2>
+    <h2 class="sr-only" id="footer">{% trans "Sitemap" %}</h2>
     <div class="container">
         {% render_model_block request.current_page "changelist" %}
         <ul class="list-inline">

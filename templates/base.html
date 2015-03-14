@@ -15,9 +15,9 @@
             <h1 class="navbar-brand">
                 <a href="/"><img src="{% static "img/logo-main@print.png" %}" alt="{{ site_settings.site.name }}" /></a>
             </h1>
-            <div class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".js-navbar-header">
                 {% for row in 123|make_list %}<span class="icon-bar"></span>{% endfor %}
-            </div>
+            </button>
         </div>
 
         {# INFO: ensure the anchor names are callable #}

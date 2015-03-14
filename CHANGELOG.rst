@@ -2,6 +2,11 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.1.2
+-----
+- fix an issue with mobile menu button
+- added additional markup to langnav
+
 3.1.1
 -----
 - use default naming space ``fa-`` for fontawesome

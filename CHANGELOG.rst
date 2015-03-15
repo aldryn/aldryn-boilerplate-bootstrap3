@@ -7,7 +7,6 @@ Aldryn Boilerplate Standard
 - fix an issue with mobile menu not opening
 - fix an issue with header html outline
 - added additional markup to langnav
-- reverse 3.0.10 changes
 - fix an issue with spacer classes when empty
 
 3.1.1

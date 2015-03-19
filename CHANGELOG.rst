@@ -4,9 +4,10 @@ Aldryn Boilerplate Standard
 
 3.1.2
 -----
+- added additional markup to langnav
+- improved seo markup
 - fix an issue with mobile menu not opening
 - fix an issue with header html outline
-- added additional markup to langnav
 - fix an issue with spacer classes when empty
 
 3.1.1

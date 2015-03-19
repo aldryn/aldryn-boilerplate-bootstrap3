@@ -5,10 +5,10 @@
 
 {% if languages|length > 1 %}
 <li class="child lang dropdown">
-    <a href="{% page_language_url lang.0 %}" class="dropdown-toggle" data-toggle="dropdown">{{ lang.name }} <span class="caret"></span></a>
+    <a href="{% page_language_url lang.0 %}" class="dropdown-toggle" data-toggle="dropdown"><span>{{ lang.name }} <span class="caret"></span></span></a>
     <ul class="dropdown-menu" role="menu">
         {% for language in languages %}{% if not language.0 == current_language %}
-        <li class="child lang"><a href="{% page_language_url language.0 %}" class="dropdown-toggle" data-toggle="dropdown">{{ language.1 }}</a></li>
+        <li class="child lang"><a href="{% page_language_url language.0 %}" class="dropdown-toggle" data-toggle="dropdown"><span>{{ language.1 }}</span></a></li>
         {% endif %}{% endfor %}
     </ul>
 </li>

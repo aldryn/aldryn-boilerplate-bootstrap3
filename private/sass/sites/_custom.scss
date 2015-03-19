@@ -10,19 +10,27 @@
 
 // #HELPERS/spacer#
 .spacer {
-    margin-top: $line-height-computed / 2;
-    margin-bottom: $line-height-computed / 2;
-}
-.spacer-xs {
-    margin-top: $line-height-computed / 4;
-    margin-bottom: $line-height-computed / 4;
-}
-.spacer-lg {
     margin-top: $line-height-computed;
     margin-bottom: $line-height-computed;
 }
+.spacer-xs {
+    margin-top: $line-height-computed / 2;
+    margin-bottom: $line-height-computed / 2;
+}
+.spacer-lg {
+    margin-top: $line-height-computed * 2;
+    margin-bottom: $line-height-computed * 2;
+}
 .spacer-zero {
     margin: 0;
+}
+.spacer:after,
+.spacer-xs:after,
+.spacer-lg:after,
+.spacer-zero:after {
+    clear: both;
+    content: "";
+    display: table;
 }
 
 // #HELPERS/accessibility#

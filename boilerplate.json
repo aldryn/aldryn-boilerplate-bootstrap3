@@ -1,9 +1,8 @@
 {
     "name": "Aldryn Bootstrap3 Boilerplate (Alpha)",
     "identifier": "bootstrap3",
-    "description": "Advanced Django CMS Boilerplate based on Bootstrap",
+    "package-name": "aldryn-bootstrap3-boilerplate-alpha",
     "version": "3.1.3",
-    "url": "https://github.com/divio",
     "templates": [
         ["fullwidth.html", "full width"],
         ["sidebar_left.html", "sidebar left"],
@@ -34,10 +33,6 @@
         "static/css/box-sizing.htc",
         "static/css/pie.htc"
     ],
-    "author": {
-        "name": "Divio AG",
-        "url": "https://www.divio.ch"
-    },
     "license": {
         "name": "BSD"
     }

@@ -4,6 +4,7 @@ Aldryn Boilerplate Bootstrap3
 
 3.1.3
 -----
+- update json file for aldryn
 - fix an issue with the lang-nav markup
 
 3.1.2

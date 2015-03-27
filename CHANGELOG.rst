@@ -2,6 +2,10 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.1.3
+-----
+- fix an issue with the lang-nav markup
+
 3.1.2
 -----
 - added additional markup to langnav

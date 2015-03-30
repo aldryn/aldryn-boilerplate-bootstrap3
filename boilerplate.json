@@ -1,8 +1,7 @@
 {
-    "name": "Aldryn Bootstrap3 Boilerplate (Alpha)",
     "identifier": "bootstrap3",
-    "package-name": "aldryn-bootstrap3-boilerplate-alpha",
-    "version": "3.1.4",
+    "package-name": "aldryn-bootstrap3-boilerplate",
+    "version": "3.1.5",
     "templates": [
         ["fullwidth.html", "full width"],
         ["sidebar_left.html", "sidebar left"],

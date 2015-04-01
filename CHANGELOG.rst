@@ -5,6 +5,7 @@ Aldryn Boilerplate Bootstrap3
 3.1.4
 -----
 - allow empty span in ckeditor
+- fix an issue in boilerplate.json
 
 3.1.3
 -----

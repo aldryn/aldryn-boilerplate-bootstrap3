@@ -2,6 +2,10 @@
 Aldryn Boilerplate Bootstrap3
 =============================
 
+3.1.6
+-----
+- update npm dependencies
+
 3.1.5
 -----
 - update to bootstrap 3.3.4

@@ -20,6 +20,7 @@ Please refere to the section within
 * Ales Kocjancic
 * Angelo Dini
 * Dario Albanesi
+* Ivan Kubrakov
 * Lionardo Mendonça
 * Mateusz Dereniowski
 * Stefan Foulis

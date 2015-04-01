@@ -1,7 +1,11 @@
 /* Default CKEDITOR Styles
  * Added within src/settings.py CKEDITOR_SETTINGS.stylesSet
  */
+
+/* allow empty span */
+CKEDITOR.dtd.$removeEmpty.span = 0;
 CKEDITOR.allElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div'];
+
 CKEDITOR.stylesSet.add('default', [
     /* Block Styles */
     { 'name': 'Text Lead', 'element': CKEDITOR.allElements, 'attributes': { 'class': 'lead' }},

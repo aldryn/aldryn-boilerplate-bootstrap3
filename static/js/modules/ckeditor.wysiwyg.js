@@ -2,8 +2,10 @@
  * Added within src/settings.py CKEDITOR_SETTINGS.stylesSet
  */
 
-/* allow empty span */
+// extend ckeditor default settings
+// DOCS: http://docs.ckeditor.com/#!/api/CKEDITOR.dtd
 CKEDITOR.dtd.$removeEmpty.span = 0;
+
 CKEDITOR.allElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div'];
 
 CKEDITOR.stylesSet.add('default', [

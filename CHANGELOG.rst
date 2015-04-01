@@ -2,6 +2,10 @@
 Aldryn Boilerplate Bootstrap3
 =============================
 
+3.1.4
+-----
+- allow empty span in ckeditor
+
 3.1.3
 -----
 - update json file for aldryn

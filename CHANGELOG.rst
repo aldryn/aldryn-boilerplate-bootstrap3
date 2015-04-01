@@ -5,6 +5,7 @@ Aldryn Boilerplate Bootstrap3
 3.1.6
 -----
 - update npm dependencies
+- fixes an issue with navigation.html
 
 3.1.5
 -----

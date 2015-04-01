@@ -2,6 +2,11 @@
 Aldryn Boilerplate Bootstrap3
 =============================
 
+3.1.5
+-----
+- update to bootstrap 3.3.4
+- update to qunit 1.17.x
+
 3.1.4
 -----
 - allow empty span in ckeditor

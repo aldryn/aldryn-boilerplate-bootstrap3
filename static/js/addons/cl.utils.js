@@ -25,7 +25,7 @@ var Cl = window.Cl || {};
         /**
          * Document setup for no javascript fallbacks and logging
          *
-         * @method document
+         * @method _document
          * @private
          */
         _document: function () {
@@ -65,23 +65,41 @@ var Cl = window.Cl || {};
         },
 
         /**
-         * Simple mobile detection, can be extended
+         * Simple redirection
          *
-         * @method isMobile
-         * @static
+         * @method redirectTo
+         * @public
+         * @param url {String} URL string
          */
-        isMobile: function () {
-            return (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i));
+        redirectTo: function (url) {
+            window.location.href = url;
         },
 
         /**
-         * Simple tablet detection, can be extended
+         * Save information within local storage
          *
-         * @method isTablet
-         * @static
+         * @method setStorage
+         * @public
+         * @param token {String} namespace
+         * @param value {String} storage value
          */
-        isTablet: function () {
-            return (navigator.userAgent.match(/iPad/i));
+        setStorage: function (token, value) {
+            if (window.localStorage) {
+                localStorage.setItem(token, value);
+            }
+        },
+
+        /**
+         * Retrieve information from local storage
+         *
+         * @method getStorage
+         * @public
+         * @param token {String} namespace
+         */
+        getStorage: function (token) {
+            if (window.localStorage) {
+                return localStorage.getItem(token);
+            }
         }
 
         // INFO: feel free to add more Utilities required for the project

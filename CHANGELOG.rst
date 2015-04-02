@@ -5,6 +5,9 @@ Aldryn Boilerplate Bootstrap3
 3.2.0
 -----
 - added yuidocs syntax and generators
+- added Cl.Utils.redirectTo
+- added Cl.Utils.getStorage and Cl.Utils.setStorage
+- deprecate Cl.Utils.mobile and Cl.utils.tablet
 - update npm dependencies
 - fixes an issue with navigation.html
 

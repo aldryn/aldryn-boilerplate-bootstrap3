@@ -21,9 +21,6 @@ var Cl = window.Cl || {};
         // removes noscript form body and adds print-js
         if (window.Cl && window.Cl.Utils) {
             Cl.Utils._document();
-            // INFO: additionally you will be able to use:
-            // Cl.Utils.mobile() for detecting mobile devices
-            // Cl.Utils.tablet() for detecting tablet devices
         }
 
         // DOCS: https://github.com/burocratik/outdated-browser

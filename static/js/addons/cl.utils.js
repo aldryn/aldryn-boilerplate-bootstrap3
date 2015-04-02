@@ -16,7 +16,7 @@ var Cl = window.Cl || {};
     'use strict';
 
     /**
-     * Contains various helpers
+     * Contains various helpers, feel free to extend and adapt
      *
      * @class Utils
      * @namespace Cl
@@ -68,7 +68,6 @@ var Cl = window.Cl || {};
          * Simple redirection
          *
          * @method redirectTo
-         * @public
          * @param url {String} URL string
          */
         redirectTo: function (url) {
@@ -79,7 +78,6 @@ var Cl = window.Cl || {};
          * Save information within local storage
          *
          * @method setStorage
-         * @public
          * @param token {String} namespace
          * @param value {String} storage value
          */
@@ -93,7 +91,6 @@ var Cl = window.Cl || {};
          * Retrieve information from local storage
          *
          * @method getStorage
-         * @public
          * @param token {String} namespace
          */
         getStorage: function (token) {
@@ -101,8 +98,6 @@ var Cl = window.Cl || {};
                 return localStorage.getItem(token);
             }
         }
-
-        // INFO: feel free to add more Utilities required for the project
     };
 
 })(jQuery);

@@ -9,6 +9,7 @@ Aldryn Boilerplate Bootstrap3
 - added Cl.Utils.getStorage and Cl.Utils.setStorage
 - deprecate Cl.Utils.mobile and Cl.utils.tablet
 - update npm dependencies
+- update CKEditor setting styles and removed double usage
 - fixes an issue with navigation.html
 
 3.1.5

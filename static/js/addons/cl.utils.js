@@ -5,6 +5,9 @@
 
 //######################################################################################################################
 // #NAMESPACES#
+/**
+ * @module Cl
+ */
 var Cl = window.Cl || {};
 
 //######################################################################################################################
@@ -12,21 +15,34 @@ var Cl = window.Cl || {};
 (function ($) {
     'use strict';
 
+    /**
+     * Contains various helpers
+     *
+     * @class Utils
+     * @namespace Cl
+     */
     Cl.Utils = {
-
-        // INFO: general document setup for no javascript fallbacks and logging
-        document: function () {
+        /**
+         * Document setup for no javascript fallbacks and logging
+         *
+         * @method document
+         * @private
+         */
+        _document: function () {
             // remove no-js class if javascript is activated
             $(document.body).removeClass('noscript');
             // ensure that console methods don't throw errors
-            this.consoleWrapper();
+            this._consoleWrapper();
         },
 
         /**
          * Stubs all the methods from console api that are not available in current environment
-         * INFO: https://developer.chrome.com/devtools/docs/console-api
+         * DOCS: https://developer.chrome.com/devtools/docs/console-api
+         *
+         * @method _consoleWrapper
+         * @private
          */
-        consoleWrapper: function () {
+        _consoleWrapper: function () {
             var method;
             var noop = function () {};
             var methods = [
@@ -48,16 +64,27 @@ var Cl = window.Cl || {};
             }
         },
 
-        // INFO: simple mobile and tablet filter that can be extended
-        mobile: function () {
+        /**
+         * Simple mobile detection, can be extended
+         *
+         * @method isMobile
+         * @static
+         */
+        isMobile: function () {
             return (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i));
         },
-        tablet: function () {
+
+        /**
+         * Simple tablet detection, can be extended
+         *
+         * @method isTablet
+         * @static
+         */
+        isTablet: function () {
             return (navigator.userAgent.match(/iPad/i));
         }
 
-        // INFO: add here more Utilities required for the project
-
+        // INFO: feel free to add more Utilities required for the project
     };
 
 })(jQuery);

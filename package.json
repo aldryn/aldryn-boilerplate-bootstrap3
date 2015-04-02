@@ -11,6 +11,7 @@
     "gulp-jshint": "~1.9.4",
     "gulp-qunit": "^1.2.1",
     "gulp-util": "~3.0.4",
+    "gulp-yuidoc": "^0.1.2",
     "jshint-stylish": "~1.0.1"
   },
   "engines": {

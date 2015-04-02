@@ -2,8 +2,9 @@
 Aldryn Boilerplate Bootstrap3
 =============================
 
-3.1.6
+3.2.0
 -----
+- added yuidocs syntax and generators
 - update npm dependencies
 - fixes an issue with navigation.html
 

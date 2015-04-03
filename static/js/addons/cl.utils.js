@@ -82,7 +82,7 @@ var Cl = window.Cl || {};
          * @param value {String} storage value
          */
         setStorage: function (token, value) {
-            if (window.localStorage) {
+            if (typeof(Storage) !== void(0)) {
                 localStorage.setItem(token, value);
             }
         },
@@ -94,7 +94,7 @@ var Cl = window.Cl || {};
          * @param token {String} namespace
          */
         getStorage: function (token) {
-            if (window.localStorage) {
+            if (typeof(Storage) !== void(0)) {
                 return localStorage.getItem(token);
             }
         }

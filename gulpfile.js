@@ -11,6 +11,7 @@ var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var qunit = require('gulp-qunit');
+var yuidoc = require('gulp-yuidoc');
 
 // SETTINGS
 //##########################################################
@@ -95,9 +96,16 @@ gulp.task('tests', function () {
         }));
 });
 
+// TASK/generates jsdoc documentation
+gulp.task('docs', function () {
+    gulp.src(patterns.js)
+        .pipe(yuidoc())
+        .pipe(gulp.dest('./static/docs'));
+});
+
 // TASK/watchers
 gulp.task('watch', function () {
-    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint']);
+    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint', 'docs']);
 });
 
 // RUNNERS

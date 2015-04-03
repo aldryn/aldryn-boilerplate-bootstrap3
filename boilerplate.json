@@ -1,7 +1,7 @@
 {
-    "name": "Aldryn Bootstrap3 Boilerplate (Alpha)",
+    "name": "Aldryn Bootstrap3 Boilerplate",
     "identifier": "bootstrap3",
-    "package-name": "aldryn-bootstrap3-boilerplate-alpha",
+    "package-name": "aldryn-bootstrap3-boilerplate",
     "version": "3.1.3",
     "templates": [
         ["fullwidth.html", "full width"],

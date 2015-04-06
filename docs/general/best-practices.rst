@@ -20,6 +20,7 @@ runner instead of Grunt as we prefer **code over configuration**. There are some
 
 * ``gulp`` runs gulp lint browser and watch commands
 * ``gulp lint`` lints all JavaScript using ``.jshintrc`` and ``.jscsrc``
+* ``gulp docs`` generates JavaScript API documentation into ``static/docs``
 * ``gulp images`` optimised images within ``/static/img``
 * ``gulp browser`` connects to a given server (django) and runs livereload on ``http://0.0.0.0:3000``
 * ``gulp watch`` starts a watch command for linting
@@ -64,6 +65,12 @@ We are implementing the following standard libraries in addition to the default 
 
 We implemented `Bower <http://bower.io/>`_ to help you manage dependencies. Packages are automatically downloaded into
 ``/static/vendor/`` but **not** moved to their appropriate folders. This still requires manual work.
+
+Documentation
+-------------
+
+We write API documentation using the `YUIDoc <http://yui.github.io/yuidoc/>`_ syntax. For HTML and CSS please refer
+to the styleguide.
 
 Tests
 -----

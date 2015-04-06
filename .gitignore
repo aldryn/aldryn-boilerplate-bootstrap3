@@ -27,6 +27,7 @@ npm-debug.log
 *.css.map
 /static/css/
 /static/vendor
+/static/docs/
 
 Gemfile.lock
 .bundle/

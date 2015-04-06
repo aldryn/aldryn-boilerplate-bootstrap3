@@ -1,6 +1,17 @@
-/* Default CKEDITOR Styles
- * Added within src/settings.py CKEDITOR_SETTINGS.stylesSet
+/*!
+ * @author:    Divio AG
+ * @copyright: http://www.divio.ch
  */
+
+//######################################################################################################################
+// #CKEDITOR#
+/**
+ * Default CKEDITOR Styles
+ * Added within src/settings.py CKEDITOR_SETTINGS.stylesSet
+ *
+ * @module CKEDITOR
+ */
+
 CKEDITOR.allElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div'];
 CKEDITOR.stylesSet.add('default', [
     /* Block Styles */
@@ -52,3 +63,9 @@ CKEDITOR.stylesSet.add('default', [
 
     { 'name': 'Blockquote Reverse', 'element': 'blockquote', 'attributes': { 'class': 'blockquote-reverse' }}
 ]);
+
+/*
+ * Extend ckeditor default settings
+ * DOCS: http://docs.ckeditor.com/#!/api/CKEDITOR.dtd
+ */
+CKEDITOR.dtd.$removeEmpty.span = 0;

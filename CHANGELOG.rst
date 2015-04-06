@@ -2,6 +2,26 @@
 Aldryn Boilerplate Bootstrap3
 =============================
 
+3.2.0
+-----
+- added yuidocs syntax and generators
+- added Cl.Utils.redirectTo
+- added Cl.Utils.getStorage and Cl.Utils.setStorage
+- deprecate Cl.Utils.mobile and Cl.utils.tablet
+- update npm dependencies
+- update CKEditor setting styles and removed double usage
+- fixes an issue with navigation.html
+
+3.1.5
+-----
+- update to bootstrap 3.3.4
+- update to qunit 1.17.x
+
+3.1.4
+-----
+- allow empty span in ckeditor
+- fix an issue in boilerplate.json
+
 3.1.3
 -----
 - update json file for aldryn

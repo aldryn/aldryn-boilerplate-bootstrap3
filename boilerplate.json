@@ -1,7 +1,7 @@
 {
     "identifier": "bootstrap3",
     "package-name": "aldryn-bootstrap3-boilerplate",
-    "version": "3.1.5",
+    "version": "3.2.0",
     "templates": [
         ["fullwidth.html", "full width"],
         ["sidebar_left.html", "sidebar left"],
@@ -27,11 +27,15 @@
         "static/js/libs/jquery.min.js",
         "static/js/libs/respond.min.js",
         "static/js/libs/swfobject.min.js",
-        "static/js/addons/ckeditor.wysiwyg.js",
+        "static/js/modules/ckeditor.wysiwyg.js",
 
         "static/css/box-sizing.htc",
         "static/css/pie.htc"
     ],
+    "author": {
+        "name": "Divio AG",
+        "url": "https://www.divio.ch"
+    },
     "license": {
         "name": "BSD"
     }

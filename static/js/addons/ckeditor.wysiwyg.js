@@ -1,0 +1,1 @@
+../modules/ckeditor.wysiwyg.js

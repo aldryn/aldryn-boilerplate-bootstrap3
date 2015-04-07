@@ -1,29 +1,30 @@
-@media print {
 //######################################################################################################################
 // #PRINT#
 
 // this file is intended for all print styles and rules
 // to ensure your website also works when printed
 
-// #DEFAULTS#
-a[href]:after {
-    content: "";
-}
-#cms_toolbar,
-.browser-outdated {
-    display: none !important;
-}
+@media print {
 
-// #CUSTOM#
-.navbar-head {
-    display: block;
-}
-.navbar-main {
-    display: none;
-}
-.navbar-head .navbar-brand a {
-    text-indent: 0;
-}
+    // #DEFAULTS#
+    a[href]:after {
+        content: "";
+    }
+    #cms_toolbar,
+    .browser-outdated {
+        display: none !important;
+    }
+
+    // #CUSTOM#
+    .navbar-head {
+        display: block;
+    }
+    .navbar-main {
+        display: none;
+    }
+    .navbar-head .navbar-brand a {
+        text-indent: 0;
+    }
 
 // end of print
 }

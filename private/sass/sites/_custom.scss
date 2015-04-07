@@ -28,19 +28,19 @@
 .spacer-xs:after,
 .spacer-lg:after,
 .spacer-zero:after {
-    clear: both;
     content: "";
     display: table;
+    clear: both;
 }
 
 // #HELPERS/accessibility#
 .skip-links {
     @extend .list-unstyled;
     position: absolute;
-    z-index: 9999;
     top: $navbar-height;
     right: 0;
     left: 0;
+    z-index: 9999;
     a {
         @extend .sr-only;
         @extend .sr-only-focusable;

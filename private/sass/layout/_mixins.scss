@@ -12,7 +12,7 @@
     @if $target == 0 {
         @return 0
     }
-    @return $target / $context + 0em;
+    @return $target / $context + em;
 }
 
 // line height calculation
@@ -55,9 +55,9 @@
 
 // hides text in an element so you can see the background.
 @mixin hide-text {
-    $approximate_em_value: 12px / 1em;
-    $wider_than_any_screen: -9999em;
-    text-indent: $wider_than_any_screen * $approximate_em_value;
+    $approximate-em-value: 12px / 1em;
+    $wider-than-any-screen: -9999em;
+    text-indent: $wider-than-any-screen * $approximate-em-value;
     overflow: hidden;
     text-align: left;
 }

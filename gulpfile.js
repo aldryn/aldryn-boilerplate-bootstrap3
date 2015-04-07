@@ -14,7 +14,7 @@ var gutil = require('gulp-util');
 var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
-var qunit = require('gulp-qunit');
+var karma = require('karma').server;
 var scsslint = require('gulp-scss-lint');
 var yuidoc = require('gulp-yuidoc');
 
@@ -111,10 +111,10 @@ gulp.task('browser', function () {
 //##########################################################
 // #TESTS#
 gulp.task('tests', function () {
-    gulp.src(paths.js + 'tests/index.html')
-        .pipe(qunit().on('error', function (error) {
-            gutil.log('\n' + error.message);
-        }));
+    karma.start({
+        'configFile': __dirname + '/static/js/tests/karma.conf.js',
+        'autoWatch': true
+    });
 });
 
 //######################################################################################################################

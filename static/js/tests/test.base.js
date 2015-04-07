@@ -6,15 +6,17 @@
 //######################################################################################################################
 // #NAMESPACES#
 // var Cl = window.Cl || {};
-/* global QUnit */
+/* global describe, it, expect */
 
 //######################################################################################################################
 // #TESTS#
 (function () {
     'use strict';
 
-    QUnit.test('hello test', function (assert) {
-        assert.ok(true, 'Passed!');
+    describe('A suite', function () {
+        it('contains spec with an expectation', function () {
+            expect(true).toBe(true);
+        });
     });
 
 })();

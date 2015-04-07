@@ -2,6 +2,11 @@
 Aldryn Boilerplate Bootstrap3
 =============================
 
+3.2.2
+-----
+- cleaned gulpfile.js
+- fixed linting issues
+
 3.2.1
 -----
 - removed js/modules

@@ -5,9 +5,9 @@ Aldryn Boilerplate Bootstrap3
 3.3.0
 -----
 - added scss-lint
-- moved ``addons/_browser.scss`` and ``addons/_select2.scss`` tp ``libs``
+- moved ``addons/_browser.scss`` and ``addons/_select2.scss`` to ``libs``
 - changed gulpfile.js file to fit guidelines
-- removed csscomb but keept settings
+- removed csscomb but kept settings
 
 3.2.1
 -----

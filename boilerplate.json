@@ -33,12 +33,5 @@
 
         "static/css/box-sizing.htc",
         "static/css/pie.htc"
-    ],
-    "author": {
-        "name": "Divio AG",
-        "url": "https://www.divio.ch"
-    },
-    "license": {
-        "name": "BSD"
-    }
+    ]
 }

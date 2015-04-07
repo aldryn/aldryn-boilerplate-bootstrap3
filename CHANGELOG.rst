@@ -2,6 +2,11 @@
 Aldryn Boilerplate Bootstrap3
 =============================
 
+3.2.1
+-----
+- removed js/modules
+- update to protected files for aldryn
+
 3.2.0
 -----
 - added yuidocs syntax and generators

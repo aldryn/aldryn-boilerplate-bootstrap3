@@ -12,6 +12,7 @@
         "templates/base_root.html",
         "templates/404.html",
         "templates/500.html",
+
         "templates/includes/analytics.html",
         "templates/includes/messages.html",
         "templates/includes/menu/breadcrumb.html",
@@ -20,16 +21,24 @@
         "templates/includes/menu/pagenav.html",
 
         "private/sass/libs/_bootstrap.scss",
+        "private/sass/libs/_fontawesome.scss",
 
         "static/js/libs/bootstrap.min.js",
         "static/js/libs/class.min.js",
         "static/js/libs/html5shiv.min.js",
         "static/js/libs/jquery.min.js",
+        "static/js/libs/outdatedBrowser.min.js",
         "static/js/libs/respond.min.js",
         "static/js/libs/swfobject.min.js",
-        "static/js/modules/ckeditor.wysiwyg.js",
 
         "static/css/box-sizing.htc",
         "static/css/pie.htc"
-    ]
+    ],
+    "author": {
+        "name": "Divio AG",
+        "url": "https://www.divio.ch"
+    },
+    "license": {
+        "name": "BSD"
+    }
 }

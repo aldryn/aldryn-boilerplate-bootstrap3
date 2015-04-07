@@ -15,6 +15,7 @@ var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var qunit = require('gulp-qunit');
+var scsslint = require('gulp-scss-lint');
 var yuidoc = require('gulp-yuidoc');
 
 //######################################################################################################################
@@ -29,16 +30,21 @@ var paths = {
 };
 
 var patterns = {
-    'images': [paths.images + '*', paths.images + '**/*', '!' + paths.images + '/dummy/*/**'],
-    'js': [paths.js + '*.js', paths.js + '**/*.js', '!' + paths.js + '*.min.js', '!' + paths.js + '**/*.min.js'],
-    'sass': [paths.sass + '*', paths.sass + '**/*']
+    'images': [paths.images + '*', paths.images + '**/*',
+        '!' + paths.images + 'dummy/*/**'],
+    'js': [paths.js + '*.js', paths.js + '**/*.js',
+        '!' + paths.js + '*.min.js', '!' + paths.js + '**/*.min.js'],
+    'sass': [paths.sass + '*', paths.sass + '**/*',
+        '!' + paths.sass + 'libs/*.scss', '!' + paths.sass + 'settings/*.scss', '!' + paths.sass + 'layout/_print.scss']
 };
 
 var port = parseInt(process.env.PORT, 10) || 8000;
 
 //######################################################################################################################
 // #LINTING#
-gulp.task('lint', function () {
+gulp.task('lint', ['jslint', 'scsslint']);
+
+gulp.task('jslint', function () {
     gulp.src(patterns.js.concat(['!' + paths.js + 'libs/*.js', './gulpfile.js']))
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
@@ -47,8 +53,20 @@ gulp.task('lint', function () {
         });
 });
 
+gulp.task('scsslint', function () {
+    // DOCS: https://github.com/brigade/scss-lint/
+    gulp.src(patterns.sass)
+        .pipe(cache('scsslint'))
+        .pipe(scsslint({
+            'config': './scss-lint.json'
+        }));
+});
+
+
 //##########################################################
 // #PREPROCESSING#
+gulp.task('preprocess', ['images', 'docs']);
+
 gulp.task('images', function () {
     var options = {
         'interlaced': true,
@@ -102,7 +120,7 @@ gulp.task('tests', function () {
 //######################################################################################################################
 // #COMMANDS#
 gulp.task('watch', function () {
-    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint', 'docs']);
+    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint']);
 });
 
 gulp.task('default', ['lint', 'browser', 'watch']);

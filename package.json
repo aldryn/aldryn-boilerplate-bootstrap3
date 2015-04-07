@@ -5,7 +5,6 @@
     "browser-sync": "^2.5.2",
     "gulp": "~3.8.11",
     "gulp-cached": "~1.0.4",
-    "gulp-csscomb": "~3.0.3",
     "gulp-imagemin": "^2.2.1",
     "gulp-jscs": "^1.4.0",
     "gulp-jshint": "~1.9.4",

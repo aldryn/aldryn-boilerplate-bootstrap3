@@ -1,10 +1,14 @@
-// IMPORTS
-//##########################################################
+/*!
+ * @author:    Divio AG
+ * @copyright: http://www.divio.ch
+ */
+
 'use strict';
-/* global require */
+
+//######################################################################################################################
+// #IMPORTS#
 var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
-var csscomb = require('gulp-csscomb');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var imagemin = require('gulp-imagemin');
@@ -13,14 +17,15 @@ var jscs = require('gulp-jscs');
 var qunit = require('gulp-qunit');
 var yuidoc = require('gulp-yuidoc');
 
-// SETTINGS
-//##########################################################
+//######################################################################################################################
+// #SETTINGS#
 var paths = {
     'css': './static/css/',
     'html': './templates/',
     'images': './static/img/',
     'js': './static/js/',
-    'sass': './private/sass/'
+    'sass': './private/sass/',
+    'docs': './static/docs'
 };
 
 var patterns = {
@@ -31,9 +36,8 @@ var patterns = {
 
 var port = parseInt(process.env.PORT, 10) || 8000;
 
-// TASKS
-//##########################################################
-// TASKS/linting
+//######################################################################################################################
+// #LINTING#
 gulp.task('lint', function () {
     gulp.src(patterns.js.concat(['!' + paths.js + 'libs/*.js', './gulpfile.js']))
         .pipe(jshint())
@@ -43,17 +47,8 @@ gulp.task('lint', function () {
         });
 });
 
-// TASK/sass prettify
-// TODO: highly experimental
-gulp.task('sass', function () {
-    gulp.src(patterns.sass)
-        .pipe(csscomb())
-        .pipe(gulp.dest(paths.sass)).on('error', function (error) {
-            gutil.log('\n' + error.message);
-        });
-});
-
-// TASK/image preprocessing
+//##########################################################
+// #PREPROCESSING#
 gulp.task('images', function () {
     var options = {
         'interlaced': true,
@@ -68,7 +63,14 @@ gulp.task('images', function () {
         });
 });
 
-// TASK/browser reload
+gulp.task('docs', function () {
+    gulp.src(patterns.js)
+        .pipe(yuidoc())
+        .pipe(gulp.dest(paths.docs));
+});
+
+//##########################################################
+// #SERVICES#
 gulp.task('browser', function () {
     var files = [
         paths.css + '*.css',
@@ -88,7 +90,8 @@ gulp.task('browser', function () {
     }, 1000);
 });
 
-// TASK/runs qunit tests
+//##########################################################
+// #TESTS#
 gulp.task('tests', function () {
     gulp.src(paths.js + 'tests/index.html')
         .pipe(qunit().on('error', function (error) {
@@ -96,20 +99,10 @@ gulp.task('tests', function () {
         }));
 });
 
-// TASK/generates jsdoc documentation
-gulp.task('docs', function () {
-    gulp.src(patterns.js)
-        .pipe(yuidoc())
-        .pipe(gulp.dest('./static/docs'));
-});
-
-// TASK/watchers
+//######################################################################################################################
+// #COMMANDS#
 gulp.task('watch', function () {
     gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint', 'docs']);
 });
 
-// RUNNERS
-//##########################################################
 gulp.task('default', ['lint', 'browser', 'watch']);
-
-// end of gulpfile.js

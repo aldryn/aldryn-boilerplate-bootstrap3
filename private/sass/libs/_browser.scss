@@ -14,19 +14,23 @@
     bottom: 0;
     left: 0;
     z-index: 9999;
-    color: white !important;
+    color: #fff;
     text-align: center;
     text-transform: uppercase;
     width: 100%;
     height: auto; // INFO: do not add paddings or margings on the container
-    background-color: $brand-danger !important;
+    background-color: $brand-danger;
 
+    h3,
+    p {
+        color: #fff;
+    }
     .btn-outline {
-        color: white;
-        border: 2px solid white;
+        color: #fff;
+        border: 2px solid #fff;
         &:hover {
             color: $brand-danger;
-            background: white;
+            background: #fff;
         }
     }
 
@@ -34,13 +38,13 @@
         position: absolute;
         top: $line-height-computed / 2;
         right: $line-height-computed;
-    }
-    .last a {
-        display: inline-block;
-        color: white;
-        font-size: 36px;
-        line-height: 1;
-        text-decoration: none;
+        a {
+            display: inline-block;
+            color: #fff;
+            font-size: 36px;
+            line-height: 1;
+            text-decoration: none;
+        }
     }
 
     // INFO: add spacer in order for cross styling between noscript and out-of-date

@@ -4,9 +4,10 @@ Aldryn Boilerplate Bootstrap3
 
 3.3.0
 -----
-- cleaned gulpfile.js
 - added scss-lint
-- fixed linting issues
+- moved ``addons/_browser.scss`` and ``addons/_select2.scss`` tp ``libs``
+- changed gulpfile.js file to fit guidelines
+- removed csscomb but keept settings
 
 3.2.1
 -----

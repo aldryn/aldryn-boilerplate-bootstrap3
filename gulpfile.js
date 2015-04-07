@@ -30,12 +30,24 @@ var paths = {
 };
 
 var patterns = {
-    'images': [paths.images + '*', paths.images + '**/*',
-        '!' + paths.images + 'dummy/*/**'],
-    'js': [paths.js + '*.js', paths.js + '**/*.js',
-        '!' + paths.js + '*.min.js', '!' + paths.js + '**/*.min.js'],
-    'sass': [paths.sass + '*', paths.sass + '**/*',
-        '!' + paths.sass + 'libs/*.scss', '!' + paths.sass + 'settings/*.scss', '!' + paths.sass + 'layout/_print.scss']
+    'images': [
+        paths.images + '*',
+        paths.images + '**/*',
+        '!' + paths.images + 'dummy/*/**'
+    ],
+    'js': [
+        paths.js + '*.js',
+        paths.js + '**/*.js',
+        '!' + paths.js + '*.min.js',
+        '!' + paths.js + '**/*.min.js'
+    ],
+    'sass': [
+        paths.sass + '*',
+        paths.sass + '**/*',
+        '!' + paths.sass + 'libs/*.scss',
+        '!' + paths.sass + 'settings/*.scss',
+        '!' + paths.sass + 'layout/_print.scss'
+    ]
 };
 
 var port = parseInt(process.env.PORT, 10) || 8000;

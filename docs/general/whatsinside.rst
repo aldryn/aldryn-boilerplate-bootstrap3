@@ -111,3 +111,10 @@ Aldryn snakes behaves similar to django-sekizai but is mostly used within the ba
 ``{{ ALDRYN_SNAKE.render_head }}`` and ``{{ ALDRYN_SNAKE.render_tail }}``.
 
 Aldryn snakes allows the additional insertion of html fragments or any other textual data.
+
+
+
+Other
+-----
+
+* JavaScript should validate JS Lint

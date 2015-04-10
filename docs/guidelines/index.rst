@@ -20,6 +20,7 @@ There are global guidelines which affects every module, those are:
     - There is something called `Accessibility <http://www.w3.org/WAI/WCAG20/quickref/>`_
     - Don't forget about **HiDPI**, **Retina** and **High Resolutions** displays
     - Proper fallbacks should be available if a connection is slow or features are disabled
+    - Progressive enhancement, graceful degredation and responsive design are buzzwords you care about
     - Develop modular and extensible
     - Documentations is your friend
 
@@ -42,6 +43,7 @@ not even for html, we even encourage you to use 80 lines
 
     - **lowercase**, **camelCase** or **hpyhened separation** ar all good, **no special characters** except for
       underscore ``_``, we love that one
+    - Always use full words instead of shorthands, ``number`` instead of ``nr``
 
 “There are only two hard things in Computer Science:
     cache invalidation and naming things
@@ -53,10 +55,12 @@ not even for html, we even encourage you to use 80 lines
     - We use **double** ``"."`` quotes for everything and for JavaScript **single** ``'.'`` quotes
 
 
-Markup
-------
+Modules
+-------
 
 .. toctree::
     :maxdepth: 2
 
     markup
+    styles
+    javascript

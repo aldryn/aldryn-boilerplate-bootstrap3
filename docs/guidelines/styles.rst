@@ -1,28 +1,133 @@
-Guidelines
-==========
+Styles
+======
 
-* Use **4 space indentation** and **not** tabs
-* Use **underscores** for scss file naming
-* Use **double-quotes** ``"`` for all text values
-* Use **dashes** to separate class/id names, **not** camelCase or underscore
-* Do **not** overuse nesting! If you got only one instance, use one line
-* Always add a space after the colon
-* Only write one css property per line
-* Keep ``sass/layout/`` clean and use the available structure
-* Use ``sass/sites/`` for theme based or specific styles
-* Define settings within ``sass/settings/``
-* Avoid referencing css using their parent like div.container
-* Use shorthands for values like ``#ccc`` or ``white``
-* Use full words instead of shorthands like ``number`` instead of ``nr``
-* Avoid using universal selectors for maintainability/performance reasons
-* Use progressive enhancement whenever possible
-* Validation is not required but nice
+.. note::
+
+    In addition to the general guidelines, the following sections describe stylesheet specific rules.
 
 
-Style
------
+Naming
+------
 
-Use block-style and group elements underneath:
+.. admonition:: Files
+    :class: `important`
+
+    - Use **underscores** for scss file naming
+    - Use only **dashes** to separate class/ID names
+
+Valid
+*****
+
+.. code-block:: text
+
+    search.scss, marketing_site.scss or theme_dark_blog.scss
+
+.. code-block:: html
+
+    class="blog blog-item blog-item-featured"
+
+Invalid
+*******
+
+.. code-block:: text
+
+    Search.scss, marketingSite.scss or theme-dark-blog.scss
+
+.. code-block:: html
+
+    class="blog blogItem blog_item__featured"
+
+
+Nesting
+-------
+
+.. admonition:: Tree
+    :class: `important`
+
+    - Don'nt overuse nesting, nest elements to a max of **4 indends**
+
+With great power comes great responsibility (just wanted to throw that in here). When writing in **sass** or **less** we
+sometimes forget performance over laziness. While nesting is very powerful, we should avoid unnecessary levels or
+blocks that can be achieved simpler. A good example is the following code:
+
+Valid
+*****
+
+.. code-block:: scss
+
+    .nav-main {
+        ul {
+            @extend list-reset;
+        }
+        li {
+            padding: 5px 10px;
+        }
+        a {
+            color: red;
+        }
+    }
+
+Invalid
+*******
+
+.. code-block:: scss
+
+    .nav-main {
+        ul {
+            @extend list-reset;
+            li {
+                padding: 5px 10px;
+                a {
+                    color: red;
+                }
+            }
+        }
+    }
+
+
+Formatting
+----------
+
+.. admonition:: Code
+    :class: `important`
+
+    - Always add a space after the colon
+    - Only write one css property per line
+    - Avoid explicitivity such as ``div.container`` or ``ul > li > a``
+    - Write color values in lowercase and avoid color names
+
+Valid
+*****
+
+.. code-block:: css
+
+    .item {
+        color: #fff;
+        padding: 10px;
+        margin: 0 0 10px 0;
+        background: no-repeat left top;
+    }
+
+Invalid
+*******
+
+.. code-block:: css
+
+    article.item {
+        color: white;
+        padding: 10px; margin-left: 0; margin-top: 0; margin-bottom: 10px;
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+
+
+Ordering
+--------
+
+.. admonition:: Tree
+    :class: `important`
+
+    - Use block-style and group elements underneath
 
 #. includes (compass includes)
 #. extending
@@ -72,47 +177,3 @@ Example
             color: black;
         }
     }
-
-
-Nesting
--------
-
-With great power comes great responsibility (just wanted to throw that in here). When writing in **sass** or **less** we
-sometimes forget performance over laziness. While nesting is very powerful, we should avoid unnecessary levels or
-blocks that can be achieved simpler. A good example is the following code:
-
-.. code-block:: css
-
-    .nav-main {
-        ul {
-            li {
-                a {
-                    color: red;
-                }
-            }
-        }
-    }
-
-This can be optimised in various ways. First of all, we don't need the additional nesting. When no other styles are
-needed just simply write compact: ``.nav-main ul li a { color: red; }``
-
-Another optimisation is to think about the required declaration levels. Do we really need the *ul li* to declare
-our anchor red? Can it just simply be ``.nav-main a { color: red }``?
-
-When we are using multiple styles, we might even consider a structure such as:
-
-.. code-block:: css
-
-    .nav-main {
-        ul {
-            @extend list-reset;
-        }
-        li {
-            padding: 5px 10px;
-        }
-        a {
-            color: red;
-        }
-    }
-
-Which makes our code more structured and readable.

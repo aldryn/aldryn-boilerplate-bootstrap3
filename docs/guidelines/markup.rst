@@ -61,7 +61,7 @@ Valid
         </div>
     {% endblock content %}
 
-    {% addtoblock "js" %}<script src="{% static "js/libs/class.min.js" %}"></script>{% endaddtoblock %}
+    {% addtoblock "js" %}<script src="{% static "js/libs/jquery.min.js" %}"></script>{% endaddtoblock %}
     {% addtoblock "js" %}
     <script>
     jQuery(document).ready(function ($) {
@@ -80,7 +80,7 @@ Invalid
     {% endblock content %}
 
     {% addtoblock "js" %}
-    <script src="{% static "js/libs/class.min.js" %}"></script>
+    <script src="{% static "js/libs/jquery.min.js" %}"></script>
     {% endaddtoblock %}
     {% addtoblock "js" %}
         <script>

@@ -185,7 +185,7 @@ BRANCH = master
 run:
 	. $(VENV); sphinx-autobuild . _build/html
 
-init:
+install:
 	##### setup virtualenv
 	test -d $(VENV) || virtualenv env --prompt="(`basename \`pwd\``)"
 	git pull origin $(BRANCH)

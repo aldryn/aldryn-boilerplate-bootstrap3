@@ -9,7 +9,7 @@ To extend and run the documentation, you will have to manually install `Sphinx <
 The automated setup takes care of the rest:
 
 #. navigate to docs ``cd docs``
-#. run ``make init`` to install additional requirements
+#. run ``make install`` to install additional requirements
 #. run ``make run`` to let the server run
 
 When opening localhost:8000 the screen might appear blank. This is due to the fact that the docs/_build folder is

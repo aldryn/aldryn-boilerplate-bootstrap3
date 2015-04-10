@@ -183,7 +183,7 @@ PIP = . $(VENV); env/bin/pip
 BRANCH = master
 # CORE COMMANDS
 run:
-	. $(VENV); sphinx-autobuild . _build/html
+	. $(VENV); sphinx-autobuild . _build/html --host 0.0.0.0
 
 install:
 	##### setup virtualenv

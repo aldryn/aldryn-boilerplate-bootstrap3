@@ -10,11 +10,11 @@ Welcome
 
 The most advanced **django-cms** based boilerplate for rapid development. It uses the full potential of the
 `Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile first projects on the web.
-In addition we implement various `best practices <http://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/general/best-practices.html>`_ from within the front-end community.
+In addition we implement various best practices from within the front-end community.
 
 This boilerplate is compatible with `Aldryn <http://www.aldryn.com/>`_.
 
-The latest stable versions is available on GitHub - https://github.com/aldryn/aldryn-boilerplate-bootstrap3
+The latest stable versions is available on GitHub - https://github.com/aldryn/aldryn-boilerplate-bootstrap3.
 
 
 #############
@@ -22,20 +22,12 @@ Documentation
 #############
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
 
-    general/index
+    guidelines/index
+    contribution/index
+..    general/index
     html/index
     css/index
     images/index
     javascript/index
-
-
-############
-Contribution
-############
-
-.. toctree::
-    :maxdepth: 2
-
-    README.rst

@@ -78,3 +78,15 @@ This folder can be freely structured. ``_custom.scss`` can be used for quick fix
     │  └─ _addons.scss
     ├─ _application.scss (imports application/_all.scss)
     └─ _marketing.scss (imports marketing/_all.scss)
+
+
+
+
+
+
+
+
+
+
+
+

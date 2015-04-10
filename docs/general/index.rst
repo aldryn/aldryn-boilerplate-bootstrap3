@@ -1,12 +1,7 @@
 General
 =======
 
-This chapter provides general information about:
-
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    requirements
-    best-practices
-    folder
-    comments
+    whatsinside

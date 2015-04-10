@@ -1,5 +1,5 @@
-Mistakes
-========
+Tips and Tricks
+===============
 
 There are several mistakes I find from time to time over again which I would like to clarify:
 
@@ -18,3 +18,9 @@ With modern HTML5 we can use the html attribute``hidden="hidden"`` which is a **
 and can easy be overwritten using css or JavaScript. This attribute is ideal for hiding elements which should be
 later displayed using JavaScript, as there is no delay in which the element is hidden as for typical
 dynamic execution.
+
+Image Optimization
+------------------
+
+Images are the number one source of optimisation when it comes to file size.
+Optimise images using tools like `CodeKit <https://incident57.com/codekit/>`_ or `Grunt <http://gruntjs.com/>`_.

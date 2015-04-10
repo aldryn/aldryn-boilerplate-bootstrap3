@@ -12,8 +12,8 @@ Naming
 .. admonition:: Files
     :class: `important`
 
-    * Use **underscores** for html file naming
-    * Use lowercase for **all** attributes
+    - Use **underscores** for html file naming
+    - Use lowercase for **all** attributes
 
 Valid
 *****
@@ -44,9 +44,9 @@ Indendation
 .. admonition:: Django
     :class: `important`
 
-    * Always add an indend after django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block %}`` ...
-    * Use singlelines within ``{% addtoblock %}`` for **files** and multilines for ``<code>``
-    * **Code readability** always wins
+    - Always add an indend after django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block %}`` ...
+    - Use singlelines within ``{% addtoblock %}`` for **files** and multilines for ``<code>``
+    - **Code readability** always wins
 
 Valid
 *****
@@ -97,8 +97,8 @@ IDs vs Classes
 .. admonition:: Don't use IDs
     :class: `important`
 
-    * Avoid IDs ad all cost
-    * When using IDs always use a **unique name**
+    - Avoid IDs ad all cost
+    - When using IDs always use a **unique name**
 
 You should **always** use classes instead if ID's. Classes represent a more OOP approach of adding and removing
 style sets like ``box box-wide box-hint``.

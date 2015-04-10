@@ -22,12 +22,11 @@ Documentation
 #############
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 2
 
+    general/index
     guidelines/index
+    structure/index
+    codestyle/index
+    tips/index
     contribution/index
-..    general/index
-    html/index
-    css/index
-    images/index
-    javascript/index

@@ -31,18 +31,14 @@ In addition, follow the steps underneath to get them running:
 
 Now you can open **http://localhost:8000** on your favorite browser and start changing the rst files within ``docs/``.
 
-It might be, that when opening the localhost an empty screen is shown. This is due to the fact that the docs/_build
-folder is not yet created. Simply change something within an *.rst file and refresh the page.
-Livereload will than take care of the rest to auto refresh your page on change.
-
 
 Pull Requests
 -------------
 
 Before starting to work on issues or features, please mind the branching model:
 
-* **master** is used for hotfix releases (1.1.x)
-* **develop** is used for features and issues (1.x.x)
+- **master** is used for hotfix releases (1.1.x)
+- **develop** is used for features and issues (1.x.x)
 
 Everything that is merged to *develop* will be released within the next proper release (1.x.x). Major releases (x.x.x)
 will have their own branches but are always merged agains *develop*.

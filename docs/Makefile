@@ -181,13 +181,15 @@ pseudoxml:
 VENV = env/bin/activate
 PIP = . $(VENV); env/bin/pip
 BRANCH = master
+PORT = 8000
 # CORE COMMANDS
 run:
-	. $(VENV); sphinx-autobuild . _build/html --host 0.0.0.0
+	. $(VENV); sphinx-autobuild . _build/html --host 0.0.0.0 --port $(PORT)
 
 install:
 	##### setup virtualenv
 	test -d $(VENV) || virtualenv env --prompt="(`basename \`pwd\``)"
 	git pull origin $(BRANCH)
 	$(PIP) install -r requirements.txt
+	. $(VENV); sphinx-build . _build/html
 	##### done

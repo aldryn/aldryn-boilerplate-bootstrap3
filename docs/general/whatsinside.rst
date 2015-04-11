@@ -1,120 +1,86 @@
 What's Inside
 =============
 
+.. note::
 
-Normalize
----------
+    The following components and settings are used within this boilerplate
 
-* http://necolas.github.io/normalize.css/
+
+SASS vs LESS
+------------
+
+A discussion which we don't want to start here. We are prefering the SASS port of Bootstrap and the comprehensive
+Compass CSS Authoring Framework. As such all styles are placed within ``/private/sass`` and get compiled to
+``/static/css``.
+
+- http://sass-lang.com
+- http://compass-style.org
 
 
 Bootstrap
 ---------
 
-* http://getbootstrap.com
+The full bootstrap library is imported via the `sass component
+<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss>`_
+and the `javascript component
+<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/static/js/libs/bootstrap.min.js>`_.
+The `Glyhpicon <http://getbootstrap.com/components/#glyphicons>`_ icon set has been `disabled
+<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss#L14>`_
+in favor of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_ icon set.
+
+- http://getbootstrap.com
 
 
-SASS/SCSS
----------
-
-* http://sass-lang.com/
-* http://compass-style.org/
-
-
-jQuery
-------
-
-* http://jquery.com
-
-
-class.js
---------
-
-* https://github.com/FinalAngel/classjs
-
-
-Shivs
------
-
-* https://github.com/aFarkas/html5shiv
-* https://github.com/scottjehl/Respond
-* https://code.google.com/p/swfobject/
-* http://patik.com/blog/complete-cross-browser-console-log/
-
-
-Reference
-=========
-
-You can use the full power of the `Django template language <https://docs.djangoproject.com/en/dev/topics/templates/>`_.
-Additionally the following libraries are on your disposal:
-
-
-Django CMS
-----------
-
-In order for `Django CMS <http://docs.django-cms.org/en>`_ to work, you need to include the **css** and **js**
-sekizai blocks and add ``{% cms_toolbar %}`` after the closing ``</body>`` tag.
-
-
-Django Sekizai
---------------
-
-With `sekizai <https://github.com/ojii/django-sekizai>`_ you can include additional assets such as CSS or JavaScript.
-Simply add ``{% load sekizai_tags %}`` on top of your file and use ``{% addtoblock "js" %}`` or
-``{% addtoblock "css" %}``.
-
-When including a single file, do not add any white spaces or breaks inside. Sekizai validates code for dublicates and
-comfortably only includes one instance. So if you already include jQuery, Sekizai will only render it **once**.
-
-The output is rendered within ``{% render_block "css" %}`` and ``{% render_block "js" %}`` in
-``templates/base_root.html``.
-
-Example
-*******
-
-.. code-block:: html
-
-    {% load sekizai_tags %}
-    {% addtoblock "css" %}<script src="{% static "css/theme.css" %}"></script>{% endaddtoblock %}
-    {% addtoblock "js" %}
-    <script>
-    jQuery(document).ready(function ($) {
-        alert('hello world');
-    });
-    </script>
-    {% endaddtoblock %}
-
-
-Django Compress
----------------
-
-`Django compressor <https://github.com/django-compressor/django-compressor>`_ should also be enabled within your setup.
-This allows you to compress files automatically on a live system.
-
-Example
-*******
-
-.. code-block:: html
-
-    {% load compress %}
-
-    {% compress js %}
-    <script src="{% static "js/base.js" %}"></script>
-    <script>obj.value = 'value';</script>
-    {% endcompress %}
-
-
-Aldryn Snake
+Font Awesome
 ------------
 
-Aldryn snakes behaves similar to django-sekizai but is mostly used within the backend. The output is rendered within
-``{{ ALDRYN_SNAKE.render_head }}`` and ``{{ ALDRYN_SNAKE.render_tail }}``.
+The Font Awsome library offers a larger `variety of icons <http://fortawesome.github.io/Font-Awesome/icons/>`_
+than the bootstrap defaults and additional `utility classes <http://fortawesome.github.io/Font-Awesome/examples/>`_.
+We implemented the `library
+<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_fontawesome.scss>`_
+separately from the `icon choices
+<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/layout/_iconography.scss>`_.
+This allows for a better customization and integration of other icon fonts.
 
-Aldryn snakes allows the additional insertion of html fragments or any other textual data.
+- http://fortawesome.github.io/Font-Awesome/examples
 
 
+JavaScript
+----------
 
-Other
------
+We are implementing the latest **2.x.x** versions of jQuery as they are being released. In addition we implement
+`class.js <https://github.com/FinalAngel/classjs>`_ to support the :doc:`../structure/javascript`.
 
-* JavaScript should validate JS Lint
+At last you find several shivs such as the html5shiv.js, respond.js, swfobject.js, outdatedBrowser.js and a console.log
+wrapper.
+
+- http://jquery.com
+- https://github.com/FinalAngel/classjs
+- https://github.com/aFarkas/html5shiv
+- https://github.com/scottjehl/Respond
+- https://code.google.com/p/swfobject
+- http://outdatedbrowser.com
+- http://patik.com/blog/complete-cross-browser-console-log/
+
+
+Template Language
+-----------------
+
+As this is a django CMS based boilerplate, naturally we are using the `django template language
+<https://docs.djangoproject.com/en/dev/topics/templates/>`_.
+
+In order to implements assets efficiently, `django-sekizai <https://github.com/ojii/django-sekizai>`_ and
+`aldryn-snake <https://github.com/aldryn/aldryn-snake>`_ are implemented within the ``base_root.html`` template.
+This gives you the ``{% addtoblock "js" %}{% endaddtoblock %}`` and ``{% addtoblock "css" %}{% endaddtoblock %}``
+template tags in addition to the django defaults.
+
+Example
+*******
+
+.. code-block:: django
+
+    {% load sekizai_tags %}
+    {% addtoblock "css" %}<link href="{% static "css/theme.css" %}" rel="stylesheet">{% endaddtoblock %}
+    {% addtoblock "js" %}<script src="{% static "libs/jquery.min.js" %}"></script>{% endaddtoblock %}
+
+- http://docs.django-cms.org

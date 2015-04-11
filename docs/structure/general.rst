@@ -1,7 +1,26 @@
-Folder Structure
-================
+General
+=======
 
-The generic folder structure is as follows:
+.. note::
+
+    The core folder structure consists of 4 main folders.
+
+.. code-block:: text
+
+    docs/
+    private/
+    static/
+    templates/
+
+Lets take a closer look at each individual folder.
+
+
+docs/
+-----
+
+The full documentation can be found there which gets compiled to `ReadTheDocs
+<https://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/>`_. More information on how to contribute there, can
+be found within the :doc:`../contribution/index` section.
 
 
 private/

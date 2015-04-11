@@ -31,6 +31,9 @@ In addition, follow the steps underneath to get them running:
 
 Now you can open **http://localhost:8000** on your favorite browser and start changing the rst files within ``docs/``.
 
+You need to be aware of `reStructuredText
+<http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ to format the documentation properly.
+
 
 Pull Requests
 =============

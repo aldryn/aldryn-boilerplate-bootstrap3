@@ -10,4 +10,4 @@ Structure
 .. toctree::
     :maxdepth: 2
 
-    markup
+    general

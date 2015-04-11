@@ -3,7 +3,7 @@ Styles
 
 .. note::
 
-    In addition to the general guidelines, the following sections describe stylesheet specific rules.
+    In addition to the :doc:`general` guidelines, the following sections describe stylesheet specific rules.
 
 
 Naming

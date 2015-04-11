@@ -3,7 +3,7 @@ Markup
 
 .. note::
 
-    In addition to the general guidelines, the following sections describe markup specific rules.
+    In addition to the :doc:`general` guidelines, the following sections describe markup specific rules.
 
 
 Naming

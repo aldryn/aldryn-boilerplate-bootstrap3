@@ -3,7 +3,7 @@ JavaScript
 
 .. note::
 
-    In addition to the general guidelines, the following sections describe JavaScript specific rules.
+    In addition to the :doc:`general` guidelines, the following sections describe JavaScript specific rules.
     `Code Conventions for the JavaScript Programming Language <http://javascript.crockford.com/code.html>`_ should be
     your Bible.
 

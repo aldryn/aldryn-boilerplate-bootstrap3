@@ -1,5 +1,5 @@
 Contribution
-============
+############
 
 .. note::
 
@@ -8,7 +8,7 @@ Contribution
 
 
 Code of Conduct
----------------
+===============
 
 - Ensure code validates against or own guidelines
 - Write documentation about what you are doing
@@ -16,7 +16,7 @@ Code of Conduct
 
 
 Documentation
--------------
+=============
 
 To extend and run the documentation, you will need `Python <https://www.python.org/downloads/>`_ and
 `Virtualenv <https://virtualenv.pypa.io/en/latest/installation.html>`_ installed on your computer. You also need
@@ -33,7 +33,7 @@ Now you can open **http://localhost:8000** on your favorite browser and start ch
 
 
 Pull Requests
--------------
+=============
 
 Before starting to work on issues or features, please mind the branching model:
 
@@ -45,7 +45,7 @@ will have their own branches but are always merged agains *develop*.
 
 
 Releases
---------
+========
 
 Always adapt the `CHANGELOG.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_
 and `AUTHORS.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_ accordingly.

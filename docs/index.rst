@@ -4,7 +4,6 @@
    contain the root `toctree` directive.
 
 
-#######
 Welcome
 #######
 
@@ -17,12 +16,11 @@ This boilerplate is compatible with `Aldryn <http://www.aldryn.com/>`_.
 The latest stable versions is available on GitHub - https://github.com/aldryn/aldryn-boilerplate-bootstrap3.
 
 
-#############
 Documentation
 #############
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 2
 
     general/index
     guidelines/index

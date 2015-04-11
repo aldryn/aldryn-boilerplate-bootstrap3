@@ -143,5 +143,9 @@ Patterns
 .. admonition:: Code
     :class: `important`
 
-    - Use the module and singleton pattern as much as possible
+    - Use the `singleton pattern
+      <http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript>`_ to avoid globals
+    - Use the `module pattern
+      <http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript>`_ to structure code
     - Avoid the functional pattern
+

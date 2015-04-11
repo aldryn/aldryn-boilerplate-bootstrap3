@@ -4,7 +4,7 @@ Comments
 .. note::
 
     If peppering your code with lots of comments is good, then having zillions of comments in your code must be great,
-    right? Not quite. Use comments where it helps reading your code.
+    right? Not quite. Comments in code are a double edged sword, use them to describe what's being done.
 
 
 Section Comments
@@ -30,16 +30,11 @@ When using comments inline, make use of the appropriate formats:
 - ``{# ... #}`` or ``{% comment %} ... {% endcomment %}`` for HTML and **never** ``<!-- ... -->``
 - ``// ...`` and ``/* ... */`` for SASS and JavaScript
 
-
-
-
-
-
-
 Notes
------
+*****
 
-We also support three types of comments within the code itself:
+We also use several comment helpers which, if you configured them in your editor, add additional highlighting to your
+code:
 
 | **TODO:**
 | indicates that something is still missing and needs to be done
@@ -65,11 +60,45 @@ We also support three types of comments within the code itself:
 
     // DOCS: https://django-cms.readthedocs.org/en/latest/
 
-HTML
-----
 
-Use the django or jinja template comments rather than the native html ones in order to hide developers notes
-from the live production website when the HTML gets shipped.
+Formatting
+----------
+
+.. admonition:: Comments
+    :class: `important`
+
+    - Add proper whitespaces
+    - In general use lowercases except for the *Notes*
+
+Valid
+*****
+
+.. code-block:: javascript
+
+    // TODO: this needs additional review
+    // square root of n with Newton-Raphson approximation
+    /**
+     * Contains various helpers, feel free to extend and adapt
+     *
+     * @class Utils
+     * @namespace Cl
+     */
+
+Invalid
+*******
+
+.. code-block:: javascript
+
+    //TODO: THIS NEEDS ADDITIONAL REVIEW
+    //
+    // square root of n with Newton-Raphson approximation
+    /**
+     * Contains various helpers, feel free to extend and adapt
+     */
 
 
-Always use a spacer after a comment
+YUIDocs
+-------
+
+In 3.3.0 we introduced `YUIDocs <http://yui.github.io/yuidoc/>`_ to further improve JavaScript documentation.
+We are encouraging using this style within your code as shown in ``/static/js/addons/cl.utils.js``.

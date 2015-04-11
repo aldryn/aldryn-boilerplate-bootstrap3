@@ -1,5 +1,5 @@
-Structure
-=========
+Styles
+======
 
 Every folder within ``private/sass/`` includes a file called **_all.scss**. This file is included within
 ``private/sass/base.scss`` which gets compiled into ``static/css/base.css``. Update the all file to include

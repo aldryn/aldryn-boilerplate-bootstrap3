@@ -1,5 +1,5 @@
 Tips and Tricks
-===============
+###############
 
 .. note::
 
@@ -7,14 +7,14 @@ Tips and Tricks
 
 
 Floating
---------
+========
 
 When using ``float: left;``, ``display: block;`` is not required as **every** element which is floated is
 automatically a **block** element.
 
 
 Hidden Attribute
-----------------
+================
 
 With modern HTML5 we can use the html attribute``hidden="hidden"`` which is a **softer** ``display: none;``
 and can easy be overwritten using css or JavaScript. This attribute is ideal for hiding elements which should be
@@ -23,7 +23,7 @@ dynamic execution.
 
 
 Image Optimization
-------------------
+==================
 
 Images are the number one source of optimisation when it comes to file size.
 Optimise images using tools like `CodeKit <https://incident57.com/codekit/>`_ or internal `Gulp <http://gulpjs.com/>`_

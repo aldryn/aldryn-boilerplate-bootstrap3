@@ -7,7 +7,7 @@ Test Suite
 
 
 JavaScript
-----------
+==========
 
 We are using the `Jasmine <http://jasmine.github.io/>`_ test suite and the `Karma <http://karma-runner.github.io/>`_
 test runner for JavaScript tests. Tests are added within ``/static/js/tests``.

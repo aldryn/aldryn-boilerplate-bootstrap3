@@ -11,3 +11,6 @@ Structure
     :maxdepth: 2
 
     general
+    markup
+    styles
+    javascript

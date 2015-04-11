@@ -1,5 +1,5 @@
-Structure
-=========
+Markup
+======
 
 Django automatically looks for a ``base.html`` yet our base extends ``base_root.html``. This is a good example of how
 Django's template inheritance is working. In order to keep the basic html structure minimalistic, we outsource

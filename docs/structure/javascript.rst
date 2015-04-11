@@ -1,15 +1,8 @@
-Structure
-=========
+JavaScript
+==========
 
-
-
-* Use a maximum length of 120 characters, however 80 is preferred
 * Use ``base.js`` for global and general functions and avoid adding js files to the root
 * Use the frameworks prefix inside the ``addons`` folder
-
-
-
-
 
 We use ``static/js/base.js`` as a single point of entry. Within this file, we lazy load additional elements using
 require.js.

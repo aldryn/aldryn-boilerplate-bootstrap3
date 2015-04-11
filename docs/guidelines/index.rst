@@ -8,6 +8,7 @@ Guidelines
     to watch `this video <https://www.youtube.com/watch?v=Xet5NcbQQ2A>`_ and **leave a comment why** within your code.
 
 .. toctree::
+    :caption: Table of Contents
     :maxdepth: 2
 
     general

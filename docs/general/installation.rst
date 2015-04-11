@@ -1,4 +1,4 @@
-Requirements
+Installation
 ============
 
 The following software should be installed on your system in order to use this boilerplate:

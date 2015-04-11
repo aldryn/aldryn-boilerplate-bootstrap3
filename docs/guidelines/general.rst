@@ -34,6 +34,7 @@ not even for html, we even encourage you to use 80 lines
     - **lowercase**, **camelCase** or **hpyhened separation** ar all good, **no special characters** except for
       underscore ``_``, we love that one
     - Always use full words instead of shorthands, ``number`` instead of ``nr``
+    - `BEM <https://bem.info/>`_ is a nice methodology to be aware of
 
 “There are only two hard things in Computer Science:
     cache invalidation and naming things

@@ -51,3 +51,17 @@ tests/
 Using QUnit you can create your JavaScript Unit tests here. This is a very simple setup and the folder structure
 within this area can be customized according to your needs.
 
+
+
+
+Documentation
+-------------
+
+We write API documentation using the `YUIDoc <http://yui.github.io/yuidoc/>`_ syntax. For HTML and CSS please refer
+to the styleguide.
+
+Tests
+-----
+
+We currently implemented a basic test framework within ``static/js/tests`` using QUnit. YOu can simply run tests
+using the Gulp command ``gulp tests``.

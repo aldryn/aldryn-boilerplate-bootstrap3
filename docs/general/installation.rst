@@ -1,28 +1,54 @@
 Installation
 ============
 
-The following software should be installed on your system in order to use this boilerplate:
+.. note::
+
+    The following dependencies should be installed on your system in order to work with this boilerplate.
 
 * Sass: http://sass-lang.com/
 * Compass: http://compass-style.org/
 * Bootstrap: https://github.com/twbs/bootstrap-sass
-
-You can compile/watch using ``compass watch private`` from within the root.
-
-
-Optional
---------
-
-We provide some automation using the `Gulp <http://gulpjs.com/>`_ task runner.
-You will need the following requirements in order to use it:
-
 * Node JS: http://nodejs.org/
-* Node Package Manager: https://www.npmjs.org/
-* Bower: http://bower.io/
-* Gulp JS: http://gulpjs.com/
+* Gulp: http://gulpjs.com/
 
-After all requirements are met, install the packages using the ``npm install`` command from within the boilerplate's
-root. You can install the bower requirements by running ``bower install``.
 
-You can run **Gulp** commands from within your base folder using ``gulp``. If you would like to
-run specific tasks, consult the **gulpfile.js** within the base folder.
+Setup
+-----
+
+Ensure you run the following commands to install all requirements form within the root:
+
+* ``npm install`` to install the requirements from ``package.json``
+* ``bower install`` to install the requirements from ``bower.json`` via ``.bowerrc``
+
+
+Gulp Commands
+-------------
+
+All front-end related tasks are handled via the `Gulp <http://gulpjs.com/>`_ task runner:
+
+* ``gulp`` runs the gulp defaults
+* ``gulp watch`` runs the gulp watch defaults
+* ``gulp lint`` starts all linting services using ``.jshintrc``, ``.jscsrc`` and ``scss-lint.json``
+* ``gulp preprocess`` runs image optimization within ``/static/img`` and compiles YUIDocs into ``static/docs``
+* ``gulp browser`` connects to a given server (django) and runs livereload on a separate IP
+* ``gulp tests`` runs the test suite
+
+We also offer single commands:
+
+* ``gulp jslint`` runs JavaScript linting
+* ``gulp scsslint`` runs SASS linting
+* ``gulp images`` runs image optimization within ``/static/img``
+* ``gulp docs`` compiles YUIDocs into ``static/docs``
+
+We love code over configuration.
+
+
+SASS Compilation
+----------------
+
+You can compile/watch SASS using the following commands from within the root:
+
+* ``compass compile private`` to compile the css
+* ``compass watch private`` to constantly watch for changes and compile
+
+The configuration will automatically be applied from ``/private/config.rb``.

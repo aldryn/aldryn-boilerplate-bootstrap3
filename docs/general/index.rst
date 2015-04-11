@@ -7,7 +7,7 @@ General
     where to find additional documentation and what they are there for.
 
 .. toctree::
-    :caption: Table of Contents
     :maxdepth: 2
 
     whatsinside
+    installation

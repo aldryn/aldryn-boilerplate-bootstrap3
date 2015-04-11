@@ -9,7 +9,6 @@ Guidelines
     why this was necessary.
 
 .. toctree::
-    :caption: Table of Contents
     :maxdepth: 2
 
     general

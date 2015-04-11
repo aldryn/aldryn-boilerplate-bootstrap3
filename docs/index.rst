@@ -26,5 +26,6 @@ Documentation
     guidelines/index
     structure/index
     codestyle/index
+    testing/index
     tips/index
     contribution/index

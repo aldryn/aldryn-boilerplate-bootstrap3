@@ -63,6 +63,15 @@ wrapper.
 - http://patik.com/blog/complete-cross-browser-console-log/
 
 
+Addons
+******
+
+We are currently implementing select2.js and cl.debug.js as default addons.
+
+- http://fk.github.io/select2-bootstrap-css/
+- http://finalangel.github.io/classjs-plugins/
+
+
 Template Language
 -----------------
 
@@ -84,3 +93,17 @@ Example
     {% addtoblock "js" %}<script src="{% static "libs/jquery.min.js" %}"></script>{% endaddtoblock %}
 
 - http://docs.django-cms.org
+
+
+Configuration
+-------------
+
+There are several **configuration files** included within the boilerplate such as:
+
+- `EditorConfig <http://editorconfig.org/>`_ within  ``.editorconfig``
+- `CSSComb <http://csscomb.com/>`_ within ``.csscomb.json``
+- `JSCS <http://jscs.info/>`_ within ``.jscsrc``
+- `JSLint <http://www.jslint.com/>`_ within ``.jshintrc``
+- `SCSS-Lint <https://github.com/brigade/scss-lint>`_ within ``scss-lint.json``
+
+mind that these do not do anything if your editor doesn't support them.

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="{% block meta_description %}{% page_attribute 'meta_description' %}{% endblock %}" />
     <meta name="keywords" content="{% block meta_keywords %}{% page_attribute 'meta_keywords' %}{% endblock %}" />
-    {% for meta_tag in meta_tags %}<!--<meta name="{{ meta_tag.name }}" content="{{ meta_tag.content }}" />-->{% endfor %}
+    {% for meta_tag in meta_tags %}{# <meta name="{{ meta_tag.name }}" content="{{ meta_tag.content }}" /> #}{% endfor %}
     {% endblock meta_tags %}
     <link rel="apple-touch-icon" href="{% static 'favicon.png' %}" />
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />

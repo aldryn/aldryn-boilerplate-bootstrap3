@@ -55,7 +55,7 @@
 
 {% block breadcrumb %}
 {% if not request.current_page.is_home %}
-<!-- start: breadcrumb -->
+{# start: breadcrumb #}
 {# INFO: breadcrumb concept: http://getbootstrap.com/components/#breadcrumbs #}
 <nav class="navbar navbar-breadcrumb" role="navigation">
     <h3 class="sr-only">{% trans "You are here" %}</h3>
@@ -67,11 +67,11 @@
         </ol>
     </div>
 </nav>
-<!-- end: breadcrumb -->
+{# end: breadcrumb #}
 {% endif %}
 {% endblock breadcrumb %}
 
-<!-- start: content -->
+{# start: content #}
 <hr class="sr-only" />
 {% block messages %}{% include "includes/messages.html" %}{% endblock messages %}
 {% block feature %}{% placeholder "feature" %}{% endblock feature %}
@@ -79,10 +79,10 @@
     {% block content %}{% endblock %}
 {% endblock extend_base %}
 <hr class="sr-only" />
-<!-- end: content -->
+{# end: content #}
 
 {% block footer %}
-<!-- start: footer -->
+{# start: footer #}
 <footer class="footer" role="contentinfo">
     <h2 class="sr-only" id="footer">{% trans "Sitemap" %}</h2>
     <div class="container">
@@ -95,6 +95,6 @@
         <div class="copyright">{% static_placeholder "footer" %}</div>
     </div>
 </footer>
-<!-- end: footer -->
+{# end: footer #}
 {% endblock footer %}
 {% endblock extend_root %}

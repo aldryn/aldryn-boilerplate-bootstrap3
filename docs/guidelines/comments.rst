@@ -10,25 +10,31 @@ Comments
 Section Comments
 ----------------
 
-One comment separation style are *section comments*. There we separate large chunks of codes with comment separators.
-You can use the full comment separation which spans 120 lines:
-
-.. code-block:: javascript
+The first separation style is *section comment*. This uses the full 120 width span ideally placed to separate large
+chunks of logic::
 
     // #####################################################################################################################
     // #NAME#
 
-Use the half version of this to separate larger modules or code blocks so its more readable and parts can be found
-quickly:
-
-.. code-block:: javascript
+The second available style separates smaller code blocks using 60 only lines::
 
     // #########################################################
     // #NAME#
 
-The large comment block should be exactly 120 characters long.
 
-Otherwise use normal inline // comments or block /* comments */ whenever it is more logical.
+Inline Comments
+---------------
+
+When using comments inline, make use of the appropriate formats:
+
+- ``{# ... #}`` or ``{% comment %} ... {% endcomment %}`` for HTML and **never** ``<!-- ... -->``
+- ``// ...`` and ``/* ... */`` for SASS and JavaScript
+
+
+
+
+
+
 
 Notes
 -----

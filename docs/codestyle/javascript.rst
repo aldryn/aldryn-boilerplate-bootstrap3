@@ -1,0 +1,886 @@
+JavaScript
+##########
+
+.. note::
+
+    This section is heavily inspired by a Airbnb JavaScript Style Guide, Yandex Codestyle, Idiomatic Javascript and lots
+    of common sense, really.
+
+
+Why?
+====
+
+Rick Waldron:
+
+    "All code in any code-base should look like a single person typed it, no matter how many people contributed."
+
+These are the fundamental principles we should follow when we design and develop software.
+
+- Consistent code is easy to read.
+- Simple code is easy to maintain.
+- In simple expressions it's harder to make mistakes.
+
+General
+=======
+
+Objects
+=======
+
+Use the literal syntax for object creation.
+
+.. code-block:: javascript
+
+    // bad
+    var item = new Object();
+
+    // good
+    var item = {};
+
+
+Don't use `reserved words <http://es5.github.io/#x7.6.1>`_ as keys.
+
+.. code-block:: javascript
+
+    // bad
+    var superman = {
+        default: { clark: 'kent' },
+        private: true
+    };
+
+    // good
+    var superman = {
+        defaults: { clark: 'kent' },
+        hidden: true
+    };
+
+Arrays
+======
+
+Use the literal syntax for array creation.
+
+.. code-block:: javascript
+
+    // bad
+    var items = new Array();
+
+    // good
+    var items = [];
+
+Use ``Array#push`` instead of direct assignment to add items to an array.
+
+.. code-block:: javascript
+
+    var someStack = [];
+
+    // bad
+    someStack[someStack.length] = 'abracadabra';
+
+    // good
+    someStack.push('abracadabra');
+
+To convert an array-like object to an array, use ``Array#slice``. If you need to copy an array, use slice as well.
+
+.. code-block:: javascript
+
+    function trigger() {
+        var args = Array.prototype.slice.call(arguments);
+        ...
+    }
+
+.. code-block:: javascript
+
+    var len = items.length;
+    var itemsCopy = [];
+    var i;
+
+    // bad
+    for (i = 0; i < len; i++) {
+        itemsCopy[i] = items[i];
+    }
+
+    // good
+    itemsCopy = items.slice();
+
+Strings
+=======
+
+Use single-quotes for strings.
+When programmaticaly building a string use ``Array#join`` instead of string concatenation
+
+.. code-block:: javascript
+
+    //bad
+    var tmpl = '<div class="whatever">' +
+        message +
+    '</div>';
+
+    //good
+    var tmpl = [
+        '<div class="whatever">',
+            message,
+        '</div>'
+    ].join('');
+
+If you have a complicated string buildup it's always better to use javascript templating instead.
+That way templates could have their own files with proper syntax highlighting and precompilation build step.
+
+Functions
+=========
+
+Function expressions:
+
+.. code-block:: javascript
+
+    // anonymous function expression
+    var anonymous = function() {
+        return true;
+    };
+
+    // named function expression
+    var named = function named() {
+        return true;
+    };
+
+    // immediately-invoked function expression (IIFE)
+    (function() {
+        console.log('Welcome to the Internet. Please follow me.');
+    })();
+
+Tend to avoid anonymous function expressions, try to always use named ones, it will save you a lot of pain going through
+stacktraces and debugging in general.
+
+Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead.
+Browsers will allow you to do it, but they all interpret it differently, which is really bad news.
+
+.. code-block:: javascript
+
+    // bad
+    if (currentUser) {
+        function test() {
+            console.log('Nope.');
+        }
+    }
+
+    // good
+    var test;
+    if (currentUser) {
+        test = function test() {
+            console.log('Yup.');
+        };
+    }
+
+Never name a parameter arguments. This will take precedence over the arguments object that is given to every function scope.
+
+.. code-block:: javascript
+
+    // bad
+    function nope(name, options, arguments) {
+        // ...stuff...
+    }
+
+    // good
+    function yup(name, options, args) {
+        // ...stuff...
+    }
+
+Prefer early returns.
+
+.. code-block:: javascript
+
+    // bad
+    function returnLate(foo) {
+        var ret;
+
+        if (foo) {
+            ret = "foo";
+        } else {
+            ret = "quux";
+        }
+        return ret;
+    }
+
+    // good
+
+    function returnEarly(foo) {
+        if (foo) {
+            return "foo";
+        }
+
+        return "quux";
+    }
+
+.. code-block:: javascript
+
+    // bad
+    function doThingsWithComponent (element) {
+        if (element.length) {
+            //do things
+        }
+    }
+
+    // good
+    function doThingsWithComponent (element) {
+        if (!element.length) {
+            return;
+        }
+
+        //do things
+    }
+
+
+Properties
+==========
+
+Use dot notation when accessing properties.
+
+.. code-block:: javascript
+
+    var luke = {
+        jedi: true,
+        age: 28
+    };
+
+    // bad
+    var isJedi = luke['jedi'];
+
+    // good
+    var isJedi = luke.jedi;
+
+Use subscript notation ``[]`` **only** when accessing properties with a variable.
+
+.. code-block:: javascript
+
+    var luke = {
+        jedi: true,
+        age: 28
+    };
+
+    function getProp(prop) {
+        return luke[prop];
+    }
+
+    var isJedi = getProp('jedi');
+
+Variables
+=========
+
+Always use var to declare variables. Not doing so will result in global variables. We want to avoid polluting the global
+namespace
+
+Assign variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting
+related issues.
+
+Use one var declaration per variable. It's easier to add new variable declarations this way, and you never have to worry
+about swapping out a ; for a , or introducing punctuation-only diffs.
+
+.. code-block:: javascript
+
+    // bad
+    var items = getItems(),
+        goSportsTeam = true,
+        dragonball = 'z';
+
+    // bad
+    // (compare to above, and try to spot the mistake)
+    var items = getItems(),
+        goSportsTeam = true;
+        dragonball = 'z';
+
+    // good
+    var items = getItems();
+    var goSportsTeam = true;
+    var dragonball = 'z';
+
+Hoisting
+========
+
+Variable declarations get hoisted to the top of their scope, but their assignment does not.
+
+.. code-block:: javascript
+
+    // we know this wouldn't work (assuming there
+    // is no notDefined global variable)
+    function example() {
+        console.log(notDefined); // => throws a ReferenceError
+    }
+
+    // creating a variable declaration after you
+    // reference the variable will work due to
+    // variable hoisting. Note: the assignment
+    // value of `true` is not hoisted.
+    function example() {
+        console.log(declaredButNotAssigned); // => undefined
+        var declaredButNotAssigned = true;
+    }
+
+    // The interpreter is hoisting the variable
+    // declaration to the top of the scope,
+    // which means our example could be rewritten as:
+    function example() {
+        var declaredButNotAssigned;
+        console.log(declaredButNotAssigned); // => undefined
+        declaredButNotAssigned = true;
+    }
+
+Anonymous function expressions hoist their variable name, but not the function assignment.
+
+.. code-block:: javascript
+
+    function example() {
+        console.log(anonymous); // => undefined
+
+        anonymous(); // => TypeError anonymous is not a function
+
+        var anonymous = function() {
+            console.log('anonymous function expression');
+        };
+    }
+
+Named function expressions hoist the variable name, not the function name or the function body.
+
+.. code-block:: javascript
+
+    function example() {
+        console.log(named); // => undefined
+
+        named(); // => TypeError named is not a function
+
+        superPower(); // => ReferenceError superPower is not defined
+
+        var named = function superPower() {
+            console.log('Flying');
+        };
+    }
+
+    // the same is true when the function name
+    // is the same as the variable name.
+    function example() {
+        console.log(named); // => undefined
+
+        named(); // => TypeError named is not a function
+
+        var named = function named() {
+            console.log('named');
+        }
+    }
+
+Function declarations hoist their name and the function body.
+
+.. code-block:: javascript
+
+    function example() {
+        superPower(); // => Flying
+
+        function superPower() {
+            console.log('Flying');
+        }
+    }
+
+For more information on hoisting refer to `JavaScript Scoping & Hoisting
+<http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html>`_  by `Ben Cherry <http://www.adequatelygood.com>`_.
+
+Comparison Operators & Equality
+===============================
+
+Use ``===`` and ``!==`` over ``==`` and ``!=``.
+
+Comparison operators are evaluated using coercion with the ToBoolean method and always follow these simple rules:
+
+- **Objects** evaluate to **true**
+- **Undefined** evaluates to **false**
+- **Null** evaluates to **false**
+- **Booleans** evaluate to the **value of the boolean**
+- **Numbers** evaluate to **false** if **+0**, **-0**, or **NaN**, otherwise **true**
+- **Strings** evaluate to **false** if an empty string '', otherwise **true**
+
+.. code-block:: javascript
+
+    if ([0]) {
+        // true
+        // An array is an object, objects evaluate to true
+    }
+
+Use shortcuts.
+
+.. code-block:: javascript
+
+    // bad
+    if (name !== '') {
+      // ...stuff...
+    }
+
+    // good
+    if (name) {
+      // ...stuff...
+    }
+
+    // bad
+    if (collection.length > 0) {
+      // ...stuff...
+    }
+
+    // good
+    if (collection.length) {
+      // ...stuff...
+    }
+
+More info in `Javascript Equality Table <https://dorey.github.io/JavaScript-Equality-Table/>`_
+
+Blocks
+======
+
+Use braces with all blocks. Don't do inline blocks.
+
+.. code-block:: javascript
+
+    // bad
+    if (test)
+        return false;
+
+    // bad
+    if (test) return false;
+
+    // good
+    if (test) {
+        return false;
+    }
+
+    // bad
+    function() { return false; }
+
+    // good
+    function() {
+        return false;
+    }
+
+If you're using multi-line blocks with if and else, put else on the same line as your if block's closing brace.
+
+.. code-block:: javascript
+
+    // bad
+    if (test) {
+      thing1();
+      thing2();
+    }
+    else {
+      thing3();
+    }
+
+    // good
+    if (test) {
+      thing1();
+      thing2();
+    } else {
+      thing3();
+    }
+
+Comments
+========
+
+Follow the guidelines.
+Use ``//`` for single line comments. Place single line comments on a newline above the subject of the comment.
+
+.. code-block:: javascript
+
+    // bad
+    var active = true;  // is current tab
+
+    // good
+    // is current tab
+    var active = true;
+
+Most importantly, keep comments up to date if the code changes.
+
+Whitespace
+==========
+
+With proper ``.editoconfig`` and ``jshint/jscs`` setup these will be enforced automatically, but still:
+
+- 4 spaces for tabs.
+- Place 1 space before leading curly brace.
+- Place 1 space before the opening parenthesis in ``if``, ``while``, etc.
+- Place no space before the argument list in function calls and declarations, e.g. ``function fight() { ... }``
+- Set off operators with spaces, e.g. ``var x = 2 + 2;``
+- End files with a single newline character.
+
+
+Use indentation when making long method chains. Use a leading dot, which emphasizes that the line is a method call,
+not a new statement.
+
+.. code-block:: javascript
+
+    // bad
+    $('#items').find('.selected').highlight().end().find('.open').updateCount();
+
+    // bad
+    $('#items').
+        find('.selected').
+            highlight().
+            end().
+        find('.open').
+            updateCount();
+
+    // good
+    $('#items')
+        .find('.selected')
+            .highlight()
+            .end()
+        .find('.open')
+            .updateCount();
+
+Leave a blank line after blocks and before the next statement
+
+.. code-block:: javascript
+
+    // bad
+    if (foo) {
+        return bar;
+    }
+    return baz;
+
+    // good
+    if (foo) {
+        return bar;
+    }
+
+    return baz;
+
+    // bad
+    var obj = {
+        foo: function() {
+        },
+        bar: function() {
+        }
+    };
+    return obj;
+
+    // good
+    var obj = {
+        foo: function() {
+        },
+
+        bar: function() {
+        }
+    };
+
+    return obj;
+
+Commas
+======
+
+- Leading commas: God, **no**!
+- Additional trailing comma: **No**
+
+.. code-block:: javascript
+
+    // bad
+    var hero = {
+        firstName: 'Kevin',
+        lastName: 'Flynn',
+    };
+
+    var heroes = [
+        'Batman',
+        'Superman',
+    ];
+
+    // good
+    var hero = {
+        firstName: 'Kevin',
+        lastName: 'Flynn'
+    };
+
+    var heroes = [
+        'Batman',
+        'Superman'
+    ];
+
+Semicolons
+==========
+
+Yes, always.
+
+.. code-block:: javascript
+
+    // bad
+    (function() {
+        var name = 'Skywalker'
+        return name
+    })()
+
+    // good
+    (function() {
+        var name = 'Skywalker';
+        return name;
+    })();
+
+    // good (guards against the function becoming an argument when two files with IIFEs are concatenated)
+    // this should not happen if the previous example is enforced, but sometimes we have no control over vendor code
+    ;(function() {
+        var name = 'Skywalker';
+        return name;
+    })();
+
+Type Casting and Coercion
+=========================
+
+Strings:
+
+.. code-block:: javascript
+
+    //  => this.reviewScore = 9;
+
+    // bad
+    var totalScore = this.reviewScore + '';
+
+    // good
+    var totalScore = '' + this.reviewScore;
+
+    // bad
+    var totalScore = '' + this.reviewScore + ' total score';
+
+    // good
+    var totalScore = this.reviewScore + ' total score';
+
+Numbers:
+Use parseInt for ``Numbers`` and always with a radix for type casting.
+
+.. code-block:: javascript
+
+    var inputValue = '4';
+
+    // very bad
+    var val = new Number(inputValue);
+
+    // bad
+    var val = +inputValue;
+
+    // bad
+    var val = inputValue >> 0;
+
+    // bad
+    var val = parseInt(inputValue);
+
+    // ok
+    var val = Number(inputValue);
+
+    // good
+    var val = parseInt(inputValue, 10);
+
+Booleans:
+
+.. code-block:: javascript
+
+    var age = 0;
+
+    // bad
+    var hasAge = new Boolean(age);
+
+    // ok
+    var hasAge = Boolean(age);
+
+    // good
+    var hasAge = !!age;
+
+Naming conventions
+==================
+
+Refer to guidelines.
+Use leading underscore to denote private methods/properties.
+When saving a reference to ``this`` use ``that``.
+
+The only place where it's allowed to use single letter variable is in event callbacks:
+
+.. code-block:: javascript
+
+    //bad
+    $('div.elem').on('click', function (clickEvent) {
+        ...
+    });
+
+    //good
+    $('.js-element').on('click', function (e) {
+        ...
+    });
+
+
+Events
+======
+
+When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a
+hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding
+and updating every handler for the event. For example, instead of:
+
+.. code-block:: javascript
+
+    // bad
+    $(this).trigger('listingUpdated', listing.id);
+
+    ...
+
+    $(this).on('listingUpdated', function(e, listingId) {
+        // do something with listingId
+    });
+
+prefer:
+
+.. code-block:: javascript
+
+    // good
+    $(this).trigger('listingUpdated', { listingId: listing.id });
+
+    ...
+
+    $(this).on('listingUpdated', function(e, data) {
+        // do something with data.listingId
+    });
+
+jQuery
+======
+
+Do not prefix jquery variables with ``$``.
+Always cache jQuery lookups.
+
+.. code-block:: javascript
+
+    // bad
+    function setSidebar() {
+      $('.sidebar').hide();
+
+      // ...stuff...
+
+      $('.sidebar').css({
+        'background-color': 'pink'
+      });
+    }
+
+    // good
+    function setSidebar() {
+      var $sidebar = $('.sidebar');
+      $sidebar.hide();
+
+      // ...stuff...
+
+      $sidebar.css({
+        'background-color': 'pink'
+      });
+    }
+
+ECMAScript 5
+============
+
+Use where appropriate. Use array methods for working with arrays, but don't use them when working with array-like
+objects such as jQuery collections. For them use ``$.fn.each`` instead.
+
+Prefer ``Array#forEach`` over ``for () {}`` loop.
+
+.. code-block:: javascript
+
+    var fighters = [
+        {
+            name: 'Jonny Cage',
+            dead: true
+        },
+        {
+            name: 'Kung Lao',
+            dead: true
+        },
+        {
+            name: 'Raiden',
+            dead: false
+        }
+    ];
+
+    // bad
+    var i;
+    var l = fighters.length;
+
+    for (; i < l; i++) {
+        console.log(fighters[i].name + ' ' + (fighters[i].dead ? 'lost' : 'did not lose'));
+    }
+
+    //good
+    fighters.forEach(function (fighter) {
+        console.log(fighter.name + ' ' + (fighter.dead ? 'lost' : 'did not lose'));
+    });
+
+
+Prefer ``Function#bind`` over ``$.proxy(function (), scope)``.
+
+Don't forget that most array methods allow passing ``thisArg`` as a second param after callback.
+
+.. code-block:: javascript
+
+    var obj = {
+        f: 'foo',
+        b: 'bar',
+        q: 'qux'
+    };
+
+    Object.keys(obj).forEach(function (key) {
+        // |this| now refers to `obj`
+        console.log(this[key] );
+    }, obj); // <-- the last arg is `thisArg`
+
+    // Prints...
+
+    // "foo"
+    // "bar"
+    // "qux"
+
+More info on ES5 compatibility `here
+<http://kangax.github.io/compat-table/es5/>`_
+
+Passing data to components
+==========================
+
+Avoid instantianting components in inline scripts. Instead pass the data to the components through data attributes.
+
+Avoid spreading options into multiple data attributes, as it might happen that two different javascript components live
+on the same DOM node and require an option with the same name. Instead use json notation.
+
+**Bad**:
+
+.. code-block:: django
+
+    <div class="js-component-1 js-component-2"
+        data-something="false" {# for component 2 #}
+        data-value="for component 1"
+        data-value="for component 2"> {# aw maaan #}
+        Sad panda :(
+    </div>
+
+Imagine in this case component 1 functionality is significantly affected by an option that is meant for component 2.
+Also if they share the same option property name, such as value - sad panda.
+
+**Good**:
+
+.. code-block:: django
+
+    <div class="js-component-first js-component-second"
+        data-component-first='{
+            "value": "for component 1"
+        }'
+        data-component-second='{
+            "value": "for component 2",
+            "something": false
+        }'>
+        Happy panda!
+    </div>
+
+Passing the data to the components is also very straightforward. This way you have the same initialisation method
+for all existing instances of the widget even if they have different options.
+
+.. code-block:: javascript
+
+    var componentElements = $('.js-component-2');
+    var defaults = {
+        x: 0,
+        y: 0,
+        something: true
+    };
+    componentElements.each(function () {
+        var componentElement = $(this);
+        var options = $.extend({}, defaults, componentElement.data('component-second'));
+        new ComponentSecond(componentElement, options);
+    }):

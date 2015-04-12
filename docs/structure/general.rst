@@ -3,7 +3,7 @@ General
 
 .. note::
 
-    The core folder structure consists of 4 main folders.
+    Let's cover the core structure of this boilerplate consisting of the 4 main folders.
 
 .. code-block:: text
 
@@ -12,7 +12,7 @@ General
     static/
     templates/
 
-Lets take a closer look at each individual folder.
+Lets take a closer look at each individual folder:
 
 
 docs/

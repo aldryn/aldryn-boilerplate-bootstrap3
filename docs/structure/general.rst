@@ -18,17 +18,19 @@ Lets take a closer look at each individual folder:
 docs/
 -----
 
-The full documentation can be found there which gets compiled to `ReadTheDocs
-<https://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/>`_. More information on how to contribute there, can
-be found within the :doc:`../contribution/index` section.
+The full documentation is stored within ``/docs`` and gets compiled into ``/docs/_build`` when running ``make run``.
+The documentation gets automatically compiled to `ReadTheDocs
+<https://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/>`_ once a push is commenced.
+More information on how to contribute to the documentation can be found within the :doc:`../contribution/index` section.
 
 
 private/
 --------
 
-This folder is intended for placing preprocessing libraries such as **sass**, **coffeescript** or **haml**.
-Simply create a folder with the associated name of the library such as ``sass/`` and place configuration files on the
-same level. An example structure would look like:
+This folder is intended for storing preprocessing libraries such as **sass**, **less**, **coffee** or **haml**.
+Simply create a folder within ``/private`` with the librarie's name such as ``sass``, ``less`` or ``haml``.
+Always place required configuration files within the ``/private`` root. Let's take a look at the sass example using
+the compass configuration file:
 
 .. code-block:: text
 
@@ -37,9 +39,9 @@ same level. An example structure would look like:
     │  └─ base.sass
     └─ config.rb
 
-.. HINT::
-   The ``config.rb`` is taken from `Compass <http://compass-style.org/>`_ which can also be used for a native sass
-   setup. However aldryn-boilerplate-bootstrap3 uses the Compass **SCSS** - format as default.
+.. hint::
+   The ``config.rb`` is taken from `Compass <http://compass-style.org/>`_. We are using *sass* as foldername and not
+   *scss* as the language itself is called `Sass <http://sass-lang.com/>`_. Always use the full written acronym.
 
 
 static/

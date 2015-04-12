@@ -20,8 +20,7 @@ These are the fundamental principles we should follow when we design and develop
 - Simple code is easy to maintain.
 - In simple expressions it's harder to make mistakes.
 
-General
-=======
+----
 
 Objects
 =======
@@ -988,3 +987,49 @@ for all existing instances of the widget even if they have different options.
         var options = $.extend({}, defaults, componentElement.data('component-second'));
         new ComponentSecond(componentElement, options);
     }):
+
+Miscellaneous
+=============
+
+- Avoid magic numbers. Try to parametrize or use constants.
+
+.. code-block:: javascript
+
+    // bad
+    setTimeout(function () {
+        if (failed && count < 5) {
+            count++;
+            return;
+        }
+        // or do stuff
+    }, 3000);
+
+    // better
+    var POLLING_TIMEOUT = 3000;
+    var MAX_FAILURES_COUNT = 5;
+
+    setTimeout(function () {
+        if (failed && count < MAX_FAILURES_COUNT) {
+            count++;
+            return;
+        }
+        // or do stuff
+    }, POLLING_TIMEOUT);
+
+
+.. code-block:: javascript
+
+    switch (e.keyCode) {
+        case keyCodes.ENTER:
+        case keyCodes.SPACE:
+            x();
+            break;
+        case keyCodes.TAB
+        case keyCodes.ESCAPE:
+            y();
+            break;
+        default:
+            z();
+    }
+
+

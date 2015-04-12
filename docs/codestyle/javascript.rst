@@ -304,7 +304,7 @@ Assign variables at the top of their scope. This helps avoid issues with variabl
 related issues.
 
 Use one var declaration per variable. It's easier to add new variable declarations this way, and you never have to worry
-about swapping out a ; for a , or introducing punctuation-only diffs.
+about swapping out a ``;`` for a ``,`` or introducing punctuation-only diffs.
 
 .. code-block:: javascript
 
@@ -860,6 +860,47 @@ prefer:
     $(this).on('listingUpdated', function(e, data) {
         // do something with data.listingId
     });
+
+Templates
+=========
+
+When passing data to JS templates (using underscore.js / window.tmpl by J. Resig) - always pass an object that has only
+one property, and that property is the data you need.
+
+Consider this template:
+
+.. code-block:: html
+
+    <% if (people) { %>
+       <%= people %>
+    <% } %>
+
+.. code-block:: javascript
+
+    // bad
+    var markup = tmpl(template, { prop1: true, prop2: '1' });
+
+This will throw a ReferenceError because these template engines use ``with`` underneath.
+Instead do this:
+
+.. code-block:: html
+
+    <% if (addon.people) { %>
+       <%= addon.people %>
+    <% } %>
+
+.. code-block:: javascript
+
+    // good
+    var markup = tmpl(template, {
+        addon: {
+            prop1: true,
+            prop2: '1'
+        }
+    });
+
+You will have explicit scope without any unexpected behaviours.
+
 
 jQuery
 ======

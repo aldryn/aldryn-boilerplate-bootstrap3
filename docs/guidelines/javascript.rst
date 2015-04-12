@@ -15,7 +15,7 @@ Naming
     :class: `important`
 
     - Use **dot** annotation ``test.base.js`` for javascript file naming
-    - Use **camelCase** for variables and **not** underscores or dashes
+    - Name ``variablesLikeThis``, ``ClassesLikeThis``, ``CONSTANTS_LIKE_THIS`` and that's it.
     - Use the ``js-`` prefix when working with JS related selectors and do not add stylings to it
     - Never use comma separation for variable declerations like ``var a, b, c;``
     - Never use $ for variable names like ``var $el = $('.el');``

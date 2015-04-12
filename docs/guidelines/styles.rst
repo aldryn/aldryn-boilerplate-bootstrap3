@@ -44,7 +44,7 @@ Nesting
 .. admonition:: Tree
     :class: `important`
 
-    - Don'nt overuse nesting, nest elements to a max of **4 indends**
+    - Don't overuse nesting, nest elements to a max of **4 indends**
 
 With great power comes great responsibility (just wanted to throw that in here). When writing in **sass** or **less** we
 sometimes forget performance over laziness. While nesting is very powerful, we should avoid unnecessary levels or
@@ -137,6 +137,7 @@ Ordering
 #. border, background (box style data)
 #. media, print (media queries)
 #. :after, :before, :active (pseudo elements)
+#. nested elements or parent referencing selectors
 
 Combine attributes such as background-image, background-color, background-repeat into
 ``background: #fff url("image.png") no-repeat left top;``.

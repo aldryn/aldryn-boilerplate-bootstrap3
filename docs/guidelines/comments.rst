@@ -7,6 +7,9 @@ Comments
     right? Not quite. Comments in code are a double edged sword, use them to describe what's being done.
 
 
+It doesn't make sense to comment every step you do in your program. Comments should discuss why something is done,
+its purpose and its goal. The code already shows how it is done, so commenting on this is redundant.
+
 Section Comments
 ----------------
 
@@ -27,7 +30,7 @@ Inline Comments
 
 When using comments inline, make use of the appropriate formats:
 
-- ``{# ... #}`` or ``{% comment %} ... {% endcomment %}`` for HTML and **never** ``<!-- ... -->``
+- ``{# ... #}`` or ``{% comment %} ... {% endcomment %}`` for Django templates and **never** ``<!-- ... -->``
 - ``// ...`` and ``/* ... */`` for SASS and JavaScript
 
 Notes
@@ -36,13 +39,30 @@ Notes
 We also use several comment helpers which, if you configured them in your editor, add additional highlighting to your
 code:
 
-| **TODO:**
-| indicates that something is still missing and needs to be done
+| **FIXME:**
+| to annotate problems with the code
 |
 
 .. code-block:: javascript
 
-    // TODO: We still need to add keyboard navigation
+    function Calculator() {
+        // FIXME: shouldn't use a global here
+        total = 0;
+        ...
+    }
+
+
+| **TODO:**
+| to annotate solutions to problems with the code
+|
+
+.. code-block:: javascript
+
+    function Calculator() {
+        // TODO: total should be configurable by an options param
+        this.total = 0;
+        ...
+    }
 
 | **INFO:**
 | provides additional help if something might be unclear or requires additional description
@@ -97,8 +117,9 @@ Invalid
      */
 
 
-YUIDocs
--------
+YUIDoc
+------
 
-In 3.3.0 we introduced `YUIDocs <http://yui.github.io/yuidoc/>`_ to further improve JavaScript documentation.
+In 3.3.0 we introduced `YUIDoc <http://yui.github.io/yuidoc/>`_ which uses syntax similar to JSDoc in order to further
+improve JavaScript documentation.
 We are encouraging using this style within your code as shown in ``/static/js/addons/cl.utils.js``.

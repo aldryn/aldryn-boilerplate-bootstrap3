@@ -9,5 +9,4 @@ Coding Style
 .. toctree::
     :maxdepth: 2
 
-    styles
     javascript

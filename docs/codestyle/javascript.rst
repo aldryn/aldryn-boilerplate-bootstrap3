@@ -499,8 +499,14 @@ With proper ``.editoconfig`` and ``jshint/jscs`` setup these will be enforced au
 - 4 spaces for tabs.
 - Place 1 space before leading curly brace.
 - Place 1 space before the opening parenthesis in ``if``, ``while``, etc.
+- Place 1 space after colon.
 - Place no space before the argument list in function calls and declarations, e.g. ``function fight() { ... }``
 - Set off operators with spaces, e.g. ``var x = 2 + 2;``
+- No whitespace at the end of line or on blank lines.
+- Lines should be no longer than 120 characters. There are 2 exceptions, both allowing the line to exceed 120 characters:
+    - If the line contains a comment with a long URL.
+    - If the line contains a regex literal. This prevents having to use the regex constructor which requires otherwise
+      unnecessary string escaping.
 - End files with a single newline character.
 
 
@@ -564,6 +570,20 @@ Leave a blank line after blocks and before the next statement
     };
 
     return obj;
+
+Use newlines to group logically related pieces of code. For example:
+
+.. code-block:: javascript
+
+    doSomethingTo(x);
+    doSomethingElseTo(x);
+    andThen(x);
+
+    nowDoSomethingWith(y);
+
+    andNowWith(z);
+
+
 
 Commas
 ======
@@ -681,6 +701,11 @@ Booleans:
 
     // good
     var hasAge = !!age;
+
+Loops
+=====
+
+Use ``for-in`` only for iterating over keys in an ``Object``, never over an ``Array``.
 
 Naming conventions
 ==================

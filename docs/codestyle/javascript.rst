@@ -109,12 +109,12 @@ When programmaticaly building a string use ``Array#join`` instead of string conc
 
 .. code-block:: javascript
 
-    //bad
+    // bad
     var tmpl = '<div class="whatever">' +
         message +
     '</div>';
 
-    //good
+    // good
     var tmpl = [
         '<div class="whatever">',
             message,
@@ -214,7 +214,7 @@ Prefer early returns.
     // bad
     function doThingsWithComponent (element) {
         if (element.length) {
-            //do things
+            // do things
         }
     }
 
@@ -224,8 +224,42 @@ Prefer early returns.
             return;
         }
 
-        //do things
+        // do things
     }
+
+Functions context
+=================
+
+Prefer ``Function#bind`` over ``$.proxy(function (), scope)``.
+
+.. code-block:: javascript
+
+    doAsync(function () {
+        this.fn();
+    }.bind(this));
+
+If the context argument is available, it is preferred.
+
+.. code-block:: javascript
+
+    // bad
+    [1, 2, 3].forEach(function (n) {
+        this.fn(n);
+    }.bind(this));
+
+    // good
+    [1, 2, 3].forEach(function (n) {
+        this.fn(n);
+    }, this);
+
+If assigning the current context to a variable, the variable should be named ``that``:
+
+.. code-block:: javascript
+
+    var that = this;
+    doAsync(function () {
+        that.fn();
+    });
 
 
 Properties
@@ -400,7 +434,7 @@ Comparison operators are evaluated using coercion with the ToBoolean method and 
         // An array is an object, objects evaluate to true
     }
 
-Use shortcuts.
+- Use shortcuts.
 
 .. code-block:: javascript
 
@@ -424,7 +458,76 @@ Use shortcuts.
       // ...stuff...
     }
 
-More info in `Javascript Equality Table <https://dorey.github.io/JavaScript-Equality-Table/>`_
+ More info in `Javascript Equality Table <https://dorey.github.io/JavaScript-Equality-Table/>`_
+
+- Condition statements should not contain assignment operations:
+
+.. code-block:: javascript
+
+    // bad
+    var foo;
+    if ((foo = bar()) > 0) {
+        // ...
+    }
+
+    // good
+    var foo = bar();
+    if (foo > 0) {
+        // ...
+    }
+
+- Logical operators should not be used for conditional branching:
+
+.. code-block:: javascript
+
+    // bad
+    condition && actionIfTrue() || actionIfFalse();
+
+    // good
+    if (condition) {
+        actionIfTrue();
+    } else {
+        actionIfFalse();
+    }
+
+- Conditions longer than the maximum line length should be divided as in the example:
+
+.. code-block:: javascript
+
+    // good
+    if (longCondition ||
+        anotherLongCondition &&
+        yetAnotherLongCondition
+    ) {
+        // ...
+    }
+
+- The ternary operator should be written as in the examples:
+
+.. code-block:: javascript
+
+    var x = a ? b : c;
+
+    var y = a ?
+        longButSimpleOperandB : longButSimpleOperandC;
+
+    var z = a ?
+        moreComplicatedB :
+        moreComplicatedC;
+
+- If a statement is longer than the maximum line length, it is split into several lines and properly indented.
+- Closing parentheses should be on a new line with the indentation of the current block statement. Tend to do the same
+  with object properties.
+
+.. code-block:: javascript
+
+    DoSomethingThatRequiresALongFunctionName(
+        veryLongArgument1,
+        argument2,
+        argument3,
+        argument4
+    );
+    anotherStatement;
 
 Blocks
 ======
@@ -479,17 +582,18 @@ Comments
 
 Follow the guidelines.
 Use ``//`` for single line comments. Place single line comments on a newline above the subject of the comment.
+Between the ``//`` and the text of the comment should be one space character.
 
 .. code-block:: javascript
 
     // bad
-    var active = true;  // is current tab
+    var active = true;  //is current tab
 
     // good
     // is current tab
     var active = true;
 
-Most importantly, keep comments up to date if the code changes.
+Most importantly, **keep comments up to date** if the code changes.
 
 Whitespace
 ==========
@@ -712,18 +816,16 @@ Naming conventions
 
 Refer to guidelines.
 Use leading underscore to denote private methods/properties.
-When saving a reference to ``this`` use ``that``.
-
 The only place where it's allowed to use single letter variable is in event callbacks:
 
 .. code-block:: javascript
 
-    //bad
+    // bad
     $('div.elem').on('click', function (clickEvent) {
         ...
     });
 
-    //good
+    // good
     $('.js-element').on('click', function (e) {
         ...
     });
@@ -824,34 +926,11 @@ Prefer ``Array#forEach`` over ``for () {}`` loop.
         console.log(fighters[i].name + ' ' + (fighters[i].dead ? 'lost' : 'did not lose'));
     }
 
-    //good
+    // good
     fighters.forEach(function (fighter) {
         console.log(fighter.name + ' ' + (fighter.dead ? 'lost' : 'did not lose'));
     });
 
-
-Prefer ``Function#bind`` over ``$.proxy(function (), scope)``.
-
-Don't forget that most array methods allow passing ``thisArg`` as a second param after callback.
-
-.. code-block:: javascript
-
-    var obj = {
-        f: 'foo',
-        b: 'bar',
-        q: 'qux'
-    };
-
-    Object.keys(obj).forEach(function (key) {
-        // |this| now refers to `obj`
-        console.log(this[key] );
-    }, obj); // <-- the last arg is `thisArg`
-
-    // Prints...
-
-    // "foo"
-    // "bar"
-    // "qux"
 
 More info on ES5 compatibility `here
 <http://kangax.github.io/compat-table/es5/>`_

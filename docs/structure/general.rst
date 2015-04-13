@@ -27,6 +27,9 @@ More information on how to contribute to the documentation can be found within t
 private/
 --------
 
+.. important::
+    This folder is publicly **not accessible**, all source files are stored safely.
+
 This folder is intended for storing preprocessing libraries such as **sass**, **less**, **coffee** or **haml**.
 Simply create a folder within ``/private`` with the librarie's name such as ``sass``, ``less`` or ``haml``.
 Always place required configuration files within the ``/private`` root. Let's take a look at the sass example using
@@ -47,7 +50,10 @@ the compass configuration file:
 static/
 -------
 
-All layout specific files will be placed in this folder. The main folder structure includes:
+.. important::
+    This folder is publicly available, all files can be accessed via ``http://yourwebserver/static/``.
+
+The general folder layout looks as follows:
 
 .. code-block:: text
 
@@ -56,14 +62,15 @@ All layout specific files will be placed in this folder. The main folder structu
     ├─ fonts/
     ├─ img/
     ├─ js/
-    └─ swf/
+    ├─ swf/
+    └─ ...
 
 If folders are not required, just simply remove them. For demo content (which might be later integrated as media files)
-create a folder called **dummy/**, for example: ``static/img/dummy/`` and place those images there.
-The dummy folder is intended to be **removed** before a website goes live.
+create a folder called **dummy/**, for example: ``/static/img/dummy`` and place those images there. This folder will
+be ignored by the ``gulp preprocess`` and ``gulp images`` commands.
 
-When a structure might get more complicated, make use of grouping and create additional folders like
-``static/img/icons`` or ``static/js/addons/jquery``.
+When a folder reaches a certain file count, make use of grouping and create additional sub-directories such as
+``/static/img/icons`` or ``/static/js/addons/jquery``.
 
 
 templates/
@@ -71,9 +78,9 @@ templates/
 
 All Django templates should be allocated within the ``templates/`` folder. This also applies for apps or inclusion
 files. When using `Haml <http://haml.info/>`_, set your configuration so the templates get compiled into
-**/templates/**.
+**/templates**.
 
 The default *index.html* is always ``templates/base.html``.
 
 Global inclusion files are placed within ``templates/includes/``. Addons normally have their own *includes/* folder
-so they are not overcrowding the global folder.
+so they are not overcrowding the global includes folder.

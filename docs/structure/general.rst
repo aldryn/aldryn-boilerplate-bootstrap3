@@ -23,7 +23,7 @@ docs/
 
 The full documentation is stored within ``/docs`` and gets compiled into ``/docs/_build`` when running ``make run``.
 The documentation gets automatically pushed to `Read the Docs
-<https://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/>`_ once something is commited to the *master* branch.
+<https://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/>`_ once something is committed to the *master* branch.
 More information on how to contribute to the documentation can be found within the :doc:`../contribution/index` section.
 
 
@@ -34,7 +34,7 @@ private/
     This folder is publicly **not accessible**, all source files are stored safely.
 
 This folder is intended for storing preprocessing libraries such as **sass**, **less**, **coffee** or **haml**.
-Simply create a folder within ``/private`` with the librarie's name such as ``/sass``, ``/less`` or ``/haml``.
+Simply create a folder within ``/private`` with the libraries name such as ``/sass``, ``/less`` or ``/haml``.
 Always place required configuration files within the ``/private`` root. Let's take a look at the SASS example using
 the compass configuration file:
 
@@ -46,7 +46,7 @@ the compass configuration file:
     └─ config.rb
 
 .. hint::
-   The ``config.rb`` is taken from `Compass <http://compass-style.org/>`_. We are using ``/sass`` as foldername and not
+   The ``config.rb`` is taken from `Compass <http://compass-style.org/>`_. We are using ``/sass`` as folder name and not
    ``/scss`` as the language itself is called `Sass <http://sass-lang.com/>`_. Always use the full written acronym.
 
 

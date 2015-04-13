@@ -5,8 +5,8 @@ Static
 
     As ``/static`` is publicly accessible, avoid adding sensitive files into this directory.
 
-Keep the **root path** of ``/static`` simple and clean. Only favicons should be placed there. They ultimately get picked
-up by the ``base_root.html`` template.
+Keep the **root path** of ``/static`` simple and clean. Only favicon's should be placed there. They ultimately get
+picked up by the ``base_root.html`` template.
 
 
 css/
@@ -20,7 +20,7 @@ fonts/
 ------
 
 All fonts should be placed here including font-icons. You can create sub-directories to create a better overview.
-This folder might not be required if you are implemting fonts via services such as
+This folder might not be required if you are implementing fonts via services such as
 `Google Fonts <http://www.google.com/fonts>`_ or `fonts.com <http://fonts.com>`_.
 
 

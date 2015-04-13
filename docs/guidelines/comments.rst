@@ -87,7 +87,7 @@ Formatting
 .. admonition:: Comments
     :class: `important`
 
-    - Add proper whitespaces
+    - Add proper whitespace
     - In general use lowercases except for the *Notes*
 
 .. code-block:: javascript

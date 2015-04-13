@@ -3,13 +3,13 @@ What's Inside
 
 .. note::
 
-    The following components and settings are included within this boilerplate for your convinience.
+    The following components and settings are included within this boilerplate for your convenience.
 
 
 SASS vs LESS
 ------------
 
-A discussion which, we don't want to start here. We are prefering the official `SASS port
+A discussion which, we don't want to start here. We are preferring the official `SASS port
 <https://github.com/twbs/bootstrap-sass>`_ of Bootstrap and the comprehensive
 Compass CSS Authoring Framework. As such all styles are placed within ``/private/sass`` and get compiled to
 ``/static/css``.
@@ -27,7 +27,7 @@ and the `JavaScript component
 <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/static/js/libs/bootstrap.min.js>`_.
 The `Glyhpicon <http://getbootstrap.com/components/#glyphicons>`_ icon set has been `disabled
 <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss#L14>`_
-in favor of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_ icon set.
+in favour of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_ icon set.
 
 - http://getbootstrap.com
 
@@ -35,13 +35,13 @@ in favor of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_ ico
 Font Awesome
 ------------
 
-The Font Awsome library offers a larger `variety of icons <http://fortawesome.github.io/Font-Awesome/icons/>`_
+The Font Awesome library offers a larger `variety of icons <http://fortawesome.github.io/Font-Awesome/icons/>`_
 far superior than the bootstrap defaults and additional `utility classes
 <http://fortawesome.github.io/Font-Awesome/examples/>`_ are available to you. We implemented the `library
 <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_fontawesome.scss>`_
 separately from the `icon choices
 <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/layout/_iconography.scss>`_.
-This allows for a better customization and integration of other icon fonts or services.
+This allows for a better customisation and integration of other icon fonts or services.
 
 - http://fortawesome.github.io/Font-Awesome
 

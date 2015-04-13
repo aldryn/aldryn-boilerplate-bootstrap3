@@ -7,7 +7,7 @@
 Welcome
 #######
 
-The most advanced **django-cms** based boilerplate for rapid development. It uses the full potential of the
+The most advanced **django CMS** based boilerplate for rapid development. It uses the full potential of the
 `Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile first projects on the web.
 In addition we implement various best practices from within the front-end community.
 

@@ -61,7 +61,7 @@ if the structure gets more complex.
 
 .. warning::
 
-    Do **not** add additional variables within ``/private/sass/settings/_bootstrap.scss``. This file is reseverd for
+    Do **not** add additional variables within ``/private/sass/settings/_bootstrap.scss``. This file is reserved for
     **bootstrap only** variables.
 
 
@@ -78,7 +78,7 @@ project:
 
     **Multisite Setup**
 
-    Let's assume you create one styleguide sharing different marketing websites or applications, your structure might
+    Let's assume you create one style guide sharing different marketing websites or applications, your structure might
     look something like:
 
 .. code-block:: text

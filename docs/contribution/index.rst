@@ -20,7 +20,7 @@ Documentation
 
 To extend and run the documentation, you will need `Python <https://www.python.org/downloads/>`_ and
 `Virtualenv <https://virtualenv.pypa.io/en/latest/installation.html>`_ installed on your computer. You also need
-`Git <http://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_ and a GitHub account obiously.
+`Git <http://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_ and a GitHub account obviously.
 
 In addition, follow the steps underneath to get them running:
 
@@ -29,7 +29,7 @@ In addition, follow the steps underneath to get them running:
 #. run ``make install`` to install additional requirements
 #. run ``make run`` to let the server run
 
-Now you can open **http://localhost:8000** on your favorite browser and start changing the rst files within ``docs/``.
+Now you can open **http://localhost:8000** on your favourite browser and start changing the rst files within ``docs/``.
 
 You need to be aware of `reStructuredText
 <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ to format the documentation properly.

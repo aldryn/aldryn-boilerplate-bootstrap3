@@ -10,9 +10,8 @@ JavaScript
 Why?
 ====
 
-Rick Waldron:
-
-    "All code in any code-base should look like a single person typed it, no matter how many people contributed."
+"All code in any code-base should look like a single person typed it,
+    no matter how many people contributed." - Rick Waldron
 
 These are the fundamental principles we should follow when we design and develop software.
 
@@ -21,6 +20,7 @@ These are the fundamental principles we should follow when we design and develop
 - In simple expressions it's harder to make mistakes.
 
 ----
+
 
 Objects
 =======
@@ -51,6 +51,7 @@ Don't use `reserved words <http://es5.github.io/#x7.6.1>`_ as keys.
         defaults: { clark: 'kent' },
         hidden: true
     };
+
 
 Arrays
 ======
@@ -88,40 +89,42 @@ To convert an array-like object to an array, use ``Array#slice``. If you need to
 
 .. code-block:: javascript
 
-    var len = items.length;
+    var length = items.length;
     var itemsCopy = [];
-    var i;
+    var index;
 
     // bad
-    for (i = 0; i < len; i++) {
-        itemsCopy[i] = items[i];
+    for (index = 0; index < length; index++) {
+        itemsCopy[index] = items[index];
     }
 
     // good
     itemsCopy = items.slice();
 
+
 Strings
 =======
 
 Use single-quotes for strings.
-When programmaticaly building a string use ``Array#join`` instead of string concatenation
+When programmatically building a string use ``Array#join`` instead of string concatenation
 
 .. code-block:: javascript
 
     // bad
-    var tmpl = '<div class="whatever">' +
+    var template = '<div class="whatever">' +
         message +
     '</div>';
 
     // good
-    var tmpl = [
+    var template = [
         '<div class="whatever">',
             message,
         '</div>'
     ].join('');
 
 If you have a complicated string buildup it's always better to use javascript templating instead.
-That way templates could have their own files with proper syntax highlighting and precompilation build step.
+That way templates could have their own files with proper syntax highlighting and pre-compilation build step.
+
 
 Functions
 =========
@@ -131,7 +134,7 @@ Function expressions:
 .. code-block:: javascript
 
     // anonymous function expression
-    var anonymous = function() {
+    var anonymous = function () {
         return true;
     };
 
@@ -141,12 +144,12 @@ Function expressions:
     };
 
     // immediately-invoked function expression (IIFE)
-    (function() {
+    (function () {
         console.log('Welcome to the Internet. Please follow me.');
     })();
 
 Tend to avoid anonymous function expressions, try to always use named ones, it will save you a lot of pain going through
-stacktraces and debugging in general.
+stack traces and debugging in general.
 
 Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead.
 Browsers will allow you to do it, but they all interpret it differently, which is really bad news.
@@ -188,43 +191,44 @@ Prefer early returns.
 
     // bad
     function returnLate(foo) {
-        var ret;
+        var value;
 
         if (foo) {
-            ret = "foo";
+            value = 'foo';
         } else {
-            ret = "quux";
+            value = 'quux';
         }
-        return ret;
+        return value;
     }
 
     // good
 
     function returnEarly(foo) {
         if (foo) {
-            return "foo";
+            return 'foo';
         }
 
-        return "quux";
+        return 'quux';
     }
 
 .. code-block:: javascript
 
     // bad
-    function doThingsWithComponent (element) {
+    function doThingsWithComponent(element) {
         if (element.length) {
             // do things
         }
     }
 
     // good
-    function doThingsWithComponent (element) {
+    function doThingsWithComponent(element) {
         if (!element.length) {
-            return;
+            return false;
         }
 
         // do things
     }
+
 
 Functions context
 =================
@@ -242,13 +246,13 @@ If the context argument is available, it is preferred.
 .. code-block:: javascript
 
     // bad
-    [1, 2, 3].forEach(function (n) {
-        this.fn(n);
+    [1, 2, 3].forEach(function (number) {
+        this.fn(number);
     }.bind(this));
 
     // good
-    [1, 2, 3].forEach(function (n) {
-        this.fn(n);
+    [1, 2, 3].forEach(function (number) {
+        this.fn(number);
     }, this);
 
 If assigning the current context to a variable, the variable should be named ``that``:
@@ -294,6 +298,7 @@ Use subscript notation ``[]`` **only** when accessing properties with a variable
 
     var isJedi = getProp('jedi');
 
+
 Variables
 =========
 
@@ -323,6 +328,7 @@ about swapping out a ``;`` for a ``,`` or introducing punctuation-only diffs.
     var items = getItems();
     var goSportsTeam = true;
     var dragonball = 'z';
+
 
 Hoisting
 ========
@@ -411,6 +417,7 @@ Function declarations hoist their name and the function body.
 
 For more information on hoisting refer to `JavaScript Scoping & Hoisting
 <http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html>`_  by `Ben Cherry <http://www.adequatelygood.com>`_.
+
 
 Comparison Operators & Equality
 ===============================
@@ -548,10 +555,10 @@ Use braces with all blocks. Don't do inline blocks.
     }
 
     // bad
-    function() { return false; }
+    function () { return false; }
 
     // good
-    function() {
+    function () {
         return false;
     }
 
@@ -576,6 +583,7 @@ If you're using multi-line blocks with if and else, put else on the same line as
       thing3();
     }
 
+
 Comments
 ========
 
@@ -593,6 +601,7 @@ Between the ``//`` and the text of the comment should be one space character.
     var active = true;
 
 Most importantly, **keep comments up to date** if the code changes.
+
 
 Whitespace
 ==========
@@ -613,7 +622,7 @@ With proper ``.editoconfig`` and ``jshint/jscs`` setup these will be enforced au
 - End files with a single newline character.
 
 
-Use indentation when making long method chains. Use a leading dot, which emphasizes that the line is a method call,
+Use indentation when making long method chains. Use a leading dot, which emphasises that the line is a method call,
 not a new statement.
 
 .. code-block:: javascript
@@ -687,7 +696,6 @@ Use newlines to group logically related pieces of code. For example:
     andNowWith(z);
 
 
-
 Commas
 ======
 
@@ -718,6 +726,7 @@ Commas
         'Superman'
     ];
 
+
 Semicolons
 ==========
 
@@ -726,23 +735,24 @@ Yes, always.
 .. code-block:: javascript
 
     // bad
-    (function() {
+    (function () {
         var name = 'Skywalker'
         return name
     })()
 
     // good
-    (function() {
+    (function () {
         var name = 'Skywalker';
         return name;
     })();
 
     // good (guards against the function becoming an argument when two files with IIFEs are concatenated)
     // this should not happen if the previous example is enforced, but sometimes we have no control over vendor code
-    ;(function() {
+    ;(function () {
         var name = 'Skywalker';
         return name;
     })();
+
 
 Type Casting and Coercion
 =========================
@@ -805,10 +815,12 @@ Booleans:
     // good
     var hasAge = !!age;
 
+
 Loops
 =====
 
 Use ``for-in`` only for iterating over keys in an ``Object``, never over an ``Array``.
+
 
 Naming conventions
 ==================
@@ -861,6 +873,7 @@ prefer:
         // do something with data.listingId
     });
 
+
 Templates
 =========
 
@@ -905,33 +918,37 @@ You will have explicit scope without any unexpected behaviours.
 jQuery
 ======
 
-Do not prefix jquery variables with ``$``.
+Do not prefix jQuery variables with ``$``.
 Always cache jQuery lookups.
 
 .. code-block:: javascript
 
     // bad
     function setSidebar() {
-      $('.sidebar').hide();
+        $('.sidebar').hide();
+        $('.sidebar').css({
+            'background-color': 'pink'
+        });
+    }
 
-      // ...stuff...
-
-      $('.sidebar').css({
-        'background-color': 'pink'
-      });
+    // bad
+    function setSidebar() {
+        var $sidebar = $('.sidebar');
+        $sidebar.hide();
+        $sidebar.css({
+            'background-color': 'pink'
+        });
     }
 
     // good
     function setSidebar() {
-      var $sidebar = $('.sidebar');
-      $sidebar.hide();
-
-      // ...stuff...
-
-      $sidebar.css({
-        'background-color': 'pink'
-      });
+        var sidebar = $('.sidebar');
+        sidebar.hide();
+        sidebar.css({
+            'background-color': 'pink'
+        });
     }
+
 
 ECMAScript 5
 ============
@@ -975,10 +992,11 @@ Prefer ``Array#forEach`` over ``for () {}`` loop.
 More info on ES5 compatibility `here
 <http://kangax.github.io/compat-table/es5/>`_
 
+
 Passing data to components
 ==========================
 
-Avoid instantianting components in inline scripts. Instead pass the data to the components through data attributes.
+Avoid instantiating components in inline scripts. Instead pass the data to the components through data attributes.
 
 Avoid spreading options into multiple data attributes, as it might happen that two different javascript components live
 on the same DOM node and require an option with the same name. Instead use json notation.
@@ -1029,10 +1047,11 @@ for all existing instances of the widget even if they have different options.
         new ComponentSecond(componentElement, options);
     }):
 
+
 Miscellaneous
 =============
 
-- Avoid magic numbers. Try to parametrize or use constants.
+- Avoid magic numbers. Try to parametrise or use constants.
 
 .. code-block:: javascript
 
@@ -1072,5 +1091,3 @@ Miscellaneous
         default:
             z();
     }
-
-

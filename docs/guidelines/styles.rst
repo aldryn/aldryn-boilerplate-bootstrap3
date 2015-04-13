@@ -34,7 +34,7 @@ Nesting
 
 .. important::
 
-    - Don't overuse nesting, nest elements to a max of **4 indends**
+    - Don't overuse nesting, nest elements to a max of **4 indents**
 
 With great power comes great responsibility (just wanted to throw that in here). When writing in **SASS** or **LESS** we
 sometimes forget performance over laziness. While nesting is very powerful, we should avoid unnecessary levels or

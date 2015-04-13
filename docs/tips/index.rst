@@ -21,7 +21,7 @@ This state can easily be overwritten using CSS or JavaScript. As such the attrib
 are later displayed through JavaScript to prevent jumping behaviours.
 
 
-Image Optimization
+Image Optimisation
 ==================
 
 Images are the number one source of optimisation when it comes to file size. Optimise images using tools like

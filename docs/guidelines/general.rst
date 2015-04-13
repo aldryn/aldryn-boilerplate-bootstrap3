@@ -14,7 +14,7 @@ Standards
     - There is something called `Accessibility <http://www.w3.org/WAI/WCAG20/quickref/>`_
     - Don't forget about **HiDPI**, **Retina** and **High Resolutions** displays
     - Proper fallbacks should be available if a connection is slow or features are disabled
-    - Progressive enhancement, graceful degredation and responsive design are buzzwords you care about
+    - Progressive enhancement, graceful degradation and responsive design are buzzwords you care about
     - Develop modular and extensible
     - Documentations is your friend
 
@@ -24,7 +24,7 @@ Spacing
 
 .. important::
 
-    - Use **4 spaces** for intendation
+    - Use **4 spaces** for indentation
 
 not 2, 3 or 8 – no tabs – if you are able to do 3 :sup:`3/4`, thats good enough
 

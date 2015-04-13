@@ -17,7 +17,7 @@ Naming
     - Use the libraries prefix such as ``cl.xplorer.js`` or ``jquery.tablesorter.js`` for file naming
     - Name ``variablesLikeThis``, ``ClassesLikeThis``, ``CONSTANTS_LIKE_THIS`` and ``events-like-this``.
     - Use the ``js-`` prefix when working with JS related selectors and do not add stylings to it
-    - Never use comma separation for variable declerations like ``var a, b, c;``
+    - Never use comma separation for variable declarations like ``var a, b, c;``
     - Never use $ for variable names such as ``var $el = $('.el');``
     - We are using the ``Cl.`` singleton for all custom JavaScript code
 
@@ -100,8 +100,8 @@ Implementation
 
     // good
     <div class="dashboard js-dashboard" data-dashboard="..."> ... </div>
+    <!-- javascript gets initialised within the file -->
     {% addtoblock "js" %}<script src="{% static "js/addons/cl.dashboard.js" %}"></script>{% endaddtoblock %}
-    <!-- javascript gets initialized within the file -->
 
 .. code-block:: django
 
@@ -110,6 +110,7 @@ Implementation
     {% addtoblock "js" %}
     <script src="{% static "js/addons/cl.dashboard.js" %}"></script>
     {% endaddtoblock %}
+    <!-- javascript gets initialised inside the template -->
     {% addtoblock "js" %}
     <script>
     jQuery(document).ready(function () {

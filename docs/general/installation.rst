@@ -29,15 +29,15 @@ All front-end related tasks are handled via the `Gulp <http://gulpjs.com/>`_ tas
 - ``gulp`` runs the gulp defaults
 - ``gulp watch`` runs the gulp watch defaults
 - ``gulp lint`` starts all linting services using ``.jshintrc``, ``.jscsrc`` and ``scss-lint.json``
-- ``gulp preprocess`` optimizes images within ``/static/img`` and compiles YUIDoc into ``static/docs``
-- ``gulp browser`` connects to a given server (django) and runs livereload on a separate IP
+- ``gulp preprocess`` optimises images within ``/static/img`` and compiles YUIDoc into ``static/docs``
+- ``gulp browser`` connects to a given server (django) and runs live reload on a separate IP
 - ``gulp tests`` runs the test suite
 
 We also offer certain single commands:
 
 - ``gulp jslint`` runs JavaScript linting
 - ``gulp scsslint`` runs SASS linting
-- ``gulp images`` optimizes images within ``/static/img``
+- ``gulp images`` optimises images within ``/static/img``
 - ``gulp docs`` compiles YUIDoc into ``static/docs``
 
 We love code over configuration.

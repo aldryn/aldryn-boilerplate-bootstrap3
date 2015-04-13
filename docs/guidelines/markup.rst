@@ -29,13 +29,13 @@ Naming
     <DIV class="box boxHighlighted" DATA-rel="#my_modal"> ... </DIV>
 
 
-Indendation
+Indentation
 -----------
 
 .. important::
 
-    - Always add an indend after django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block %}`` ...
-    - Use singlelines within ``{% addtoblock %}`` for **files** and multilines for ``<code>``
+    - Always add an indent after django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block %}`` ...
+    - Use single lines within ``{% addtoblock %}`` for **files** and multilines for ``<code>``
     - **Code readability** always wins
 
 .. code-block:: django

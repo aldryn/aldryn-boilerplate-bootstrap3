@@ -1,6 +1,7 @@
 JavaScript
 ##########
 
+
 .. note::
 
     This section is heavily inspired by a Airbnb JavaScript Style Guide, Yandex Codestyle, Idiomatic Javascript and lots
@@ -10,8 +11,7 @@ JavaScript
 Why?
 ====
 
-"All code in any code-base should look like a single person typed it,
-    no matter how many people contributed." - Rick Waldron
+    "All code in any code-base should look like a single person typed it, no matter how many people contributed." - Rick Waldron
 
 These are the fundamental principles we should follow when we design and develop software.
 
@@ -21,9 +21,263 @@ These are the fundamental principles we should follow when we design and develop
 
 ----
 
+Formatting
+==========
+
+Blocks
+------
+
+Use braces with all blocks. Don't do inline blocks.
+
+.. code-block:: javascript
+
+    // bad
+    if (test)
+        return false;
+
+    // bad
+    if (test) return false;
+
+    // good
+    if (test) {
+        return false;
+    }
+
+    // bad
+    function () { return false; }
+
+    // good
+    function () {
+        return false;
+    }
+
+If you're using multi-line blocks with if and else, put else on the same line as your if block's closing brace.
+
+.. code-block:: javascript
+
+    // bad
+    if (test) {
+      thing1();
+      thing2();
+    }
+    else {
+      thing3();
+    }
+
+    // good
+    if (test) {
+      thing1();
+      thing2();
+    } else {
+      thing3();
+    }
+
+
+Comments
+--------
+
+Follow the guidelines.
+Use ``//`` for single line comments. Place single line comments on a newline above the subject of the comment.
+Between the ``//`` and the text of the comment should be one space character.
+
+.. code-block:: javascript
+
+    // bad
+    var active = true;  //is current tab
+
+    // good
+    // is current tab
+    var active = true;
+
+Most importantly, **keep comments up to date** if the code changes.
+
+
+Whitespace
+----------
+
+With proper ``.editoconfig`` and ``jshint/jscs`` setup these will be enforced automatically, but still:
+
+- 4 spaces for tabs.
+- Place 1 space before leading curly brace.
+- Place 1 space before the opening parenthesis in ``if``, ``while``, etc.
+- Place 1 space after colon.
+- Place no space before the argument list in function calls and declarations, e.g. ``function fight() { ... }``
+- Set off operators with spaces, e.g. ``var x = 2 + 2;``
+- No whitespace at the end of line or on blank lines.
+- Lines should be no longer than 120 characters. There are 2 exceptions, both allowing the line to exceed 120 characters:
+    - If the line contains a comment with a long URL.
+    - If the line contains a regex literal. This prevents having to use the regex constructor which requires otherwise
+      unnecessary string escaping.
+- End files with a single newline character.
+
+
+Use indentation when making long method chains. Use a leading dot, which emphasises that the line is a method call,
+not a new statement.
+
+.. code-block:: javascript
+
+    // bad
+    $('#items').find('.selected').highlight().end().find('.open').updateCount();
+
+    // bad
+    $('#items').
+        find('.selected').
+            highlight().
+            end().
+        find('.open').
+            updateCount();
+
+    // good
+    $('#items')
+        .find('.selected')
+            .highlight()
+            .end()
+        .find('.open')
+            .updateCount();
+
+Leave a blank line after blocks and before the next statement
+
+.. code-block:: javascript
+
+    // bad
+    if (foo) {
+        return bar;
+    }
+    return baz;
+
+    // good
+    if (foo) {
+        return bar;
+    }
+
+    return baz;
+
+    // bad
+    var obj = {
+        foo: function() {
+        },
+        bar: function() {
+        }
+    };
+    return obj;
+
+    // good
+    var obj = {
+        foo: function() {
+        },
+
+        bar: function() {
+        }
+    };
+
+    return obj;
+
+Use newlines to group logically related pieces of code. For example:
+
+.. code-block:: javascript
+
+    doSomethingTo(x);
+    doSomethingElseTo(x);
+    andThen(x);
+
+    nowDoSomethingWith(y);
+
+    andNowWith(z);
+
+
+Commas
+------
+
+- Leading commas: God, **no**!
+- Additional trailing comma: **No**
+
+.. code-block:: javascript
+
+    // bad
+    var hero = {
+        firstName: 'Kevin',
+        lastName: 'Flynn',
+    };
+
+    var heroes = [
+        'Batman',
+        'Superman',
+    ];
+
+    // good
+    var hero = {
+        firstName: 'Kevin',
+        lastName: 'Flynn'
+    };
+
+    var heroes = [
+        'Batman',
+        'Superman'
+    ];
+
+
+Semicolons
+----------
+
+Yes, always.
+
+.. code-block:: javascript
+
+    // bad
+    (function () {
+        var name = 'Skywalker'
+        return name
+    })()
+
+    // good
+    (function () {
+        var name = 'Skywalker';
+        return name;
+    })();
+
+    // good (guards against the function becoming an argument when two files with IIFEs are concatenated)
+    // this should not happen if the previous example is enforced, but sometimes we have no control over vendor code
+    ;(function () {
+        var name = 'Skywalker';
+        return name;
+    })();
+
+Variables
+=========
+
+General
+-------
+
+Always use var to declare variables. Not doing so will result in global variables. We want to avoid polluting the global
+namespace
+
+Assign variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting
+related issues.
+
+Use one var declaration per variable. It's easier to add new variable declarations this way, and you never have to worry
+about swapping out a ``;`` for a ``,`` or introducing punctuation-only diffs.
+
+.. code-block:: javascript
+
+    // bad
+    var items = getItems(),
+        goSportsTeam = true,
+        dragonball = 'z';
+
+    // bad
+    // (compare to above, and try to spot the mistake)
+    var items = getItems(),
+        goSportsTeam = true;
+        dragonball = 'z';
+
+    // good
+    var items = getItems();
+    var goSportsTeam = true;
+    var dragonball = 'z';
+
 
 Objects
-=======
+-------
 
 Use the literal syntax for object creation.
 
@@ -54,7 +308,7 @@ Don't use `reserved words <http://es5.github.io/#x7.6.1>`_ as keys.
 
 
 Arrays
-======
+------
 
 Use the literal syntax for array creation.
 
@@ -103,7 +357,7 @@ To convert an array-like object to an array, use ``Array#slice``. If you need to
 
 
 Strings
-=======
+-------
 
 Use single-quotes for strings.
 When programmatically building a string use ``Array#join`` instead of string concatenation
@@ -127,7 +381,7 @@ That way templates could have their own files with proper syntax highlighting an
 
 
 Functions
-=========
+---------
 
 Function expressions:
 
@@ -231,7 +485,7 @@ Prefer early returns.
 
 
 Functions context
-=================
+-----------------
 
 Prefer ``Function#bind`` over ``$.proxy(function (), scope)``.
 
@@ -266,7 +520,7 @@ If assigning the current context to a variable, the variable should be named ``t
 
 
 Properties
-==========
+----------
 
 Use dot notation when accessing properties.
 
@@ -299,39 +553,8 @@ Use subscript notation ``[]`` **only** when accessing properties with a variable
     var isJedi = getProp('jedi');
 
 
-Variables
-=========
-
-Always use var to declare variables. Not doing so will result in global variables. We want to avoid polluting the global
-namespace
-
-Assign variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting
-related issues.
-
-Use one var declaration per variable. It's easier to add new variable declarations this way, and you never have to worry
-about swapping out a ``;`` for a ``,`` or introducing punctuation-only diffs.
-
-.. code-block:: javascript
-
-    // bad
-    var items = getItems(),
-        goSportsTeam = true,
-        dragonball = 'z';
-
-    // bad
-    // (compare to above, and try to spot the mistake)
-    var items = getItems(),
-        goSportsTeam = true;
-        dragonball = 'z';
-
-    // good
-    var items = getItems();
-    var goSportsTeam = true;
-    var dragonball = 'z';
-
-
 Hoisting
-========
+--------
 
 Variable declarations get hoisted to the top of their scope, but their assignment does not.
 
@@ -419,8 +642,73 @@ For more information on hoisting refer to `JavaScript Scoping & Hoisting
 <http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html>`_  by `Ben Cherry <http://www.adequatelygood.com>`_.
 
 
+
+Types
+=====
+
+Type Casting and Coercion
+-------------------------
+
+Strings:
+
+.. code-block:: javascript
+
+    //  => this.reviewScore = 9;
+
+    // bad
+    var totalScore = this.reviewScore + '';
+
+    // good
+    var totalScore = '' + this.reviewScore;
+
+    // bad
+    var totalScore = '' + this.reviewScore + ' total score';
+
+    // good
+    var totalScore = this.reviewScore + ' total score';
+
+Numbers:
+Use parseInt for ``Numbers`` and always with a radix for type casting.
+
+.. code-block:: javascript
+
+    var inputValue = '4';
+
+    // very bad
+    var val = new Number(inputValue);
+
+    // bad
+    var val = +inputValue;
+
+    // bad
+    var val = inputValue >> 0;
+
+    // bad
+    var val = parseInt(inputValue);
+
+    // ok
+    var val = Number(inputValue);
+
+    // good
+    var val = parseInt(inputValue, 10);
+
+Booleans:
+
+.. code-block:: javascript
+
+    var age = 0;
+
+    // bad
+    var hasAge = new Boolean(age);
+
+    // ok
+    var hasAge = Boolean(age);
+
+    // good
+    var hasAge = !!age;
+
 Comparison Operators & Equality
-===============================
+-------------------------------
 
 Use ``===`` and ``!==`` over ``==`` and ``!=``.
 
@@ -535,295 +823,19 @@ Comparison operators are evaluated using coercion with the ToBoolean method and 
     );
     anotherStatement;
 
-Blocks
-======
 
-Use braces with all blocks. Don't do inline blocks.
-
-.. code-block:: javascript
-
-    // bad
-    if (test)
-        return false;
-
-    // bad
-    if (test) return false;
-
-    // good
-    if (test) {
-        return false;
-    }
-
-    // bad
-    function () { return false; }
-
-    // good
-    function () {
-        return false;
-    }
-
-If you're using multi-line blocks with if and else, put else on the same line as your if block's closing brace.
-
-.. code-block:: javascript
-
-    // bad
-    if (test) {
-      thing1();
-      thing2();
-    }
-    else {
-      thing3();
-    }
-
-    // good
-    if (test) {
-      thing1();
-      thing2();
-    } else {
-      thing3();
-    }
-
-
-Comments
-========
-
-Follow the guidelines.
-Use ``//`` for single line comments. Place single line comments on a newline above the subject of the comment.
-Between the ``//`` and the text of the comment should be one space character.
-
-.. code-block:: javascript
-
-    // bad
-    var active = true;  //is current tab
-
-    // good
-    // is current tab
-    var active = true;
-
-Most importantly, **keep comments up to date** if the code changes.
-
-
-Whitespace
-==========
-
-With proper ``.editoconfig`` and ``jshint/jscs`` setup these will be enforced automatically, but still:
-
-- 4 spaces for tabs.
-- Place 1 space before leading curly brace.
-- Place 1 space before the opening parenthesis in ``if``, ``while``, etc.
-- Place 1 space after colon.
-- Place no space before the argument list in function calls and declarations, e.g. ``function fight() { ... }``
-- Set off operators with spaces, e.g. ``var x = 2 + 2;``
-- No whitespace at the end of line or on blank lines.
-- Lines should be no longer than 120 characters. There are 2 exceptions, both allowing the line to exceed 120 characters:
-    - If the line contains a comment with a long URL.
-    - If the line contains a regex literal. This prevents having to use the regex constructor which requires otherwise
-      unnecessary string escaping.
-- End files with a single newline character.
-
-
-Use indentation when making long method chains. Use a leading dot, which emphasises that the line is a method call,
-not a new statement.
-
-.. code-block:: javascript
-
-    // bad
-    $('#items').find('.selected').highlight().end().find('.open').updateCount();
-
-    // bad
-    $('#items').
-        find('.selected').
-            highlight().
-            end().
-        find('.open').
-            updateCount();
-
-    // good
-    $('#items')
-        .find('.selected')
-            .highlight()
-            .end()
-        .find('.open')
-            .updateCount();
-
-Leave a blank line after blocks and before the next statement
-
-.. code-block:: javascript
-
-    // bad
-    if (foo) {
-        return bar;
-    }
-    return baz;
-
-    // good
-    if (foo) {
-        return bar;
-    }
-
-    return baz;
-
-    // bad
-    var obj = {
-        foo: function() {
-        },
-        bar: function() {
-        }
-    };
-    return obj;
-
-    // good
-    var obj = {
-        foo: function() {
-        },
-
-        bar: function() {
-        }
-    };
-
-    return obj;
-
-Use newlines to group logically related pieces of code. For example:
-
-.. code-block:: javascript
-
-    doSomethingTo(x);
-    doSomethingElseTo(x);
-    andThen(x);
-
-    nowDoSomethingWith(y);
-
-    andNowWith(z);
-
-
-Commas
-======
-
-- Leading commas: God, **no**!
-- Additional trailing comma: **No**
-
-.. code-block:: javascript
-
-    // bad
-    var hero = {
-        firstName: 'Kevin',
-        lastName: 'Flynn',
-    };
-
-    var heroes = [
-        'Batman',
-        'Superman',
-    ];
-
-    // good
-    var hero = {
-        firstName: 'Kevin',
-        lastName: 'Flynn'
-    };
-
-    var heroes = [
-        'Batman',
-        'Superman'
-    ];
-
-
-Semicolons
-==========
-
-Yes, always.
-
-.. code-block:: javascript
-
-    // bad
-    (function () {
-        var name = 'Skywalker'
-        return name
-    })()
-
-    // good
-    (function () {
-        var name = 'Skywalker';
-        return name;
-    })();
-
-    // good (guards against the function becoming an argument when two files with IIFEs are concatenated)
-    // this should not happen if the previous example is enforced, but sometimes we have no control over vendor code
-    ;(function () {
-        var name = 'Skywalker';
-        return name;
-    })();
-
-
-Type Casting and Coercion
-=========================
-
-Strings:
-
-.. code-block:: javascript
-
-    //  => this.reviewScore = 9;
-
-    // bad
-    var totalScore = this.reviewScore + '';
-
-    // good
-    var totalScore = '' + this.reviewScore;
-
-    // bad
-    var totalScore = '' + this.reviewScore + ' total score';
-
-    // good
-    var totalScore = this.reviewScore + ' total score';
-
-Numbers:
-Use parseInt for ``Numbers`` and always with a radix for type casting.
-
-.. code-block:: javascript
-
-    var inputValue = '4';
-
-    // very bad
-    var val = new Number(inputValue);
-
-    // bad
-    var val = +inputValue;
-
-    // bad
-    var val = inputValue >> 0;
-
-    // bad
-    var val = parseInt(inputValue);
-
-    // ok
-    var val = Number(inputValue);
-
-    // good
-    var val = parseInt(inputValue, 10);
-
-Booleans:
-
-.. code-block:: javascript
-
-    var age = 0;
-
-    // bad
-    var hasAge = new Boolean(age);
-
-    // ok
-    var hasAge = Boolean(age);
-
-    // good
-    var hasAge = !!age;
+Common patterns
+===============
 
 
 Loops
-=====
+-----
 
 Use ``for-in`` only for iterating over keys in an ``Object``, never over an ``Array``.
 
 
 Naming conventions
-==================
+------------------
 
 Refer to guidelines.
 Use leading underscore to denote private methods/properties.
@@ -843,7 +855,7 @@ The only place where it's allowed to use single letter variable is in event call
 
 
 Events
-======
+------
 
 When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a
 hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding
@@ -875,7 +887,7 @@ prefer:
 
 
 Templates
-=========
+---------
 
 When passing data to JS templates (using underscore.js / window.tmpl by J. Resig) - always pass an object that has only
 one property, and that property is the data you need.
@@ -916,7 +928,7 @@ You will have explicit scope without any unexpected behaviours.
 
 
 jQuery
-======
+------
 
 Do not prefix jQuery variables with ``$``.
 Always cache jQuery lookups.
@@ -949,52 +961,8 @@ Always cache jQuery lookups.
         });
     }
 
-
-ECMAScript 5
-============
-
-Use where appropriate. Use array methods for working with arrays, but don't use them when working with array-like
-objects such as jQuery collections. For them use ``$.fn.each`` instead.
-
-Prefer ``Array#forEach`` over ``for () {}`` loop.
-
-.. code-block:: javascript
-
-    var fighters = [
-        {
-            name: 'Jonny Cage',
-            dead: true
-        },
-        {
-            name: 'Kung Lao',
-            dead: true
-        },
-        {
-            name: 'Raiden',
-            dead: false
-        }
-    ];
-
-    // bad
-    var i;
-    var l = fighters.length;
-
-    for (; i < l; i++) {
-        console.log(fighters[i].name + ' ' + (fighters[i].dead ? 'lost' : 'did not lose'));
-    }
-
-    // good
-    fighters.forEach(function (fighter) {
-        console.log(fighter.name + ' ' + (fighter.dead ? 'lost' : 'did not lose'));
-    });
-
-
-More info on ES5 compatibility `here
-<http://kangax.github.io/compat-table/es5/>`_
-
-
 Passing data to components
-==========================
+--------------------------
 
 Avoid instantiating components in inline scripts. Instead pass the data to the components through data attributes.
 
@@ -1048,8 +1016,8 @@ for all existing instances of the widget even if they have different options.
     }):
 
 
-Miscellaneous
-=============
+Magic numbers
+-------------
 
 - Avoid magic numbers. Try to parametrise or use constants.
 
@@ -1091,3 +1059,47 @@ Miscellaneous
         default:
             z();
     }
+
+
+ECMAScript 5
+============
+
+Use where appropriate. Use array methods for working with arrays, but don't use them when working with array-like
+objects such as jQuery collections. For them use ``$.fn.each`` instead.
+
+Prefer ``Array#forEach`` over ``for () {}`` loop.
+
+.. code-block:: javascript
+
+    var fighters = [
+        {
+            name: 'Jonny Cage',
+            dead: true
+        },
+        {
+            name: 'Kung Lao',
+            dead: true
+        },
+        {
+            name: 'Raiden',
+            dead: false
+        }
+    ];
+
+    // bad
+    var i;
+    var l = fighters.length;
+
+    for (; i < l; i++) {
+        console.log(fighters[i].name + ' ' + (fighters[i].dead ? 'lost' : 'did not lose'));
+    }
+
+    // good
+    fighters.forEach(function (fighter) {
+        console.log(fighter.name + ' ' + (fighter.dead ? 'lost' : 'did not lose'));
+    });
+
+
+More info on ES5 compatibility `here
+<http://kangax.github.io/compat-table/es5/>`_
+

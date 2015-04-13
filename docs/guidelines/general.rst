@@ -34,6 +34,7 @@ last few years, but your brain has not. Better to use screen estate for splits, 
 
     - **lowercase**, **camelCase** or **hyphened separation** are all good, **no special characters** except for
       underscore ``_``, we love that one
+    - when not said otherwise, use dashes ``-`` for file naming
     - Always use full words instead of shorthands, ``number`` instead of ``nr``
     - `BEM <https://bem.info/>`_ is a nice methodology to be aware of
 

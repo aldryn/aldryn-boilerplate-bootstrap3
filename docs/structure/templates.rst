@@ -1,52 +1,59 @@
 Templates
 =========
 
-Django automatically looks for a ``base.html`` yet our base extends ``base_root.html``. This is a good example of how
-Django's template inheritance is working. In order to keep the basic html structure minimalistic, we outsource
-all head and foot relevant code into base_html which makes this file better maintainable.
+.. note::
+
+    The entry point for every website is ``/templates/base.html`` following the rules of the `django template engine
+    <https://docs.djangoproject.com/en/dev/topics/templates/>`_. Templates usually ``{% extends %}`` from base.html.
+    The base file itself extends from ``base_root.html``. This is a good example of how Django's template inheritance
+    is working.
+
+The following templates are always required:
+
+- ``404.html`` for 404 error handling
+- ``500.html`` or critical errors, **only add generic html without template tags**
+- ``base.html`` entry point
 
 
-Where to start
---------------
-
-Build your general structure within **base.html**. This includes namely the header and the footer.
-Do not split up header and footer into separate files, you can use django blocks and overwrite default
-behaviours when needed. Additional structure should be defined within the CMS templates:
-
-
-Content Management
-------------------
-
-Within ``setting.py`` we can define so called **Templates** which are than available over django CMS toolbars
-**Page > Templates** UI. These templates can have a different structures. In the boilerplate there are four
-predefined templates:
-
-* fullsize.html
-* sidebar_left.html
-* sidebar_right.html
-* tpl_home.html
-
-When choosing a name, be descriptive about their uses as the customer can set them by himself. If I would add a more
-narrow header option for fullsize, I would simply call it ``fullsize_simple.html``.
-
-
-Menu
-----
-
-All menu relevant templates are kept within ``templates/includes/menu/*.html``. These display what classes are used
-to render a navigation, breadcrumb or even the pagenav.
-
-
-Messages
---------
-
-You need to be aware of the `django message framework <https://docs.djangoproject.com/en/dev/ref/contrib/messages/>`_
-which displays global notifications or error messages. This file is kept within ``templates/includes/messages.html``
-and included within ``templates/base.html``.
-
-Analytics
+includes/
 ---------
 
-Store all analytics code within the designated file in ``templates/includes/analytics.html`` which will be injected
-right after the opening ``<body>`` tag. Google Analytics is already pre-prepared and will be shown when adding
-the required UA-XXXXX code within the CMS.
+Global inclusion files should be added here such as the `navigation
+<http://django-cms.readthedocs.org/en/develop/reference/navigation.html>`_, `django messages
+<https://docs.djangoproject.com/en/dev/ref/contrib/messages/>`_ or tracking codes.
+
+
+Page Templates
+--------------
+
+django CMS allows you to set `CMS_TEMPLATES
+<http://docs.django-cms.org/en/latest/reference/configuration.html#cms-templates>`_
+which can be chosen within the cms by the user.
+
+.. image:: ../_static/toolbar-templates.png
+
+The following templates are provided from the start:
+
+- ``fullwidth.html`` uses the 100% span of the bootstrap grid
+- ``sidebar_left.html`` creates a left sidebar with the content placed on the right
+- ``sidebar_right.html`` creates a right sidebar with the content placed on the left
+- ``tpl_home.html`` specific template for the landing page
+
+
+Page Types
+----------
+
+You can save a CMS page as "Page Type" and re-use it later when creating a new page. Simply select "Page > Save as Page
+Type .." and select a name. You can create a new page by choosing "Page > Add Page > New Page" and choose the
+"Page type" you want to use. That drop down does not show up if there are no page types saved.
+
+Page types get listed separately within the menu tree, so you can change them after saving again if you want.
+
+.. image:: ../_static/toolbar-page-types.png
+
+
+Blocks and Placeholders
+-----------------------
+
+The content block ``{% block content %}{% endblock %}`` and placeholder ``{% placeholder content %}`` always need
+to be present.

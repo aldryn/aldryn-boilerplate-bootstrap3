@@ -49,6 +49,7 @@ var patterns = {
         '!' + paths.sass + 'layout/_print.scss'
     ]
 };
+patterns.jshint = patterns.js.concat(['!' + paths.js + 'libs/*.js', './gulpfile.js']);
 
 var port = parseInt(process.env.PORT, 10) || 8000;
 
@@ -57,12 +58,13 @@ var port = parseInt(process.env.PORT, 10) || 8000;
 gulp.task('lint', ['jslint', 'scsslint']);
 
 gulp.task('jslint', function () {
-    gulp.src(patterns.js.concat(['!' + paths.js + 'libs/*.js', './gulpfile.js']))
+    gulp.src(patterns.jshint)
         .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(jscs()).on('error', function (error) {
+        .pipe(jscs())
+        .on('error', function (error) {
             gutil.log('\n' + error.message);
-        });
+        })
+        .pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('scsslint', function () {
@@ -122,17 +124,19 @@ gulp.task('browser', function () {
 
 // #########################################################
 // #TESTS#
-gulp.task('tests', function () {
+gulp.task('tests', ['lint'], function () {
+    // run javascript tests
     karma.start({
         'configFile': __dirname + '/tests/karma.conf.js',
-        'autoWatch': true
+        // 'autoWatch': true,
+        'singleRun': true
     });
 });
 
 // #####################################################################################################################
 // #COMMANDS#
 gulp.task('watch', function () {
-    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint']);
+    gulp.watch(patterns.jshint, ['lint']);
 });
 
 gulp.task('default', ['lint', 'browser', 'watch']);

@@ -129,13 +129,13 @@ For example, lets take a look at the following code snippet:
         <p>Hello World</p>
     </div>
 
-We don't need to add specific classes to the **h2** as we can control the inner style using ``.addon-blog``. However
-more complicated structures such as lead, content, author, meta infos, tags can require their own class names:
+We should handle HTML modular and avoid type selectors at all costs. Add additional classes for lead, content, author,
+meta infos, tags and so on. The content section itself can than contain the usual html code:
 
 .. code-block:: html
 
     <div class="addon-blog">
-        <h2>My Blog</h2>
+        <h2 class="blog-heading">My Blog</h2>
         <p class="blog-lead">Hello World</p>
         <div class="blog-content">
             <h3>Details</h3>
@@ -144,8 +144,8 @@ more complicated structures such as lead, content, author, meta infos, tags can 
         </div>
         <div class="blog-author">Dummy Man</div>
         <ul class="blog-tags tags">
-            <li><a href="#">News</a>
-            <li><a href="#">Blog</a>
-            <li><a href="#">Tags</a>
+            <li class="blog-tag-items"><a href="#">News</a>
+            <li class="blog-tag-items"><a href="#">Blog</a>
+            <li class="blog-tag-items"><a href="#">Tags</a>
         </ul>
     </div>

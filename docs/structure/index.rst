@@ -4,7 +4,7 @@ Structure
 .. note::
 
     This section covers naming conventions for folders and sub-directories. The correct placing of files is imperative
-    for a common shared structure. Follow those guidelines closely to ensure correct file placements.
+    for a common shared structure. It is simpler to find code when you know where to look.
 
 .. toctree::
     :maxdepth: 2

@@ -3,10 +3,10 @@ Static
 
 .. note::
 
-    As static is publicly accessible, avoid adding sensitive files into this directory.
+    As ``/static`` is publicly accessible, avoid adding sensitive files into this directory.
 
-In general the **root folder** ``/static`` should be kept clean. Only favicons should be placed there. They get picked
-up by the templates automatically.
+Keep the **root path** of ``/static`` simple and clean. Only favicons should be placed there. They ultimately get picked
+up by the ``base_root.html`` template.
 
 
 css/
@@ -31,14 +31,15 @@ Demo images (which might be later integrated as media files via filer) should be
 This folder will be ignored by the ``gulp preprocess`` and ``gulp images`` commands.
 
 Make use of grouping and create additional sub-directories such as ``/static/img/icons`` or ``/static/img/visuals`` if
-the file counts reaches a certain threshold.
+the file count reaches a certain threshold.
 
 
 js/
 ---
 
-The same structure approach as described within :doc:`private` is applied to the js directory. *layout/*, *settings/*
-and *sites/* are essentially not required but may be used.
+The same structure approach as described within :doc:`private` is applied to the js directory. */layout*, */settings*
+and */sites* are essentially not required but may be used. jQuery is an essential part and should be treated the same
+as the Bootstrap component.
 
 
 swf/

@@ -10,6 +10,6 @@ Structure
     :maxdepth: 2
 
     general
+    private
     markup
-    styles
     javascript

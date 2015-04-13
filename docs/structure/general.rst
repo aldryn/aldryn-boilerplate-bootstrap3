@@ -12,6 +12,8 @@ General
     static/
     templates/
 
+The starting point for each entry is always called ``base.ext``. For HTML ``base.html``, SASS ``base.scss``, JavaScript
+``base.js`` – you get the drift. In this case you always know which file you should look after **first**.
 Lets take a closer look at each individual folder:
 
 
@@ -20,7 +22,7 @@ docs/
 
 The full documentation is stored within ``/docs`` and gets compiled into ``/docs/_build`` when running ``make run``.
 The documentation gets automatically compiled to `ReadTheDocs
-<https://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/>`_ once a push is commenced.
+<https://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/>`_ once a push to *master* is commenced.
 More information on how to contribute to the documentation can be found within the :doc:`../contribution/index` section.
 
 

@@ -11,6 +11,7 @@ General
     private/
     static/
     templates/
+    tests/
 
 The starting point for each entry is always called ``base.ext``. For HTML ``base.html``, SASS ``base.scss``, JavaScript
 ``base.js`` – you get the drift. In this case you always know which file you should look after **first**.
@@ -82,3 +83,9 @@ The default *index.html* is always ``templates/base.html``.
 
 Global inclusion files are placed within ``templates/includes/``. Addons normally have their own *includes/* folder
 so they are not overcrowding the global includes folder.
+
+
+tests/
+------
+
+The test setup and structure is described in more depth within the :doc:`../testing/index` section.

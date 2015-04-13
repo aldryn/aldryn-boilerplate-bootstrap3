@@ -40,8 +40,6 @@ js/
 The same structure approach as described within :doc:`private` is applied to the js directory. *layout/*, *settings/*
 and *sites/* are essentially not required but may be used.
 
-The current state of tests are documented within the :doc:`../testing/index.rst`.
-
 
 swf/
 ----

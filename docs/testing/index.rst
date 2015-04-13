@@ -1,5 +1,5 @@
-Test Suite
-##########
+Testing
+#######
 
 .. warning::
 

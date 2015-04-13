@@ -4,7 +4,8 @@ Comments
 .. note::
 
     If peppering your code with lots of comments is good, then having zillions of comments in your code must be great,
-    right? Not quite. Comments in code are a double edged sword, use them to describe what's being done.
+    right? Not quite. Comments in code are a double edged sword, use them to describe what's being done not what you
+    are thinking about.
 
 
 It doesn't make sense to comment every step you do in your program. Comments should discuss why something is done,
@@ -14,7 +15,7 @@ Section Comments
 ----------------
 
 The first separation style is *section comment*. This uses the full 120 width span ideally placed to separate large
-chunks of logic::
+chunks of logic or a nice addition to the top of a file::
 
     // #####################################################################################################################
     // #NAME#
@@ -50,7 +51,6 @@ code:
         total = 0;
         ...
     }
-
 
 | **TODO:**
 | to annotate solutions to problems with the code
@@ -90,11 +90,9 @@ Formatting
     - Add proper whitespaces
     - In general use lowercases except for the *Notes*
 
-Valid
-*****
-
 .. code-block:: javascript
 
+    good
     // TODO: this needs additional review
     // square root of n with Newton-Raphson approximation
     /**
@@ -104,11 +102,9 @@ Valid
      * @namespace Cl
      */
 
-Invalid
-*******
-
 .. code-block:: javascript
 
+    bad
     //TODO: THIS NEEDS ADDITIONAL REVIEW
     //
     // square root of n with Newton-Raphson approximation

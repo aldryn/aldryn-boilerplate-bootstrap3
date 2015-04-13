@@ -9,31 +9,22 @@ Styles
 Naming
 ------
 
-.. admonition:: Files
-    :class: `important`
+.. important::
 
     - Use **underscores** for scss file naming
     - Use only **dashes** to separate class/ID names
 
-Valid
-*****
-
 .. code-block:: text
 
+    // good
     search.scss, marketing_site.scss or theme_dark_blog.scss
-
-.. code-block:: html
 
     class="blog blog-item blog-item-featured"
 
-Invalid
-*******
-
 .. code-block:: text
 
+    // bad
     Search.scss, marketingSite.scss or theme-dark-blog.scss
-
-.. code-block:: html
 
     class="blog blogItem blog_item__featured"
 
@@ -41,20 +32,17 @@ Invalid
 Nesting
 -------
 
-.. admonition:: Tree
-    :class: `important`
+.. important::
 
     - Don't overuse nesting, nest elements to a max of **4 indends**
 
-With great power comes great responsibility (just wanted to throw that in here). When writing in **sass** or **less** we
+With great power comes great responsibility (just wanted to throw that in here). When writing in **SASS** or **LESS** we
 sometimes forget performance over laziness. While nesting is very powerful, we should avoid unnecessary levels or
-blocks that can be achieved simpler. A good example is the following code:
-
-Valid
-*****
+blocks that can be simplified.
 
 .. code-block:: scss
 
+    // good
     .nav-main {
         ul {
             @extend list-reset;
@@ -67,11 +55,9 @@ Valid
         }
     }
 
-Invalid
-*******
-
 .. code-block:: scss
 
+    // bad
     .nav-main {
         ul {
             @extend list-reset;
@@ -88,19 +74,18 @@ Invalid
 Formatting
 ----------
 
-.. admonition:: Code
-    :class: `important`
+.. important::
 
-    - Always add a space after the colon
+    - Always add a space after the colon ``:``
     - Only write one css property per line
-    - Avoid explicitivity such as ``div.container`` or ``ul > li > a``
+    - Avoid `specificity <https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity>`_
+      such as ``div.container`` or ``ul > li > a``
     - Write color values in lowercase and avoid color names
 
-Valid
-*****
 
 .. code-block:: css
 
+    // good
     .item {
         color: #fff;
         padding: 10px;
@@ -108,11 +93,10 @@ Valid
         background: no-repeat left top;
     }
 
-Invalid
-*******
 
 .. code-block:: css
 
+    // bad
     article.item {
         color: white;
         padding: 10px; margin-left: 0; margin-top: 0; margin-bottom: 10px;
@@ -124,10 +108,10 @@ Invalid
 Ordering
 --------
 
-.. admonition:: Tree
-    :class: `important`
+.. important::
 
     - Use block-style and group elements underneath
+    - Checkout ``scss-lint.json`` for a comprehensive ordering example
 
 #. includes (compass includes)
 #. extending
@@ -141,8 +125,6 @@ Ordering
 
 Combine attributes such as background-image, background-color, background-repeat into
 ``background: #fff url("image.png") no-repeat left top;``.
-
-Also ensure combined css selectors are always on a new line.
 
 Example
 *******

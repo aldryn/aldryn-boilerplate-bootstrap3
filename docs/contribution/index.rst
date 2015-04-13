@@ -34,6 +34,17 @@ Now you can open **http://localhost:8000** on your favorite browser and start ch
 You need to be aware of `reStructuredText
 <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ to format the documentation properly.
 
+.. admonition:: Guidelines
+    :class: `important`
+
+    - always start paths with a `/` and leave the trailing slash
+    - leave two spaces before a title and one space for the 3rd level titles
+    - django is written in lowercase
+    - django CMS is written without hyphen and CMS as uppercase
+    - Aldryn is written with a capital A
+    - Write names properly: SASS, Bootstrap, JavaScript instead of sass, bootstrap and javascript
+    - use dashes for list
+
 
 Pull Requests
 =============

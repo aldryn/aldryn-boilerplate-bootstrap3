@@ -9,31 +9,22 @@ Markup
 Naming
 ------
 
-.. admonition:: Files
-    :class: `important`
+.. important::
 
     - Use **underscores** for html file naming
     - Use lowercase for **all** attributes
 
-Valid
-*****
-
-.. code-block:: text
-
-    two_column_template.html, tpl_master.html or ask_for_additional_information.html
-
 .. code-block:: html
+
+    // good
+    two_column_template.html, tpl_master.html or ask_for_additional_information.html
 
     <div class="box box-highlighted" data-rel="#my-modal"> ... </div>
 
-Invalid
-*******
-
-.. code-block:: text
-
-    two_column-template.html, tpl-master.html, askForAdditionalInformation.html
-
 .. code-block:: html
+
+    // bad
+    two_column-template.html, tpl-master.html, askForAdditionalInformation.html
 
     <DIV class="box boxHighlighted" DATA-rel="#my_modal"> ... </DIV>
 
@@ -41,18 +32,15 @@ Invalid
 Indendation
 -----------
 
-.. admonition:: Django
-    :class: `important`
+.. important::
 
     - Always add an indend after django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block %}`` ...
     - Use singlelines within ``{% addtoblock %}`` for **files** and multilines for ``<code>``
     - **Code readability** always wins
 
-Valid
-*****
-
 .. code-block:: django
 
+    // good
     {% block content %}
         <div class="plugin-blog">
             {% if true %}
@@ -70,11 +58,9 @@ Valid
     </script>
     {% endaddtoblock %}
 
-Invalid
-*******
-
 .. code-block:: django
 
+    // bad
     {% block content %}
     <div class="plugin-blog">{% if true %}<p>Hello World</p>{% endif %}</div>
     {% endblock content %}
@@ -94,8 +80,7 @@ Invalid
 IDs vs Classes
 --------------
 
-.. admonition:: Don't use IDs
-    :class: `important`
+.. important::
 
     - Avoid IDs ad all cost
     - When using IDs always use a **unique name**
@@ -106,11 +91,9 @@ style sets like ``box box-wide box-hint``.
 Try to avoid declaring ID's at all. They should only be used to reference form elements or for in-page navigation
 in which case you need to make the name **absolutely unique**.
 
-Valid
-*****
-
 .. code-block:: html
 
+    // good
     <div class="box box-highlighted box-8723"> ... </div>
     <!-- IDs only for navigation jumper through <a href="#page-anchor-team"></a> -->
     <div id="page-anchor-team"></div>
@@ -118,11 +101,9 @@ Valid
     <label for="field-id12-firstname">Name</label>
     <input type="text" name="firstname" id="field-id12-firstname">
 
-Invalid
-*******
-
 .. code-block:: html
 
+    // bad
     <div class="box box-highlighted" id="box-8723"> ... </div>
     <!-- IDs only for navigation jumper through <a href="#page-anchor-team"></a> -->
     <div id="team"></div>
@@ -136,7 +117,7 @@ Modular
 
 .. important::
 
-    Try to keep the html structure simple and avoid unnecessary elements. It is sometimes easier to use a single div with
+    Try to keep the HTML structure simple and avoid unnecessary elements. It is sometimes easier to use a single div with
     a single class rather than multiple divs with multiple classes.
 
 For example, lets take a look at the following code snippet:

@@ -64,14 +64,6 @@ code:
         ...
     }
 
-| **INFO:**
-| provides additional help if something might be unclear or requires additional description
-|
-
-.. code-block:: javascript
-
-    // INFO: We had to loop twice through the element as the provided data is nested multiple times
-
 | **DOCS:**
 | provides a simple docs link
 |

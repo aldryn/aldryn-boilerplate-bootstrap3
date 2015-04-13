@@ -17,8 +17,9 @@
     color: #fff;
     text-align: center;
     text-transform: uppercase;
+    // do not add paddings or margings on the container
     width: 100%;
-    height: auto; // INFO: do not add paddings or margings on the container
+    height: auto;
     background-color: $brand-danger;
 
     h3,
@@ -47,14 +48,14 @@
         }
     }
 
-    // INFO: add spacer in order for cross styling between noscript and out-of-date
+    // add spacer in order for cross styling between noscript and out-of-date
     .btn-outline,
     noscript h3 {
         margin-bottom: $line-height-computed;
     }
 }
 
-// INFO: additionally also implement a warning when JavaScript is disabled
+// additionally also implement a warning when JavaScript is disabled
 .noscript .browser-outdated {
     display: block;
     p,

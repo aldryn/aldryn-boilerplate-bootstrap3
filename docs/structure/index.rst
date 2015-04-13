@@ -11,5 +11,5 @@ Structure
 
     general
     private
-    markup
-    javascript
+    static
+    templates

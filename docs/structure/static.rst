@@ -1,0 +1,49 @@
+Static
+======
+
+.. note::
+
+    As static is publicly accessible, avoid adding sensitive files into this directory.
+
+In general the **root folder** ``/static`` should be kept clean. Only favicons should be placed there. They get picked
+up by the templates automatically.
+
+
+css/
+----
+
+CSS gets automatically compiled via ``/private/config.rb`` into this folder. You can add additional files such as
+``*.htc`` if required. But **always add css files through SASS**.
+
+
+fonts/
+------
+
+All fonts should be placed here including font-icons. You can create sub-directories to create a better overview.
+This folder might not be required if you are implemting fonts via services such as
+`Google Fonts <http://www.google.com/fonts>`_ or `fonts.com <http://fonts.com>`_.
+
+
+img/
+----
+
+Demo images (which might be later integrated as media files via filer) should be placed within ``/static/img/dummy``.
+This folder will be ignored by the ``gulp preprocess`` and ``gulp images`` commands.
+
+Make use of grouping and create additional sub-directories such as ``/static/img/icons`` or ``/static/img/visuals`` if
+the file counts reaches a certain threshold.
+
+
+js/
+---
+
+The same structure approach as described within :doc:`private` is applied to the js directory. *layout/*, *settings/*
+and *sites/* are essentially not required but may be used.
+
+The current state of tests are documented within the :doc:`../testing/index.rst`.
+
+
+swf/
+----
+
+Old school, currently only required to use ``/static/js/libs/swfobject.min.js``.

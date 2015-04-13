@@ -67,12 +67,8 @@ The general folder layout looks as follows:
     ├─ swf/
     └─ ...
 
-If folders are not required, just simply remove them. For demo content (which might be later integrated as media files)
-create a folder called **dummy/**, for example: ``/static/img/dummy`` and place those images there. This folder will
-be ignored by the ``gulp preprocess`` and ``gulp images`` commands.
-
-When a folder reaches a certain file count, make use of grouping and create additional sub-directories such as
-``/static/img/icons`` or ``/static/js/addons/jquery``.
+If folders are not required, just simply remove them. When a folder reaches a certain file count, make use of grouping
+and create additional sub-directories such as ``/static/img/icons`` or ``/static/js/addons/jquery``.
 
 
 templates/

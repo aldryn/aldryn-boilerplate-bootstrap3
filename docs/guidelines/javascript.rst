@@ -15,10 +15,12 @@ Naming
     :class: `important`
 
     - Use **dot** annotation ``test.base.js`` for javascript file naming
+    - Use the libraries prefix such as ``cl.xplorer.js`` or ``jquery.tablesorter.js`` for file naming
     - Name ``variablesLikeThis``, ``ClassesLikeThis``, ``CONSTANTS_LIKE_THIS`` and `events-like-this`.
     - Use the ``js-`` prefix when working with JS related selectors and do not add stylings to it
     - Never use comma separation for variable declerations like ``var a, b, c;``
     - Never use $ for variable names like ``var $el = $('.el');``
+    - We are using the ``Cl.`` singleton for all custom JavaScript code
 
 When using jQuery to refer to a DOM instance, always use the ``js-`` prefix to separate
 styles from JavaScript functionality. For example: ``<div class="addon addon-gallery js-addon-gallery"></div>``.

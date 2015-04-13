@@ -84,6 +84,16 @@ Formatting
 
 .. code-block:: javascript
 
+    bad
+    //TODO: THIS NEEDS ADDITIONAL REVIEW
+    //
+    // square root of n with Newton-Raphson approximation
+    /**
+     * Contains various helpers, feel free to extend and adapt
+     */
+
+.. code-block:: javascript
+
     good
     // TODO: this needs additional review
     // square root of n with Newton-Raphson approximation
@@ -92,16 +102,6 @@ Formatting
      *
      * @class Utils
      * @namespace Cl
-     */
-
-.. code-block:: javascript
-
-    bad
-    //TODO: THIS NEEDS ADDITIONAL REVIEW
-    //
-    // square root of n with Newton-Raphson approximation
-    /**
-     * Contains various helpers, feel free to extend and adapt
      */
 
 

@@ -32,20 +32,20 @@ Even when removing the js class (or just waiting for javascript to kick in), the
 
 .. code-block:: javascript
 
+    // bad
+    CL.Utils.js, jquery_tooltip.js, testWebsiteCreateNew.js
+
+    var $jquery, current_state;
+    var test-website-create-new;
+
+.. code-block:: javascript
+
     // good
     cl.utils.js, jquery.tooltip.js or test.website.create.new.js
 
     var jquery;
     var currentState;
     var nextIndexValue;
-
-.. code-block:: javascript
-
-    // bad
-    CL.Utils.js, jquery_tooltip.js, testWebsiteCreateNew.js
-
-    var $jquery, current_state;
-    var test-website-create-new;
 
 
 Formatting
@@ -60,18 +60,6 @@ Formatting
 
 .. code-block:: javascript
 
-    // good
-    function (container) {
-        var container = $(container);
-        if (container.length) {
-            // do something
-        } else {
-            // so something else
-        }
-    }
-
-.. code-block:: javascript
-
     // bad
     function(cont){
         var c = $(cont);
@@ -80,6 +68,18 @@ Formatting
         }
         else
         {
+            // so something else
+        }
+    }
+
+.. code-block:: javascript
+
+    // good
+    function (container) {
+        var container = $(container);
+        if (container.length) {
+            // do something
+        } else {
             // so something else
         }
     }
@@ -98,13 +98,6 @@ Implementation
 
 .. code-block:: django
 
-    // good
-    <div class="dashboard js-dashboard" data-dashboard="..."> ... </div>
-    <!-- javascript gets initialised within the file -->
-    {% addtoblock "js" %}<script src="{% static "js/addons/cl.dashboard.js" %}"></script>{% endaddtoblock %}
-
-.. code-block:: django
-
     // bad
     <div class="dashboard" id="dashboard"> ... </div>
     {% addtoblock "js" %}
@@ -120,6 +113,13 @@ Implementation
     });
     </script>
     {% endaddtoblock "js" %}
+
+.. code-block:: django
+
+    // good
+    <div class="dashboard js-dashboard" data-dashboard="..."> ... </div>
+    <!-- javascript gets initialised within the file -->
+    {% addtoblock "js" %}<script src="{% static "js/addons/cl.dashboard.js" %}"></script>{% endaddtoblock %}
 
 
 Patterns

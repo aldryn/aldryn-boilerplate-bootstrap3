@@ -16,17 +16,17 @@ Naming
 
 .. code-block:: html
 
-    // good
-    two_column_template.html, tpl_master.html or ask_for_additional_information.html
-
-    <div class="box box-highlighted" data-rel="#my-modal"> ... </div>
-
-.. code-block:: html
-
     // bad
     two_column-template.html, tpl-master.html, askForAdditionalInformation.html
 
     <DIV class="box boxHighlighted" DATA-rel="#my_modal"> ... </DIV>
+
+.. code-block:: html
+
+    // good
+    two_column_template.html, tpl_master.html or ask_for_additional_information.html
+
+    <div class="box box-highlighted" data-rel="#my-modal"> ... </div>
 
 
 Indentation
@@ -37,6 +37,24 @@ Indentation
     - Always add an indent after django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block %}`` ...
     - Use single lines within ``{% addtoblock %}`` for **files** and multilines for ``<code>``
     - **Code readability** always wins
+
+.. code-block:: django
+
+    // bad
+    {% block content %}
+    <div class="plugin-blog">{% if true %}<p>Hello World</p>{% endif %}</div>
+    {% endblock content %}
+
+    {% addtoblock "js" %}
+    <script src="{% static "js/libs/jquery.min.js" %}"></script>
+    {% endaddtoblock %}
+    {% addtoblock "js" %}
+        <script>
+            jQuery(document).ready(function ($) {
+                alert('hello world');
+            });
+        </script>
+    {% endaddtoblock %}
 
 .. code-block:: django
 
@@ -58,24 +76,6 @@ Indentation
     </script>
     {% endaddtoblock %}
 
-.. code-block:: django
-
-    // bad
-    {% block content %}
-    <div class="plugin-blog">{% if true %}<p>Hello World</p>{% endif %}</div>
-    {% endblock content %}
-
-    {% addtoblock "js" %}
-    <script src="{% static "js/libs/jquery.min.js" %}"></script>
-    {% endaddtoblock %}
-    {% addtoblock "js" %}
-        <script>
-            jQuery(document).ready(function ($) {
-                alert('hello world');
-            });
-        </script>
-    {% endaddtoblock %}
-
 
 IDs vs Classes
 --------------
@@ -93,16 +93,6 @@ in which case you need to make the name **absolutely unique**.
 
 .. code-block:: html
 
-    // good
-    <div class="box box-highlighted box-8723"> ... </div>
-    <!-- IDs only for navigation jumper through <a href="#page-anchor-team"></a> -->
-    <div id="page-anchor-team"></div>
-    <!-- IDs only for form elements -->
-    <label for="field-id12-firstname">Name</label>
-    <input type="text" name="firstname" id="field-id12-firstname">
-
-.. code-block:: html
-
     // bad
     <div class="box box-highlighted" id="box-8723"> ... </div>
     <!-- IDs only for navigation jumper through <a href="#page-anchor-team"></a> -->
@@ -110,6 +100,16 @@ in which case you need to make the name **absolutely unique**.
     <!-- IDs only for form elements -->
     <label for="firstname">Name</label>
     <input type="text" name="firstname" id="firstname">
+
+.. code-block:: html
+
+    // good
+    <div class="box box-highlighted box-8723"> ... </div>
+    <!-- IDs only for navigation jumper through <a href="#page-anchor-team"></a> -->
+    <div id="page-anchor-team"></div>
+    <!-- IDs only for form elements -->
+    <label for="field-id12-firstname">Name</label>
+    <input type="text" name="firstname" id="field-id12-firstname">
 
 
 Modular

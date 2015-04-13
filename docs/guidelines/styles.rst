@@ -16,17 +16,17 @@ Naming
 
 .. code-block:: text
 
-    // good
-    search.scss, marketing_site.scss or theme_dark_blog.scss
-
-    class="blog blog-item blog-item-featured"
-
-.. code-block:: text
-
     // bad
     Search.scss, marketingSite.scss or theme-dark-blog.scss
 
     class="blog blogItem blog_item__featured"
+
+.. code-block:: text
+
+    // good
+    search.scss, marketing_site.scss or theme_dark_blog.scss
+
+    class="blog blog-item blog-item-featured"
 
 
 Nesting
@@ -39,21 +39,6 @@ Nesting
 With great power comes great responsibility (just wanted to throw that in here). When writing in **SASS** or **LESS** we
 sometimes forget performance over laziness. While nesting is very powerful, we should avoid unnecessary levels or
 blocks that can be simplified.
-
-.. code-block:: scss
-
-    // good
-    .nav-main {
-        ul {
-            @extend list-reset;
-        }
-        li {
-            padding: 5px 10px;
-        }
-        a {
-            color: red;
-        }
-    }
 
 .. code-block:: scss
 
@@ -70,6 +55,21 @@ blocks that can be simplified.
         }
     }
 
+.. code-block:: scss
+
+    // good
+    .nav-main {
+        ul {
+            @extend list-reset;
+        }
+        li {
+            padding: 5px 10px;
+        }
+        a {
+            color: red;
+        }
+    }
+
 
 Formatting
 ----------
@@ -82,6 +82,15 @@ Formatting
       such as ``div.container`` or ``ul > li > a``
     - Write color values in lowercase and avoid color names
 
+.. code-block:: css
+
+    // bad
+    article.item {
+        color: white;
+        padding: 10px; margin-left: 0; margin-top: 0; margin-bottom: 10px;
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
 
 .. code-block:: css
 
@@ -91,17 +100,6 @@ Formatting
         padding: 10px;
         margin: 0 0 10px 0;
         background: no-repeat left top;
-    }
-
-
-.. code-block:: css
-
-    // bad
-    article.item {
-        color: white;
-        padding: 10px; margin-left: 0; margin-top: 0; margin-bottom: 10px;
-        background-repeat: no-repeat;
-        background-position: left top;
     }
 
 
@@ -124,7 +122,7 @@ Ordering
 #. nested elements or parent referencing selectors
 
 Combine attributes such as background-image, background-color, background-repeat into
-``background: #fff url("image.png") no-repeat left top;``.
+``background: #fff url("image.png") no-repeat left top;`` when it makes sense.
 
 Example
 *******

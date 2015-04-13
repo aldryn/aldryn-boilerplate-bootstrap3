@@ -12,3 +12,4 @@ General
 
     whatsinside
     installation
+    configuration

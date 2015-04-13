@@ -54,7 +54,7 @@ Formatting
 .. important::
 
     - Always declare variables on top of the functions and not in-between
-    - Always use semicolons and full brackets except shorthands like
+    - Always use `semicolons <https://www.youtube.com/watch?v=M94ii6MVilw>`_ and full brackets except shorthands like
       ``var i = (true) ? 'yes' : 'no';``
     - Use proper spaces for ``if (true) {} else {}`` or ``function () {}``
 

@@ -124,7 +124,7 @@ gulp.task('browser', function () {
 // #TESTS#
 gulp.task('tests', function () {
     karma.start({
-        'configFile': __dirname + '/static/js/tests/karma.conf.js',
+        'configFile': __dirname + '/tests/karma.conf.js',
         'autoWatch': true
     });
 });

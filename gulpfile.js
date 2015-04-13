@@ -74,6 +74,8 @@ gulp.task('scsslint', function () {
         .pipe(scsslint({
             'config': './scss-lint.json'
         }));
+        // FIXME: tests currently pass even if there is a linting error, the reporter stops all remaining issues :(
+        // .pipe(scsslint.failReporter());
 });
 
 
@@ -128,7 +130,6 @@ gulp.task('tests', ['lint'], function () {
     // run javascript tests
     karma.start({
         'configFile': __dirname + '/tests/karma.conf.js',
-        // 'autoWatch': true,
         'singleRun': true
     });
 });

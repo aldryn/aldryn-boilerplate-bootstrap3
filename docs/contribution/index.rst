@@ -37,13 +37,10 @@ You need to be aware of `reStructuredText
 .. admonition:: Guidelines
     :class: `important`
 
-    - always start paths with a `/` and leave the trailing slash
-    - leave two spaces before a title and one space for the 3rd level titles
-    - django is written in lowercase
-    - django CMS is written without hyphen and CMS as uppercase
-    - Aldryn is written with a capital A
+    - Always start paths with a ``/`` and leave the trailing slash
+    - Leave two spaces before a title
+    - Write "django", "django CMS" or "Aldryn"
     - Write names properly: SASS, Bootstrap, JavaScript instead of sass, bootstrap and javascript
-    - use dashes for list
 
 
 Pull Requests

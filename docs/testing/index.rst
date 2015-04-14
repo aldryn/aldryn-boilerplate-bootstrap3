@@ -6,14 +6,15 @@ Testing
     The test framework is currently in development.
 
 
-JavaScript
-==========
+General
+=======
 
 We are using the `Jasmine <http://jasmine.github.io/>`_ test suite and the `Karma <http://karma-runner.github.io/>`_
-test runner for JavaScript tests. Tests are added within ``/static/js/tests``. For running the tests you need to run
+test runner for behaviour driven tests. All tests are located within ``/tests``. You cna run them by excecuting
 ``gulp tests`` within your console.
 
-Name the files according to the :doc:`../guidelines/javascript` guidelines and use proper prefixing:
+Name the files according to the :doc:`../guidelines/general` and additional guidelines and use proper prefixing,
+for example:
 
 .. code-block:: text
 

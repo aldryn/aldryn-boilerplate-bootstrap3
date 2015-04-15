@@ -4,20 +4,19 @@
    contain the root `toctree` directive.
 
 
-#######
 Welcome
 #######
 
-The most advanced **django-cms** based boilerplate for rapid development. It uses the full potential of the
-`Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile first projects on the web.
-In addition we implement various `best practices <http://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/general/best-practices.html>`_ from within the front-end community.
+Aldryn Boilerplate Bootstrap 3 is the most complete **django CMS** based Boilerplate for rapid development. It uses the
+full potential of the `Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile-first
+projects on the web, and implements various best practices from within the front-end community.
 
-This boilerplate is compatible with `Aldryn <http://www.aldryn.com/>`_.
+This Boilerplate can be used with standalone django CMS websites as well as on the `Aldryn <http://
+www.aldryn.com/>`_ cloud platform.
 
-The latest stable versions is available on GitHub - https://github.com/aldryn/aldryn-boilerplate-bootstrap3
+The latest stable version is available on GitHub - https://github.com/aldryn/aldryn-boilerplate-bootstrap3.
 
 
-#############
 Documentation
 #############
 
@@ -25,17 +24,9 @@ Documentation
     :maxdepth: 2
 
     general/index
-    html/index
-    css/index
-    images/index
-    javascript/index
-
-
-############
-Contribution
-############
-
-.. toctree::
-    :maxdepth: 2
-
-    README.rst
+    guidelines/index
+    structure/index
+    testing/index
+    codestyle/index
+    tips/index
+    contribution/index

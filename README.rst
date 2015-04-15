@@ -2,9 +2,9 @@
 Aldryn Boilerplate Standard
 ===========================
 
-The most advanced **django-cms** based boilerplate for rapid development. It uses the full potential of the
+The most advanced **django CMS** based boilerplate for rapid development. It uses the full potential of the
 `Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile first projects on the web.
-In addition we implement various `best practices <http://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/general/best-practices.html>`_ from within the front-end community.
+In addition we implement various best practices from within the front-end community.
 
 This boilerplate is compatible with `Aldryn <http://www.aldryn.com/>`_.
 
@@ -14,11 +14,10 @@ Documentation
 
 A full documentation can be found on read the docs - http://aldryn-boilerplate-bootstrap3.rtfd.org
 
-For extending the documentation, follow the instructions within ``/docs/README.rst``.
 
+Contribution
+------------
 
-Contribute
-----------
-
-You are very welcome to help improving the aldryn-standard-boilerplate, especially the documentation.
-Feel free to fork and send us pull requests.
+You are very welcome improving this boilerplate for Aldryn and your everyday use, especially the documentation always
+needs love. Feel free to fork and send us pull requests and checkout the
+`contribution guide <http://aldryn-boilerplate-bootstrap3.rtfd.org/contribution/index.html>`_ within our documentation.

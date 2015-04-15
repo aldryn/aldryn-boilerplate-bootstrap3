@@ -5,9 +5,13 @@ Aldryn Boilerplate Bootstrap3
 3.3.0
 -----
 - added scss-lint
-- moved ``addons/_browser.scss`` and ``addons/_select2.scss`` to ``libs``
+- added jasmine and karma
+- moved javascript ``js/tests/`` into the root for a shared test setup
+- moved sass ``addons/_browser.scss`` and ``addons/_select2.scss`` to ``libs``
 - changed gulpfile.js file to fit guidelines
 - removed csscomb but kept settings
+- removed qunit
+- removed ``pie.htc`` and ``box-sizing.htc``
 
 3.2.1
 -----

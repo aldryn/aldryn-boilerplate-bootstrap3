@@ -5,7 +5,7 @@
 
 'use strict';
 
-//######################################################################################################################
+// #####################################################################################################################
 // #IMPORTS#
 var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
@@ -18,7 +18,7 @@ var karma = require('karma').server;
 var scsslint = require('gulp-scss-lint');
 var yuidoc = require('gulp-yuidoc');
 
-//######################################################################################################################
+// #####################################################################################################################
 // #SETTINGS#
 var paths = {
     'css': './static/css/',
@@ -49,20 +49,22 @@ var patterns = {
         '!' + paths.sass + 'layout/_print.scss'
     ]
 };
+patterns.jshint = patterns.js.concat(['!' + paths.js + 'libs/*.js', './gulpfile.js']);
 
 var port = parseInt(process.env.PORT, 10) || 8000;
 
-//######################################################################################################################
+// #####################################################################################################################
 // #LINTING#
 gulp.task('lint', ['jslint', 'scsslint']);
 
 gulp.task('jslint', function () {
-    gulp.src(patterns.js.concat(['!' + paths.js + 'libs/*.js', './gulpfile.js']))
+    gulp.src(patterns.jshint)
         .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(jscs()).on('error', function (error) {
+        .pipe(jscs())
+        .on('error', function (error) {
             gutil.log('\n' + error.message);
-        });
+        })
+        .pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('scsslint', function () {
@@ -72,10 +74,12 @@ gulp.task('scsslint', function () {
         .pipe(scsslint({
             'config': './scss-lint.json'
         }));
+    // FIXME: tests currently pass even if there is a linting error, the reporter stops all remaining issues :(
+    // .pipe(scsslint.failReporter());
 });
 
 
-//##########################################################
+// #########################################################
 // #PREPROCESSING#
 gulp.task('preprocess', ['images', 'docs']);
 
@@ -99,7 +103,7 @@ gulp.task('docs', function () {
         .pipe(gulp.dest(paths.docs));
 });
 
-//##########################################################
+// #########################################################
 // #SERVICES#
 gulp.task('browser', function () {
     var files = [
@@ -120,19 +124,20 @@ gulp.task('browser', function () {
     }, 1000);
 });
 
-//##########################################################
+// #########################################################
 // #TESTS#
-gulp.task('tests', function () {
+gulp.task('tests', ['lint'], function () {
+    // run javascript tests
     karma.start({
-        'configFile': __dirname + '/static/js/tests/karma.conf.js',
-        'autoWatch': true
+        'configFile': __dirname + '/tests/karma.conf.js',
+        'singleRun': true
     });
 });
 
-//######################################################################################################################
+// #####################################################################################################################
 // #COMMANDS#
 gulp.task('watch', function () {
-    gulp.watch(patterns.js.concat(['./gulpfile.js']), ['lint']);
+    gulp.watch(patterns.jshint, ['lint']);
 });
 
 gulp.task('default', ['lint', 'browser', 'watch']);

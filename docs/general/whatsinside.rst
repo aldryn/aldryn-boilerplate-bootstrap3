@@ -1,62 +1,56 @@
-What's Inside
+What's inside
 =============
 
 .. note::
 
-    The following components and settings are included within this boilerplate for your convenience.
+    This Boilerplate employs and configures a number of components.
 
+SASS
+----
 
-SASS vs LESS
-------------
+For CSS pre-processing, we use `SASS <http://sass-lang.com>`_. In particular, we use:
 
-A discussion which, we don't want to start here. We are preferring the official `SASS port
-<https://github.com/twbs/bootstrap-sass>`_ of Bootstrap and the comprehensive
-Compass CSS Authoring Framework. As such all styles are placed within ``/private/sass`` and get compiled to
-``/static/css``.
+* the official `SASS port <https://github.com/twbs/bootstrap-sass>`_ of Bootstrap
+* the `Compass <http://compass-style.org>`_ framework
 
-- http://sass-lang.com
-- http://compass-style.org
-
+All styles should be created in ``/private/sass``, and will be compiled to ``/static/css``.
 
 Bootstrap
 ---------
 
-The full Bootstrap library is imported via the `SASS component
-<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss>`_
-and the `JavaScript component
+The full `Bootstrap library <http://getbootstrap.com>`_ is imported via the `SASS component
+<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss>`_ and the
+`JavaScript component
 <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/static/js/libs/bootstrap.min.js>`_.
+
 The `Glyhpicon <http://getbootstrap.com/components/#glyphicons>`_ icon set has been `disabled
 <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss#L14>`_
 in favour of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_ icon set.
 
-- http://getbootstrap.com
-
-
 Font Awesome
 ------------
 
-The Font Awesome library offers a larger `variety of icons <http://fortawesome.github.io/Font-Awesome/icons/>`_
-far superior than the bootstrap defaults and additional `utility classes
-<http://fortawesome.github.io/Font-Awesome/examples/>`_ are available to you. We implemented the `library
-<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_fontawesome.scss>`_
-separately from the `icon choices
-<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/layout/_iconography.scss>`_.
-This allows for a better customisation and integration of other icon fonts or services.
+The `Font Awesome library <http://fortawesome.github.io/Font-Awesome>`_ offers a larger and better `variety of icons
+<http://fortawesome.github.io/Font-Awesome/icons/>`_ than the Bootstrap defaults. Additional `utility classes
+<http://fortawesome.github.io/Font-Awesome/examples/>`_ are also available.
 
-- http://fortawesome.github.io/Font-Awesome
-
+We have implemented the `library
+<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_fontawesome.scss>`_ separately
+from the `icon choices
+<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/layout/_iconography.scss>`_. This
+allows for better customisation and integration of other icon fonts or services.
 
 JavaScript
 ----------
 
-We are implementing the latest **2.x.x** versions of jQuery as they are being released. In addition we encourage the use
-of `class.js <https://github.com/FinalAngel/classjs>`_, a simple library that helps out with the modular pattern in
-:doc:`../guidelines/javascript`.
+We are implementing the latest **2.x.x** versions of `jQuery <http://jquery.com>`_ as they are
+released. In addition we encourage the use of `class.js <https://github.com/FinalAngel/classjs>`_, a simple library
+that helps out with the modular pattern in :doc:`/general/guidelines/javascript`.
 
 - http://jquery.com
 - https://github.com/FinalAngel/classjs
 
-In addition several commonly used shivs stand available to you including:
+In addition several commonly-used shims are available to you including:
 
 - `The HTML5 Shiv <https://github.com/aFarkas/html5shiv>`_
 - `Respond.js <https://github.com/scottjehl/Respond>`_
@@ -67,16 +61,13 @@ In addition several commonly used shivs stand available to you including:
 Addons
 ******
 
-We are currently implementing the select2.js bootstrap version and cl.debug.js as default addons.
-
-- http://fk.github.io/select2-bootstrap-css/
-- http://finalangel.github.io/classjs-plugins/
-
+We are currently implementing the `select2.js bootstrap version <http://fk.github.io/select2-bootstrap-css/>`_ and
+`cl.debug.js <http://finalangel.github.io/classjs-plugins/>`_ as default addons.
 
 Template Language
 -----------------
 
-As this is a django CMS based boilerplate, naturally we are using the `django template language
+As this is a django CMS based boilerplate, naturally we are using the `Django template language
 <https://docs.djangoproject.com/en/dev/topics/templates/>`_.
 
 In order to implements assets efficiently, `django-sekizai <https://github.com/ojii/django-sekizai>`_ and

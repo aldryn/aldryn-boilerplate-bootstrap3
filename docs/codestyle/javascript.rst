@@ -307,6 +307,7 @@ Don't use `reserved words <http://es5.github.io/#x7.6.1>`_ as keys.
         hidden: true
     };
 
+Do not use quotes for properties, it is only needed for screening reserved words which we are not supposed to use.
 
 Arrays
 ------

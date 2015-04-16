@@ -6,6 +6,7 @@ Aldryn Boilerplate Bootstrap3
 -----
 - added scss-lint
 - added jasmine and karma
+- added separate ``layout/_button.scss`` file for buttons
 - moved javascript ``js/tests/`` into the root for a shared test setup
 - moved Sass ``addons/_browser.scss`` and ``addons/_select2.scss`` to ``libs``
 - changed gulpfile.js file to fit guidelines

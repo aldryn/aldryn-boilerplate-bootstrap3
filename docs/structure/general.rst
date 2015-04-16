@@ -3,7 +3,7 @@ General
 
 .. note::
 
-    Let's cover the core structure of this boilerplate consisting of the main folders:
+    Let's cover the core structure of this Boilerplate consisting of the main folders:
 
 .. code-block:: text
 
@@ -13,30 +13,33 @@ General
     templates/
     tests/
 
-The starting point for each entry is always called ``base.ext``. For HTML ``base.html``, SASS ``base.scss``, JavaScript
-``base.js`` – you get the idea. In this case you always know which file you should look after **first**.
-Lets take a closer look at each individual folder:
+The starting point for each entry is always named "base"``", with the appropriate file extension. For HTML
+``base.html``, Sass ``base.scss``, JavaScript ``base.js`` – you get the idea. This way you always know which file
+you should look after **first**. Lets take a closer look at each individual folder:
 
 
 docs/
 -----
 
-The full documentation is stored within ``/docs`` and gets compiled into ``/docs/_build`` when running ``make run``.
-The documentation gets automatically pushed to `Read the Docs
-<https://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/>`_ once something is committed to the *master* branch.
-More information on how to contribute to the documentation can be found within the :doc:`../contribution/index` section.
+The full documentation is stored within ``/docs`` and is compiled into ``/docs/_build`` when running ``make run``. The
+documentation is automatically pushed to `Read the Docs
+<https://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/>`_ once something is committed to the *master*
+branch. More information on how to contribute to the documentation can be found within the :doc:`/contribution/index`
+section.
 
 
 private/
 --------
 
 .. important::
-    This folder is publicly **not accessible**, all source files are stored safely.
+    This folder is **not published**, nor touched by preprocessing or other build libraries. Anything in here should be
+    and remain safe.
 
-This folder is intended for storing preprocessing libraries such as **sass**, **less**, **coffee** or **haml**.
-Simply create a folder within ``/private`` with the libraries name such as ``/sass``, ``/less`` or ``/haml``.
-Always place required configuration files within the ``/private`` root. Let's take a look at the SASS example using
-the compass configuration file:
+This folder is intended for storing preprocessing library code (Sass, Less, Coffee, HAML, etc). Simply create a folder
+within ``/private`` with appropriate name: ``/sass``, ``/less`` or ``/haml`` and so on as required. Always place
+required configuration files within the ``/private`` root. 
+
+Let's take a look at the Sass example using the compass configuration file:
 
 .. code-block:: text
 

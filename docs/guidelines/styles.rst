@@ -3,7 +3,7 @@ Styles
 
 .. note::
 
-    In addition to the :doc:`general` guidelines, the following sections describe stylesheet specific rules.
+    In addition to the :doc:`general` guidelines, the following sections describe stylesheet-specific rules.
 
 
 Naming
@@ -11,8 +11,8 @@ Naming
 
 .. important::
 
-    - Use **underscores** for scss file naming
-    - Use only **dashes** to separate class/ID names
+    - Use **lowercase** in SCSS file names.
+    - Use only **dashes** in class/ID names.
 
 .. code-block:: text
 
@@ -34,10 +34,10 @@ Nesting
 
 .. important::
 
-    - Don't overuse nesting, nest elements to a max of **4 indents**
+    - Don't overuse nesting; nest elements to a maximum of **4 indents**
 
-With great power comes great responsibility (just wanted to throw that in here). When writing in **SASS** or **LESS** we
-sometimes forget performance over laziness. While nesting is very powerful, we should avoid unnecessary levels or
+With great power comes great responsibility (just wanted to throw that in here). When writing in **Sass** or **Less**
+laziness can have performance implications. While nesting is very powerful, we should avoid unnecessary levels or
 blocks that can be simplified.
 
 .. code-block:: scss
@@ -76,11 +76,11 @@ Formatting
 
 .. important::
 
-    - Always add a space after the colon ``:``
-    - Only write one css property per line
-    - Avoid `specificity <https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity>`_
-      such as ``div.container`` or ``ul > li > a``
-    - Write color values in lowercase and avoid color names
+    - Always add a space after the colon ``:``.
+    - Only write one CSS property per line.
+    - Avoid using selectors such as ``div.container`` or ``ul > li > a`` (i.e. ad-hoc, non-namespaced) to determine
+      `specificity <https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity>`_.
+    - Write colour values in lowercase and avoid colour names.
 
 .. code-block:: css
 
@@ -108,10 +108,10 @@ Ordering
 
 .. important::
 
-    - Use block-style and group elements underneath
-    - Checkout ``scss-lint.json`` for a comprehensive ordering example
+    - Use block-style, and group elements below.
+    - See ``scss-lint.json`` for a comprehensive ordering example.
 
-#. includes (compass includes)
+#. includes (Compass includes)
 #. extending
 #. visibility, position
 #. color, font-size, line-height, font-* (font relevant data)

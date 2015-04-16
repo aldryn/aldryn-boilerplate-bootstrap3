@@ -4,12 +4,18 @@ Comments
 .. note::
 
     If peppering your code with lots of comments is good, then having zillions of comments in your code must be great,
-    right? Not quite. Comments in code are a double edged sword, use them to describe what's being done not what you
-    are thinking about.
+    right? Not quite. It doesn't make sense to comment every step your code makes, or to comment on things that don't
+    need to be explained.
 
+Comments in code should describe:
 
-It doesn't make sense to comment every step you do in your program. Comments should discuss why something is done,
-its purpose and its goal. The code already shows how it is done, so commenting on this is redundant.
+- **what** is being done
+- **why** it's being done
+
+They do not need to describe:
+
+- **how** it is being done (the code already shows this)
+- what you are thinking about
 
 Section Comments
 ----------------
@@ -32,13 +38,12 @@ Inline Comments
 When using comments inline, make use of the appropriate formats:
 
 - ``{# ... #}`` or ``{% comment %} ... {% endcomment %}`` for Django templates and **never** ``<!-- ... -->``
-- ``// ...`` and ``/* ... */`` for SASS and JavaScript
+- ``// ...`` and ``/* ... */`` for Sass and JavaScript
 
 Notes
 *****
 
-We also use several comment helpers which, if you configured them in your editor, add additional highlighting to your
-code:
+We also use several comment helpers which, if configured in your editor, add additional highlighting to your code:
 
 | **FIXME:**
 | to annotate problems with the code
@@ -79,8 +84,8 @@ Formatting
 .. admonition:: Comments
     :class: `important`
 
-    - Add proper whitespace
-    - In general use lowercases except for the *Notes*
+    - Add proper whitespace.
+    - In general use lowercases except for the *Notes*.
 
 .. code-block:: javascript
 
@@ -109,5 +114,5 @@ YUIDoc
 ------
 
 In 3.3.0 we introduced `YUIDoc <http://yui.github.io/yuidoc/>`_ which uses syntax similar to JSDoc in order to further
-improve JavaScript documentation.
-We are encouraging using this style within your code as shown in ``/static/js/addons/cl.utils.js``.
+improve JavaScript documentation. We encourage using this style within your code, as shown in
+``/static/js/addons/cl.utils.js``.

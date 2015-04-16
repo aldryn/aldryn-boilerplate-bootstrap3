@@ -3,14 +3,14 @@ What's inside
 
 .. note::
 
-    This Boilerplate employs and configures a number of components.
+    This Boilerplate includes and configures a number of components.
 
-SASS
+Sass
 ----
 
-For CSS pre-processing, we use `SASS <http://sass-lang.com>`_. In particular, we use:
+For CSS pre-processing, we use `Sass <http://sass-lang.com>`_. In particular, we use:
 
-* the official `SASS port <https://github.com/twbs/bootstrap-sass>`_ of Bootstrap
+* the official `Sass port <https://github.com/twbs/bootstrap-sass>`_ of Bootstrap
 * the `Compass <http://compass-style.org>`_ framework
 
 All styles should be created in ``/private/sass``, and will be compiled to ``/static/css``.
@@ -18,7 +18,7 @@ All styles should be created in ``/private/sass``, and will be compiled to ``/st
 Bootstrap
 ---------
 
-The full `Bootstrap library <http://getbootstrap.com>`_ is imported via the `SASS component
+The full `Bootstrap library <http://getbootstrap.com>`_ is imported via the `Sass component
 <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss>`_ and the
 `JavaScript component
 <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/static/js/libs/bootstrap.min.js>`_.

@@ -37,10 +37,10 @@ You need to be aware of `reStructuredText
 .. admonition:: Guidelines
     :class: `important`
 
-    - Always start paths with a ``/`` and leave the trailing slash
-    - Leave two spaces before a title
-    - Write "django", "django CMS" or "Aldryn"
-    - Write names properly: SASS, Bootstrap, JavaScript instead of sass, bootstrap and javascript
+    - Always start paths with a ``/`` and leave the trailing slash.
+    - Leave two spaces before a title.
+    - Write "django", "django CMS" or "Aldryn".
+    - Write names properly: Sass, Bootstrap, JavaScript instead of sass (or SASS), bootstrap and javascript.
 
 
 Pull Requests

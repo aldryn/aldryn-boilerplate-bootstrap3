@@ -7,7 +7,7 @@ Aldryn Boilerplate Bootstrap3
 - added scss-lint
 - added jasmine and karma
 - moved javascript ``js/tests/`` into the root for a shared test setup
-- moved sass ``addons/_browser.scss`` and ``addons/_select2.scss`` to ``libs``
+- moved Sass ``addons/_browser.scss`` and ``addons/_select2.scss`` to ``libs``
 - changed gulpfile.js file to fit guidelines
 - removed csscomb but kept settings
 - removed qunit
@@ -129,7 +129,7 @@ Aldryn Boilerplate Bootstrap3
 - added a guideline to use ``js-`` prefix for javascript functionality
 - added z-index function helper
 - changed structure of ``layout/_mixins.scss``
-- changed sass file heading end ending comments to be more descriptive
+- changed Sass file heading end ending comments to be more descriptive
 - removed compress as dependency
 
 3.0.1

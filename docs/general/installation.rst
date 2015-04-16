@@ -3,7 +3,7 @@ Installation
 
 .. note::
 
-    The following dependencies should be installed on your system in order to work with this boilerplate.
+    The following dependencies should be installed on your system in order to work with this Boilerplate.
 
 - Sass: http://sass-lang.com/
 - Compass: http://compass-style.org/
@@ -15,7 +15,7 @@ Installation
 Setup
 -----
 
-Ensure you run the following commands to install all requirements form within the root:
+Run the following commands to install all requirements from within the root of the package:
 
 - ``npm install`` to install the requirements from ``package.json``
 - ``bower install`` to install the requirements from ``bower.json`` via ``.bowerrc``
@@ -33,20 +33,20 @@ All front-end related tasks are handled via the `Gulp <http://gulpjs.com/>`_ tas
 - ``gulp browser`` connects to a given server (django) and runs live reload on a separate IP
 - ``gulp tests`` runs the test suite
 
-We also offer certain single commands:
+We also offer some standalone commands:
 
 - ``gulp jslint`` runs JavaScript linting
-- ``gulp scsslint`` runs SASS linting
+- ``gulp scsslint`` runs Sass linting
 - ``gulp images`` optimises images within ``/static/img``
 - ``gulp docs`` compiles YUIDoc into ``static/docs``
 
 We love code over configuration.
 
 
-SASS Compilation
+Sass Compilation
 ----------------
 
-You can compile/watch SASS using the following commands from within the root:
+You can compile/watch Sass using the following commands from within the root:
 
 - ``compass compile private`` to compile the css
 - ``compass watch private`` to constantly watch for changes and compile

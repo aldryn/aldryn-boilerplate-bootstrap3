@@ -3,14 +3,15 @@ Templates
 
 .. note::
 
-    The entry point for every website is ``/templates/base.html`` following the rules of the `django template engine
+    The entry point for every website is ``/templates/base.html`` following the rules of the `Django template engine
     <https://docs.djangoproject.com/en/dev/topics/templates/>`_. Templates usually ``{% extends %}`` from ``base.html``.
     The base file itself extends from ``base_root.html``. This is a good example of how Django's template inheritance
     is working.
 
 The following templates are always required:
 
-- ``404.html`` for 404 error handling
+- ``404.html`` for 404 error handling. You are not obliged to construct an elaborate and hilarious tribute to some
+  trope in popular culture, because you are an adult.
 - ``500.html`` for critical errors, **only add generic html without template tags**
 - ``base.html`` as entry point for ``{% extends %}``
 
@@ -18,10 +19,10 @@ The following templates are always required:
 includes/
 ---------
 
-Global inclusion files should be added here such as the `navigation
+Global inclusion files should be added here, for example the `navigation
 <http://django-cms.readthedocs.org/en/develop/reference/navigation.html>`_, `django messages
 <https://docs.djangoproject.com/en/dev/ref/contrib/messages/>`_ or tracking codes. Create additional */include* folders
-within addons to not overcrowd this directory.
+within addons to avoid overcrowding this directory.
 
 
 Page Templates
@@ -44,12 +45,12 @@ The following templates are provided from the start:
 Page Types
 ----------
 
-You can save a CMS page as "Page Type" and re-use it later when creating a new page. Simply select ``Page > Save as Page
-Type ..`` and choose a name. You can create a new page by selecting ``Page > Add Page > New Page`` and choose the
+You can save a CMS page as "Page Type" and re-use it later when creating a new page. Simply select *Page > Save as Page
+Type ..* and choose a name. You can create a new page by selecting *Page > Add Page > New Page* and choose the
 "Page type" you want to use. That drop down does not show up if there are no page types saved.
 
-Page types get listed separately within the menu tree underneath *Page Types*.
-This allows you can change or delete them at any time if required.
+Page types are listed separately within the menu tree underneath *Page Types*.
+This allows you to change or delete them at any time if required.
 
 .. image:: ../_static/toolbar-page-types.png
 

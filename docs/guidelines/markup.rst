@@ -11,8 +11,8 @@ Naming
 
 .. important::
 
-    - Use **underscores** for html file naming
-    - Use lowercase for **all** attributes
+    - Use **underscores** for HTML file naming.
+    - Use lowercase for **all** attributes.
 
 .. code-block:: html
 
@@ -34,9 +34,9 @@ Indentation
 
 .. important::
 
-    - Always add an indent after django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block %}`` ...
-    - Use single lines within ``{% addtoblock %}`` for **files** and multilines for ``<code>``
-    - **Code readability** always wins
+    - Always add an indent after Django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block %}`` and so on.
+    - Use single lines within ``{% addtoblock %}`` for **files** and multilines for ``<code>``.
+    - **Code readability** always wins.
 
 .. code-block:: django
 
@@ -82,11 +82,11 @@ IDs vs Classes
 
 .. important::
 
-    - Avoid IDs ad all cost
-    - When using IDs always use a **unique name**
+    - Avoid IDs wherever possible.
+    - Where it's necessary to use IDs, always use **unique names**
 
-You should **always** use classes instead if ID's. Classes represent a more OOP approach of adding and removing
-style sets like ``box box-wide box-hint``.
+You should **always** use classes instead of IDs where you can. Classes represent a more OOP approach to adding and
+removing style sets like ``box box-wide box-hint``.
 
 Try to avoid declaring ID's at all. They should only be used to reference form elements or for in-page navigation
 in which case you need to make the name **absolutely unique**.
@@ -112,13 +112,13 @@ in which case you need to make the name **absolutely unique**.
     <input type="text" name="firstname" id="field-id12-firstname">
 
 
-Modular
--------
+Modularity
+----------
 
 .. important::
 
-    Try to keep the HTML structure simple and avoid unnecessary elements. It is sometimes easier to use a single div with
-    a single class rather than multiple divs with multiple classes.
+    Try to keep HTML structure simple, avoiding unnecessary elements. It is sometimes easier to use a single div with a
+    single class rather than multiple divs with multiple classes.
 
 For example, lets take a look at the following code snippet:
 
@@ -129,8 +129,8 @@ For example, lets take a look at the following code snippet:
         <p>Hello World</p>
     </div>
 
-We should handle HTML modular and avoid type selectors at all costs. Add additional classes for lead, content, author,
-meta infos, tags and so on. The content section itself can than contain the usual html code:
+We should build modular HTML, and take pains to avoid type selectors. Add additional classes for lead, content, author,
+meta info, tags and so on. The content section itself can then contain the usual HTML code:
 
 .. code-block:: html
 

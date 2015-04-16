@@ -13,13 +13,13 @@ Naming
 
 .. important::
 
-    - Use **dot** annotation ``test.base.js`` for javascript file naming
-    - Use the libraries prefix such as ``cl.xplorer.js`` or ``jquery.tablesorter.js`` for file naming
+    - Use **dot** annotation ``test.base.js`` for JavaScript file naming.
+    - Use a library's prefix, such as ``cl.xplorer.js`` or ``jquery.tablesorter.js``, for file naming.
     - Name ``variablesLikeThis``, ``ClassesLikeThis``, ``CONSTANTS_LIKE_THIS`` and ``events-like-this``.
-    - Use the ``js-`` prefix when working with JS related selectors and do not add stylings to it
-    - Never use comma separation for variable declarations like ``var a, b, c;``
-    - Never use $ for variable names such as ``var $el = $('.el');``
-    - We are using the ``Cl.`` singleton for all custom JavaScript code
+    - Use the ``js-`` prefix when working with JS-related selectors and do not add styling to it.
+    - Never use comma separation for variable declarations like ``var a, b, c;``.
+    - Never use $ for variable names such as ``var $el = $('.el');``.
+    - We are using the ``Cl.`` singleton for all custom JavaScript code.
 
 When using jQuery to refer to a DOM instance, always use the ``js-`` prefix to separate
 styles from JavaScript functionality. For example: ``<div class="addon addon-gallery js-addon-gallery"></div>``.
@@ -27,7 +27,7 @@ styles from JavaScript functionality. For example: ``<div class="addon addon-gal
 In this example, *addon* and *addon-gallery* have styles attached to them, *js-plugin-gallery*
 refers to the JavaScript functionality attached to the DOM element.
 
-Even when removing the js class (or just waiting for javascript to kick in), the addon should still look good.
+Even when removing the JS class (or just waiting for JavaScript to kick in), the addon should still look good.
 
 
 .. code-block:: javascript
@@ -53,10 +53,10 @@ Formatting
 
 .. important::
 
-    - Always declare variables on top of the functions and not in-between
-    - Always use `semicolons <https://www.youtube.com/watch?v=M94ii6MVilw>`_ and full brackets except shorthands like
-      ``var i = (true) ? 'yes' : 'no';``
-    - Use proper spaces for ``if (true) {} else {}`` or ``function () {}``
+    - Always declare variables on top of the functions and not in between.
+    - Always use `semicolons <https://www.youtube.com/watch?v=M94ii6MVilw>`_ and full brackets, except in shorthand like
+      ``var i = (true) ? 'yes' : 'no';``.
+    - Use proper spaces for ``if (true) {} else {}`` or ``function () {}``.
 
 .. code-block:: javascript
 
@@ -90,11 +90,11 @@ Implementation
 
 .. important::
 
-    - Keep <script> and the following starting closure on the same level
-    - Separate all script tags using ``{% addtoblock "js" %}{% endaddtoblock %}``
-    - Never use JavaScript attributes on html elements such as ``onclick=""`` or ``onload=""``
+    - Keep ``<script>`` and the following starting closure on the same level.
+    - Separate all script tags using ``{% addtoblock "js" %}{% endaddtoblock %}``.
+    - Never use JavaScript attributes on HTML elements such as ``onclick=""`` or ``onload=""``.
     - Don't add inline JavaScript within HTML, implement JavaScript through **files only**. Instantiate functionality
-      from within the JavaScript file instead
+      from within the JavaScript file instead.
 
 .. code-block:: django
 
@@ -128,8 +128,8 @@ Patterns
 .. important::
 
     - Use the `singleton pattern
-      <http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript>`_ to avoid globals
+      <http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript>`_ to avoid globals.
     - Use the `module pattern
-      <http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript>`_ to structure code
-    - Avoid the `functional pattern <http://1closure.com/2012/06/object-oriented-javascript-the-functional-pattern/>`_
+      <http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript>`_ to structure code.
+    - Avoid the `functional pattern <http://1closure.com/2012/06/object-oriented-javascript-the-functional-pattern/>`_.
 

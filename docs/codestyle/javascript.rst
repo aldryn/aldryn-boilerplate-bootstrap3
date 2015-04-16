@@ -52,7 +52,7 @@ Use braces with all blocks. Don't do inline blocks.
         return false;
     }
 
-If you're using multi-line blocks with if and else, put else on the same line as your if block's closing brace.
+When you're using multi-line blocks with if and else, put else on the same line as your if block's closing brace.
 
 .. code-block:: javascript
 
@@ -961,6 +961,59 @@ Always cache jQuery lookups.
             'background-color': 'pink'
         });
     }
+
+
+Classes
+-------
+
+It is a common pattern when creating javascript components to save all the ui elements under a common namespace.
+It is also a common mistake to declare an object called ``ui`` on a class.
+
+.. code-block:: javascript
+
+    // bad
+    var Widget = new Class({
+        ui: {
+            oneElement: null,
+            anotherElement: null
+        },
+        initialize: function (container, options) {
+            this._buildUI(container);
+        },
+        _buildUI: function (container) {
+            this.container = $(container);
+
+            // another bad thing
+            this.ui.oneElement = $('.js-one-element');
+            this.ui.anotherElement = $('.js-another-element');
+        }
+    });
+
+There are several problems. The ``ui`` object is declared on prototype in this case, and as with all complex types is
+javascript we are working with a reference to the value. That means that the same ui object will be shared across all
+instances of the class, which in turn will mean that you won't be able to use several instances on the page.
+
+.. code-block:: javascript
+
+    // good
+    var Widget = new Class({
+        initialize: function (container, options) {
+            this._buildUI(container);
+        },
+        _buildUI: function (container) {
+            this.container = $(container);
+            this.ui = {
+                // scoping widget's moving parts under the same container is a good pattern as well
+                oneElement: $('.js-one-element', this.container),
+                anotherElement: $('.js-another-element', this.container)
+            };
+        }
+    });
+
+We do not always know how the widget will be used. Even if "it's only gonna be on this page and it's gonna be this
+particular instance" seems like a valid reason not to change - it never is. We should always strive for making components
+independent and reusable, it's usually not a big effort (especially if you think about before writing the widget) and
+it can solve a lot of problems for you in the future.
 
 Passing data to components
 --------------------------

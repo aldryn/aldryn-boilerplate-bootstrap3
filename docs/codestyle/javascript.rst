@@ -2,7 +2,6 @@
 JavaScript
 **********
 
-
 .. note::
 
     This section is heavily inspired by a Airbnb JavaScript Style Guide, Yandex Codestyle, Idiomatic Javascript and lots

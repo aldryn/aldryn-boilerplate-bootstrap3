@@ -1,5 +1,6 @@
+**********
 JavaScript
-==========
+**********
 
 .. note::
 
@@ -9,7 +10,7 @@ JavaScript
 
 
 Naming
-------
+======
 
 .. important::
 
@@ -49,7 +50,7 @@ Even when removing the JS class (or just waiting for JavaScript to kick in), the
 
 
 Formatting
-----------
+==========
 
 .. important::
 
@@ -86,7 +87,7 @@ Formatting
 
 
 Implementation
---------------
+==============
 
 .. important::
 
@@ -123,7 +124,7 @@ Implementation
 
 
 Patterns
---------
+========
 
 .. important::
 

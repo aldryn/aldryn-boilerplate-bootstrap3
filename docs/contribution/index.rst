@@ -1,3 +1,4 @@
+############
 Contribution
 ############
 
@@ -7,16 +8,18 @@ Contribution
     needs love. Feel free to fork and send us pull requests and follow the guidelines from within this section.
 
 
+***************
 Code of Conduct
-===============
+***************
 
 - Ensure code validates against or own guidelines
 - Write documentation about what you are doing
 - If you are not sure, just ask - join our community **#aldryn** on `Freenode <http://freenode.net/>`_
 
 
+*************
 Documentation
-=============
+*************
 
 To extend and run the documentation, you will need `Python <https://www.python.org/downloads/>`_ and
 `Virtualenv <https://virtualenv.pypa.io/en/latest/installation.html>`_ installed on your computer. You also need
@@ -41,10 +44,13 @@ You need to be aware of `reStructuredText
     - Leave two spaces before a title.
     - Write "django", "django CMS" or "Aldryn".
     - Write names properly: Sass, Bootstrap, JavaScript instead of sass (or SASS), bootstrap and javascript.
+    - Additional guidelines from `django CMS
+      <http://docs.django-cms.org/en/support-3.0.x/contributing/contributing.html#documentation-markup>`_ apply.
 
 
+*************
 Pull Requests
-=============
+*************
 
 Before starting to work on issues or features, please mind the branching model:
 
@@ -55,8 +61,9 @@ Everything that is merged to *develop* will be released within the next proper r
 will have their own branches but are always merged agains *develop*.
 
 
+********
 Releases
-========
+********
 
 Always adapt the `CHANGELOG.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_
 and `AUTHORS.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_ accordingly.

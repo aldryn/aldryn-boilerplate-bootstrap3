@@ -4,6 +4,7 @@
    contain the root `toctree` directive.
 
 
+#######
 Welcome
 #######
 
@@ -17,6 +18,7 @@ www.aldryn.com/>`_ cloud platform.
 The latest stable version is available on GitHub - https://github.com/aldryn/aldryn-boilerplate-bootstrap3.
 
 
+#############
 Documentation
 #############
 

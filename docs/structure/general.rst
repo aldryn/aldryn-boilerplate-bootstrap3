@@ -1,5 +1,6 @@
+*******
 General
-=======
+*******
 
 .. note::
 
@@ -19,7 +20,7 @@ you should look after **first**. Lets take a closer look at each individual fold
 
 
 docs/
------
+=====
 
 The full documentation is stored within ``/docs`` and is compiled into ``/docs/_build`` when running ``make run``. The
 documentation is automatically pushed to `Read the Docs
@@ -29,7 +30,7 @@ section.
 
 
 private/
---------
+========
 
 .. important::
     This folder is **not published**, nor touched by preprocessing or other build libraries. Anything in here should be
@@ -54,7 +55,7 @@ Let's take a look at the Sass example using the compass configuration file:
 
 
 static/
--------
+=======
 
 .. important::
     This folder is publicly available, all files can be accessed via ``http://yourwebserver/static/``.
@@ -76,7 +77,7 @@ and create additional sub-directories such as ``/static/img/icons`` or ``/static
 
 
 templates/
-----------
+==========
 
 All django templates should be allocated within the ``/templates`` folder. This also applies for apps or inclusion
 files. When using `Haml <http://haml.info/>`_, set your configuration so templates get compiled into ``/templates``.
@@ -88,6 +89,6 @@ so they are not overcrowding the structure.
 
 
 tests/
-------
+======
 
 The test suite is described in more depth within the :doc:`../testing/index` section.

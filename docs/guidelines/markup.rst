@@ -1,5 +1,6 @@
+******
 Markup
-======
+******
 
 .. note::
 
@@ -7,7 +8,7 @@ Markup
 
 
 Naming
-------
+======
 
 .. important::
 
@@ -30,7 +31,7 @@ Naming
 
 
 Indentation
------------
+===========
 
 .. important::
 
@@ -78,7 +79,7 @@ Indentation
 
 
 IDs vs Classes
---------------
+==============
 
 .. important::
 
@@ -113,7 +114,7 @@ in which case you need to make the name **absolutely unique**.
 
 
 Modularity
-----------
+==========
 
 .. important::
 

@@ -1,12 +1,13 @@
+*******
 General
-=======
+*******
 
 .. note::
     There are global guidelines which affect every single language, file or folder.
 
 
 Standards
----------
+=========
 
 .. important::
 
@@ -20,7 +21,7 @@ Standards
 
 
 Spacing
--------
+=======
 
 .. important::
 
@@ -30,7 +31,7 @@ not 2, 3 or 8 – no tabs – if you are able to do 3 :sup:`3/4`, that's good en
 
 
 Line Length
------------
+===========
 
 .. important::
 
@@ -41,7 +42,7 @@ last few years, but your brain hasn't. Better to use screen estate for splits, a
 
 
 Naming
-------
+======
 
 .. important::
 
@@ -57,7 +58,7 @@ Naming
 
 
 Quotes
-------
+======
 
 .. important::
 

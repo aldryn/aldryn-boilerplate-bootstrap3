@@ -1,5 +1,6 @@
+******
 Styles
-======
+******
 
 .. note::
 
@@ -7,7 +8,7 @@ Styles
 
 
 Naming
-------
+======
 
 .. important::
 
@@ -30,7 +31,7 @@ Naming
 
 
 Nesting
--------
+=======
 
 .. important::
 
@@ -72,7 +73,7 @@ blocks that can be simplified.
 
 
 Formatting
-----------
+==========
 
 .. important::
 
@@ -104,7 +105,7 @@ Formatting
 
 
 Ordering
---------
+========
 
 .. important::
 
@@ -126,8 +127,9 @@ Combine attributes such as background-image, background-color, background-repeat
 ``background: #fff url("image.png") no-repeat left top;`` when it makes sense. But remember, that a shorthand like
 ``background`` cannot be overridden with just ``background-image``, so use wisely!
 
+
 Example
-*******
+-------
 
 .. code-block:: css
 

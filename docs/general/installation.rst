@@ -1,5 +1,6 @@
+************
 Installation
-============
+************
 
 .. note::
 
@@ -13,7 +14,7 @@ Installation
 
 
 Setup
------
+=====
 
 Run the following commands to install all requirements from within the root of the package:
 
@@ -22,7 +23,7 @@ Run the following commands to install all requirements from within the root of t
 
 
 Gulp Commands
--------------
+=============
 
 All front-end related tasks are handled via the `Gulp <http://gulpjs.com/>`_ task runner:
 
@@ -44,7 +45,7 @@ We love code over configuration.
 
 
 Sass Compilation
-----------------
+================
 
 You can compile/watch Sass using the following commands from within the root:
 

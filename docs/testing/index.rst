@@ -1,3 +1,4 @@
+#######
 Testing
 #######
 
@@ -6,8 +7,9 @@ Testing
     The test framework is currently in development.
 
 
+*******
 General
-=======
+*******
 
 We are using the `Jasmine <http://jasmine.github.io/>`_ test suite and the `Karma <http://karma-runner.github.io/>`_
 test runner for behaviour driven tests. All tests are located within ``/tests``. You can run them by excecuting

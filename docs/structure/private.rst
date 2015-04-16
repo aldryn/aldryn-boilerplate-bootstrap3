@@ -1,5 +1,6 @@
+*******
 Private
-=======
+*******
 
 .. note::
 
@@ -14,7 +15,7 @@ Let's cover the folders individually:
 
 
 addons/
--------
+=======
 
 If a component is plug-and-playable, it probably belongs in here. Good examples are jQuery plugins or Aldryn addons.
 Sometimes larger application such as a shop might also be pluggable. If this is **not** the case, they belong in
@@ -27,7 +28,7 @@ the ``/sass/sites`` directory.
 
 
 layout/
--------
+=======
 
 We consider the general look and feel as the *layout* of a website or application. This might include the typography,
 header and footer, icons or the printable version. The layout can be broken down into further parts if a website gets
@@ -41,7 +42,7 @@ layouts and derive from a global common style guide.
 
 
 libs/
------
+=====
 
 All independent files are placed within this folder. This implies that the order of inclusion does not matter within
 ``/sass/libs/_all.scss``. The only exception is ``/sass/libs/_bootstrap.scss`` for re-using the Bootstrap variables.
@@ -53,7 +54,7 @@ All independent files are placed within this folder. This implies that the order
 
 
 settings/
----------
+=========
 
 It is very useful to store values, that are used more than twice, within their own variable. We even encourage storing
 **all colour values** within the settings. **Don't repeat yourself**. Create a sub-structure, similar to ``/sites`` if
@@ -66,7 +67,7 @@ the structure becomes more complex.
 
 
 sites/
-------
+======
 
 Besides */addons* you will work mostly within the ``/private/sass/sites`` folder. All custom elements that are in
 general not plug-and-playable, fixed into the website somewhere or specific components, get thrown in here.

@@ -1,5 +1,6 @@
+********
 Comments
-========
+********
 
 .. note::
 
@@ -17,8 +18,9 @@ They do not need to describe:
 - **how** it is being done (the code already shows this)
 - what you are thinking about
 
+
 Section Comments
-----------------
+================
 
 The first separation style is *section comment*. This uses the full 120 width span ideally placed to separate large
 chunks of logic or a nice addition to the top of a file::
@@ -33,15 +35,16 @@ The second available style separates smaller code blocks using 60 only lines::
 
 
 Inline Comments
----------------
+===============
 
 When using comments inline, make use of the appropriate formats:
 
 - ``{# ... #}`` or ``{% comment %} ... {% endcomment %}`` for Django templates and **never** ``<!-- ... -->``
 - ``// ...`` and ``/* ... */`` for Sass and JavaScript
 
+
 Notes
-*****
+-----
 
 We also use several comment helpers which, if configured in your editor, add additional highlighting to your code:
 
@@ -79,7 +82,7 @@ We also use several comment helpers which, if configured in your editor, add add
 
 
 Formatting
-----------
+==========
 
 .. admonition:: Comments
     :class: `important`
@@ -111,7 +114,7 @@ Formatting
 
 
 YUIDoc
-------
+======
 
 In 3.3.0 we introduced `YUIDoc <http://yui.github.io/yuidoc/>`_ which uses syntax similar to JSDoc in order to further
 improve JavaScript documentation. We encourage using this style within your code, as shown in

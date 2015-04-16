@@ -1,5 +1,6 @@
+*********
 Templates
-=========
+*********
 
 .. note::
 
@@ -17,7 +18,7 @@ The following templates are always required:
 
 
 includes/
----------
+=========
 
 Global inclusion files should be added here, for example the `navigation
 <http://django-cms.readthedocs.org/en/develop/reference/navigation.html>`_, `django messages
@@ -26,7 +27,7 @@ within addons to avoid overcrowding this directory.
 
 
 Page Templates
---------------
+==============
 
 django CMS allows you to set `CMS_TEMPLATES
 <http://docs.django-cms.org/en/latest/reference/configuration.html#cms-templates>`_
@@ -43,7 +44,7 @@ The following templates are provided from the start:
 
 
 Page Types
-----------
+==========
 
 You can save a CMS page as "Page Type" and re-use it later when creating a new page. Simply select *Page > Save as Page
 Type ..* and choose a name. You can create a new page by selecting *Page > Add Page > New Page* and choose the
@@ -56,7 +57,7 @@ This allows you to change or delete them at any time if required.
 
 
 Blocks and Placeholders
------------------------
+=======================
 
 The content block ``{% block content %}{% endblock %}`` and placeholder ``{% placeholder content %}`` always need
 to be present within page templates.

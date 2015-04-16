@@ -7,6 +7,11 @@ General
 
 Formatting, nesting, ordering and everything else is covered by `Guidelines <../guidelines/styles>`_
 
+Main problem with CSS
+---------------------
+
+Describe
+
 Selector performance
 --------------------
 
@@ -18,6 +23,11 @@ JS selectors
 We use ``js-`` prefixed selectors for referencing DOM Nodes from javascript. That means that these classes have a pure
 functional pirpose and styles should **never** be applied to them. Same type of widget could be easily represented by
 completely different sets of markup.
+
+Magic numbers
+-------------
+
+TODO
 
 Sass
 ====

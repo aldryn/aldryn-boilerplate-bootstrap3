@@ -179,17 +179,14 @@ pseudoxml:
 ########################################################################################################################
 ##### CUSTOM CONFIGURATION
 VENV = env/bin/activate
-PIP = . $(VENV); env/bin/pip
-BRANCH = `git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 PORT = 8000
 # CORE COMMANDS
-run:
-	. $(VENV); sphinx-autobuild . _build/html --host 0.0.0.0 --port $(PORT)
-
 install:
 	##### setup virtualenv
-	test -d $(VENV) || virtualenv env --prompt="(`basename \`pwd\``)"
-	git pull origin $(BRANCH)
-	$(PIP) install -r requirements.txt
+	virtualenv env
+	. $(VENV); pip install -r requirements.txt
 	. $(VENV); sphinx-build . _build/html
 	##### done
+
+run:
+	. $(VENV); sphinx-autobuild . _build/html --host 0.0.0.0 --port $(PORT)

@@ -76,3 +76,13 @@ Autoprefixer
 ------------
 
 TODO
+
+Bootstrap
+=========
+
+TODO: caveat with settings
+
+Media queries
+-------------
+
+TODO

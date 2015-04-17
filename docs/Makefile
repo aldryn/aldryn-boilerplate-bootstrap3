@@ -180,7 +180,7 @@ pseudoxml:
 ##### CUSTOM CONFIGURATION
 VENV = env/bin/activate
 PIP = . $(VENV); env/bin/pip
-BRANCH = master
+BRANCH = `git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 PORT = 8000
 # CORE COMMANDS
 run:

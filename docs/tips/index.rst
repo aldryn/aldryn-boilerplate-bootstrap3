@@ -21,7 +21,8 @@ Hidden Attribute
 
 With modern HTML5 we can use the ``hidden="hidden"`` attribute which is a **softer** version of ``display: none;``.
 This state can easily be overwritten using CSS or JavaScript. As such the attribute is ideal for hiding elements which
-are later displayed through JavaScript to prevent jumping behaviours.
+are later displayed through JavaScript to prevent jumping behaviours. But be aware of the `current support
+<http://caniuse.com/#search=hidden >`_.
 
 
 ******************

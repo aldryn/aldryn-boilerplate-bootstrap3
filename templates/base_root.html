@@ -2,13 +2,13 @@
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{% block title %}{% page_attribute page_title %} - {{ request.site.name }}{% endblock title %}</title>
     {% block meta_tags %}
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="{% block meta_description %}{% page_attribute 'meta_description' %}{% endblock %}" />
     <meta name="keywords" content="{% block meta_keywords %}{% page_attribute 'meta_keywords' %}{% endblock %}" />
-    {% for meta_tag in meta_tags %}<!--<meta name="{{ meta_tag.name }}" content="{{ meta_tag.content }}" />-->{% endfor %}
+    {% for meta_tag in meta_tags %}{# <meta name="{{ meta_tag.name }}" content="{{ meta_tag.content }}" /> #}{% endfor %}
     {% endblock meta_tags %}
     <link rel="apple-touch-icon" href="{% static 'favicon.png' %}" />
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}" />

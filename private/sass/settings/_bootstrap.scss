@@ -1,4 +1,4 @@
-//####################################################################################################################
+// #####################################################################################################################
 // #GLOBAL IMPORTS#
 @import "compass/css3";
 @import "compass/utilities";
@@ -12,7 +12,7 @@
 
 $bootstrap-sass-asset-helper: false;
 
-//#########################################################
+// #########################################################
 // Colors
 // Gray and brand colors for use across Bootstrap.
 
@@ -31,7 +31,7 @@ $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
 
 
-//#########################################################
+// #########################################################
 // Scaffolding
 // Settings for some of the most global styles.
 
@@ -48,7 +48,7 @@ $link-hover-color:      darken($link-color, 15%);
 $link-hover-decoration: underline;
 
 
-//#########################################################
+// #########################################################
 // Typography
 // Font, line-height, and color for body text, headings, and more.
 
@@ -81,7 +81,7 @@ $headings-line-height:    1.1;
 $headings-color:          inherit;
 
 
-//#########################################################
+// #########################################################
 // Iconography
 // Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
@@ -97,7 +97,7 @@ $icon-font-name:          "glyphicons-halflings-regular";
 $icon-font-svg-id:        "glyphicons_halflingsregular";
 
 
-//#########################################################
+// #########################################################
 // Components
 // Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
@@ -131,7 +131,7 @@ $caret-width-base:          4px;
 $caret-width-large:         5px;
 
 
-//#########################################################
+// #########################################################
 // Tables
 // Customizes the `.table` component with basic values, each used across all table variations.
 
@@ -152,7 +152,7 @@ $table-bg-active:               $table-bg-hover;
 $table-border-color:            #ddd;
 
 
-//#########################################################
+// #########################################################
 // Buttons
 // For each of Bootstrap's buttons, define text, background and border color.
 
@@ -185,7 +185,7 @@ $btn-danger-border:              darken($btn-danger-bg, 5%);
 $btn-link-disabled-color:        $gray-light;
 
 
-//#########################################################
+// #########################################################
 // Forms
 
 //** `<input>` background color
@@ -232,14 +232,14 @@ $input-group-addon-border-color: $input-border;
 $cursor-disabled:                not-allowed;
 
 
-//#########################################################
+// #########################################################
 // Dropdowns
 // Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
 $dropdown-bg:                    #fff;
 //** Dropdown menu `border-color`.
-$dropdown-border:                rgba(0,0,0,.15);
+$dropdown-border:                rgba(0, 0, 0, 0.15);
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border:       #ccc;
 //** Divider color for between dropdown items.
@@ -267,7 +267,7 @@ $dropdown-header-color:          $gray-light;
 $dropdown-caret-color:           #000;
 
 
-//#########################################################
+// #########################################################
 //-- Z-index master list
 //
 // Warning: Avoid customizing these values. They're used for a bird's eye view
@@ -283,7 +283,7 @@ $zindex-navbar-fixed:      1030;
 $zindex-modal:             1040;
 
 
-//#########################################################
+// #########################################################
 // Media queries breakpoints
 // Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
@@ -322,7 +322,7 @@ $screen-sm-max:              ($screen-md-min - 1);
 $screen-md-max:              ($screen-lg-min - 1);
 
 
-//#########################################################
+// #########################################################
 // Grid system
 // Define your custom responsive grid.
 
@@ -337,7 +337,7 @@ $grid-float-breakpoint:     $screen-sm-min;
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
 
-//#########################################################
+// #########################################################
 // Container sizes
 // Define the maximum width of `.container` for different screen sizes.
 
@@ -357,7 +357,7 @@ $container-large-desktop:      (1140px + $grid-gutter-width);
 $container-lg:                 $container-large-desktop;
 
 
-//#########################################################
+// #########################################################
 // Navbar
 
 // Basics of a navbar
@@ -418,7 +418,7 @@ $navbar-inverse-toggle-icon-bar-bg:         #fff;
 $navbar-inverse-toggle-border-color:        #333;
 
 
-//#########################################################
+// #########################################################
 // Navs
 
 //= Shared nav styles
@@ -446,7 +446,7 @@ $nav-pills-active-link-hover-bg:            $component-active-bg;
 $nav-pills-active-link-hover-color:         $component-active-color;
 
 
-//#########################################################
+// #########################################################
 // Pagination
 
 $pagination-color:                     $link-color;
@@ -466,7 +466,7 @@ $pagination-disabled-bg:               #fff;
 $pagination-disabled-border:           #ddd;
 
 
-//#########################################################
+// #########################################################
 // Pager
 
 $pager-bg:                             $pagination-bg;
@@ -481,7 +481,7 @@ $pager-active-color:                   $pagination-active-color;
 $pager-disabled-color:                 $pagination-disabled-color;
 
 
-//#########################################################
+// #########################################################
 // Jumbotron
 
 $jumbotron-padding:              30px;
@@ -491,7 +491,7 @@ $jumbotron-heading-color:        inherit;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5));
 
 
-//#########################################################
+// #########################################################
 // Form states and alerts
 // Define colors for form feedback states and, by default, alerts.
 
@@ -512,7 +512,7 @@ $state-danger-bg:                #f2dede;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%);
 
 
-//#########################################################
+// #########################################################
 // Tooltips
 
 //** Tooltip max width
@@ -521,7 +521,7 @@ $tooltip-max-width:           200px;
 $tooltip-color:               #fff;
 //** Tooltip background color
 $tooltip-bg:                  #000;
-$tooltip-opacity:             .9;
+$tooltip-opacity:             0.9;
 
 //** Tooltip arrow width
 $tooltip-arrow-width:         5px;
@@ -529,7 +529,7 @@ $tooltip-arrow-width:         5px;
 $tooltip-arrow-color:         $tooltip-bg;
 
 
-//#########################################################
+// #########################################################
 // Popovers
 
 //** Popover body background color
@@ -537,7 +537,7 @@ $popover-bg:                          #fff;
 //** Popover maximum width
 $popover-max-width:                   276px;
 //** Popover border color
-$popover-border-color:                rgba(0,0,0,.2);
+$popover-border-color:                rgba(0, 0, 0, 0.2);
 //** Popover fallback border color
 $popover-fallback-border-color:       #ccc;
 
@@ -557,7 +557,7 @@ $popover-arrow-outer-color:           fade_in($popover-border-color, 0.05);
 $popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%);
 
 
-//#########################################################
+// #########################################################
 // Labels
 
 //** Default label background color
@@ -579,7 +579,7 @@ $label-color:                 #fff;
 $label-link-hover-color:      #fff;
 
 
-//#########################################################
+// #########################################################
 // Modals
 
 //** Padding applied to the modal body
@@ -593,14 +593,14 @@ $modal-title-line-height:     $line-height-base;
 //** Background color of modal content area
 $modal-content-bg:                             #fff;
 //** Modal content border color
-$modal-content-border-color:                   rgba(0,0,0,.2);
+$modal-content-border-color:                   rgba(0, 0, 0, 0.2);
 //** Modal content border color **for IE8**
 $modal-content-fallback-border-color:          #999;
 
 //** Modal backdrop background color
 $modal-backdrop-bg:           #000;
 //** Modal backdrop opacity
-$modal-backdrop-opacity:      .5;
+$modal-backdrop-opacity:      0.5;
 //** Modal header border color
 $modal-header-border-color:   #e5e5e5;
 //** Modal footer border color
@@ -611,7 +611,7 @@ $modal-md:                    600px;
 $modal-sm:                    300px;
 
 
-//#########################################################
+// #########################################################
 // Alerts
 // Define alert colors, border radius, and padding.
 
@@ -636,7 +636,7 @@ $alert-danger-text:           $state-danger-text;
 $alert-danger-border:         $state-danger-border;
 
 
-//#########################################################
+// #########################################################
 // Progress bars
 
 //** Background color of the whole progress component
@@ -658,7 +658,7 @@ $progress-bar-danger-bg:      $brand-danger;
 $progress-bar-info-bg:        $brand-info;
 
 
-//#########################################################
+// #########################################################
 // List group
 
 //** Background color on `.list-group-item`
@@ -691,7 +691,7 @@ $list-group-link-hover-color:   $list-group-link-color;
 $list-group-link-heading-color: #333;
 
 
-//#########################################################
+// #########################################################
 // Panels
 
 $panel-bg:                    #fff;
@@ -729,7 +729,7 @@ $panel-danger-border:         $state-danger-border;
 $panel-danger-heading-bg:     $state-danger-bg;
 
 
-//#########################################################
+// #########################################################
 // Thumbnails
 
 //** Padding around the thumbnail image
@@ -747,14 +747,14 @@ $thumbnail-caption-color:     $text-color;
 $thumbnail-caption-padding:   9px;
 
 
-//#########################################################
+// #########################################################
 // Wells
 
 $well-bg:                     #f5f5f5;
 $well-border:                 darken($well-bg, 7%);
 
 
-//#########################################################
+// #########################################################
 // Badges
 
 $badge-color:                 #fff;
@@ -772,7 +772,7 @@ $badge-line-height:           1;
 $badge-border-radius:         10px;
 
 
-//#########################################################
+// #########################################################
 // Breadcrumbs
 
 $breadcrumb-padding-vertical:   8px;
@@ -787,14 +787,14 @@ $breadcrumb-active-color:       $gray-light;
 $breadcrumb-separator:          "/";
 
 
-//#########################################################
+// #########################################################
 // Carousel
 
-$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
+$carousel-text-shadow:                        0 1px 2px rgba(0, 0, 0, 0.6);
 
 $carousel-control-color:                      #fff;
 $carousel-control-width:                      15%;
-$carousel-control-opacity:                    .5;
+$carousel-control-opacity:                    0.5;
 $carousel-control-font-size:                  20px;
 
 $carousel-indicator-active-bg:                #fff;
@@ -803,7 +803,7 @@ $carousel-indicator-border-color:             #fff;
 $carousel-caption-color:                      #fff;
 
 
-//#########################################################
+// #########################################################
 // Close
 
 $close-font-weight:           bold;
@@ -811,7 +811,7 @@ $close-color:                 #000;
 $close-text-shadow:           0 1px 0 #fff;
 
 
-//#########################################################
+// #########################################################
 // Code
 
 $code-color:                  #c7254e;
@@ -826,7 +826,7 @@ $pre-border-color:            #ccc;
 $pre-scrollable-max-height:   340px;
 
 
-//#########################################################
+// #########################################################
 // Type
 
 //** Horizontal offset for forms and lists.

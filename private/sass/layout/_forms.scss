@@ -1,81 +1,10 @@
-//######################################################################################################################
+// #####################################################################################################################
 // #FORMS#
 
 // all styles related to the global forms should be declared within this file
 // apply the "sites/" nesting described within the documentation if the file is getting to large
 
-//##################################################
-// #HELPERS#
-
-// these helpers are additionally added to extend bootstrap's defaults
-// btn-outline is very handy and generally adds a border and transparency to a button
-
-// #HELPERS/animation#
-.btn {
-    @include transition(background, $speed);
-}
-
-// #HELPERS/outline#
-.btn-outline {
-    border: 1px solid transparent;
-    background: transparent;
-    &.btn-default {
-        @include button-variant($btn-default-color, transparent, $btn-default-border);
-        &:hover,
-        &:active,
-        &:focus {
-            color: white;
-            background-color: $btn-default-border;
-        }
-    }
-    &.btn-primary {
-        @include button-variant($btn-primary-bg, transparent, $btn-primary-border);
-        &:hover,
-        &:active,
-        &:focus {
-            color: white;
-            background-color: $btn-primary-border;
-        }
-    }
-    &.btn-success {
-        @include button-variant($btn-success-bg, transparent, $btn-success-border);
-        &:hover,
-        &:active,
-        &:focus {
-            color: white;
-            background-color: $btn-success-border;
-        }
-    }
-    &.btn-info {
-        @include button-variant($btn-info-bg, transparent, $btn-info-border);
-        &:hover,
-        &:active,
-        &:focus {
-            color: white;
-            background-color: $btn-info-border;
-        }
-    }
-    &.btn-warning {
-        @include button-variant($btn-warning-bg, transparent, $btn-warning-border);
-        &:hover,
-        &:active,
-        &:focus {
-            color: white;
-            background-color: $btn-warning-border;
-        }
-    }
-    &.btn-danger {
-        @include button-variant($btn-danger-bg, transparent, $btn-danger-border);
-        &:hover,
-        &:active,
-        &:focus {
-            color: white;
-            background-color: $btn-danger-border;
-        }
-    }
-}
-
-// #HELPERS/fieldset#
+// #FORMS/fieldset#
 // DOCS: http://getbootstrap.com/css/#tables-responsive
 @-moz-document url-prefix() {
     fieldset {

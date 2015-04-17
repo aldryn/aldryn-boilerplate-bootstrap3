@@ -15,4 +15,4 @@ The CMS allows for custom style sets within the editor. This allows the user to 
 have already added the general Bootstrap utilities. The file can be found at
 ``/static/js/addons/ckeditor.wysiwyg.js``.
 
-.. image:: ../_static/editor-wysiwyg.png
+.. image:: /_static/editor-wysiwyg.png

@@ -123,9 +123,10 @@ Ordering
 #. nested elements or parent referencing selectors
 
 .. note::
-Combine attributes such as background-image, background-color, background-repeat into a single line
-``background: #fff url("image.png") no-repeat left top;`` when it makes sense. But remember, that a shorthand like
-``background`` cannot be overridden with just ``background-image``, so use wisely!
+
+    Combine attributes such as background-image, background-color, background-repeat into a single line ``background:
+    #fff url("image.png") no-repeat left top;`` when it makes sense. But remember, that a shorthand like ``background``
+    cannot be overridden with just ``background-image``, so use wisely!
 
 
 Example

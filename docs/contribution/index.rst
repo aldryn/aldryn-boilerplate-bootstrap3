@@ -42,10 +42,10 @@ You need to be aware of `reStructuredText
 
     - Always start paths with a ``/`` and leave the trailing slash.
     - Leave two spaces before a title.
-    - Write "django", "django CMS" or "Aldryn".
+    - Write "Django", "django CMS" or "Aldryn".
     - Write names properly: Sass, Bootstrap, JavaScript instead of sass (or SASS), bootstrap and javascript.
     - Additional guidelines from `django CMS
-      <http://docs.django-cms.org/en/support-3.0.x/contributing/contributing.html#documentation-markup>`_ apply.
+      <http://docs.django-cms.org/en/develop/contributing/contributing.html#documentation-markup>`_ apply.
 
 
 *************

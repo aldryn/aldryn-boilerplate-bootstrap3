@@ -29,6 +29,6 @@
         "static/js/libs/jquery.min.js",
         "static/js/libs/outdatedBrowser.min.js",
         "static/js/libs/respond.min.js",
-        "static/js/libs/swfobject.min.js",
+        "static/js/libs/swfobject.min.js"
     ]
 }

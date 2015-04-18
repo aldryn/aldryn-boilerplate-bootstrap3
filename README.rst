@@ -2,6 +2,8 @@
 Aldryn Boilerplate Standard
 ###########################
 
+|Build Status| |Coverage Status| |Code Climate|
+
 Aldryn Boilerplate Bootstrap 3 is the most complete **django CMS** based Boilerplate for rapid development. It uses the
 full potential of the `Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile-first
 projects on the web, and implements various best practices from within the front-end community.
@@ -24,3 +26,11 @@ Contribution
 You are very welcome improving this boilerplate for Aldryn and your everyday use, especially the documentation always
 needs love. Feel free to fork and send us pull requests and checkout the
 `contribution guide <http://aldryn-boilerplate-bootstrap3.rtfd.org/contribution/index.html>`_ within our documentation.
+
+
+.. |Build Status| image:: http://img.shields.io/travis/aldryn/aldryn-boilerplate-bootstrap3/master.svg
+   :target: https://travis-ci.org/aldryn/aldryn-boilerplate-bootstrap3
+.. |Coverage Status| image:: http://img.shields.io/coveralls/aldryn/aldryn-boilerplate-bootstrap3/master.svg
+   :target: https://coveralls.io/r/aldryn/aldryn-boilerplate-bootstrap3?branch=master
+.. |Code Climate| image:: https://img.shields.io/codeclimate/aldryn/aldryn-boilerplate-bootstrap3/flow.svg
+   :target: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3

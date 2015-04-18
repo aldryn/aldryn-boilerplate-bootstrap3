@@ -1,0 +1,21 @@
+language: node_js
+
+node_js:
+  - "0.10"
+
+before_install:
+  - gem install scss-lint
+  - npm install -g npm
+
+before_script:
+  - npm install -g gulp
+
+after_script:
+  - npm run coveralls
+
+script: gulp tests
+
+env:
+  global:
+    - secure: JzpT5Z5yG6+PLg5v41sHZgOKiZH+uCqGrmhhFGWckRvNOD4bw4k1qqkFDkDFPGEOWTjCEONnECFUkb2lWu3BSAjqn/23OWJTE0j9t+5UIgdTy+wPHXWzdllsc0WiZOX6iQOMwagzAiS9Yr405qfYwkDUkM50efkplALWUOxSDM8=
+    - secure: WfH6tReQFi7Vu5cV8AiZGOAXzgT6wRNKVBTwa+oPjNgNRHdVi+KrejNhGX8ZywF+RPFbLjVG3zIp/o0ZmaEcJO2OSVkOuSfjuUTh6fwYP0gUN1TAyv66wmnOk5tmtfjMCSRPEj8jrq/r/wmIgH1ZFnU8Z7TT2VwEqSyoTCprPho=

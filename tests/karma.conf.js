@@ -11,28 +11,52 @@ module.exports = function (config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: '',
+        basePath: '..',
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
+        // tests/${path}
         files: [
-          'test.base.js'
+            // these have to be specified in order since
+            // dependency loading is not handled yet
+            'static/js/libs/jquery.min.js',
+            'static/js/libs/bootstrap.min.js',
+            'static/js/libs/class.min.js',
+            'static/js/addons/*.js',
+            'static/js/*.js',
+
+            // tests themselves
+            'tests/*.js'
         ],
 
         // list of files to exclude
-        exclude: [],
+        exclude: [
+            'static/js/addons/ckeditor.wysiwyg.js',
+            'static/js/addons/jquery.select2.min.js',
+            'tests/karma.conf.js'
+        ],
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: {},
+        preprocessors: {
+            'static/js/**/*.js': ['coverage']
+        },
+
+        // optionally, configure the reporter
+        coverageReporter: {
+            reporters: [
+                { type: 'html', dir: 'tests/coverage/' },
+                { type: 'lcov', dir: 'tests/coverage/' }
+            ]
+        },
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress'],
+        reporters: ['progress', 'coverage'],
 
         // web server port
         port: 9876,

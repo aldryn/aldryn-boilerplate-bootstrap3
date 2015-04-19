@@ -29,5 +29,7 @@ npm-debug.log
 /static/vendor
 /static/docs/
 
+/tests/coverage
+
 Gemfile.lock
 .bundle/

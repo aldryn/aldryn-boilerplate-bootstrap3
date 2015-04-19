@@ -28,9 +28,9 @@ needs love. Feel free to fork and send us pull requests and checkout the
 `contribution guide <http://aldryn-boilerplate-bootstrap3.rtfd.org/contribution/index.html>`_ within our documentation.
 
 
-.. |Build Status| image:: http://img.shields.io/travis/aldryn/aldryn-boilerplate-bootstrap3/master.svg
+.. |Build Status| image:: https://travis-ci.org/aldryn/aldryn-boilerplate-bootstrap3.svg?branch=master
    :target: https://travis-ci.org/aldryn/aldryn-boilerplate-bootstrap3
-.. |Coverage Status| image:: http://img.shields.io/coveralls/aldryn/aldryn-boilerplate-bootstrap3/master.svg
-   :target: https://coveralls.io/r/aldryn/aldryn-boilerplate-bootstrap3?branch=master
-.. |Code Climate| image:: https://img.shields.io/codeclimate/aldryn/aldryn-boilerplate-bootstrap3/flow.svg
+.. |Coverage Status| image:: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3/badges/coverage.svg
+   :target: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3
+.. |Code Climate| image:: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3/badges/gpa.svg
    :target: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3

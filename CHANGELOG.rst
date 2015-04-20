@@ -3,6 +3,11 @@ Aldryn Boilerplate Bootstrap3
 #############################
 
 
+3.3.1
+=====
+- work on documentation
+
+
 3.3.0
 =====
 - added scss-lint

@@ -43,6 +43,11 @@ Run the following commands to install all requirements from within the root of t
 Gulp Commands
 =============
 
+.. warning::
+
+    Please mind that ``gulp`` also starts *browserSync* equal to ``gulp browser`` which tries to connect to a
+    Django server. The Django setup is **not included** within this boilerplate.
+
 All front-end related tasks are handled via the `Gulp <http://gulpjs.com/>`_ task runner:
 
 - ``gulp`` runs the gulp defaults

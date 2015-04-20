@@ -26,7 +26,8 @@ var paths = {
     'images': './static/img/',
     'js': './static/js/',
     'sass': './private/sass/',
-    'docs': './static/docs'
+    'docs': './static/docs',
+    'tests': './tests'
 };
 
 var patterns = {
@@ -38,7 +39,7 @@ var patterns = {
     'js': [
         paths.js + '*.js',
         paths.js + '**/*.js',
-        './tests/*.js',
+        paths.tests + '*.js',
         '!' + paths.js + '*.min.js',
         '!' + paths.js + '**/*.min.js'
     ],

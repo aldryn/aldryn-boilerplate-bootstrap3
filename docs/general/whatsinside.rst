@@ -89,8 +89,8 @@ Example
 .. code-block:: django
 
     {% load sekizai_tags %}
-    {% addtoblock "css" %}<link href="{% static "css/theme.css" %}" rel="stylesheet">{% endaddtoblock %}
-    {% addtoblock "js" %}<script src="{% static "libs/jquery.min.js" %}"></script>{% endaddtoblock %}
+    {% addtoblock "css" %}<link href="{% static 'css/theme.css' %}" rel="stylesheet">{% endaddtoblock %}
+    {% addtoblock "js" %}<script src="{% static 'libs/jquery.min.js' %}"></script>{% endaddtoblock %}
 
 - http://docs.django-cms.org
 

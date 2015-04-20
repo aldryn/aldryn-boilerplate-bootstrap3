@@ -6,11 +6,27 @@ Installation
 
     The following dependencies should be installed on your system in order to work with this Boilerplate.
 
+- Ruby: https://www.ruby-lang.org/
 - Sass: http://sass-lang.com/
 - Compass: http://compass-style.org/
 - Bootstrap: https://github.com/twbs/bootstrap-sass
 - Node JS: http://nodejs.org/
 - Gulp: http://gulpjs.com/
+
+You can find most installation steps within `osx-bootstrap <https://github.com/divio/osx-bootstrap>`_ but in short:
+
+- `ruby -v` ensure ruby is installed
+- `gem update --system`
+- `gem install sass`
+- `gem install compass`
+- `gem install bootstrap-sass`
+- `brew install node` when using `Homebrew <http://brew.sh/>`_
+- `curl -L https://npmjs.org/install.sh | sh`
+- `npm install -g bower`
+- `npm install -g gulp`
+
+At last make sure you correctly configured your
+`paths <https://github.com/divio/osx-bootstrap/blob/master/core/npm.sh#L16>`_.
 
 
 Setup

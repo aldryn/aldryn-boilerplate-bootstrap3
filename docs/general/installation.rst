@@ -63,6 +63,7 @@ We also offer some standalone commands:
 - ``gulp scsslint`` runs Sass linting
 - ``gulp images`` optimises images within ``/static/img``
 - ``gulp docs`` compiles YUIDoc into ``static/docs``
+- ``gulp karma`` only runs karma for debugging
 
 We love code over configuration.
 

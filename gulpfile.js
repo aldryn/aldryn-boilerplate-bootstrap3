@@ -38,6 +38,7 @@ var patterns = {
     'js': [
         paths.js + '*.js',
         paths.js + '**/*.js',
+        './tests/*.js',
         '!' + paths.js + '*.min.js',
         '!' + paths.js + '**/*.min.js'
     ],
@@ -130,6 +131,13 @@ gulp.task('tests', ['lint'], function () {
     karma.start({
         'configFile': __dirname + '/tests/karma.conf.js',
         'singleRun': true
+    });
+});
+
+gulp.task('karma', function () {
+    // run javascript tests
+    karma.start({
+        'configFile': __dirname + '/tests/karma.conf.js'
     });
 });
 

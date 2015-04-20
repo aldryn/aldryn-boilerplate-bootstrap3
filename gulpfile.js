@@ -78,7 +78,6 @@ gulp.task('scsslint', function () {
     // .pipe(scsslint.failReporter());
 });
 
-
 // #########################################################
 // #PREPROCESSING#
 gulp.task('preprocess', ['images', 'docs']);

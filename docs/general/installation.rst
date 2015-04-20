@@ -9,21 +9,23 @@ Installation
 - Ruby: https://www.ruby-lang.org/
 - Sass: http://sass-lang.com/
 - Compass: http://compass-style.org/
+- SCSS-Lint: https://github.com/brigade/scss-lint
 - Bootstrap: https://github.com/twbs/bootstrap-sass
 - Node JS: http://nodejs.org/
 - Gulp: http://gulpjs.com/
 
 You can find most installation steps within `osx-bootstrap <https://github.com/divio/osx-bootstrap>`_ but in short:
 
-- `ruby -v` ensure ruby is installed
-- `gem update --system`
-- `gem install sass`
-- `gem install compass`
-- `gem install bootstrap-sass`
-- `brew install node` when using `Homebrew <http://brew.sh/>`_
-- `curl -L https://npmjs.org/install.sh | sh`
-- `npm install -g bower`
-- `npm install -g gulp`
+#. run ``ruby -v`` ensure ruby is installed
+#. run ``gem update --system``
+#. run ``gem install sass``
+#. run ``gem install compass``
+#. run ``gem install scss-lint``
+#. run ``gem install bootstrap-sass``
+#. run ``brew install node`` when using `Homebrew <http://brew.sh/>`_
+#. run ``curl -L https://npmjs.org/install.sh | sh``
+#. run ``npm install -g bower``
+#. run ``npm install -g gulp``
 
 At last make sure you correctly configured your
 `paths <https://github.com/divio/osx-bootstrap/blob/master/core/npm.sh#L16>`_.

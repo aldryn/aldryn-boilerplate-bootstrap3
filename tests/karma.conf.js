@@ -35,14 +35,14 @@ module.exports = function (config) {
         // list of files to exclude
         exclude: [
             'static/js/addons/ckeditor.wysiwyg.js',
-            'static/js/addons/jquery.select2.min.js',
             'tests/karma.conf.js'
         ],
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'static/js/**/*.js': ['coverage']
+            'static/js/base.js': ['coverage'],
+            'static/js/addons/cl.utils.js': ['coverage']
         },
 
         // optionally, configure the reporter

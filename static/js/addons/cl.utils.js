@@ -83,7 +83,8 @@ var Cl = window.Cl || {};
          */
         setStorage: function (token, value) {
             if (typeof (Storage) !== void(0)) {
-                return localStorage.setItem(token, value);
+                localStorage.setItem(token, value);
+                return value;
             }
         },
 

@@ -5,8 +5,9 @@ Aldryn Boilerplate Bootstrap 3
 
 3.3.1
 =====
-- work on documentation
-- improve local testing
+- documentation improvements
+- added more tests
+- added missing fontawesome to ``bower.json``
 
 
 3.3.0

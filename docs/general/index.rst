@@ -14,3 +14,4 @@ General
     whatsinside
     installation
     configuration
+    basic_usage

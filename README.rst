@@ -25,7 +25,7 @@ Contribution
 
 You are very welcome improving this boilerplate for Aldryn and your everyday use, especially the documentation always
 needs love. Feel free to fork and send us pull requests and checkout the
-`contribution guide <http://aldryn-boilerplate-bootstrap3.rtfd.org/contribution/index.html>`_ within our documentation.
+`contribution guide <http://aldryn-boilerplate-bootstrap3.readthedocs.org/en/latest/contribution/index.html>`_ within our documentation.
 
 
 .. |Build Status| image:: https://travis-ci.org/aldryn/aldryn-boilerplate-bootstrap3.svg?branch=master

@@ -42,6 +42,9 @@ references to them to be made anywhere else than ``base_root.html``.
 ``base_root.html``, and allows page content structures and layouts (headings, ``divs``, navigation menus and so on) to
 be created within ``{% block extend_root %}``.
 
+``base.html`` contains an *empty* ``{% block content %}``, that - in templates that extend it - is filled with ``{%
+placeholder content %}`` as well as width cues for images etc.
+
 
 ==============================
 User-selectable page templates

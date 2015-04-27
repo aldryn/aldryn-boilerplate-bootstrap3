@@ -4,10 +4,54 @@ Templates
 
 .. note::
 
-    The entry point for every website is ``/templates/base.html`` following the rules of the `Django template engine
-    <https://docs.djangoproject.com/en/dev/topics/templates/>`_. Templates usually ``{% extends %}`` from ``base.html``.
-    The base file itself extends from ``base_root.html``. This is a good example of how Django's template inheritance
-    is working.
+    Aldryn Boilerplate Bootstrap 3 follows django CMS good practices, and provides three layers of site template
+    inheritance using ``{% extends %}``. See `Django template engine
+    <https://docs.djangoproject.com/en/dev/topics/templates/>`_.
+
+From the top down the three layers are:
+
+- *user-selectable page templates* (``fullwidth.html``, ``sidebar_left.html`` and so on), which inherit from:
+- ``base.html``, which inherits from:
+- ``base_root.html``
+
+
+==================
+``base_root.html``
+==================
+
+``base_root.html`` sets up the components that will rarely if ever need to be changed, and that you want to keep out of
+sight and out of mind as much as possible.
+
+It contains fundamental HTML elements (``<html>`` ``<body>`` and so on) so that these don't need to be managed in
+inheriting templates.
+
+It is also intended to be almost wholly content-agnostic - it doesn't know or care about how your site's pages are
+going to be structured, and shouldn't need to. To this end it provides an empty ``{% block extend_root %}{% endblock
+%}``, that inheriting templates will override to provide the page's content.
+
+In addition, Addons such as `Aldryn News & Blog <https://github.com/aldryn/aldryn-newsblog>`_ in the Aldryn Collection
+family of applications are designed to use the same JavaScript frameworks throughout, so there is no need for
+references to them to be made anywhere else than ``base_root.html``.
+
+
+=============
+``base.html``
+=============
+
+``base.html`` is the template that *designers* will be most interested in. It fills in the bare HTML elements of
+``base_root.html``, and allows page content structures and layouts (headings, ``divs``, navigation menus and so on) to
+be created within ``{% block extend_root %}``.
+
+
+==============================
+User-selectable page templates
+==============================
+
+Finally, users can select templates that inherit from ``base.html``. Even if your project has one 'standard' template
+and some minor variations, it is wise for *all* of them to inherit from a ``base.html``, so that they can all be edited
+independently. Even if your 'standard' template changes nothing in ``base.html``, you should not be tempted to make
+``base.html`` selectable by the user.
+
 
 The following templates are always required:
 
@@ -17,6 +61,7 @@ The following templates are always required:
 - ``base.html`` as entry point for ``{% extends %}``
 
 
+=========
 includes/
 =========
 
@@ -26,6 +71,7 @@ Global inclusion files should be added here, for example the `navigation
 within addons to avoid overcrowding this directory.
 
 
+==============
 Page Templates
 ==============
 
@@ -43,6 +89,7 @@ The following templates are provided from the start:
 - ``tpl_home.html`` specific template for the landing page
 
 
+==========
 Page Types
 ==========
 
@@ -56,6 +103,7 @@ This allows you to change or delete them at any time if required.
 .. image:: ../_static/toolbar-page-types.png
 
 
+=======================
 Blocks and Placeholders
 =======================
 

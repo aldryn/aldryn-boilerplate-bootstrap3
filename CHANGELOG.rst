@@ -1,6 +1,13 @@
-#############################
-Aldryn Boilerplate Bootstrap3
-#############################
+##############################
+Aldryn Boilerplate Bootstrap 3
+##############################
+
+
+3.3.1
+=====
+- documentation improvements
+- added more tests
+- added missing fontawesome to ``bower.json``
 
 
 3.3.0

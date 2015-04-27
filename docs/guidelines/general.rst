@@ -25,9 +25,9 @@ Spacing
 
 .. important::
 
-    - Use **4 spaces** for indentation
+    - Use **4 spaces** for indentation.
 
-not 2, 3 or 8 – no tabs – if you are able to do 3 :sup:`3/4`, that's good enough
+Not 2, 3 or 8 – no tabs – if you are able to do 3 :sup:`3/4`, that's good enough
 
 
 Line Length
@@ -35,7 +35,7 @@ Line Length
 
 .. important::
 
-    - Don't breach **120 characters** per line
+    - Don't breach **120 characters** per line.
 
 *Not even for HTML.* We even encourage you to use 80 characters per line. Yes, screens have got much bigger over the
 last few years, but your brain hasn't. Better to use screen estate for splits, anyway.

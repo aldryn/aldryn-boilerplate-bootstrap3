@@ -84,7 +84,7 @@ IDs vs Classes
 .. important::
 
     - Avoid IDs wherever possible.
-    - Where it's necessary to use IDs, always use **unique names**
+    - Where it's necessary to use IDs, always use **unique names**.
 
 You should **always** use classes instead of IDs where you can. Classes represent a more OOP approach to adding and
 removing style sets like ``box box-wide box-hint``.

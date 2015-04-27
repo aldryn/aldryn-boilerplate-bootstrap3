@@ -46,7 +46,7 @@
                 if (typeof (Storage) !== void(0)) {
                     expect(Storage).toEqual(jasmine.any(Object));
                 } else {
-                    expect(Storage).toThrowError(TypeError);
+                    expect(Storage).toThrowError(ReferenceError);
                 }
             });
 

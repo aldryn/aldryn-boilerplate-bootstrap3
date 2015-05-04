@@ -7,6 +7,7 @@ Aldryn Boilerplate Bootstrap 3
 =====
 - documentation improvements
 - fix an issue with ``setStorage`` and ``getStorage`` on private browsing mode
+- freeze ``package.json`` and ``bower.json`` versions
 
 
 3.3.1

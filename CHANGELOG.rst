@@ -5,7 +5,9 @@ Aldryn Boilerplate Bootstrap 3
 
 3.3.2
 =====
+- documentation improvements
 - fix an issue with ``setStorage`` and ``getStorage`` on private browsing mode
+
 
 3.3.1
 =====

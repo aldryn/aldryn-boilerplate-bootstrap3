@@ -82,7 +82,7 @@ var Cl = window.Cl || {};
          * @param value {String} storage value
          */
         setStorage: function (token, value) {
-            if (typeof (Storage) !== void(0)) {
+            if (this._checkStorage()) {
                 localStorage.setItem(token, value);
                 return value;
             }
@@ -95,8 +95,26 @@ var Cl = window.Cl || {};
          * @param token {String} namespace
          */
         getStorage: function (token) {
-            if (typeof (Storage) !== void(0)) {
+            if (this._checkStorage()) {
                 return localStorage.getItem(token);
+            }
+        },
+
+        /**
+         * Localstorage shim from Modernizr
+         *
+         * @method _checkStorage
+         * @private
+         */
+        _checkStorage: function () {
+            // DOCS: https://github.com/Modernizr/Modernizr/blob/master/feature-detects/storage/localstorage.js
+            var mod = 'modernizr';
+            try {
+                localStorage.setItem(mod, mod);
+                localStorage.removeItem(mod);
+                return true;
+            } catch (e) {
+                return false;
             }
         }
     };

@@ -52,7 +52,7 @@
 
             it('one can store a value', function () {
                 expect(localStorage.getItem('test#1')).toBeNull();
-                expect(Cl.Utils.setStorage).not.toThrow();
+                expect(Cl.Utils.setStorage).toThrow();
 
                 var returnValue = Cl.Utils.setStorage('test#1', 'true');
                 expect(returnValue).toBe('true');
@@ -61,7 +61,7 @@
 
             it('the other retrieve a value', function () {
                 expect(localStorage.getItem('test#2')).toBeNull();
-                expect(Cl.Utils.getStorage).not.toThrow();
+                expect(Cl.Utils.getStorage).toThrow();
 
                 Cl.Utils.setStorage('test#2', 'true');
                 var returnValue = Cl.Utils.getStorage('test#2');

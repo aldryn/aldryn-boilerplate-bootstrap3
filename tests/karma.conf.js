@@ -25,6 +25,7 @@ module.exports = function (config) {
             'static/js/libs/jquery.min.js',
             'static/js/libs/bootstrap.min.js',
             'static/js/libs/class.min.js',
+            'static/js/libs/outdatedBrowser.min.js',
             'static/js/addons/*.js',
             'static/js/*.js',
 

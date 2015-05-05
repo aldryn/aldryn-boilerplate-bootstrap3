@@ -8,11 +8,13 @@
 /**
  * @module Cl
  */
+// istanbul ignore next
 var Cl = window.Cl || {};
 /* global outdatedBrowser */
 
 // #####################################################################################################################
 // #BASE#
+// istanbul ignore next
 (function ($) {
     'use strict';
 

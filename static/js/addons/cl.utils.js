@@ -8,6 +8,7 @@
 /**
  * @module Cl
  */
+// istanbul ignore next
 var Cl = window.Cl || {};
 
 // #####################################################################################################################
@@ -44,6 +45,7 @@ var Cl = window.Cl || {};
          */
         _consoleWrapper: function () {
             var method;
+            // istanbul ignore next
             var noop = function () {};
             var methods = [
                 'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
@@ -52,6 +54,7 @@ var Cl = window.Cl || {};
                 'timeStamp', 'trace', 'warn'
             ];
             var length = methods.length;
+            // istanbul ignore next
             var console = (window.console = window.console || {});
 
             while (length--) {
@@ -82,9 +85,11 @@ var Cl = window.Cl || {};
          * @param value {String} storage value
          */
         setStorage: function (token, value) {
-            if (this._checkStorage()) {
+            if (token && value && this._checkStorage()) {
                 localStorage.setItem(token, value);
                 return value;
+            } else {
+                return false;
             }
         },
 
@@ -95,8 +100,10 @@ var Cl = window.Cl || {};
          * @param token {String} namespace
          */
         getStorage: function (token) {
-            if (this._checkStorage()) {
+            if (token && this._checkStorage()) {
                 return localStorage.getItem(token);
+            } else {
+                return false;
             }
         },
 
@@ -114,6 +121,7 @@ var Cl = window.Cl || {};
                 localStorage.removeItem(mod);
                 return true;
             } catch (e) {
+                // istanbul ignore next
                 return false;
             }
         }

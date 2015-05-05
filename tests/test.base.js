@@ -20,7 +20,7 @@
         });
 
         it('loads outdatedBrowser', function () {
-            // expect(outdatedBrowser).toBeDefined();
+            expect(outdatedBrowser).toBeDefined();
         });
 
         it('loads Cl.Debug', function () {

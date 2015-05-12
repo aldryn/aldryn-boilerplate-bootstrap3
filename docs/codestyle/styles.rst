@@ -80,7 +80,25 @@ TODO
 Bootstrap
 =========
 
-TODO: caveat with settings
+When using ``settings/_bootstrap.scss`` make sure that you have all the variables overwritten in the file, because
+overriding only some of them can lead to subtle bugs like `this <https://gist.github.com/vxsx/598a1312cd036fa94095>`_:
+
+.. code-block:: scss
+
+    // this is what happens in the bootstrap/_variables.scss
+    $line-height-computed: 20px !default;
+    $padding-base-vertical: 6px !default;
+
+    // and this is a computed property from bootstrap, 34px by default
+    $input-height-base:  ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+
+    // now what we want to do is to override line-height-computed in our settings file
+    $line-height-computed: 23px;
+
+Now we would expect that ``$input-height-base`` will be 37px, but it will be still 34px because computed properties are
+already calculated and won't be changed. Since bootstrap components dimensions are all interconnected to these computed
+variables we should always have the full settings file. Order matters too.
+
 
 Media queries
 -------------

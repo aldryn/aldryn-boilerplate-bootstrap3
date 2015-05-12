@@ -90,7 +90,11 @@ At the moment compass. In plans - dropping compass and implementing LibSass.
 Autoprefixer
 ------------
 
-TODO
+For generating vendor prefixes one should use Autoprefixer instead of relying on mixins. That way we reduce sass
+compilation time and ensure that we have only prefixes that we actually need. As a good side effect we will use actual
+standard CSS syntax.
+
+Will be implemented with LibSass, but can be used with ``autoprefixer-rails`` gem.
 
 Bootstrap
 =========

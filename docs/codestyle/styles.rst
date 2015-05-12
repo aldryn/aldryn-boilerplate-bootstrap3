@@ -103,4 +103,26 @@ variables we should always have the full settings file. Order matters too.
 Media queries
 -------------
 
-TODO
+In general when using media queries with bootstrap variables, use appropriate values for appropriate type of a query.
+
+.. code-block:: scss
+
+    // bad
+    @media (min-width: $screen-sm-max) {
+        ...
+    }
+
+    @media (max-width: $screen-sm-min) {
+        ...
+    }
+
+    // good
+    @media (min-width: $screen-md-min) {
+        ...
+    }
+
+    @media (max-width: $screen-xs-max) {
+        ...
+    }
+
+These values differ only by 1 pixel, but it's a very important one.

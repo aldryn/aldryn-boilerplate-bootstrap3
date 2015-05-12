@@ -122,7 +122,7 @@ var Cl = window.Cl || {};
             } catch (e) {
                 return false;
             }
-}()),
+        }())
     };
 
 })(jQuery);

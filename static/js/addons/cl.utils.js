@@ -85,7 +85,7 @@ var Cl = window.Cl || {};
          * @param value {String} storage value
          */
         setStorage: function (token, value) {
-            if (token && value && this._checkStorage()) {
+            if (token && value && this._isStorageSupported) {
                 localStorage.setItem(token, value);
                 return value;
             } else {
@@ -100,7 +100,7 @@ var Cl = window.Cl || {};
          * @param token {String} namespace
          */
         getStorage: function (token) {
-            if (token && this._checkStorage()) {
+            if (token && this._isStorageSupported) {
                 return localStorage.getItem(token);
             } else {
                 return false;
@@ -110,21 +110,19 @@ var Cl = window.Cl || {};
         /**
          * Localstorage shim from Modernizr
          *
-         * @method _checkStorage
+         * @method _isStorageSupported
          * @private
          */
-        _checkStorage: function () {
-            // DOCS: https://github.com/Modernizr/Modernizr/blob/master/feature-detects/storage/localstorage.js
+        _isStorageSupported: (function localStorageCheck() {
             var mod = 'modernizr';
             try {
                 localStorage.setItem(mod, mod);
                 localStorage.removeItem(mod);
                 return true;
             } catch (e) {
-                // istanbul ignore next
                 return false;
             }
-        }
+}()),
     };
 
 })(jQuery);

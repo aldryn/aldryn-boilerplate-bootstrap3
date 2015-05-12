@@ -50,13 +50,11 @@
                     expect(Storage).toThrowError(ReferenceError);
                 }
 
-                var value = Cl.Utils._checkStorage();
-                expect(value).toBe(true);
+                expect(Cl.Utils._isStorageSupported).toBe(true);
             });
 
             it('one can store a value', function () {
                 expect(localStorage.getItem('test#1')).toBeNull();
-                // FIXME expect(Cl.Utils.setStorage).toThrow();
 
                 var returnValue = Cl.Utils.setStorage('test#1', 'true');
                 expect(returnValue).toBe('true');
@@ -65,7 +63,6 @@
 
             it('the other retrieve a value', function () {
                 expect(localStorage.getItem('test#2')).toBeNull();
-                // FIXME expect(Cl.Utils.getStorage).toThrow();
 
                 Cl.Utils.setStorage('test#2', 'true');
                 var returnValue = Cl.Utils.getStorage('test#2');
@@ -74,9 +71,7 @@
             });
 
             it('handle exceptions as expected', function () {
-                Cl.Utils._checkStorage = function () {
-                    return false;
-                };
+                Cl.Utils._isStorageSupported = false;
 
                 expect(Cl.Utils.getStorage('test#3')).toBe(false);
                 expect(Cl.Utils.getStorage()).toBe(false);

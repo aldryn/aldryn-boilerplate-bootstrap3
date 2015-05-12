@@ -67,6 +67,21 @@ Mixins
 TODO
 
 
+Color manipulation
+------------------
+
+When using alpha transparent colors keep in mind that ``rgba`` supports passing colors, so you can do things like this:
+
+.. code-block:: scss
+
+    // bad
+    color: rgba(0, 0, 0, 0.85);
+
+    // good
+    color: rgba(black, 0.85);
+    color: rgba(#000, 0.85);
+    color: rgba($color, 0.85);
+
 Compass vs LibSass
 ==================
 

@@ -10,12 +10,32 @@ Formatting, nesting, ordering and everything else is covered by `Guidelines <../
 Main problem with CSS
 ---------------------
 
-Describe
+    There are two types of problems in CSS: cosmetic problems and architectural problems. Cosmetic problems—issues like
+    vertical centering or equal-height columns—usually engender the most vocal complaints, but they’re almost never
+    showstoppers. They’re annoying, sure, but they don’t break the build.
+
+    Philip Walton `Side Effects in CSS <http://philipwalton.com/articles/side-effects-in-css/>`_
+
+Since CSS is global, every rule you write or override has the potential to break completely unrelated things. With that
+in mind, try to avoid selectors that are too unspecific (e.g. `type selectors
+<https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors>`_ or overly specific selectors, like ``.nav > ul > li
+> a``. That selector is going to be extremely painful to extend and override if there's going to be a "special" list
+item for example. That also brings us to
+
 
 Selector performance
 --------------------
 
-TODO
+It is always said that css selectors performance is not that important and there are no "easy-to-follow" rules for
+fixing it. But just to reiterate, main points:
+
+- If your project is sufficiently big and complex or really dynamic, css selector performance may play a major role
+  in the perceived rendering performance.
+
+- Selectors are interpreted by the browser from right to left, meaning ``.my-class > *`` will select all the
+  elements on the page all the time and check if their immediate parent has a class ``my-class``. If there
+  would be no ``>`` it would traverse the tree all the way up for every element, which is not very good. It is
+  true that browsers do optimize things like this, but you should always check for yourself.
 
 JS selectors
 ------------
@@ -145,3 +165,9 @@ In general when using media queries with bootstrap variables, use appropriate va
     }
 
 These values differ only by 1 pixel, but it's a very important one.
+
+TBD
+---
+
+- Screenshot regression testing
+- autoprefixer implementation

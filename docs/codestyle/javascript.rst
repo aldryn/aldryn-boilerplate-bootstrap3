@@ -426,7 +426,8 @@ Browsers will allow you to do it, but they all interpret it differently, which i
         };
     }
 
-Never name a parameter arguments. This will take precedence over the arguments object that is given to every function scope.
+Never name a parameter arguments. This will take precedence over the arguments object that is given to every function
+scope. It is also a `reserved word <http://es5.github.io/#x7.6.1>`_.
 
 .. code-block:: javascript
 

@@ -1,0 +1,27 @@
+language: node_js
+
+node_js:
+  - "0.10"
+
+before_install:
+  - gem install scss-lint
+  - npm install -g npm
+
+before_script:
+  - npm install -g gulp
+  - npm install -g codeclimate-test-reporter
+
+after_script:
+  - codeclimate < tests/coverage/**/lcov.info
+
+script:
+  - gulp tests
+
+env:
+  global:
+    - secure: ghtK6PdDy13ruL+HGT4doVcUkl8pyzukY1gkHbkIAL8BrOc0eQdGBnAxKpPGZJv/8upWyul69DgXKg26cbS633Gfp0NjM/YPUh6wEgTg46Zjirw1ejX7xmqsQUGukZXOXNsll7/Syql+KEn8ao+JOAh+gjkFfNY2mxD6Oxs56Sc=
+    - secure: Vd/CeUcWVUsgejibIiq8PQT1xfK7SYRdWSdol6ymGb2LVI5ckm4rOGm+FBdbKip43oqgpkM7sLqBzSUTVTsGdea87tiKJKpp4AXaKTgkzG9LzY6eX67fnWvG2WOfTdrLIeUwjY/HVlAQC8ymaZ09Nj6Rhb7dKoziEW7+uqGjGjo=
+    - secure: gRrsTzeBs+2N7pi95FQ4lhhAzqXlwsVR8fBwPfYVY6s+kqFzyh7KeFuy2uH5JiS3MPP+XIihT9r6jf5rmmhoLIGTEpos3HZYGkaSEPSPybvNVdVoTnMzaNlrMdCLgw1/S15K1luhyR6PqvfVxoD+PTUNeT0s/YUuxMpsuvMgGtE=
+
+addons:
+  sauce_connect: true

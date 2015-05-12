@@ -1,3 +1,19 @@
+########################################################################################################################
+##### CUSTOM CONFIGURATION
+VENV = env/bin/activate
+PORT = 8000
+# CORE COMMANDS
+install:
+	##### setup virtualenv
+	virtualenv env
+	. $(VENV); pip install -r requirements.txt
+	. $(VENV); sphinx-build . _build/html
+	##### done
+
+run:
+	. $(VENV); sphinx-autobuild . _build/html --host 0.0.0.0 --port $(PORT)
+
+########################################################################################################################
 # Makefile for Sphinx documentation
 #
 
@@ -6,11 +22,6 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = _build
-
-# User-friendly check for sphinx-build
-ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
-endif
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -175,21 +186,3 @@ pseudoxml:
 	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
-
-########################################################################################################################
-##### CUSTOM CONFIGURATION
-VENV = env/bin/activate
-PIP = . $(VENV); env/bin/pip
-BRANCH = master
-PORT = 8000
-# CORE COMMANDS
-run:
-	. $(VENV); sphinx-autobuild . _build/html --host 0.0.0.0 --port $(PORT)
-
-install:
-	##### setup virtualenv
-	test -d $(VENV) || virtualenv env --prompt="(`basename \`pwd\``)"
-	git pull origin $(BRANCH)
-	$(PIP) install -r requirements.txt
-	. $(VENV); sphinx-build . _build/html
-	##### done

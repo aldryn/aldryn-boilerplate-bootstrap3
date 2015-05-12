@@ -26,7 +26,8 @@ var paths = {
     'images': './static/img/',
     'js': './static/js/',
     'sass': './private/sass/',
-    'docs': './static/docs'
+    'docs': './static/docs',
+    'tests': './tests'
 };
 
 var patterns = {
@@ -38,6 +39,7 @@ var patterns = {
     'js': [
         paths.js + '*.js',
         paths.js + '**/*.js',
+        paths.tests + '*.js',
         '!' + paths.js + '*.min.js',
         '!' + paths.js + '**/*.min.js'
     ],
@@ -77,7 +79,6 @@ gulp.task('scsslint', function () {
     // FIXME: tests currently pass even if there is a linting error, the reporter stops all remaining issues :(
     // .pipe(scsslint.failReporter());
 });
-
 
 // #########################################################
 // #PREPROCESSING#
@@ -131,6 +132,13 @@ gulp.task('tests', ['lint'], function () {
     karma.start({
         'configFile': __dirname + '/tests/karma.conf.js',
         'singleRun': true
+    });
+});
+
+gulp.task('karma', function () {
+    // run javascript tests
+    karma.start({
+        'configFile': __dirname + '/tests/karma.conf.js'
     });
 });
 

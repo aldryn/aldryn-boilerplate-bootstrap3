@@ -42,10 +42,10 @@ You need to be aware of `reStructuredText
 
     - Always start paths with a ``/`` and leave the trailing slash.
     - Leave two spaces before a title.
-    - Write "django", "django CMS" or "Aldryn".
+    - Write "Django", "django CMS" or "Aldryn".
     - Write names properly: Sass, Bootstrap, JavaScript instead of sass (or SASS), bootstrap and javascript.
     - Additional guidelines from `django CMS
-      <http://docs.django-cms.org/en/support-3.0.x/contributing/contributing.html#documentation-markup>`_ apply.
+      <http://docs.django-cms.org/en/develop/contributing/contributing.html#documentation-markup>`_ apply.
 
 
 *************
@@ -66,7 +66,7 @@ Releases
 ********
 
 Always adapt the `CHANGELOG.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_
-and `AUTHORS.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_ accordingly.
+and `AUTHORS.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/AUTHORS.rst>`_ accordingly.
 After the release, set the correct release notes on
 `GitHub <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/releases>`_. Don't forget to update the release
 version within `boilerplate.json <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/boilerplate.json>`_

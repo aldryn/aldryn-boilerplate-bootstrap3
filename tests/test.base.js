@@ -13,9 +13,20 @@
 (function () {
     'use strict';
 
-    describe('A suite', function () {
-        it('contains spec with an expectation', function () {
-            expect(true).toBe(true);
+    describe('base.js', function () {
+        it('loads Cl.Utils._document()', function () {
+            expect(window.Cl).toBeDefined();
+            expect(Cl.Utils).toBeDefined();
+        });
+
+        it('loads outdatedBrowser', function () {
+            // expect(outdatedBrowser).toBeDefined();
+        });
+
+        it('loads Cl.Debug', function () {
+            expect(Cl.Debug).toBeDefined();
+            new Cl.Debug();
+            expect($('#divio-dt').length).toBeTruthy();
         });
     });
 

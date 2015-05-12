@@ -50,7 +50,7 @@ JavaScript
 
 We are implementing the latest **2.x.x** versions of `jQuery <http://jquery.com>`_ as they are
 released. In addition we encourage the use of `class.js <https://github.com/FinalAngel/classjs>`_, a simple library
-that helps out with the modular pattern in :doc:`/general/guidelines/javascript`.
+that helps out with the modular pattern in :doc:`/guidelines/javascript`.
 
 - http://jquery.com
 - https://github.com/FinalAngel/classjs
@@ -89,8 +89,8 @@ Example
 .. code-block:: django
 
     {% load sekizai_tags %}
-    {% addtoblock "css" %}<link href="{% static "css/theme.css" %}" rel="stylesheet">{% endaddtoblock %}
-    {% addtoblock "js" %}<script src="{% static "libs/jquery.min.js" %}"></script>{% endaddtoblock %}
+    {% addtoblock "css" %}<link href="{% static 'css/theme.css' %}" rel="stylesheet">{% endaddtoblock %}
+    {% addtoblock "js" %}<script src="{% static 'libs/jquery.min.js' %}"></script>{% endaddtoblock %}
 
 - http://docs.django-cms.org
 

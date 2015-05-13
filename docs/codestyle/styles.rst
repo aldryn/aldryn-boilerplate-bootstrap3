@@ -47,7 +47,49 @@ completely different sets of markup.
 Magic numbers
 -------------
 
-TODO
+Tend not to use magic numbers in CSS. Let's say you want to position an element in a specific place. Try to be agnostic
+of the environment and don't use values that are too specific.
+
+.. code-block:: scss
+
+    .nav {
+        height: 30px;
+    }
+
+    // bad
+    .dropdown {
+        // it works, but imagine we are going to change
+        // the height of the nav. we'll need to go all over the css and change
+        // the value now
+        top: 35px;
+    }
+
+    // good
+    .dropdown {
+        top: 100%;
+        margin-top: 5px;
+    }
+
+Another example of magic numbers could be computed values. Let's say you have a component that is created on top of
+existing component, like a bootstrap styled select.
+
+.. code-block:: scss
+
+    // bad
+    .custom-select {
+        height: 38px;
+        padding: 14px 17px;
+    }
+
+    // much better
+    .custom-select {
+        height: $input-height-base - 2px;
+        padding: ($padding-base-vertical - 1px) ($padding-base-horizontal - 1px);
+    }
+
+
+`Avoid magic numbers like the plague. <http://csswizardry.com/2012/11/code-smells-in-css/>`_.
+
 
 Sass
 ====

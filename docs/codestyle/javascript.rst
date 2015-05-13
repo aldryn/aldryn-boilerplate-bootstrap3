@@ -21,8 +21,10 @@ These are the fundamental principles we should follow when we design and develop
 
 ----
 
+
 Formatting
 ==========
+
 
 Blocks
 ------
@@ -242,8 +244,10 @@ Yes, always.
         return name;
     })();
 
+
 Variables
 =========
+
 
 General
 -------
@@ -307,6 +311,7 @@ Don't use `reserved words <http://es5.github.io/#x7.6.1>`_ as keys.
     };
 
 Do not use quotes for properties, it is only needed for screening reserved words which we are not supposed to use.
+
 
 Arrays
 ------
@@ -644,9 +649,9 @@ For more information on hoisting refer to `JavaScript Scoping & Hoisting
 <http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html>`_  by `Ben Cherry <http://www.adequatelygood.com>`_.
 
 
-
 Types
 =====
+
 
 Type Casting and Coercion
 -------------------------
@@ -708,6 +713,7 @@ Booleans:
 
     // good
     var hasAge = !!age;
+
 
 Comparison Operators & Equality
 -------------------------------
@@ -1015,6 +1021,7 @@ We do not always know how the widget will be used. Even if "it's only gonna be o
 particular instance" seems like a valid reason not to change - it never is. We should always strive for making components
 independent and reusable, it's usually not a big effort (especially if you think about before writing the widget) and
 it can solve a lot of problems for you in the future.
+
 
 Passing data to components
 --------------------------

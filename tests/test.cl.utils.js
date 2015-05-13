@@ -26,6 +26,7 @@
                 spyOn(Cl.Utils, '_consoleWrapper');
                 Cl.Utils._document();
                 expect(Cl.Utils._consoleWrapper).toHaveBeenCalled();
+                expect(window.console).toEqual(jasmine.any(Object));
             });
         });
 
@@ -48,11 +49,12 @@
                 } else {
                     expect(Storage).toThrowError(ReferenceError);
                 }
+
+                expect(Cl.Utils._isStorageSupported).toBe(true);
             });
 
             it('one can store a value', function () {
                 expect(localStorage.getItem('test#1')).toBeNull();
-                expect(Cl.Utils.setStorage).not.toThrow();
 
                 var returnValue = Cl.Utils.setStorage('test#1', 'true');
                 expect(returnValue).toBe('true');
@@ -61,13 +63,23 @@
 
             it('the other retrieve a value', function () {
                 expect(localStorage.getItem('test#2')).toBeNull();
-                expect(Cl.Utils.getStorage).not.toThrow();
 
                 Cl.Utils.setStorage('test#2', 'true');
                 var returnValue = Cl.Utils.getStorage('test#2');
                 expect(returnValue).toBe('true');
                 expect(localStorage.getItem('test#2')).toBe('true');
             });
+
+            it('handle exceptions as expected', function () {
+                Cl.Utils._isStorageSupported = false;
+
+                expect(Cl.Utils.getStorage('test#3')).toBe(false);
+                expect(Cl.Utils.getStorage()).toBe(false);
+
+                expect(Cl.Utils.setStorage('test#3', 'true')).toBe(false);
+                expect(Cl.Utils.setStorage('test#3')).toBe(false);
+                expect(Cl.Utils.setStorage()).toBe(false);
+            })
         });
     });
 

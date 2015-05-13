@@ -12,3 +12,4 @@ Coding Style
     :maxdepth: 3
 
     javascript
+    styles

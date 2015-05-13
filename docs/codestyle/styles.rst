@@ -2,10 +2,12 @@
 Styles
 ******
 
+
 General
 =======
 
 Formatting, nesting, ordering and everything else is covered by `Guidelines <../guidelines/styles>`_
+
 
 Main problem with CSS
 ---------------------
@@ -37,12 +39,14 @@ fixing it. But just to reiterate, main points:
   would be no ``>`` it would traverse the tree all the way up for every element, which is not very good. It is
   true that browsers do optimize things like this, but you should always check for yourself.
 
+
 JS selectors
 ------------
 
 We use ``js-`` prefixed selectors for referencing DOM Nodes from javascript. That means that these classes have a pure
 functional pirpose and styles should **never** be applied to them. Same type of widget could be easily represented by
 completely different sets of markup.
+
 
 Magic numbers
 -------------
@@ -94,11 +98,13 @@ existing component, like a bootstrap styled select.
 Sass
 ====
 
+
 Sass or SCSS
 ------------
 
 That one is a no-brainer. We use SCSS flavor because it is closer to CSS and easier to pick up for everyone.
 It also resolves subtle issues with indentation.
+
 
 Nesting
 -------
@@ -134,10 +140,12 @@ When using alpha transparent colors keep in mind that ``rgba`` supports passing 
     color: rgba(#000, 0.85);
     color: rgba($color, 0.85);
 
+
 Compass vs LibSass
 ==================
 
 At the moment compass. In plans - dropping compass and implementing LibSass.
+
 
 Autoprefixer
 ------------
@@ -147,6 +155,7 @@ compilation time and ensure that we have only prefixes that we actually need. As
 standard CSS syntax.
 
 Will be implemented with LibSass, but can be used with ``autoprefixer-rails`` gem.
+
 
 Bootstrap
 =========
@@ -198,8 +207,9 @@ In general when using media queries with bootstrap variables, use appropriate va
 
 These values differ only by 1 pixel, but it's a very important one.
 
-TBD
----
+
+Open for discussion
+-------------------
 
 - Screenshot regression testing
 - autoprefixer implementation

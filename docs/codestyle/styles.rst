@@ -106,10 +106,6 @@ Nesting
 Optimal nesting level is 2. You can go up to 4 levels (scss-lint rule), but try not to.
 Overused nesting usually means that something is wrong with the code.
 
-Formatting
-----------
-
-TODO
 
 Extends
 -------
@@ -121,12 +117,6 @@ Only use @extend when the rulesets that you are trying to DRY out are inherently
     negatively impacting the source order of your code.
 
     http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
-
-
-Mixins
-------
-
-TODO
 
 
 Color manipulation

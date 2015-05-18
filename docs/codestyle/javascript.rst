@@ -919,6 +919,38 @@ Prefer promise based ``$.ajax`` calls over callback passing into settings object
         ...
     });
 
+The nice thing about this is that the return value of ``$.ajax`` is now a deferred promise that can be bound to
+anywhere else in your application. So let's say you want to make this ajax call from a few different places.
+Rather than passing in your success function as an option to the function that makes this ajax call, you can just have
+the function return $.ajax itself and bind your callbacks with done, fail, then, or whatever. Note that ``always``
+is a callback that will run whether the request succeeds or fails. ``done`` will only be triggered on success.
+
+It is also easier to process when you need to pass multiple success callbacks with few chained `.done` calls (which can
+also be conditional) than passing array of functions into ``success`` property.
+
+.. code-block:: javascript
+
+    ...
+    getItems: function getItems(options) {
+        var opts = $.extend({
+            url: '/items/',
+            dataType: 'json',
+            ...
+        }, options);
+        return $.ajax(opts);
+    }
+    ...
+
+    // and then in the app
+    this.getItems().done(function (products) {
+        ...
+    })
+
+    // and in all the different places
+    this.getItems({ url: '/items/categories/12' }).done(function (products) {
+        ...
+    });
+
 
 Common patterns
 ===============

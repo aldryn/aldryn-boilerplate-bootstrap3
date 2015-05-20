@@ -1,6 +1,6 @@
-###########################
-Aldryn Boilerplate Standard
-###########################
+############################
+Bootstrap3 Based Boilerplate
+############################
 
 |Build Status| |Coverage Status| |Code Climate|
 

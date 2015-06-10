@@ -12,7 +12,7 @@
 }
 
 // line height calculation
-@function lh($line-height, $line-height-ratio: 1.5) {
+@function lh($line-height, $line-height-ratio: $line-height-base) {
     @if $line-height == 0 {
         @return 0
     }

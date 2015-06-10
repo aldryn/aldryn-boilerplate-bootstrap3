@@ -58,8 +58,9 @@ mixins/
 
 This folder is used to store additional functions or mixins which are not part of the default bootstrap eco-system.
 
-We provide already some helper functions such as ``em(12px, 16px)`` which calculates em values from a given base or
-``lh(16px)`` which gets the golden ratio from a passed font-size.
+We provide already some helper functions such as ``em(12px, 16px)`` that calculates the pixel values from a given
+size in relation to the parent size or ``lh(16px)`` which returns the line-height value according the golden ratio
+from a passed size.
 
 Additionally we have mixins for managing `z-index` layers, `keyframes` rendering , `hide-content` and
 a simplified `micro-clearfix`.

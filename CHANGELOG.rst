@@ -3,6 +3,14 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
+3.3.3
+=====
+- added new ``mixins`` folder to ``private/sass/`` for mixins
+- style adaptions to html markup
+- removed unused meta tag insertions
+- update documentation
+
+
 3.3.2
 =====
 - documentation improvements

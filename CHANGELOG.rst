@@ -3,6 +3,13 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
+3.3.5
+=====
+- update to bootstrap 3.3.5
+- update dependencies
+- simplified templates
+
+
 3.3.3
 =====
 - added new ``mixins`` folder to ``private/sass/`` for mixins

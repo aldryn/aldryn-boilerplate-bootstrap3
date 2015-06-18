@@ -3,10 +3,6 @@
 
 {% block body_class %}tpl-fullwidth{% endblock %}
 
-{% block extend_base %}
-<div class="container">
-    {% block content %}
-        {% with 940 as width %}{% placeholder content %}{% endwith %}
-    {% endblock content %}
-</div>
-{% endblock extend_base %}
+{% block content %}
+    {% with 940 as width %}{% placeholder content %}{% endwith %}
+{% endblock content %}

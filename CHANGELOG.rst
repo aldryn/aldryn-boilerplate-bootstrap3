@@ -8,6 +8,7 @@ Aldryn Boilerplate Bootstrap 3
 - update to bootstrap 3.3.5
 - update dependencies
 - simplified templates
+- changed $speed value to $speed-base
 
 
 3.3.3

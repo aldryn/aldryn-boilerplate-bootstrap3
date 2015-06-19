@@ -2,8 +2,7 @@
     "name": "aldryn-boilerplate-bootstrap3",
     "private": true,
     "dependencies": {
-        "bootstrap": "3.3.4",
-        "bootstrap-sass-official": "3.3.4",
+        "bootstrap-sass-official": "3.3.5",
         "class.js": "1.0.0",
         "fontawesome": "4.3.0",
         "html5shiv": "3.7.2",

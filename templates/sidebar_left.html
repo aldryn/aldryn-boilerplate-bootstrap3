@@ -3,13 +3,10 @@
 
 {% block body_class %}tpl-sidebar-left{% endblock %}
 
-{% block extend_base %}
-<div class="container">
+{% block content %}
     <div class="row">
         <div class="col-md-17 col-md-push-7">
-            {% block content %}
-                {% with 940 as width %}{% placeholder content %}{% endwith %}
-            {% endblock content %}
+            {% with 940 as width %}{% placeholder content %}{% endwith %}
         </div>
         <aside class="col-md-7 col-md-pull-17">
             <h3 class="sr-only">{% trans "Sidebar" %}</h3>
@@ -25,5 +22,4 @@
             {% endblock sidebar %}
         </aside>
     </div>
-</div>
-{% endblock extend_base %}
+{% endblock content %}

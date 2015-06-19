@@ -3,7 +3,7 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
-3.3.5
+3.3.4
 =====
 - update to bootstrap 3.3.5
 - update dependencies

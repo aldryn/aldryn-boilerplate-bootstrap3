@@ -2,6 +2,10 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
+Unreleased
+==========
+- move tooling in package.json from dependencies to devDependencies
+
 
 3.3.4
 =====

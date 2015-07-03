@@ -4,11 +4,11 @@
  */
 
 'use strict';
-/* global describe, it, expect */
+/* global Cl, describe, it, expect, fixture, beforeEach, outdatedBrowser */
 
-// #####################################################################################################################
-// #TESTS#
-describe('base.js', function() {
+// #############################################################################
+// UNIT TEST
+describe('base.js', function () {
     beforeEach(function () {
         fixture.setBase('tests/fixtures');
         this.markup = fixture.load('outdatedBrowser.html');

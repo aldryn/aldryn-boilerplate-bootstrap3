@@ -4,9 +4,10 @@
  */
 
 'use strict';
+/* global Cl, jasmine, describe, it, expect, Storage, spyOn, beforeEach */
 
-// #####################################################################################################################
-// #TESTS#
+// #############################################################################
+// UNIT TEST
 describe('Cl.Utils', function () {
     it('exists', function () {
         expect(Cl.Utils).toBeDefined();
@@ -79,6 +80,6 @@ describe('Cl.Utils', function () {
             expect(Cl.Utils.setStorage('test#3', 'true')).toBe(false);
             expect(Cl.Utils.setStorage('test#3')).toBe(false);
             expect(Cl.Utils.setStorage()).toBe(false);
-        })
+        });
     });
 });

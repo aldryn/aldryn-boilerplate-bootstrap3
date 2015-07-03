@@ -8,8 +8,10 @@ Aldryn Boilerplate Bootstrap 3
 - major update to testing infrastructure
 - added integration tests
 - update dependencies
+- changed all {% load static %} instances to {% load staticfiles %}
 - update documentation
 - move tooling in package.json from dependencies to devDependencies
+- removed cl.debug.js
 
 
 3.3.4

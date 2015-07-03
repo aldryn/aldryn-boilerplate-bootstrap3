@@ -78,7 +78,7 @@ gulp.task('lint:sass', function () {
     return gulp.src(PROJECT_PATTERNS.sass)
         .pipe(cache('scsslint'))
         .pipe(scsslint({
-            'config': './scss-lint.json'
+            config: './scss-lint.json'
         }));
 });
 
@@ -88,9 +88,9 @@ gulp.task('preprocess', ['images', 'docs']);
 
 gulp.task('images', function () {
     var options = {
-        'interlaced': true,
-        'optimizationLevel': 5,
-        'progressive': true
+        interlaced: true,
+        optimizationLevel: 5,
+        progressive: true
     };
 
     gulp.src(PROJECT_PATTERNS.images)
@@ -118,9 +118,9 @@ gulp.task('browser', function () {
     // DOCS: http://www.browsersync.io/docs/options/
     setTimeout(function () {
         browserSync.init(files, {
-            'proxy': '0.0.0.0:' + PORT,
-            'port': PORT + 1,
-            'ui': {
+            proxy: '0.0.0.0:' + PORT,
+            port: PORT + 1,
+            ui: {
                 'port': PORT + 2
             }
         });
@@ -133,8 +133,8 @@ gulp.task('tests', ['tests:unit', 'tests:integration', 'tests:lint']);
 gulp.task('tests:unit', function (done) {
     // run javascript tests
     karma.start({
-        'configFile': PROJECT_PATH.tests + '/karma.conf.js',
-        'singleRun': true
+        configFile: PROJECT_PATH.tests + '/karma.conf.js',
+        singleRun: true
     }, done);
 });
 
@@ -142,8 +142,8 @@ gulp.task('tests:webdriver', webdriverUpdate);
 gulp.task('tests:integration', ['tests:webdriver'], function () {
     return gulp.src([PROJECT_PATH.tests + '/integration/*.js'])
         .pipe(protractor({
-            'configFile': PROJECT_PATH.tests + '/protractor.conf.js',
-            'args': []
+            configFile: PROJECT_PATH.tests + '/protractor.conf.js',
+            args: []
         }))
         .on('error', function (error) {
             gutil.log(gutil.colors.red(
@@ -157,7 +157,7 @@ gulp.task('tests:lint', ['lint']);
 gulp.task('tests:watch', ['tests:lint'], function () {
     // run javascript tests
     karma.start({
-        'configFile': PROJECT_PATH.tests + '/karma.conf.js'
+        configFile: PROJECT_PATH.tests + '/karma.conf.js'
     });
 });
 

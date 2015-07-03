@@ -78,44 +78,8 @@ The starting structure looks like this:
     ├─ karma.conf.js
     └─ protractor.conf.js
 
-
-fixtures/
----------
-
-``/tests/fixtures`` is used to load html snippets within your **unit tests**.
-You simply define the path within test file, load the fixture and than
-test against it.
-
-.. code-block:: javascript
-
-    // load the fixture
-    fixture.setBase('tests/fixtures');
-    this.markup = fixture.load('snippet.html');
-
-    // test
-    expect(fixture.el.firstChild).to.equal(this.markup[0][0]);
-
-    // now let's cleanup
-    fixture.cleanup()
-
-You can find more information about this within the
-`karma-fixtures <https://github.com/billtrik/karma-fixture>`_ documentation.
-
-
-coverage/
----------
-
-This folder is added when running **unit tests** either through ``gulp tests``,
-``gulp tests:unit`` or ``gulp tests:watch``. Coverage uses the
-`istanbul <https://gotwarlost.github.io/istanbul/>`_ tool to give you a nice
-UI for debugging. Just simply launch the `index` file in either one of the
-sub-folders generatet. There can be as many sub-folders as clients connected
-to your runner.
-
-It's worth to mention that the success of your project does not depend on the
-tests or the percentage of your code coverage. Yet it will improve maintanance
-and further development for you and other contributors. We should
-"Aim for the highest" possible coverage.
+Fixtures and coverage is described in more depth within
+:doc:`/testing/unit_tests`.
 
 
 Configuration

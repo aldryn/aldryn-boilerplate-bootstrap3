@@ -66,7 +66,7 @@ gulp.task('lint', ['lint:javascript', 'lint:sass']);
 
 gulp.task('lint:javascript', function () {
     // DOCS: http://jshint.com/docs/
-    gulp.src(PROJECT_PATTERNS.jshint)
+    return gulp.src(PROJECT_PATTERNS.jshint)
         .pipe(jshint())
         .pipe(jscs())
         .on('error', function (error) {
@@ -77,7 +77,7 @@ gulp.task('lint:javascript', function () {
 
 gulp.task('lint:sass', function () {
     // DOCS: https://github.com/brigade/scss-lint/
-    gulp.src(PROJECT_PATTERNS.sass)
+    return gulp.src(PROJECT_PATTERNS.sass)
         .pipe(cache('scsslint'))
         .pipe(scsslint({
             'config': './scss-lint.json'

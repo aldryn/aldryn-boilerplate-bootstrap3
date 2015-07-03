@@ -2,7 +2,7 @@
 Bootstrap3 Based Boilerplate
 ############################
 
-|Build Status| |Dependency Status| |Coverage Status| |Code Climate|
+|Build Status| |Coverage Status| |Code Climate| |Dependency Status|
 
 Aldryn Boilerplate Bootstrap 3 is the most complete **django CMS** based Boilerplate for rapid development. It uses the
 full potential of the `Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile-first

@@ -32,6 +32,7 @@
 
         describe('.redirectTo()', function () {
             it('forwards to a new url', function () {
+                window.location.href.replace('#testRedirect', '');
                 expect(window.location.href).not.toMatch('#testRedirect');
                 Cl.Utils.redirectTo('#testRedirect');
                 expect(window.location.href).toMatch('#testRedirect');
@@ -45,7 +46,7 @@
 
             it('use the local storage of the browser', function () {
                 if (typeof (Storage) !== void(0)) {
-                    expect(Storage).toEqual(jasmine.any(Object));
+                    expect(Storage).toBeDefined();
                 } else {
                     expect(Storage).toThrowError(ReferenceError);
                 }

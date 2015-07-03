@@ -71,6 +71,12 @@ We are currently implementing the `select2.js bootstrap version
 <http://fk.github.io/select2-bootstrap-css/>`_ as default addon.
 
 
+Gulp
+----
+
+We use `Gulp <http://gulpjs.com/>`_ to manage our frontend workflow.
+
+
 Template Language
 =================
 

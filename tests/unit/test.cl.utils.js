@@ -4,6 +4,7 @@
  */
 
 'use strict';
+/* global Cl, jasmine, describe, it, expect, Storage, spyOn, beforeEach */
 
 // #############################################################################
 // UNIT TEST
@@ -79,6 +80,6 @@ describe('Cl.Utils', function () {
             expect(Cl.Utils.setStorage('test#3', 'true')).toBe(false);
             expect(Cl.Utils.setStorage('test#3')).toBe(false);
             expect(Cl.Utils.setStorage()).toBe(false);
-        })
+        });
     });
 });

@@ -30,7 +30,7 @@ var PROJECT_PATH = {
     'images': PROJECT_ROOT + '/static/img/',
     'js': PROJECT_ROOT + '/static/js/',
     'sass': PROJECT_ROOT + '/private/sass/',
-    'tests': PROJECT_ROOT + '/tests'
+    'tests': PROJECT_ROOT + '/tests/'
 };
 
 var PROJECT_PATTERNS = {

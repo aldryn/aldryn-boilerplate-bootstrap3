@@ -67,8 +67,8 @@ In addition several commonly-used shims are available to you including:
 Addons
 ------
 
-We are currently implementing the `select2.js bootstrap version <http://fk.github.io/select2-bootstrap-css/>`_ and
-`cl.debug.js <http://finalangel.github.io/classjs-plugins/>`_ as default addons.
+We are currently implementing the `select2.js bootstrap version
+<http://fk.github.io/select2-bootstrap-css/>`_ as default addon.
 
 
 Template Language

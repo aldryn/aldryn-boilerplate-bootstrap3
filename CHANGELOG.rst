@@ -11,7 +11,8 @@ Unreleased
 =====
 - major update to testing infrastructure
 - added integration tests
-- updated documentation
+- update dependencies
+- update documentation
 
 
 3.3.4

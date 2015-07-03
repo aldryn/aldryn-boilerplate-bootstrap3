@@ -3,6 +3,13 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
+3.4.0
+=====
+- major update to testing infrastructure
+- added integration tests
+- updated documentation
+
+
 3.3.4
 =====
 - update to bootstrap 3.3.5

@@ -6,7 +6,7 @@
 'use strict';
 
 // #############################################################################
-// #IMPORTS#
+// IMPORTS
 var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
 var gulp = require('gulp');
@@ -21,7 +21,7 @@ var webdriverUpdate = require('gulp-protractor').webdriver_update;
 var yuidoc = require('gulp-yuidoc');
 
 // #############################################################################
-// #SETTINGS#
+// SETTINGS
 var PROJECT_ROOT = __dirname;
 var PROJECT_PATH = {
     'css': PROJECT_ROOT + '/static/css/',
@@ -59,7 +59,7 @@ var PROJECT_PATTERNS = {
 var PORT = parseInt(process.env.PORT, 10) || 8000;
 
 // #############################################################################
-// #LINTING#
+// LINTING
 gulp.task('lint', ['lint:javascript', 'lint:sass']);
 
 gulp.task('lint:javascript', function () {
@@ -82,8 +82,8 @@ gulp.task('lint:sass', function () {
         }));
 });
 
-// #######################################
-// #PREPROCESSING#
+// #############################################################################
+// PREPROCESSING
 gulp.task('preprocess', ['images', 'docs']);
 
 gulp.task('images', function () {
@@ -106,8 +106,8 @@ gulp.task('docs', function () {
         .pipe(gulp.dest(PROJECT_PATH.docs));
 });
 
-// #######################################
-// #SERVICES#
+// #############################################################################
+// SERVICES
 gulp.task('browser', function () {
     var files = [
         PROJECT_PATH.css + '*.css',
@@ -127,8 +127,8 @@ gulp.task('browser', function () {
     }, 1000);
 });
 
-// #######################################
-// #TESTS#
+// #############################################################################
+// TESTS
 gulp.task('tests', ['tests:unit', 'tests:integration', 'tests:lint']);
 gulp.task('tests:unit', function (done) {
     // run javascript tests
@@ -162,7 +162,7 @@ gulp.task('tests:watch', ['tests:lint'], function () {
 });
 
 // #############################################################################
-// #COMMANDS#
+// COMMANDS
 gulp.task('watch', function () {
     gulp.watch(PROJECT_PATTERNS.js, ['lint']);
 });

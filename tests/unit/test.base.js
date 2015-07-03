@@ -6,8 +6,8 @@
 'use strict';
 /* global describe, it, expect */
 
-// #####################################################################################################################
-// #TESTS#
+// #############################################################################
+// UNIT TEST
 describe('base.js', function() {
     beforeEach(function () {
         fixture.setBase('tests/fixtures');

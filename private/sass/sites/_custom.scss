@@ -1,14 +1,11 @@
-// #####################################################################################################################
-// #CUSTOM#
+// #############################################################################
+// CUSTOM
 
 // this file is the starting point for custom style and structure
 // feel free to organise your code here as you wish
 // keep in mind that you can use deeper folder nesting for more structure and refinement
 
-// #########################################################
-// #HELPERS#
-
-// #HELPERS/spacer#
+// HELPERS/spacer
 .spacer {
     margin-top: $line-height-computed;
     margin-bottom: $line-height-computed;
@@ -33,7 +30,7 @@
     clear: both;
 }
 
-// #HELPERS/accessibility#
+// HELPERS/accessibility
 .skip-links {
     @extend .list-unstyled;
     position: absolute;
@@ -47,7 +44,7 @@
     }
 }
 
-// #HELPERS/colors#
+// HELPERS/colors
 @include bg-variant(".brand-primary", $brand-primary);
 @include bg-variant(".brand-secondary", $brand-secondary);
 @include bg-variant(".brand-success", $brand-success);
@@ -62,7 +59,7 @@
 @include bg-variant(".brand-gray-light", $gray-light);
 @include bg-variant(".brand-gray-lighter", $gray-lighter);
 
-// #HELPERS/styleguide#
+// HELPERS/styleguide
 .styleguide {
     padding: $line-height-computed 0;
 }

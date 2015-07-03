@@ -3,8 +3,8 @@
  * @copyright: http://www.divio.ch
  */
 
-// #####################################################################################################################
-// #CKEDITOR#
+// #############################################################################
+// CKEDITOR
 /**
  * Default CKEDITOR Styles
  * Added within src/settings.py CKEDITOR_SETTINGS.stylesSet

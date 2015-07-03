@@ -22,16 +22,12 @@ They do not need to describe:
 Section Comments
 ================
 
-The first separation style is *section comment*. This uses the full 120 width span ideally placed to separate large
-chunks of logic or a nice addition to the top of a file::
+In addition to the regular comments, we introduced the *section comment*. Use
+this style to separate large chungs of logic (which you should generally avoid).
+The line is exactly 80 characters long::
 
-    // #####################################################################################################################
-    // #NAME#
-
-The second available style separates smaller code blocks using 60 only lines::
-
-    // #########################################################
-    // #NAME#
+    // #############################################################################
+    // NAME
 
 
 Inline Comments

@@ -6,7 +6,7 @@ Services
 Travis
 ======
 
-The `Travis <http://docs.travis-ci.com/>`_ configuration is farily
+The `Travis <http://docs.travis-ci.com/>`_ configuration is fairly
 straightforward. You can see our example configuration file for reference. The
 important point here is to add all your credentials using ``travis encrypt``
 for security reasons.

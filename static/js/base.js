@@ -32,12 +32,6 @@ var Cl = window.Cl || {};
                 'lowerThan': 'boxShadow'
             });
         }
-
-        // load debugging
-        // DOCS: http://finalangel.github.io/classjs-plugins/examples/cl.debug/
-        if (window.Cl && window.Cl.Debug) {
-            new Cl.Debug();
-        }
     });
 
 })(jQuery);

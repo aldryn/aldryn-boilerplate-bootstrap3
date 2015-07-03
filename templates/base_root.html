@@ -39,9 +39,6 @@
 <script src="{% static 'js/libs/class.min.js' %}"></script>
 <script src="{% static 'js/libs/outdatedBrowser.min.js' %}"></script>
 <script src="{% static 'js/addons/cl.utils.js' %}"></script>
-{% if debug %}
-    <script src="{% static 'js/addons/cl.debug.min.js' %}"></script>
-{% endif %}
 <script src="{% static 'js/base.js' %}"></script>
 {% render_block "js" %}
 {% block extrafoot %}{% endblock %}

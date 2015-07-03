@@ -27,12 +27,6 @@
         it('loads outdatedBrowser', function () {
             expect(outdatedBrowser).toBeDefined();
         });
-
-        it('loads Cl.Debug', function () {
-            expect(Cl.Debug).toBeDefined();
-            new Cl.Debug();
-            expect($('#divio-dt').length).toBeTruthy();
-        });
     });
 
 })();

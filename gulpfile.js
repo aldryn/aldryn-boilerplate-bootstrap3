@@ -43,6 +43,7 @@ var PROJECT_PATTERNS = {
         PROJECT_PATH.js + '*.js',
         PROJECT_PATH.js + '**/*.js',
         PROJECT_PATH.tests + '*.js',
+        PROJECT_PATH.tests + '*/**.js',
         '!' + PROJECT_PATH.js + '*.min.js',
         '!' + PROJECT_PATH.js + '**/*.min.js'
     ],
@@ -54,9 +55,6 @@ var PROJECT_PATTERNS = {
         '!' + PROJECT_PATH.sass + 'layout/_print.{scss,sass}'
     ]
 };
-PROJECT_PATTERNS.jshint = PROJECT_PATTERNS.js.concat(
-    ['!' + PROJECT_PATH.js + 'libs/*.js', './gulpfile.js']
-);
 
 var PORT = parseInt(process.env.PORT, 10) || 8000;
 
@@ -66,7 +64,7 @@ gulp.task('lint', ['lint:javascript', 'lint:sass']);
 
 gulp.task('lint:javascript', function () {
     // DOCS: http://jshint.com/docs/
-    return gulp.src(PROJECT_PATTERNS.jshint)
+    return gulp.src(PROJECT_PATTERNS.js)
         .pipe(jshint())
         .pipe(jscs())
         .on('error', function (error) {
@@ -166,7 +164,7 @@ gulp.task('tests:watch', ['tests:lint'], function () {
 // #############################################################################
 // #COMMANDS#
 gulp.task('watch', function () {
-    gulp.watch(PROJECT_PATTERNS.jshint, ['lint']);
+    gulp.watch(PROJECT_PATTERNS.js, ['lint']);
 });
 
 gulp.task('default', ['browser', 'lint', 'watch']);

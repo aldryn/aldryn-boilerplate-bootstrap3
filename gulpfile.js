@@ -144,8 +144,8 @@ gulp.task('tests:webdriver', webdriverUpdate);
 gulp.task('tests:integration', ['tests:webdriver'], function () {
     return gulp.src([PROJECT_PATH.tests + '/integration/*.js'])
         .pipe(protractor({
-            configFile: PROJECT_PATH.tests + '/protractor.conf.js',
-            args: []
+            'configFile': PROJECT_PATH.tests + '/protractor.conf.js',
+            'args': []
         }))
         .on('error', function (error) {
             gutil.log(gutil.colors.red(

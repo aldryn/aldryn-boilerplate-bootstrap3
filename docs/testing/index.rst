@@ -4,10 +4,11 @@ Testing
 
 .. note::
 
-    We are using `Jasmine <http://jasmine.github.io/>`_ to write tests and the
-    `Karma <http://karma-runner.github.io/>`_ test runner for excecuting them.
-    Additionally `Protractor <protractortest.org>`_ serves as testing framework
-    for integration tests.
+    This section describes the unit and integration tests setup using
+    `Jasmine <http://jasmine.github.io/>`_ and
+    `Protractor <protractortest.org>`_. You will find advise on how to setup
+    your own testing infrastructure, integrate it into `Travis <travis-ci.org>`_
+    and connect with `Sauce Labs <http://saucelabs.com>`_.
 
 .. toctree::
     :maxdepth: 2

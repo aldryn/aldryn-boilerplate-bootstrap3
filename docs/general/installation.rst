@@ -59,11 +59,13 @@ All front-end related tasks are handled via the `Gulp <http://gulpjs.com/>`_ tas
 
 We also offer some standalone commands:
 
-- ``gulp jslint`` runs JavaScript linting
-- ``gulp scsslint`` runs Sass linting
-- ``gulp images`` optimises images within ``/static/img``
 - ``gulp docs`` compiles YUIDoc into ``static/docs``
-- ``gulp karma`` only runs karma for debugging
+- ``gulp images`` optimises images within ``/static/img``
+- ``gulp lint:javascript`` runs JavaScript linting
+- ``gulp lint:sass`` runs Sass linting
+- ``gulp tests:unit`` runs unit tests
+- ``gulp tests:integration`` runs integration tests
+- ``gulp tests:watch`` runs tests in debugging mode
 
 We love code over configuration.
 

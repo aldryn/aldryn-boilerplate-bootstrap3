@@ -3,7 +3,6 @@
     "esnext": true,
     "expr": true,
     "bitwise": true,
-    "camelcase": true,
     "curly": true,
     "eqeqeq": true,
     "immed": true,

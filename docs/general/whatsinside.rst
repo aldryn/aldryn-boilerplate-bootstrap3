@@ -71,6 +71,12 @@ We are currently implementing the `select2.js bootstrap version <http://fk.githu
 `cl.debug.js <http://finalangel.github.io/classjs-plugins/>`_ as default addons.
 
 
+Gulp
+----
+
+We use `Gulp <http://gulpjs.com/>`_ to manage our frontend workflow.
+
+
 Template Language
 =================
 

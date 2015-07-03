@@ -74,7 +74,7 @@ We are currently implementing the `select2.js bootstrap version <http://fk.githu
 Gulp
 ----
 
-We are using `Gulp <http://gulpjs.com/>`_ to manage our frontend workflow.
+We use `Gulp <http://gulpjs.com/>`_ to manage our frontend workflow.
 
 
 Template Language

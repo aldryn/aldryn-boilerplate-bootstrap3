@@ -12,6 +12,7 @@ Aldryn Boilerplate Bootstrap 3
 - update documentation
 - move tooling in package.json from dependencies to devDependencies
 - removed cl.debug.js
+- updated jshint task to fail on travis correctly
 
 
 3.3.4

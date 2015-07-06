@@ -9,7 +9,6 @@
 // IMPORTS
 var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
-var coveralls = require('gulp-coveralls');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var imagemin = require('gulp-imagemin');
@@ -137,9 +136,6 @@ gulp.task('tests:unit', function (done) {
         configFile: PROJECT_PATH.tests + '/karma.conf.js',
         singleRun: true
     }, done);
-    // report to coveralls
-    gulp.src(PROJECT_PATH.tests + '/coverage/**/lcov.info')
-        .pipe(coveralls());
 });
 
 gulp.task('tests:webdriver', webdriverUpdate);

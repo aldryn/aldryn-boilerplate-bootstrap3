@@ -55,13 +55,9 @@ an elegant `platform configurator
 you if you want to add more browsers.
 
 
-Code Climate
-============
+Coveralls
+=========
 
-We also support `Code Climate <http://codeclimate.com>`_ to show the current
-coverage status. You simple need to import your project and add the appropriate
-repo token::
-
-    travis encrypt CODECLIMATE_REPO_TOKEN={TOKEN} --add
-
-Where ``{TOKEN}`` represents the key from Code Climate.
+We also support `Coveralls <http://coveralls.io>`_ to show the current
+coverage status. You simple need to import your project and Gulp will take
+care of the rest.

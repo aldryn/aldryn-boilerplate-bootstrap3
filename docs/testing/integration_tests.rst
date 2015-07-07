@@ -7,9 +7,9 @@ Configuration
 =============
 
 The main configuration file to look at is ``/tests/protractor.conf.js``.
-It configures our **browserName**.
+It configures our ``browserName``.
 
-In **browserName** we specify the browser that will be used to launch the tests.
+In ``browserName`` we specify the browser that will be used to launch the tests.
 It can be set to ``phantomjs``, ``firefox`` or ``chrome``.
 
 You can find more information about this in the

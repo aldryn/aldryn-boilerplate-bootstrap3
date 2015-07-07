@@ -10,12 +10,13 @@ The main configuration file to look at is ``/tests/protractor.conf.js``.
 It configures our **specs**, **exclude** and **suites** paths.
 
 Inside **specs** we specify the location of all specs that should be launched.
-It can be set to run all tests that are in the specs folder like this ``specs: ['specs/*.js']``.
+It can be set to run all tests that are in the specs folder like this
+``specs: ['integration/specs/*.js']``.
 
 The **exclude** setting allows us to specifically exclude certain specs from
-running. By defining a path - say ``specs/spec.log*.js`` in ``exclude`` - we
-can exclude scripts such as ``specs/spec.login.js`` and ``specs/spec.logout.js``
-from being launched.
+running. By defining a path - say ``integration/specs/spec.log*.js`` in
+``exclude`` - we can exclude scripts such as ``integration/specs/spec.login.js``
+and ``integration/specs/spec.logout.js`` from being launched.
 
 Alternatively, **suites** may be used - we can group spec files into suites
 with the keyword. For example we can add 2 tests into suite like this:
@@ -25,7 +26,7 @@ with the keyword. For example we can add 2 tests into suite like this:
     // Spec patterns are relative to the location of the spec file. They may
     // include glob patterns.
     suites: {
-        logInOut: ['specs/spec.login.js', 'specs/spec.logout.js']
+        logInOut: ['integration/specs/spec.login.js', 'integration/specs/spec.logout.js']
     }
 
 Or you can also specify specs using patterns:
@@ -33,7 +34,7 @@ Or you can also specify specs using patterns:
 .. code-block:: javascript
 
     suites: {
-        logInOut: ['specs/spec.log*.js']
+        logInOut: ['integration/specs/spec.log*.js']
     }
 
 You can find more information about this within the

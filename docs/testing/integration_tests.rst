@@ -13,7 +13,8 @@ In **browserName** we specify the browser that will be used to launch the tests.
 It can be set to ``phantomjs``, ``firefox`` or ``chrome``.
 
 You can find more information about this in the
-`protractor referenceConf.js <https://github.com/angular/protractor/blob/master/docs/referenceConf.js>`_ documentation.
+`protractor referenceConf.js
+<https://github.com/angular/protractor/blob/master/docs/referenceConf.js>`_ documentation.
 
 All spec files should be placed in ``/tests/integration/specs`` and all page
 object files should be in ``/tests/integration/pages``. So, the file organisation

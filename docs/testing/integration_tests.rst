@@ -7,38 +7,36 @@ Configuration
 =============
 
 The main configuration file to look at is ``/tests/protractor.conf.js``.
-It configures our **specs**, **exclude** and **suites** paths.
+It configures our **browserName**.
 
-Inside **specs** we specify the location of all specs that should be launched.
-It can be set to run all tests that are in the specs folder like this
-``specs: ['integration/specs/*.js']``.
+In **browserName** we specify the browser that will be used to launch the tests.
+It can be set to ``phantomjs``, ``firefox`` or ``chrome``.
 
-The **exclude** setting allows us to specifically exclude certain specs from
-running. By defining a path - say ``integration/specs/spec.log*.js`` in
-``exclude`` - we can exclude scripts such as ``integration/specs/spec.login.js``
-and ``integration/specs/spec.logout.js`` from being launched.
-
-Alternatively, **suites** may be used - we can group spec files into suites
-with the keyword. For example we can add 2 tests into suite like this:
-
-.. code-block:: javascript
-
-    // Spec patterns are relative to the location of the spec file. They may
-    // include glob patterns.
-    suites: {
-        logInOut: ['integration/specs/spec.login.js', 'integration/specs/spec.logout.js']
-    }
-
-Or you can also specify specs using patterns:
-
-.. code-block:: javascript
-
-    suites: {
-        logInOut: ['integration/specs/spec.log*.js']
-    }
-
-You can find more information about this within the
+You can find more information about this in the
 `protractor referenceConf.js <https://github.com/angular/protractor/blob/master/docs/referenceConf.js>`_ documentation.
+
+All spec files should be placed in ``/tests/integration/specs`` and all page
+object files should be in ``/tests/integration/pages``. So, the file organisation
+structure is:
+
+```
+/tests/integration/specs
+  - spec.name.js
+  - spec.another.name.js
+
+/tests/integration/pages
+  - page.name.js
+  - page.another.name.js
+```
+
+The specs that will be launched are defined in the ``gulpfile.js``. They can be
+specified using patterns:
+
+.. code-block:: javascript
+
+    return gulp.src([PROJECT_PATH.tests + '/integration/specs/*.js'])
+
+By default all specs inside ``/tests/integration/specs`` folder will be launched.
 
 
 Coverage

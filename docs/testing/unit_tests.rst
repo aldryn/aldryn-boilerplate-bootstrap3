@@ -9,12 +9,12 @@ Configuration
 The main configuration file to look at is ``/tests/karma.conf.js``.
 It configures our **files**, **exclude** and **preprocessors** paths.
 
-Within **files** you add all the files required to be loaded within your tests.
+In **files** you add all the files required to be loaded in your tests.
 For example if we do not add jQuery into this array, we would not have it
 available to us while the tests run.
 
 The **exclude** setting allows us to specifically exclude certain files from
-loading within the browser. By defining a path - say ``addons/*.js`` in
+loading in the browser. By defining a path - say ``addons/*.js`` in
 ``exclude`` - we can exclude scripts such as ``addons/myscript.js``.
 
 Finally, add all files you want to be covered to **preprocessors**. We do not
@@ -25,8 +25,8 @@ simply include all files, as we cannot guarantee the coverage of libraries or
 Fixtures
 ========
 
-``/tests/fixtures`` is used to load HTML snippets within your **unit tests**.
-Simply define the path within test file, load the fixture and then test against
+``/tests/fixtures`` is used to load HTML snippets in your **unit tests**.
+Simply define the path in test file, load the fixture and then test against
 it.
 
 .. code-block:: javascript
@@ -41,7 +41,7 @@ it.
     // now let's cleanup
     fixture.cleanup()
 
-You can find more information about this within the
+You can find more information about this in the
 `karma-fixtures <https://github.com/billtrik/karma-fixture>`_ documentation.
 
 

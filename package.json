@@ -15,6 +15,7 @@
         "jshint-stylish": "2.0.1",
         "karma": "0.12.37",
         "karma-coverage": "0.4.2",
+        "karma-coveralls": "1.1.0",
         "karma-fixture": "0.2.5",
         "karma-html2js-preprocessor": "0.1.0",
         "karma-jasmine": "0.3.6",

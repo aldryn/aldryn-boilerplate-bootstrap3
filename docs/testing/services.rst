@@ -65,3 +65,11 @@ repo token::
     travis encrypt CODECLIMATE_REPO_TOKEN={TOKEN} --add
 
 Where ``{TOKEN}`` represents the key from Code Climate.
+
+
+Coveralls
+=========
+
+You can use `Coveralls <http://coveralls.io>`_ as an alternative to show the
+current coverage status. You simply need to import your project and Karma will
+take care of the rest.

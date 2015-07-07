@@ -55,8 +55,8 @@ an elegant `platform configurator
 you if you want to add more browsers.
 
 
-Coveralls
-=========
+Code Climate
+============
 
 We also support `Code Climate <http://codeclimate.com>`_ to show the current
 coverage status. You simple need to import your project and add the appropriate
@@ -67,8 +67,8 @@ repo token::
 Where ``{TOKEN}`` represents the key from Code Climate.
 
 
-Code Climate
-============
+Coveralls
+=========
 
 You can use `Coveralls <http://coveralls.io>`_ as an alternative to show the
 current coverage status. You simply need to import your project and Karma will

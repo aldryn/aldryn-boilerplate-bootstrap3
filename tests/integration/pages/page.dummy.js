@@ -13,8 +13,8 @@
  * This file uses the Page Object pattern to define a test.
  **/
 
-var DummyPage = {
+var dummyPage = {
     site: 'http://www.django-cms.org'
 };
 
-module.exports = DummyPage;
+module.exports = dummyPage;

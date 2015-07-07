@@ -11,7 +11,7 @@ interactions.
 This testing infrastructure includes them both with `Jasmine
 <http://jasmine.github.io/>`_ as the test suite and `Karma
 <http://karma-runner.github.io/>`_ as the test runner for unit tests.
-`Protractor <protractortest.org>`_ serves as the integration tests framework.
+`Protractor <http://www.protractortest.org>`_ serves as the integration tests framework.
 Both tests can be run separately as described in :ref:`testing_commands` below.
 
 All tests are located within ``/tests``. Each pull request is validated on

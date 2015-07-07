@@ -15,7 +15,7 @@ available to us while the tests run.
 
 The **exclude** setting allows us to specifically exclude certain files from
 loading within the browser. By defining a path - say ``addons/*.js`` in
-``files`` - we can exclude scripts such as ``addons/myscript.js``.
+``exclude`` - we can exclude scripts such as ``addons/myscript.js``.
 
 Finally, add all files you want to be covered to **preprocessors**. We do not
 simply include all files, as we cannot guarantee the coverage of libraries or

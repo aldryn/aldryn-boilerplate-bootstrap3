@@ -1,0 +1,54 @@
+// #############################################################################
+// ICONOGRAPHY
+
+// the full set of font awesome is included as default, this allows for a wider
+// choice rather than the Glyphicons for a custom set generate the font using fontastic.me
+@font-face {
+    font-family: "<%= fontName %>";
+    src: url("<%= fontPath %><%= fontName %>.eot?v=4.3.0");
+    src: url("<%= fontPath %><%= fontName %>.eot?v=4.3.0#iefix") format("eot"),
+         url("<%= fontPath %><%= fontName %>.woff?v=4.3.0") format("woff"),
+         url("<%= fontPath %><%= fontName %>.ttf?v=4.3.0") format("truetype"),
+         url("<%= fontPath %><%= fontName %>.svg?v=4.3.0#<%= fontName %>") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+%icon {
+    display: inline-block;
+    font: normal normal normal 14px/1 <%= fontName %>;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+@function icon-char($filename) {
+    $char: "";
+<% _.each(glyphs, function(glyph) { %>
+    @if $filename == <%= glyph.fileName %> {
+        $char: "<%= glyph.codePoint %>";
+    }<% }); %>
+
+    @return $char;
+}
+
+.icon {
+    @extend %icon;
+}
+@mixin icon($filename, $insert: before) {
+    &:#{$insert} {
+        content: #{"\"\\"}#{icon-char($filename) + "\""};
+    }
+}
+
+// #############################################################################
+// ICONS:start
+// use unicode characters for accessibility reasons and use aria-hidden="true" for decorative icons
+// DOCS: http://filamentgroup.com/lab/bulletproof_icon_fonts.html
+<% _.each(glyphs, function(glyph) { %>
+.icon-<%= glyph.fileName %> {
+    @include icon(<%= glyph.fileName %>);
+}
+<% }); %>

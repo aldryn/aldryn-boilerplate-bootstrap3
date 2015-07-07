@@ -20,15 +20,16 @@ All spec files should be placed in ``/tests/integration/specs`` and all page
 object files should be in ``/tests/integration/pages``. So, the file organisation
 structure is:
 
-```
-/tests/integration/specs
-  - spec.name.js
-  - spec.another.name.js
+.. code-block:: text
 
-/tests/integration/pages
-  - page.name.js
-  - page.another.name.js
-```
+    tests/
+    └─ integration/
+       ├─ specs/
+       │   ├─ spec.name.js
+       │   └─ spec.another.name.js
+       └─ pages/
+           ├─ page.name.js
+           └─ page.another.name.js
 
 The specs that will be launched are defined in the ``gulpfile.js``. They can be
 specified using patterns:

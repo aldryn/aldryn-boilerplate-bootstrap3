@@ -7,7 +7,7 @@ Aldryn Boilerplate Bootstrap 3
 =====
 - major update to testing infrastructure
 - added integration tests
-- added browserlist
+- added browserslist
 - added coveralls support
 - update dependencies
 - update jshint task to fail on travis correctly

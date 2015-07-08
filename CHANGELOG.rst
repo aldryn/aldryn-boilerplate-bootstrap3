@@ -9,6 +9,7 @@ Aldryn Boilerplate Bootstrap 3
 - added integration tests
 - added browserslist
 - added coveralls support
+- added custom icon-font support
 - update dependencies
 - update jshint task to fail on travis correctly
 - update documentation

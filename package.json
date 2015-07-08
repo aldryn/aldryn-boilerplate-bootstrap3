@@ -7,6 +7,8 @@
         "gulp": "3.9.0",
         "gulp-cached": "1.1.0",
         "gulp-imagemin": "2.3.0",
+        "gulp-iconfont": "3.0.1",
+        "gulp-iconfont-css": "0.0.9",
         "gulp-jscs": "1.6.0",
         "gulp-jshint": "1.11.2",
         "gulp-scss-lint": "0.2.0",

@@ -11,6 +11,8 @@ var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var iconfont = require('gulp-iconfont');
+var iconfontCss = require('gulp-iconfont-css');
 var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
@@ -26,8 +28,10 @@ var PROJECT_ROOT = __dirname;
 var PROJECT_PATH = {
     'css': PROJECT_ROOT + '/static/css/',
     'docs': PROJECT_ROOT + '/static/docs',
+    'fonts':  PROJECT_ROOT + '/static/fonts/',
     'html': PROJECT_ROOT + '/templates/',
     'images': PROJECT_ROOT + '/static/img/',
+    'icons': PROJECT_ROOT + '/private/icons/',
     'js': PROJECT_ROOT + '/static/js/',
     'sass': PROJECT_ROOT + '/private/sass/',
     'tests': PROJECT_ROOT + '/tests/'
@@ -40,6 +44,7 @@ var PROJECT_PATTERNS = {
         '!' + PROJECT_PATH.images + 'dummy/*/**'
     ],
     'js': [
+        'gulpfile.js',
         PROJECT_PATH.js + '*.js',
         PROJECT_PATH.js + '**/*.js',
         PROJECT_PATH.tests + '*.js',
@@ -108,6 +113,24 @@ gulp.task('docs', function () {
     gulp.src(PROJECT_PATTERNS.js)
         .pipe(yuidoc())
         .pipe(gulp.dest(PROJECT_PATH.docs));
+});
+
+gulp.task('icons', function () {
+    gulp.src(PROJECT_PATH.icons + '**/*.svg')
+        .pipe(iconfontCss({
+            fontName: 'iconfont',
+            fontPath: 'static/fonts/iconfont/',
+            path: PROJECT_PATH.sass + 'libs/_iconfont.scss',
+            targetPath: '../../../private/sass/layout/_iconfont.scss'
+        }))
+        .pipe(iconfont({
+            fontName: 'iconfont',
+            normalize: true
+        }))
+        .on('glyphs', function (glyphs, options) {
+            gutil.log.bind(glyphs, options);
+        })
+        .pipe(gulp.dest(PROJECT_PATH.fonts + 'iconfont/'));
 });
 
 // #############################################################################

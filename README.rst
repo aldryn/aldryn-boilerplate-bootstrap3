@@ -4,6 +4,8 @@ Bootstrap3 Based Boilerplate
 
 |Build Status| |Coverage Status| |Code Climate| |Dependency Status|
 
+|Browser Matrix|
+
 Aldryn Boilerplate Bootstrap 3 is the most complete **django CMS** based Boilerplate for rapid development. It uses the
 full potential of the `Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile-first
 projects on the web, and implements various best practices from within the front-end community.
@@ -36,3 +38,5 @@ needs love. Feel free to fork and send us pull requests and checkout the
    :target: https://coveralls.io/github/aldryn/aldryn-boilerplate-bootstrap3?branch=master%2Fcoveralls
 .. |Code Climate| image:: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3/badges/gpa.svg
    :target: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3
+.. |Browser Matrix| image:: https://saucelabs.com/browser-matrix/aldryn-boilerboot3.svg
+   :target: https://saucelabs.com/u/aldryn-boilerboot3

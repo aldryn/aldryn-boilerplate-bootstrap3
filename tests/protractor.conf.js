@@ -26,7 +26,7 @@ var config = {
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: {
         showColors: true,
-        defaultTimeoutInterval: 30000
+        defaultTimeoutInterval: 240000
     }
 };
 
@@ -34,8 +34,8 @@ if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {
     config.capabilities = null;
     config.sauceUser = process.env.SAUCE_USERNAME;
     config.sauceKey = process.env.SAUCE_ACCESS_KEY;
-    config.multiCapabilities = Object.keys(browsers).map(function (key) {
-        var browserCapability =  browsers[key];
+    config.multiCapabilities = browsers.map(function (browser) {
+        var browserCapability =  browser;
         browserCapability.name = formatTaskName(browserCapability.browserName);
         return browserCapability;
     });

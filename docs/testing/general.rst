@@ -11,7 +11,7 @@ interactions.
 This testing infrastructure includes them both with `Jasmine
 <http://jasmine.github.io/>`_ as the test suite and `Karma
 <http://karma-runner.github.io/>`_ as the test runner for unit tests.
-`Protractor <protractortest.org>`_ serves as the integration tests framework.
+`Protractor <http://www.protractortest.org>`_ serves as the integration tests framework.
 Both tests can be run separately as described in :ref:`testing_commands` below.
 
 All tests are located within ``/tests``. Each pull request is validated on
@@ -92,3 +92,13 @@ The configuration files are located at the root of the ``/tests`` folder.
 
 The function of these configuration files is described in more depth within
 :doc:`/testing/unit_tests` or :doc:`/testing/integration_tests`.
+
+Browserslist
+============
+
+`Browserslist <https://github.com/ai/browserslist>`_ enables us to provide a
+compiled and ready to use browser-list to services such as Sauce Labs,
+Autoprefixer and more.
+
+Simply add the required browser to the ``browserslist`` file. Our configuration
+includes the `last 2 versions` and `ie >= 9`.

@@ -144,7 +144,7 @@ gulp.task('tests:unit', function (done) {
 
 gulp.task('tests:webdriver', webdriverUpdate);
 gulp.task('tests:integration', ['tests:webdriver'], function () {
-    return gulp.src([PROJECT_PATH.tests + '/integration/*.js'])
+    return gulp.src([PROJECT_PATH.tests + '/integration/specs/*.js'])
         .pipe(protractor({
             configFile: PROJECT_PATH.tests + '/protractor.conf.js',
             args: []

@@ -7,13 +7,14 @@ Aldryn Boilerplate Bootstrap 3
 =====
 - major update to testing infrastructure
 - added integration tests
+- added browserlist
+- added coveralls support
 - update dependencies
-- changed all {% load static %} instances to {% load staticfiles %}
+- update jshint task to fail on travis correctly
 - update documentation
+- changed all {% load static %} instances to {% load staticfiles %}
 - move tooling in package.json from dependencies to devDependencies
 - removed cl.debug.js
-- added coveralls support
-- updated jshint task to fail on travis correctly
 
 
 3.3.4

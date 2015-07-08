@@ -12,8 +12,8 @@ Aldryn Boilerplate Bootstrap 3
 - update dependencies
 - update jshint task to fail on travis correctly
 - update documentation
-- changed all {% load static %} instances to {% load staticfiles %}
-- move tooling in package.json from dependencies to devDependencies
+- changed all ``{% load static %}`` instances to ``{% load staticfiles %}``
+- move tooling in ``package.json`` from dependencies to **dev**Dependencies
 - removed cl.debug.js
 
 

@@ -101,4 +101,4 @@ compiled and ready to use browser-list to services such as Sauce Labs,
 Autoprefixer and more.
 
 Simply add the required browser to the ``browserslist`` file. Our configuration
-includes the `last 3 versions`.
+includes the `last 2 versions` and `ie >= 9`.

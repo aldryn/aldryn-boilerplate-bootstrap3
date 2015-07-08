@@ -1,7 +1,7 @@
 // #############################################################################
 // CUSTOM ICONS
 
-// this file generates custom icons into /private/sass/sites/_iconfont.scss
+// this file generates custom icons into /private/sass/layout/_iconfont.scss
 @font-face {
     font-family: "<%= fontName %>";
     src: url("<%= fontPath %><%= fontName %>.eot?v=0.1.0");

@@ -118,7 +118,7 @@ gulp.task('icons', function () {
     var dest = PROJECT_PATH.fonts + 'iconfont/';
     console.log(dest);
 
-    gulp.src(PROJECT_PATH.icons)
+    gulp.src(PROJECT_PATH.icons + '**/*.svg')
         .pipe(iconfontCss({
             fontName: 'iconfont',
             fontPath: dest,

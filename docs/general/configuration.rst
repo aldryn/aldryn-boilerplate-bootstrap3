@@ -27,7 +27,7 @@ configuration steps required if you want to use them:
 #. Add your SVG fonts to ``/private/icons``. Gulp gets all SVG files from
    the ``/private/icons/**/*.svg`` pattern and generates the fonts for you.
 #. Run ``gulp icons`` to generate the icon-font
-#. Uncomment ``// @import iconfont;`` from within
+#. Uncomment ``// @import iconfont;`` from
    ``/private/sass/layout/_iconography.scss`` to include it in your gulp build
 
 The ``gulp icons`` command will automatically generate the

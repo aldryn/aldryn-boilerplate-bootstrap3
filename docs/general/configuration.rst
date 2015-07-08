@@ -16,3 +16,20 @@ already added the general Bootstrap utilities for you. The file can be found at:
 ``/static/js/addons/ckeditor.wysiwyg.js``.
 
 .. image:: /_static/editor-wysiwyg.png
+
+
+Custom Icons
+============
+
+We added support for custom icon-font generation through Gulp. There are some
+configuration steps required:
+
+#. Add your SVG fonts to ``/private/icons``. Gulp gets all SVG files from
+   the ``/private/icons/**/*.svg`` pattern and generates the fonts for you.
+#. Run ``gulp icons`` to generate the icon-font
+#. Uncomment ``// @import iconfont;`` from within
+   ``//private/sass/stites/_all.scss`` to include it in your gulp build
+
+The ``gulp icons`` command will automatically generate the
+``/private/sass/sites/_iconfont.scss`` file where you find the class reference
+and mixins for all icons.

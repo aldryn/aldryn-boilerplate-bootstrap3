@@ -26,7 +26,7 @@ var config = {
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: {
         showColors: true,
-        defaultTimeoutInterval: 300000
+        defaultTimeoutInterval: 240000
     }
 };
 

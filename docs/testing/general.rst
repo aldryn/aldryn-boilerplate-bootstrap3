@@ -92,3 +92,13 @@ The configuration files are located at the root of the ``/tests`` folder.
 
 The function of these configuration files is described in more depth within
 :doc:`/testing/unit_tests` or :doc:`/testing/integration_tests`.
+
+Browserlist
+===========
+
+`Browserlist <https://github.com/ai/browserslist>`_ enables us to provide a
+compiled and ready to use browser-list to services such as Sauce Labs,
+Autoprefixer and more.
+
+Simply add the required browser to the ``browserlist`` file. Our configuration
+includes the `last 3 versions`.

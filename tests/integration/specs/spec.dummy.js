@@ -9,10 +9,8 @@
 // #############################################################################
 // INTEGRATION TEST
 describe('Django CMS website', function () {
-    var dummyPage = require('../pages/page.dummy.js');
-
     it('should have a title', function () {
-        browser.get(dummyPage.site);
+        browser.get('http://www.django-cms.org');
 
         expect(browser.getTitle()).toContain('django-cms');
     });

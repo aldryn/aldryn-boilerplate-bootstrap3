@@ -120,7 +120,7 @@ gulp.task('icons', function () {
             fontName: 'iconfont',
             fontPath: 'static/fonts/iconfont/',
             path: PROJECT_PATH.sass + 'libs/_iconfont.scss',
-            targetPath: '../../../private/sass/sites/_iconfont.scss'
+            targetPath: '../../../private/sass/layout/_iconfont.scss'
         }))
         .pipe(iconfont({
             fontName: 'iconfont',

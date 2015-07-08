@@ -22,7 +22,7 @@ Custom Icons
 ============
 
 We added support for custom icon-font generation through Gulp. There are some
-configuration steps required:
+configuration steps required if you want to use them:
 
 #. Add your SVG fonts to ``/private/icons``. Gulp gets all SVG files from
    the ``/private/icons/**/*.svg`` pattern and generates the fonts for you.

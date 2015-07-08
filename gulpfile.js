@@ -115,15 +115,12 @@ gulp.task('docs', function () {
 });
 
 gulp.task('icons', function () {
-    var dest = PROJECT_PATH.fonts + 'iconfont/';
-    console.log(dest);
-
     gulp.src(PROJECT_PATH.icons + '**/*.svg')
         .pipe(iconfontCss({
             fontName: 'iconfont',
-            fontPath: dest,
+            fontPath: 'static/fonts/iconfont/',
             path: PROJECT_PATH.sass + 'libs/_iconfont.scss',
-            targetPath: PROJECT_PATH.sass + 'sites/_iconfont.scss'
+            targetPath: '../../../private/sass/sites/_iconfont.scss'
         }))
         .pipe(iconfont({
             fontName: 'iconfont',
@@ -132,7 +129,7 @@ gulp.task('icons', function () {
         .on('glyphs', function(glyphs, options) {
             gutil.log.bind(glyphs, options);
         })
-        .pipe(gulp.dest(dest));
+        .pipe(gulp.dest(PROJECT_PATH.fonts + 'iconfont/'));
 });
 
 // #############################################################################

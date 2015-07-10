@@ -1,4 +1,4 @@
-<!doctype html>{% load i18n static cms_tags sekizai_tags %}
+<!doctype html>{% load i18n staticfiles cms_tags sekizai_tags %}
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="utf-8">
@@ -39,9 +39,6 @@
 <script src="{% static 'js/libs/class.min.js' %}"></script>
 <script src="{% static 'js/libs/outdatedBrowser.min.js' %}"></script>
 <script src="{% static 'js/addons/cl.utils.js' %}"></script>
-{% if debug %}
-    <script src="{% static 'js/addons/cl.debug.min.js' %}"></script>
-{% endif %}
 <script src="{% static 'js/base.js' %}"></script>
 {% render_block "js" %}
 {% block extrafoot %}{% endblock %}

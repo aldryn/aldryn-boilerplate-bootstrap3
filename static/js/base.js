@@ -3,8 +3,8 @@
  * @copyright: http://www.divio.ch
  */
 
-// #####################################################################################################################
-// #NAMESPACES#
+// #############################################################################
+// NAMESPACES
 /**
  * @module Cl
  */
@@ -12,8 +12,8 @@
 var Cl = window.Cl || {};
 /* global outdatedBrowser */
 
-// #####################################################################################################################
-// #BASE#
+// #############################################################################
+// BASE
 // istanbul ignore next
 (function ($) {
     'use strict';
@@ -31,12 +31,6 @@ var Cl = window.Cl || {};
                 'languagePath': '',
                 'lowerThan': 'boxShadow'
             });
-        }
-
-        // load debugging
-        // DOCS: http://finalangel.github.io/classjs-plugins/examples/cl.debug/
-        if (window.Cl && window.Cl.Debug) {
-            new Cl.Debug();
         }
     });
 

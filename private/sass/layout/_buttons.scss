@@ -1,15 +1,15 @@
-// #####################################################################################################################
-// #BUTTONS#
+// #############################################################################
+// BUTTONS
 
 // all styles related to the button system should be declared within this file
 // apply the "sites/" nesting described within the documentation if the file is getting to large
 
-// #BUTTONS/animation#
+// BUTTONS/animation
 .btn {
     @include transition(background, $speed-base);
 }
 
-// #BUTTONS/outline#
+// BUTTONS/outline
 .btn-outline {
     border: 1px solid transparent;
     background: transparent;

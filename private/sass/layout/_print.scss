@@ -1,12 +1,12 @@
-// #####################################################################################################################
-// #PRINT#
+// #############################################################################
+// PRINT
 
 // this file is intended for all print styles and rules
 // to ensure your website also works when printed
 
 @media print {
 
-    // #DEFAULTS#
+    // Defaults
     a[href]:after {
         content: "";
     }
@@ -15,7 +15,7 @@
         display: none !important;
     }
 
-    // #CUSTOM#
+    // Custom
     .navbar-head {
         display: block;
     }

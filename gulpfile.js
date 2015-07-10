@@ -5,147 +5,193 @@
 
 'use strict';
 
-// #####################################################################################################################
-// #IMPORTS#
+// #############################################################################
+// IMPORTS
 var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var iconfont = require('gulp-iconfont');
+var iconfontCss = require('gulp-iconfont-css');
 var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var karma = require('karma').server;
+var protractor = require('gulp-protractor').protractor;
 var scsslint = require('gulp-scss-lint');
+var webdriverUpdate = require('gulp-protractor').webdriver_update;
 var yuidoc = require('gulp-yuidoc');
 
-// #####################################################################################################################
-// #SETTINGS#
-var paths = {
-    'css': './static/css/',
-    'html': './templates/',
-    'images': './static/img/',
-    'js': './static/js/',
-    'sass': './private/sass/',
-    'docs': './static/docs',
-    'tests': './tests'
+// #############################################################################
+// SETTINGS
+var PROJECT_ROOT = __dirname;
+var PROJECT_PATH = {
+    'css': PROJECT_ROOT + '/static/css/',
+    'docs': PROJECT_ROOT + '/static/docs',
+    'fonts':  PROJECT_ROOT + '/static/fonts/',
+    'html': PROJECT_ROOT + '/templates/',
+    'images': PROJECT_ROOT + '/static/img/',
+    'icons': PROJECT_ROOT + '/private/icons/',
+    'js': PROJECT_ROOT + '/static/js/',
+    'sass': PROJECT_ROOT + '/private/sass/',
+    'tests': PROJECT_ROOT + '/tests/'
 };
 
-var patterns = {
+var PROJECT_PATTERNS = {
     'images': [
-        paths.images + '*',
-        paths.images + '**/*',
-        '!' + paths.images + 'dummy/*/**'
+        PROJECT_PATH.images + '*',
+        PROJECT_PATH.images + '**/*',
+        '!' + PROJECT_PATH.images + 'dummy/*/**'
     ],
     'js': [
-        paths.js + '*.js',
-        paths.js + '**/*.js',
-        paths.tests + '*.js',
-        '!' + paths.js + '*.min.js',
-        '!' + paths.js + '**/*.min.js'
+        'gulpfile.js',
+        PROJECT_PATH.js + '*.js',
+        PROJECT_PATH.js + '**/*.js',
+        PROJECT_PATH.tests + '*.js',
+        PROJECT_PATH.tests + '*/**.js',
+        '!' + PROJECT_PATH.js + '*.min.js',
+        '!' + PROJECT_PATH.js + '**/*.min.js'
     ],
     'sass': [
-        paths.sass + '*',
-        paths.sass + '**/*',
-        '!' + paths.sass + 'libs/*.scss',
-        '!' + paths.sass + 'settings/*.scss',
-        '!' + paths.sass + 'layout/_print.scss'
+        PROJECT_PATH.sass + '*',
+        PROJECT_PATH.sass + '**/*',
+        '!' + PROJECT_PATH.sass + 'libs/*',
+        '!' + PROJECT_PATH.sass + 'settings/*',
+        '!' + PROJECT_PATH.sass + 'layout/_print.{scss,sass}'
     ]
 };
-patterns.jshint = patterns.js.concat(['!' + paths.js + 'libs/*.js', './gulpfile.js']);
 
-var port = parseInt(process.env.PORT, 10) || 8000;
+var PORT = parseInt(process.env.PORT, 10) || 8000;
 
-// #####################################################################################################################
-// #LINTING#
-gulp.task('lint', ['jslint', 'scsslint']);
+// #############################################################################
+// LINTING
+gulp.task('lint', ['lint:javascript', 'lint:sass']);
 
-gulp.task('jslint', function () {
-    gulp.src(patterns.jshint)
+gulp.task('lint:javascript', function () {
+    // DOCS: http://jshint.com/docs/
+    return gulp.src(PROJECT_PATTERNS.js)
         .pipe(jshint())
         .pipe(jscs())
         .on('error', function (error) {
             gutil.log('\n' + error.message);
+            if (process.env.CI) {
+                // Force the process to exit with error code
+                process.exit(1);
+            }
         })
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('scsslint', function () {
+gulp.task('lint:sass', function () {
     // DOCS: https://github.com/brigade/scss-lint/
-    gulp.src(patterns.sass)
+    return gulp.src(PROJECT_PATTERNS.sass)
         .pipe(cache('scsslint'))
         .pipe(scsslint({
-            'config': './scss-lint.json'
+            config: './scss-lint.json'
         }));
-    // FIXME: tests currently pass even if there is a linting error, the reporter stops all remaining issues :(
-    // .pipe(scsslint.failReporter());
 });
 
-// #########################################################
-// #PREPROCESSING#
+// #############################################################################
+// PREPROCESSING
 gulp.task('preprocess', ['images', 'docs']);
 
 gulp.task('images', function () {
     var options = {
-        'interlaced': true,
-        'optimizationLevel': 5,
-        'progressive': true
+        interlaced: true,
+        optimizationLevel: 5,
+        progressive: true
     };
 
-    gulp.src(patterns.images)
+    gulp.src(PROJECT_PATTERNS.images)
         .pipe(cache(imagemin(options)))
-        .pipe(gulp.dest(paths.images)).on('error', function (error) {
+        .pipe(gulp.dest(PROJECT_PATH.images)).on('error', function (error) {
             gutil.log('\n' + error.message);
         });
 });
 
 gulp.task('docs', function () {
-    gulp.src(patterns.js)
+    gulp.src(PROJECT_PATTERNS.js)
         .pipe(yuidoc())
-        .pipe(gulp.dest(paths.docs));
+        .pipe(gulp.dest(PROJECT_PATH.docs));
 });
 
-// #########################################################
-// #SERVICES#
+gulp.task('icons', function () {
+    gulp.src(PROJECT_PATH.icons + '**/*.svg')
+        .pipe(iconfontCss({
+            fontName: 'iconfont',
+            fontPath: 'static/fonts/iconfont/',
+            path: PROJECT_PATH.sass + 'libs/_iconfont.scss',
+            targetPath: '../../../private/sass/layout/_iconfont.scss'
+        }))
+        .pipe(iconfont({
+            fontName: 'iconfont',
+            normalize: true
+        }))
+        .on('glyphs', function (glyphs, options) {
+            gutil.log.bind(glyphs, options);
+        })
+        .pipe(gulp.dest(PROJECT_PATH.fonts + 'iconfont/'));
+});
+
+// #############################################################################
+// SERVICES
 gulp.task('browser', function () {
     var files = [
-        paths.css + '*.css',
-        paths.html + '**/*.html',
-        paths.js + '**/*.js'
+        PROJECT_PATH.css + '*.css',
+        PROJECT_PATH.html + '**/*.html',
+        PROJECT_PATH.js + '**/*.js'
     ];
 
     // DOCS: http://www.browsersync.io/docs/options/
     setTimeout(function () {
         browserSync.init(files, {
-            'proxy': '0.0.0.0:' + port,
-            'port': port + 1,
-            'ui': {
-                'port': port + 2
+            proxy: '0.0.0.0:' + PORT,
+            port: PORT + 1,
+            ui: {
+                'port': PORT + 2
             }
         });
     }, 1000);
 });
 
-// #########################################################
-// #TESTS#
-gulp.task('tests', ['lint'], function () {
+// #############################################################################
+// TESTS
+gulp.task('tests', ['tests:unit', 'tests:integration', 'tests:lint']);
+gulp.task('tests:unit', function (done) {
     // run javascript tests
     karma.start({
-        'configFile': __dirname + '/tests/karma.conf.js',
-        'singleRun': true
+        configFile: PROJECT_PATH.tests + '/karma.conf.js',
+        singleRun: true
+    }, done);
+});
+
+gulp.task('tests:webdriver', webdriverUpdate);
+gulp.task('tests:integration', ['tests:webdriver'], function () {
+    return gulp.src([PROJECT_PATH.tests + '/integration/specs/*.js'])
+        .pipe(protractor({
+            configFile: PROJECT_PATH.tests + '/protractor.conf.js',
+            args: []
+        }))
+        .on('error', function (error) {
+            gutil.log(gutil.colors.red(
+                'Error (' + error.plugin + '): ' + error.message
+            ));
+        });
+});
+
+gulp.task('tests:lint', ['lint']);
+
+gulp.task('tests:watch', ['tests:lint'], function () {
+    // run javascript tests
+    karma.start({
+        configFile: PROJECT_PATH.tests + '/karma.conf.js'
     });
 });
 
-gulp.task('karma', function () {
-    // run javascript tests
-    karma.start({
-        'configFile': __dirname + '/tests/karma.conf.js'
-    });
-});
-
-// #####################################################################################################################
-// #COMMANDS#
+// #############################################################################
+// COMMANDS
 gulp.task('watch', function () {
-    gulp.watch(patterns.jshint, ['lint']);
+    gulp.watch(PROJECT_PATTERNS.js, ['lint']);
 });
 
-gulp.task('default', ['lint', 'browser', 'watch']);
+gulp.task('default', ['browser', 'lint', 'watch']);

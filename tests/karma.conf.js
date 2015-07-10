@@ -5,17 +5,32 @@
 
 'use strict';
 
-// #####################################################################################################################
-// #CONFIGURATION#
-module.exports = function (config) {
-    config.set({
+// #############################################################################
+// CONFIGURATION
+var baseConf = require('./base.conf');
 
+module.exports = function (config) {
+    var browsers = {
+        'PhantomJS': 'used for local testing'
+    };
+
+    // Browsers to run on Sauce Labs
+    // Check out https://saucelabs.com/platforms for all browser/OS combos
+    if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {
+        browsers = baseConf.sauceLabsBrowsers.reduce(function (browsers, capability) {
+            browsers[JSON.stringify(capability)] = capability;
+            browsers[JSON.stringify(capability)].base = 'SauceLabs';
+            return browsers;
+        }, {});
+    }
+
+    var settings = {
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '..',
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine', 'fixture'],
 
         // list of files / patterns to load in the browser
         // tests/${path}
@@ -30,20 +45,28 @@ module.exports = function (config) {
             'static/js/*.js',
 
             // tests themselves
-            'tests/*.js'
+            'tests/unit/*.js',
+
+            // fixture patterns
+            {
+                pattern: 'tests/fixtures/**/*'
+            }
         ],
 
         // list of files to exclude
         exclude: [
-            'static/js/addons/ckeditor.wysiwyg.js',
-            'tests/karma.conf.js'
+            'static/js/addons/ckeditor.wysiwyg.js'
         ],
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
+            // add specific files for coverage
             'static/js/base.js': ['coverage'],
-            'static/js/addons/cl.utils.js': ['coverage']
+            'static/js/addons/cl.utils.js': ['coverage'],
+            // for fixtures
+            '**/*.html': ['html2js'],
+            '**/*.json': ['json_fixtures']
         },
 
         // optionally, configure the reporter
@@ -54,10 +77,16 @@ module.exports = function (config) {
             ]
         },
 
+        // fixtures dependency
+        // https://github.com/billtrik/karma-fixture
+        jsonFixturesPreprocessor: {
+            variableName: '__json__'
+        },
+
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress', 'coverage'],
+        reporters: ['progress', 'coverage', 'coveralls', 'saucelabs'],
 
         // web server port
         port: 9876,
@@ -75,10 +104,20 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['PhantomJS'],
+        browsers: Object.keys(browsers),
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
         singleRun: false
-    });
+    };
+
+    if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {
+        settings.sauceLabs = {
+            testName: baseConf.formatTaskName('Unit')
+        };
+        settings.captureTimeout = 240000;
+        settings.customLaunchers = browsers;
+    }
+
+    config.set(settings);
 };

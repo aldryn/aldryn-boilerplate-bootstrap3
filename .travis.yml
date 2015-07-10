@@ -3,8 +3,6 @@ language: node_js
 node_js:
   - "0.10"
 
-sudo: false
-
 before_install:
   - gem install scss-lint
   - npm install -g npm

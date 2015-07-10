@@ -34,8 +34,8 @@ needs love. Feel free to fork and send us pull requests and checkout the
    :target: https://travis-ci.org/aldryn/aldryn-boilerplate-bootstrap3
 .. |Dependency Status| image:: https://gemnasium.com/aldryn/aldryn-boilerplate-bootstrap3.svg
    :target: https://gemnasium.com/aldryn/aldryn-boilerplate-bootstrap3
-.. |Coverage Status| image:: https://coveralls.io/repos/aldryn/aldryn-boilerplate-bootstrap3/badge.svg?branch=master&service=github
-   :target: https://coveralls.io/github/aldryn/aldryn-boilerplate-bootstrap3?branch=master
+.. |Coverage Status| image:: https://coveralls.io/repos/github/aldryn/aldryn-boilerplate-bootstrap3/badge.svg?branch=master%2Fcoveralls
+   :target: https://coveralls.io/github/aldryn/aldryn-boilerplate-bootstrap3?branch=master%2Fcoveralls
 .. |Code Climate| image:: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3/badges/gpa.svg
    :target: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3
 .. |Browser Matrix| image:: https://saucelabs.com/browser-matrix/aldryn-boilerboot3.svg

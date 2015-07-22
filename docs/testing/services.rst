@@ -39,8 +39,7 @@ the sub-account token.
 See the example `.travis.yml <https://github.com/aldryn/
 aldryn-boilerplate-bootstrap3/blob/master/.travis.yml>`_:
 
-- first ``secure`` line in ``env: global:`` represents encrypted Sauce Labs
-sub-account user name
+- first ``secure`` line in ``env: global:`` represents encrypted Sauce Labs sub-account user name
 
 - second ``secure`` line stands for encrypted Sauce Labs sub-account token
 

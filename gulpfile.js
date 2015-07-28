@@ -17,8 +17,11 @@ var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var karma = require('karma').server;
+var minifyCss = require('gulp-minify-css');
 var protractor = require('gulp-protractor').protractor;
+var sass = require('gulp-sass');
 var scsslint = require('gulp-scss-lint');
+var sourcemaps = require('gulp-sourcemaps');
 var webdriverUpdate = require('gulp-protractor').webdriver_update;
 var yuidoc = require('gulp-yuidoc');
 
@@ -93,7 +96,31 @@ gulp.task('lint:sass', function () {
 
 // #############################################################################
 // PREPROCESSING
-gulp.task('preprocess', ['images', 'docs']);
+gulp.task('preprocess', ['sass', 'images', 'docs']);
+
+gulp.task('sass', function () {
+    gulp.src(PROJECT_PATTERNS.sass)
+        // Sourcemaps are disabled by default to reduce filesize
+        // .pipe(sourcemaps.init())
+        .pipe(sass())
+        .on('error', function (error) {
+            gutil.log(gutil.colors.red(
+                'Error (' + error.plugin + '): ' + error.messageFormatted)
+            );
+            // Used on Aldryn to inform aldryn client about the errors in sass compilation
+            if (process.env.EXIT_ON_ERRORS) {
+                process.exit(1);
+            }
+        })
+        .pipe(autoprefixer({
+            // browsers are coming from browserslist file
+            cascade: false
+        }))
+        // .pipe(minifyCss())
+        // Sourcemaps are disabled by default to reduce filesize
+        // .pipe(sourcemaps.write())
+        .pipe(gulp.dest(PROJECT_PATH.css));
+});
 
 gulp.task('images', function () {
     var options = {
@@ -191,7 +218,7 @@ gulp.task('tests:watch', ['tests:lint'], function () {
 // #############################################################################
 // COMMANDS
 gulp.task('watch', function () {
-    gulp.watch(PROJECT_PATTERNS.js, ['lint']);
+    gulp.watch(PROJECT_PATTERNS.js, ['sass', 'lint']);
 });
 
 gulp.task('default', ['browser', 'lint', 'watch']);

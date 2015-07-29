@@ -2,7 +2,8 @@
 // BUTTONS
 
 // all styles related to the button system should be declared within this file
-// apply the "sites/" nesting described within the documentation if the file is getting to large
+// apply the "sites/" nesting described within the documentation if the file is
+// getting to large
 
 // BUTTONS/animation
 .btn {
@@ -14,7 +15,9 @@
     border: 1px solid transparent;
     background: transparent;
     &.btn-default {
-        @include button-variant($btn-default-color, transparent, $btn-default-border);
+        @include button-variant(
+            $btn-default-color, transparent, $btn-default-border
+        );
         &:hover,
         &:active,
         &:focus {
@@ -23,7 +26,9 @@
         }
     }
     &.btn-primary {
-        @include button-variant($btn-primary-bg, transparent, $btn-primary-border);
+        @include button-variant(
+            $btn-primary-bg, transparent, $btn-primary-border
+        );
         &:hover,
         &:active,
         &:focus {
@@ -32,7 +37,9 @@
         }
     }
     &.btn-success {
-        @include button-variant($btn-success-bg, transparent, $btn-success-border);
+        @include button-variant(
+            $btn-success-bg, transparent, $btn-success-border
+        );
         &:hover,
         &:active,
         &:focus {
@@ -41,7 +48,9 @@
         }
     }
     &.btn-info {
-        @include button-variant($btn-info-bg, transparent, $btn-info-border);
+        @include button-variant(
+            $btn-info-bg, transparent, $btn-info-border
+        );
         &:hover,
         &:active,
         &:focus {
@@ -50,7 +59,9 @@
         }
     }
     &.btn-warning {
-        @include button-variant($btn-warning-bg, transparent, $btn-warning-border);
+        @include button-variant(
+            $btn-warning-bg, transparent, $btn-warning-border
+        );
         &:hover,
         &:active,
         &:focus {
@@ -59,7 +70,9 @@
         }
     }
     &.btn-danger {
-        @include button-variant($btn-danger-bg, transparent, $btn-danger-border);
+        @include button-variant(
+            $btn-danger-bg, transparent, $btn-danger-border
+        );
         &:hover,
         &:active,
         &:focus {

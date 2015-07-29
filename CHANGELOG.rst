@@ -8,6 +8,7 @@ Aldryn Boilerplate Bootstrap 3
 - added libsass support
 - removed compass support
 - use @error instead of @warn in sass
+- removed `lh` from ``mixins/_functions.scss``
 
 
 3.4.0

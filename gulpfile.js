@@ -7,6 +7,7 @@
 
 // #############################################################################
 // IMPORTS
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
 var gulp = require('gulp');
@@ -107,7 +108,8 @@ gulp.task('sass', function () {
             gutil.log(gutil.colors.red(
                 'Error (' + error.plugin + '): ' + error.messageFormatted)
             );
-            // Used on Aldryn to inform aldryn client about the errors in sass compilation
+            // Used on Aldryn to inform aldryn client about the errors in
+            // sass compilation
             if (process.env.EXIT_ON_ERRORS) {
                 process.exit(1);
             }
@@ -116,7 +118,7 @@ gulp.task('sass', function () {
             // browsers are coming from browserslist file
             cascade: false
         }))
-        // .pipe(minifyCss())
+        .pipe(minifyCss())
         // Sourcemaps are disabled by default to reduce filesize
         // .pipe(sourcemaps.write())
         .pipe(gulp.dest(PROJECT_PATH.css));

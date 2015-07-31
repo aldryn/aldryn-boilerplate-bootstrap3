@@ -1,7 +1,18 @@
 language: node_js
 
 node_js:
-  - "0.10"
+  - 0.10
+
+sudo: false
+
+env:
+  global:
+    # encrypted Code Climate token
+    - secure: ghtK6PdDy13ruL+HGT4doVcUkl8pyzukY1gkHbkIAL8BrOc0eQdGBnAxKpPGZJv/8upWyul69DgXKg26cbS633Gfp0NjM/YPUh6wEgTg46Zjirw1ejX7xmqsQUGukZXOXNsll7/Syql+KEn8ao+JOAh+gjkFfNY2mxD6Oxs56Sc=
+    # encrypted Sauce Labs sub-account user name
+    - secure: LJw6Cd29/2EdavwQyALzgteQM5+tasvJu0FpS9HJnJPw77HAEl+u8HhRzV2V+/4n2ZMOG9lvDjS1ON+crAolXvo8FO607QNxKFfaMRU2ESynr7+A+itLD/4x3ljPXh72Mypw4Sh0geeVYyZ613jfjzXwKK6lazE/ZhzfcyD4hYk=
+    # encrypted Sauce Labs sub-account token
+    - secure: Nwqm4GQfjZ52MvcQZ/mP068RapB6Jg3sMVmitqsYwUmZsC9xDdmjkJlv3ViWmtZYcvYvQKT7+/iZ4+NjVvYcw7n2OY2vs9F/Vf+XuXuiQEQ9Ouy5im8vWM+1xxzfzPe0tVIWDIApx2j94G+CnKMebwCUeaPeRS1H8BXClPMVkeo=
 
 before_install:
   - gem install scss-lint
@@ -16,9 +27,3 @@ after_script:
 
 script:
   - gulp tests
-
-env:
-  global:
-    - secure: ghtK6PdDy13ruL+HGT4doVcUkl8pyzukY1gkHbkIAL8BrOc0eQdGBnAxKpPGZJv/8upWyul69DgXKg26cbS633Gfp0NjM/YPUh6wEgTg46Zjirw1ejX7xmqsQUGukZXOXNsll7/Syql+KEn8ao+JOAh+gjkFfNY2mxD6Oxs56Sc=
-    - secure: LJw6Cd29/2EdavwQyALzgteQM5+tasvJu0FpS9HJnJPw77HAEl+u8HhRzV2V+/4n2ZMOG9lvDjS1ON+crAolXvo8FO607QNxKFfaMRU2ESynr7+A+itLD/4x3ljPXh72Mypw4Sh0geeVYyZ613jfjzXwKK6lazE/ZhzfcyD4hYk=
-    - secure: Nwqm4GQfjZ52MvcQZ/mP068RapB6Jg3sMVmitqsYwUmZsC9xDdmjkJlv3ViWmtZYcvYvQKT7+/iZ4+NjVvYcw7n2OY2vs9F/Vf+XuXuiQEQ9Ouy5im8vWM+1xxzfzPe0tVIWDIApx2j94G+CnKMebwCUeaPeRS1H8BXClPMVkeo=

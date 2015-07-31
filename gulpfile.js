@@ -7,11 +7,13 @@
 
 // #############################################################################
 // IMPORTS
+var argv = require('minimist')(process.argv.slice(2));
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var gulpif = require('gulp-if');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
 var imagemin = require('gulp-imagemin');
@@ -66,6 +68,7 @@ var PROJECT_PATTERNS = {
 };
 
 var PORT = parseInt(process.env.PORT, 10) || 8000;
+var DEBUG = argv.debug;
 
 // #############################################################################
 // LINTING
@@ -102,7 +105,7 @@ gulp.task('preprocess', ['sass', 'images', 'docs']);
 gulp.task('sass', function () {
     gulp.src(PROJECT_PATTERNS.sass)
         // Sourcemaps are disabled by default to reduce filesize
-        // .pipe(sourcemaps.init())
+        .pipe(gulpif(DEBUG, sourcemaps.init()))
         .pipe(sass())
         .on('error', function (error) {
             gutil.log(gutil.colors.red(
@@ -120,7 +123,7 @@ gulp.task('sass', function () {
         }))
         .pipe(minifyCss())
         // Sourcemaps are disabled by default to reduce filesize
-        // .pipe(sourcemaps.write())
+        .pipe(gulpif(DEBUG, sourcemaps.write()))
         .pipe(gulp.dest(PROJECT_PATH.css));
 });
 

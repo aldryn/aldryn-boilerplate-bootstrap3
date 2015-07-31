@@ -19,7 +19,7 @@
 }
 
 // outline button mixin which extends bootstrap button-variant
-@mixin button-variant-outline($color, $border, $color-hover: white) {
+@mixin button-variant-outline($color, $border, $color-hover: #fff) {
     @include button-variant($color, transparent, $border);
     &:hover,
     &:active,

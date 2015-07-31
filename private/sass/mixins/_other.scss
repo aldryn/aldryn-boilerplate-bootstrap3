@@ -17,3 +17,16 @@
     overflow: hidden;
     text-align: left;
 }
+
+// outline button mixin which extends bootstrap button-variant
+@mixin button-variant-outline($color, $border, $color-hover: white) {
+    @include button-variant($color, transparent, $border);
+    &:hover,
+    &:active,
+    &.active,
+    &:focus,
+    .open > &.dropdown-toggle {
+        color: $color-hover;
+        background-color: $border;
+    }
+}

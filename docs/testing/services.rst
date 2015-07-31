@@ -36,6 +36,15 @@ For each new setup you need to adapt the ``env: global:`` variables by adding::
 Where ``{USER}`` represents the sub-account user name and ``{TOKEN}``
 the sub-account token.
 
+See the example `.travis.yml <https://github.com/aldryn/
+aldryn-boilerplate-bootstrap3/blob/master/.travis.yml>`_:
+
+- the first ``secure`` line in ``env: global:`` represents encrypted Sauce Labs sub-account user name
+
+- the second ``secure`` line stands for encrypted Sauce Labs sub-account token
+
+- the third ``secure`` line is the encrypted Code Climate token
+
 .. important::
     To get the correct
     `status image <https://docs.saucelabs.com/reference/status-images/>`_

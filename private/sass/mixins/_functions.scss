@@ -10,11 +10,3 @@
     }
     @return $target / $context + em;
 }
-
-// line height calculation
-@function lh($line-height, $line-height-ratio: $line-height-base) {
-    @if $line-height == 0 {
-        @return 0
-    }
-    @return round($line-height * $line-height-ratio);
-}

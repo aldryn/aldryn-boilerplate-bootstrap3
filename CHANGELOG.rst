@@ -6,6 +6,8 @@ Aldryn Boilerplate Bootstrap 3
 4.0.0
 =====
 - added libsass support
+- added ``spacer-sm`` and ``spacer-md`` css classes
+- updated ``templates/404.html`` to look better
 - removed compass support
 - use @error instead of @warn in sass
 - removed `lh` from ``mixins/_functions.scss``

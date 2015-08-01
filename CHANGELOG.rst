@@ -3,6 +3,12 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
+3.4.1
+=====
+- Added ``button-variant-outline``mixin
+- Separated line length rule for JS & HTML
+
+
 3.4.0
 =====
 - major update to testing infrastructure

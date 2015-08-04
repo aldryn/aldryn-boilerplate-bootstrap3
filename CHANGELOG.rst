@@ -5,8 +5,11 @@ Aldryn Boilerplate Bootstrap 3
 
 3.4.1
 =====
-- Added ``button-variant-outline``mixin
-- Separated line length rule for JS & HTML
+- added ``button-variant-outline``mixin
+- added ``.spacer-sm`` an ``spacer-md``
+- changed line length rule for JS & HTML
+- changed ``.jshintrc`` settings slightly
+- improved ``.travis.yml`` structure
 
 
 3.4.0

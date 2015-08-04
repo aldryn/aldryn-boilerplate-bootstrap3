@@ -14,70 +14,23 @@
 .btn-outline {
     border: 1px solid transparent;
     background: transparent;
+
     &.btn-default {
-        @include button-variant(
-            $btn-default-color, transparent, $btn-default-border
-        );
-        &:hover,
-        &:active,
-        &:focus {
-            color: #fff;
-            background-color: $btn-default-border;
-        }
+        @include button-variant-outline($btn-default-color, $btn-default-border);
     }
     &.btn-primary {
-        @include button-variant(
-            $btn-primary-bg, transparent, $btn-primary-border
-        );
-        &:hover,
-        &:active,
-        &:focus {
-            color: #fff;
-            background-color: $btn-primary-border;
-        }
+        @include button-variant-outline($btn-primary-bg, $btn-primary-border);
     }
     &.btn-success {
-        @include button-variant(
-            $btn-success-bg, transparent, $btn-success-border
-        );
-        &:hover,
-        &:active,
-        &:focus {
-            color: #fff;
-            background-color: $btn-success-border;
-        }
+        @include button-variant-outline($btn-success-bg, $btn-success-border);
     }
     &.btn-info {
-        @include button-variant(
-            $btn-info-bg, transparent, $btn-info-border
-        );
-        &:hover,
-        &:active,
-        &:focus {
-            color: #fff;
-            background-color: $btn-info-border;
-        }
+        @include button-variant-outline($btn-info-bg, $btn-info-border);
     }
     &.btn-warning {
-        @include button-variant(
-            $btn-warning-bg, transparent, $btn-warning-border
-        );
-        &:hover,
-        &:active,
-        &:focus {
-            color: #fff;
-            background-color: $btn-warning-border;
-        }
+        @include button-variant-outline($btn-warning-bg, $btn-warning-border);
     }
     &.btn-danger {
-        @include button-variant(
-            $btn-danger-bg, transparent, $btn-danger-border
-        );
-        &:hover,
-        &:active,
-        &:focus {
-            color: #fff;
-            background-color: $btn-danger-border;
-        }
+        @include button-variant-outline($btn-danger-bg, $btn-danger-border);
     }
 }

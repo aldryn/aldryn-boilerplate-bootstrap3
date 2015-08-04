@@ -60,6 +60,8 @@ Before starting to work on issues or features, please mind the branching model:
 Everything that is merged to *develop* will be released within the next proper release (1.x.x). Major releases (x.x.x)
 will have their own branches but are always merged agains *develop*.
 
+A pull request needs the consent of two developers familiar with this repository to be merged.
+
 
 ********
 Releases

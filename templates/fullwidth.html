@@ -4,5 +4,7 @@
 {% block body_class %}tpl-fullwidth{% endblock %}
 
 {% block content %}
-    {% with 940 as width %}{% placeholder content %}{% endwith %}
+    <div class="container">
+        {% with 940 as width %}{% placeholder content %}{% endwith %}
+    </div>
 {% endblock content %}

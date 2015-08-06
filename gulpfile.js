@@ -59,10 +59,7 @@ var PROJECT_PATTERNS = {
         '!' + PROJECT_PATH.js + '/**/*.min.js'
     ],
     'sass': [
-        PROJECT_PATH.sass + '/**/*.{scss,sass}',
-        // exclude from linting
-        '!' + PROJECT_PATH.sass + '/libs/*.{scss,sass}',
-        '!' + PROJECT_PATH.sass + '/settings/*.{scss,sass}'
+        PROJECT_PATH.sass + '/**/*.{scss,sass}'
     ]
 };
 
@@ -71,7 +68,7 @@ var DEBUG = argv.debug;
 
 // #############################################################################
 // LINTING
-gulp.task('lint', ['lint:javascript', 'lint:sass']);
+gulp.task('lint', ['lint:javascript']);
 
 gulp.task('lint:javascript', function () {
     // DOCS: http://jshint.com/docs/
@@ -88,6 +85,7 @@ gulp.task('lint:javascript', function () {
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
+/* FIXME: disabled for now
 gulp.task('lint:sass', function () {
     // DOCS: https://github.com/brigade/scss-lint/
     return gulp.src(PROJECT_PATTERNS.sass)
@@ -96,6 +94,7 @@ gulp.task('lint:sass', function () {
             config: './scss-lint.json'
         }));
 });
+*/
 
 // #############################################################################
 // PREPROCESSING
@@ -147,7 +146,7 @@ gulp.task('docs', function () {
 });
 
 gulp.task('icons', function () {
-    gulp.src(PROJECT_PATH.icons + '**/*.svg')
+    gulp.src(PROJECT_PATH.icons + '/**/*.svg')
         .pipe(iconfontCss({
             fontName: 'iconfont',
             appendUnicode: true,
@@ -224,7 +223,8 @@ gulp.task('tests:watch', ['tests:lint'], function () {
 // #############################################################################
 // COMMANDS
 gulp.task('watch', function () {
-    gulp.watch(PROJECT_PATTERNS.js, ['default']);
+    gulp.watch(PROJECT_PATTERNS.sass, ['sass']);
+    gulp.watch(PROJECT_PATTERNS.js, ['lint']);
 });
 
-gulp.task('default', ['sass', 'lint']);
+gulp.task('default', ['sass', 'lint', 'watch']);

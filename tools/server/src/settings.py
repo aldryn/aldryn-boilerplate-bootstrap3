@@ -1,7 +1,7 @@
 from django.utils.translation import ugettext_lazy as _
 
 """
-Django settings for src project.
+Django settings for this project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/

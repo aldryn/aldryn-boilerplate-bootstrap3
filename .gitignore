@@ -33,3 +33,5 @@ npm-debug.log
 
 Gemfile.lock
 .bundle/
+
+/tools/server/env

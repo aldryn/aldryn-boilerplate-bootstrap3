@@ -46,22 +46,23 @@ var PROJECT_PATH = {
 
 var PROJECT_PATTERNS = {
     'images': [
-        PROJECT_PATH.images + '/*',
         PROJECT_PATH.images + '/**/*',
+        // exclude from preprocessing
         '!' + PROJECT_PATH.images + '/dummy/*/**'
     ],
     'js': [
         'gulpfile.js',
         PROJECT_PATH.js + '/**/*.js',
-        PROJECT_PATH.tests + '/*/**.js',
+        PROJECT_PATH.tests + '/**/*.js',
+        // exclude from linting
         '!' + PROJECT_PATH.js + '/*.min.js',
         '!' + PROJECT_PATH.js + '/**/*.min.js'
     ],
     'sass': [
         PROJECT_PATH.sass + '/**/*.{scss,sass}',
+        // exclude from linting
         '!' + PROJECT_PATH.sass + '/libs/*.{scss,sass}',
-        '!' + PROJECT_PATH.sass + '/settings/*.{scss,sass}',
-        '!' + PROJECT_PATH.sass + '/layout/_print.{scss,sass}'
+        '!' + PROJECT_PATH.sass + '/settings/*.{scss,sass}'
     ]
 };
 

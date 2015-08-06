@@ -93,6 +93,7 @@ The configuration files are located at the root of the ``/tests`` folder.
 The function of these configuration files is described in more depth within
 :doc:`/testing/unit_tests` or :doc:`/testing/integration_tests`.
 
+
 Browserslist
 ============
 
@@ -102,3 +103,17 @@ Autoprefixer and more.
 
 Simply add the required browser to the ``browserslist`` file. Our configuration
 includes the `last 2 versions` and `ie >= 9`.
+
+
+Local Server
+============
+
+You need to be able to run
+`django <https://docs.djangoproject.com/en/1.8/intro/install/>`_ to start a
+local server:
+
+- run ``cd tools/server``
+- run ``make install`` to setup the server
+- run ``make run`` to start the server
+
+the development server will be reachable on ``http://0.0.0.0:8000/``

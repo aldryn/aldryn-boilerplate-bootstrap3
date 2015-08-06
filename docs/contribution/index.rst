@@ -73,4 +73,5 @@ After the release, set the correct release notes on
 `GitHub <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/releases>`_. Don't forget to update the release
 version within `boilerplate.json <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/boilerplate.json>`_
 
-Ensure to run ``bash tools/release.sh`` before releasing the package on Aldryn.
+Ensure to run ``bash tools/release.sh`` before releasing the package on Aldryn
+within the root path.

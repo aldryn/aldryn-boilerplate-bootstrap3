@@ -33,38 +33,35 @@ var yuidoc = require('gulp-yuidoc');
 // SETTINGS
 var PROJECT_ROOT = __dirname;
 var PROJECT_PATH = {
-    'css': PROJECT_ROOT + '/static/css/',
+    'css': PROJECT_ROOT + '/static/css',
     'docs': PROJECT_ROOT + '/static/docs',
-    'fonts':  PROJECT_ROOT + '/static/fonts/',
-    'html': PROJECT_ROOT + '/templates/',
-    'images': PROJECT_ROOT + '/static/img/',
-    'icons': PROJECT_ROOT + '/private/icons/',
-    'js': PROJECT_ROOT + '/static/js/',
-    'sass': PROJECT_ROOT + '/private/sass/',
-    'tests': PROJECT_ROOT + '/tests/'
+    'fonts':  PROJECT_ROOT + '/static/fonts',
+    'html': PROJECT_ROOT + '/templates',
+    'images': PROJECT_ROOT + '/static/img',
+    'icons': PROJECT_ROOT + '/private/icons',
+    'js': PROJECT_ROOT + '/static/js',
+    'sass': PROJECT_ROOT + '/private/sass',
+    'tests': PROJECT_ROOT + '/tests'
 };
 
 var PROJECT_PATTERNS = {
     'images': [
-        PROJECT_PATH.images + '*',
-        PROJECT_PATH.images + '**/*',
-        '!' + PROJECT_PATH.images + 'dummy/*/**'
+        PROJECT_PATH.images + '/*',
+        PROJECT_PATH.images + '/**/*',
+        '!' + PROJECT_PATH.images + '/dummy/*/**'
     ],
     'js': [
         'gulpfile.js',
-        PROJECT_PATH.js + '*.js',
-        PROJECT_PATH.js + '**/*.js',
-        PROJECT_PATH.tests + '*.js',
-        PROJECT_PATH.tests + '*/**.js',
-        '!' + PROJECT_PATH.js + '*.min.js',
-        '!' + PROJECT_PATH.js + '**/*.min.js'
+        PROJECT_PATH.js + '/**/*.js',
+        PROJECT_PATH.tests + '/*/**.js',
+        '!' + PROJECT_PATH.js + '/*.min.js',
+        '!' + PROJECT_PATH.js + '/**/*.min.js'
     ],
     'sass': [
-        PROJECT_PATH.sass + '*',
-        PROJECT_PATH.sass + '**/*',
-        '!' + PROJECT_PATH.sass + 'libs/*',
-        '!' + PROJECT_PATH.sass + 'settings/*',
-        '!' + PROJECT_PATH.sass + 'layout/_print.{scss,sass}'
+        PROJECT_PATH.sass + '/**/*.{scss,sass}',
+        '!' + PROJECT_PATH.sass + '/libs/*.{scss,sass}',
+        '!' + PROJECT_PATH.sass + '/settings/*.{scss,sass}',
+        '!' + PROJECT_PATH.sass + '/layout/_print.{scss,sass}'
     ]
 };
 
@@ -152,8 +149,10 @@ gulp.task('icons', function () {
     gulp.src(PROJECT_PATH.icons + '**/*.svg')
         .pipe(iconfontCss({
             fontName: 'iconfont',
+            appendUnicode: true,
+            formats: ['ttf', 'eot', 'woff', 'svg'],
             fontPath: 'static/fonts/',
-            path: PROJECT_PATH.sass + 'libs/_iconfont.scss',
+            path: PROJECT_PATH.sass + '/libs/_iconfont.scss',
             targetPath: '../../../private/sass/layout/_iconography.scss'
         }))
         .pipe(iconfont({
@@ -224,7 +223,7 @@ gulp.task('tests:watch', ['tests:lint'], function () {
 // #############################################################################
 // COMMANDS
 gulp.task('watch', function () {
-    gulp.watch(PROJECT_PATTERNS.js, ['sass', 'lint']);
+    gulp.watch(PROJECT_PATTERNS.js, ['default']);
 });
 
-gulp.task('default', ['browser', 'lint', 'watch']);
+gulp.task('default', ['sass', 'lint']);

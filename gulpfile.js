@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2013, Divio AG
  * Licensed under BSD
  * htttp://github.com/aldryn/aldryn-boilerplate-bootstrap3
@@ -33,38 +33,33 @@ var yuidoc = require('gulp-yuidoc');
 // SETTINGS
 var PROJECT_ROOT = __dirname;
 var PROJECT_PATH = {
-    'css': PROJECT_ROOT + '/static/css/',
+    'css': PROJECT_ROOT + '/static/css',
     'docs': PROJECT_ROOT + '/static/docs',
-    'fonts':  PROJECT_ROOT + '/static/fonts/',
-    'html': PROJECT_ROOT + '/templates/',
-    'images': PROJECT_ROOT + '/static/img/',
-    'icons': PROJECT_ROOT + '/private/icons/',
-    'js': PROJECT_ROOT + '/static/js/',
-    'sass': PROJECT_ROOT + '/private/sass/',
-    'tests': PROJECT_ROOT + '/tests/'
+    'fonts':  PROJECT_ROOT + '/static/fonts',
+    'html': PROJECT_ROOT + '/templates',
+    'images': PROJECT_ROOT + '/static/img',
+    'icons': PROJECT_ROOT + '/private/icons',
+    'js': PROJECT_ROOT + '/static/js',
+    'sass': PROJECT_ROOT + '/private/sass',
+    'tests': PROJECT_ROOT + '/tests'
 };
 
 var PROJECT_PATTERNS = {
     'images': [
-        PROJECT_PATH.images + '*',
-        PROJECT_PATH.images + '**/*',
-        '!' + PROJECT_PATH.images + 'dummy/*/**'
+        PROJECT_PATH.images + '/**/*',
+        // exclude from preprocessing
+        '!' + PROJECT_PATH.images + '/dummy/*/**'
     ],
     'js': [
         'gulpfile.js',
-        PROJECT_PATH.js + '*.js',
-        PROJECT_PATH.js + '**/*.js',
-        PROJECT_PATH.tests + '*.js',
-        PROJECT_PATH.tests + '*/**.js',
-        '!' + PROJECT_PATH.js + '*.min.js',
-        '!' + PROJECT_PATH.js + '**/*.min.js'
+        PROJECT_PATH.js + '/**/*.js',
+        PROJECT_PATH.tests + '/**/*.js',
+        // exclude from linting
+        '!' + PROJECT_PATH.js + '/*.min.js',
+        '!' + PROJECT_PATH.js + '/**/*.min.js'
     ],
     'sass': [
-        PROJECT_PATH.sass + '*',
-        PROJECT_PATH.sass + '**/*',
-        '!' + PROJECT_PATH.sass + 'libs/*',
-        '!' + PROJECT_PATH.sass + 'settings/*',
-        '!' + PROJECT_PATH.sass + 'layout/_print.{scss,sass}'
+        PROJECT_PATH.sass + '/**/*.{scss,sass}'
     ]
 };
 
@@ -73,7 +68,7 @@ var DEBUG = argv.debug;
 
 // #############################################################################
 // LINTING
-gulp.task('lint', ['lint:javascript', 'lint:sass']);
+gulp.task('lint', ['lint:javascript']);
 
 gulp.task('lint:javascript', function () {
     // DOCS: http://jshint.com/docs/
@@ -90,6 +85,7 @@ gulp.task('lint:javascript', function () {
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
+/* FIXME: disabled for now
 gulp.task('lint:sass', function () {
     // DOCS: https://github.com/brigade/scss-lint/
     return gulp.src(PROJECT_PATTERNS.sass)
@@ -98,6 +94,7 @@ gulp.task('lint:sass', function () {
             config: './scss-lint.json'
         }));
 });
+*/
 
 // #############################################################################
 // PREPROCESSING
@@ -149,12 +146,14 @@ gulp.task('docs', function () {
 });
 
 gulp.task('icons', function () {
-    gulp.src(PROJECT_PATH.icons + '**/*.svg')
+    gulp.src(PROJECT_PATH.icons + '/**/*.svg')
         .pipe(iconfontCss({
             fontName: 'iconfont',
-            fontPath: 'static/fonts/iconfont/',
-            path: PROJECT_PATH.sass + 'libs/_iconfont.scss',
-            targetPath: '../../../private/sass/layout/_iconfont.scss'
+            appendUnicode: true,
+            formats: ['ttf', 'eot', 'woff', 'svg'],
+            fontPath: 'static/fonts/',
+            path: PROJECT_PATH.sass + '/libs/_iconfont.scss',
+            targetPath: '../../../private/sass/layout/_iconography.scss'
         }))
         .pipe(iconfont({
             fontName: 'iconfont',
@@ -163,7 +162,7 @@ gulp.task('icons', function () {
         .on('glyphs', function (glyphs, options) {
             gutil.log.bind(glyphs, options);
         })
-        .pipe(gulp.dest(PROJECT_PATH.fonts + 'iconfont/'));
+        .pipe(gulp.dest(PROJECT_PATH.fonts));
 });
 
 // #############################################################################
@@ -224,7 +223,8 @@ gulp.task('tests:watch', ['tests:lint'], function () {
 // #############################################################################
 // COMMANDS
 gulp.task('watch', function () {
-    gulp.watch(PROJECT_PATTERNS.js, ['sass', 'lint']);
+    gulp.watch(PROJECT_PATTERNS.sass, ['sass']);
+    gulp.watch(PROJECT_PATTERNS.js, ['lint']);
 });
 
-gulp.task('default', ['browser', 'lint', 'watch']);
+gulp.task('default', ['sass', 'lint', 'watch']);

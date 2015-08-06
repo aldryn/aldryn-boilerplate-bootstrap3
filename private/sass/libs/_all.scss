@@ -4,6 +4,7 @@
 // this folder is for additional independent libraries such as 960gs or
 // twitter bootstrap these libraries do not depend on other elements
 
-@import "bootstrap"; // using https://github.com/twbs/bootstrap-sass
-@import "fontawesome";
+@import "bootstrap/bootstrap";
+@import "fontawesome/font-awesome";
 @import "select2";
+// @import "iconfont"; uncomment to enable custom icons

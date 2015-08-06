@@ -60,6 +60,8 @@ Before starting to work on issues or features, please mind the branching model:
 Everything that is merged to *develop* will be released within the next proper release (1.x.x). Major releases (x.x.x)
 will have their own branches but are always merged agains *develop*.
 
+A pull request needs the consent of two developers familiar with this repository to be merged.
+
 
 ********
 Releases
@@ -70,3 +72,6 @@ and `AUTHORS.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/m
 After the release, set the correct release notes on
 `GitHub <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/releases>`_. Don't forget to update the release
 version within `boilerplate.json <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/boilerplate.json>`_
+
+Ensure to run ``bash tools/release.sh`` before releasing the package on Aldryn
+within the root path.

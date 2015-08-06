@@ -1,6 +1,7 @@
-/*!
- * @author:    Divio AG
- * @copyright: http://www.divio.ch
+/*
+ * Copyright (c) 2013, Divio AG
+ * Licensed under BSD
+ * htttp://github.com/aldryn/aldryn-boilerplate-bootstrap3
  */
 
 // #############################################################################
@@ -11,6 +12,7 @@
  *
  * @module CKEDITOR
  */
+/* global CKEDITOR */
 
 CKEDITOR.allElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div'];
 CKEDITOR.stylesSet.add('default', [

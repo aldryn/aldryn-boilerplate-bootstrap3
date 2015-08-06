@@ -1,6 +1,7 @@
-/*!
- * @author:    Divio AG
- * @copyright: http://www.divio.ch
+/*
+ * Copyright (c) 2013, Divio AG
+ * Licensed under BSD
+ * htttp://github.com/aldryn/aldryn-boilerplate-bootstrap3
  */
 
 // #############################################################################

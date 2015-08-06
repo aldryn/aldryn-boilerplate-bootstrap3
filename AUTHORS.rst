@@ -1,6 +1,6 @@
-###########################
-Aldryn Boilerplate Standard
-###########################
+#######
+Authors
+#######
 
 Thanks to all the developers for the excellent contribution to this boilerplate.
 
@@ -24,8 +24,10 @@ Please refere to the section within
 * Angelo Dini
 * Daniele Procida
 * Dario Albanesi
+* Dmytro Shpakovskyi
 * Ivan Kubrakov
 * Lionardo Mendonça
+* Loriana Indelicato
 * Mateusz Dereniowski
 * Stefan Foulis
 * Tom Berger

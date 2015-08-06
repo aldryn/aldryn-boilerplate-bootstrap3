@@ -6,11 +6,25 @@ Aldryn Boilerplate Bootstrap 3
 4.0.0
 =====
 - added libsass support
-- added ``spacer-sm`` and ``spacer-md`` css classes
+- added ``tools`` folder
+- added ``tools/server`` for local testing
 - updated ``templates/404.html`` to look better
+- updated Font Awesome to 4.4.0
+- updated Font Awesome to use sass library
+- updated content templates
+- updated license information
 - removed compass support
 - use @error instead of @warn in sass
 - removed `lh` from ``mixins/_functions.scss``
+
+
+3.4.1
+=====
+- added ``button-variant-outline``mixin
+- added ``.spacer-sm`` an ``spacer-md``
+- changed line length rule for JS & HTML
+- changed ``.jshintrc`` settings slightly
+- improved ``.travis.yml`` structure
 
 
 3.4.0

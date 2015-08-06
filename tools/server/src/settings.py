@@ -119,7 +119,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, '../../templates')
+            os.path.join(BASE_DIR, '../../templates'),
+            os.path.join(BASE_DIR, 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -185,8 +186,5 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     # Customize this
-    ('fullwidth.html', 'Fullwidth'),
-    ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right'),
-    ('tpl_home.html', 'Home Template'),
+    ('bootstrap.html', 'Bootstrap'),
 )

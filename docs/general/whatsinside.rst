@@ -13,6 +13,7 @@ Sass
 For CSS pre-processing, we use `Sass <http://sass-lang.com>`_.
 In particular, we use:
 
+* `LibSass <http://libsass.org/>`_ for fast SASS compilation
 * `Gulp JS <http://gulpjs.com/>`_ and the `gulp-sass
   <https://github.com/dlmanning/gulp-sass>`_ plugin to compile SASS files
 * the official `Sass port <https://github.com/twbs/bootstrap-sass>`_ of

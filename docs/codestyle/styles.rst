@@ -161,8 +161,6 @@ on mixins. That way we reduce sass compilation time and ensure that we have only
 prefixes that we actually need. As a good side effect we will use actual
 standard CSS syntax.
 
-Will be implemented with LibSass, but can be used with ``autoprefixer-rails`` gem.
-
 
 Bootstrap
 =========

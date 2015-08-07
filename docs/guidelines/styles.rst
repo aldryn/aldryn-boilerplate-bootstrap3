@@ -4,7 +4,8 @@ Styles
 
 .. note::
 
-    In addition to the :doc:`general` guidelines, the following sections describe stylesheet-specific rules.
+    In addition to the :doc:`general` guidelines, the following sections
+    describe stylesheet-specific rules.
 
 
 Naming
@@ -37,8 +38,9 @@ Nesting
 
     - Don't overuse nesting; nest elements to a maximum of **4 indents**.
 
-With great power comes great responsibility (just wanted to throw that in here). When writing in **Sass** or **Less**
-laziness can have performance implications. While nesting is very powerful, we should avoid unnecessary levels or
+With great power comes great responsibility (just wanted to throw that in here).
+When writing in **Sass** or **Less** laziness can have performance implications.
+While nesting is very powerful, we should avoid unnecessary levels or
 blocks that can be simplified.
 
 .. code-block:: scss
@@ -112,7 +114,7 @@ Ordering
     - Use block-style, and group elements below.
     - See ``scss-lint.json`` for a comprehensive ordering example.
 
-#. includes (Compass includes)
+#. includes (mixins)
 #. extending
 #. visibility, position
 #. color, font-size, line-height, font-* (font relevant data)
@@ -124,9 +126,11 @@ Ordering
 
 .. note::
 
-    Combine attributes such as background-image, background-color, background-repeat into a single line ``background:
-    #fff url("image.png") no-repeat left top;`` when it makes sense. But remember, that a shorthand like ``background``
-    cannot be overridden with just ``background-image``, so use wisely!
+    Combine attributes such as background-image, background-color,
+    background-repeat into a single line ``background:
+    #fff url("image.png") no-repeat left top;`` when it makes sense.
+    But remember, that a shorthand like ``background`` cannot be overridden
+    with just ``background-image``, so use wisely!
 
 
 Example

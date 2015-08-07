@@ -3,7 +3,8 @@ General
 *******
 
 .. note::
-    There are global guidelines which affect every single language, file or folder.
+    There are global guidelines which affect every single language, file or
+    folder.
 
 
 Standards
@@ -37,8 +38,9 @@ Line Length
 
     - Don't breach **120 characters** per line.
 
-*Not even for HTML.* We even encourage you to use 80 characters per line. Yes, screens have got much bigger over the
-last few years, but your brain hasn't. Better to use screen estate for splits, anyway.
+*Not even for HTML.* We even encourage you to use 80 characters per line. Yes,
+screens have got much bigger over the last few years, but your brain hasn't.
+Better to use screen estate for splits, anyway.
 
 
 Naming
@@ -46,8 +48,8 @@ Naming
 
 .. important::
 
-    - **lowercase**, **camelCase** or **hyphened separation** are all good; use **no special characters** except for
-      underscore ``_``.
+    - **lowercase**, **camelCase** or **hyphened separation** are all good; use
+      **no special characters** except for underscore ``_``.
     - Use dashes ``-`` for file naming, unless expressly counterindicated (e.g. in HTML template names).
     - Always use full words instead of abbreviations: ``number`` is better than ``nr``.
     - `BEM <https://bem.info/>`_ is a nice methodology to be aware of.
@@ -62,5 +64,5 @@ Quotes
 
 .. important::
 
-    - We always use **double** ``"."`` quotes for everything, *except in JavaScript*, where we use **single** ``'.'``
-      quotes.
+    - We always use **double** ``"."`` quotes for everything,
+      *except in JavaScript*, where we use **single** ``'.'`` quotes.

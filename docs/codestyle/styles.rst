@@ -6,53 +6,61 @@ Styles
 General
 =======
 
-Formatting, nesting, ordering and everything else is covered by `Guidelines <../guidelines/styles>`_
+Formatting, nesting, ordering and everything else is covered by
+`Guidelines <../guidelines/styles>`_
 
 
 Main problem with CSS
 ---------------------
 
-    There are two types of problems in CSS: cosmetic problems and architectural problems. Cosmetic problems—issues like
-    vertical centering or equal-height columns—usually engender the most vocal complaints, but they’re almost never
-    showstoppers. They’re annoying, sure, but they don’t break the build.
+    There are two types of problems in CSS: cosmetic problems and architectural
+    problems. Cosmetic problems—issues like vertical centering or equal-height
+    columns—usually engender the most vocal complaints, but they’re almost
+    never showstoppers. They’re annoying, sure, but they don’t break the build.
 
     Philip Walton `Side Effects in CSS <http://philipwalton.com/articles/side-effects-in-css/>`_
 
-Since CSS is global, every rule you write or override has the potential to break completely unrelated things. With that
-in mind, try to avoid selectors that are too unspecific (e.g. `type selectors
-<https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors>`_ or overly specific selectors, like ``.nav > ul > li
-> a``. That selector is going to be extremely painful to extend and override if there's going to be a "special" list
-item for example. That also brings us to
+Since CSS is global, every rule you write or override has the potential to
+break completely unrelated things. With that in mind, try to avoid selectors
+that are too unspecific (e.g.
+`type selectors <https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors>`_
+or overly specific selectors, like ``.nav > ul > li > a``. That selector
+is going to be extremely painful to extend and override if there's going to be
+a "special" list item for example. That also brings us to
 
 
 Selector performance
 --------------------
 
-It is always said that css selectors performance is not that important and there are no "easy-to-follow" rules for
-fixing it. But just to reiterate, main points:
+It is always said that css selectors performance is not that important and
+there are no "easy-to-follow" rules for fixing it. But just to reiterate, main points:
 
-- If your project is sufficiently big and complex or really dynamic, css selector performance may play a major role
-  in the perceived rendering performance.
+- If your project is sufficiently big and complex or really dynamic, css
+  selector performance may play a major role in the perceived rendering performance.
 
-- Selectors are interpreted by the browser from right to left, meaning ``.my-class > *`` will select all the
-  elements on the page all the time and check if their immediate parent has a class ``my-class``. If there
-  would be no ``>`` it would traverse the tree all the way up for every element, which is not very good. It is
-  true that browsers do optimize things like this, but you should always check for yourself.
+- Selectors are interpreted by the browser from right to left, meaning
+``.my-class > *`` will select all the elements on the page all the time and
+check if their immediate parent has a class ``my-class``. If there would be
+no ``>`` it would traverse the tree all the way up for every element, which
+is not very good. It is true that browsers do optimize things like this, but
+you should always check for yourself.
 
 
 JS selectors
 ------------
 
-We use ``js-`` prefixed selectors for referencing DOM Nodes from javascript. That means that these classes have a pure
-functional pirpose and styles should **never** be applied to them. Same type of widget could be easily represented by
-completely different sets of markup.
+We use ``js-`` prefixed selectors for referencing DOM Nodes from javascript.
+That means that these classes have a pure functional purpose and styles should
+**never** be applied to them. Same type of widget could be easily represented
+by completely different sets of markup.
 
 
 Magic numbers
 -------------
 
-Tend not to use magic numbers in CSS. Let's say you want to position an element in a specific place. Try to be agnostic
-of the environment and don't use values that are too specific.
+Tend not to use magic numbers in CSS. Let's say you want to position an element
+in a specific place. Try to be agnostic of the environment and don't use values
+that are too specific.
 
 .. code-block:: scss
 
@@ -74,8 +82,9 @@ of the environment and don't use values that are too specific.
         margin-top: 5px;
     }
 
-Another example of magic numbers could be computed values. Let's say you have a component that is created on top of
-existing component, like a bootstrap styled select.
+Another example of magic numbers could be computed values. Let's say you have a
+component that is created on top of existing component, like a bootstrap styled
+select.
 
 .. code-block:: scss
 
@@ -102,25 +111,27 @@ Sass
 Sass or SCSS
 ------------
 
-That one is a no-brainer. We use SCSS flavor because it is closer to CSS and easier to pick up for everyone.
-It also resolves subtle issues with indentation.
+That one is a no-brainer. We use SCSS flavor because it is closer to CSS and
+easier to pick up for everyone. It also resolves subtle issues with indentation.
 
 
 Nesting
 -------
 
-Optimal nesting level is 2. You can go up to 4 levels (scss-lint rule), but try not to.
-Overused nesting usually means that something is wrong with the code.
+Optimal nesting level is 2. You can go up to 4 levels (scss-lint rule), but try
+not to. Overused nesting usually means that something is wrong with the code.
 
 
 Extends
 -------
 
 In general, try to avoid extend unless you know exactly what you are doing.
-Only use @extend when the rulesets that you are trying to DRY out are inherently and thematically related.
+Only use @extend when the rulesets that you are trying to DRY out are inherently
+and thematically related.
 
-    Do not force relationships that do not exist: to do so will create unusual groupings in your project, as well as
-    negatively impacting the source order of your code.
+    Do not force relationships that do not exist: to do so will create unusual
+    groupings in your project, as well as negatively impacting the source order
+    of your code.
 
     http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
 
@@ -128,7 +139,8 @@ Only use @extend when the rulesets that you are trying to DRY out are inherently
 Color manipulation
 ------------------
 
-When using alpha transparent colors keep in mind that ``rgba`` supports passing colors, so you can do things like this:
+When using alpha transparent colors keep in mind that ``rgba`` supports passing
+colors, so you can do things like this:
 
 .. code-block:: scss
 
@@ -141,27 +153,21 @@ When using alpha transparent colors keep in mind that ``rgba`` supports passing 
     color: rgba($color, 0.85);
 
 
-Compass vs LibSass
-==================
-
-At the moment compass. In plans - dropping compass and implementing LibSass.
-
-
 Autoprefixer
 ------------
 
-For generating vendor prefixes one should use Autoprefixer instead of relying on mixins. That way we reduce sass
-compilation time and ensure that we have only prefixes that we actually need. As a good side effect we will use actual
+For generating vendor prefixes one should use Autoprefixer instead of relying
+on mixins. That way we reduce sass compilation time and ensure that we have only
+prefixes that we actually need. As a good side effect we will use actual
 standard CSS syntax.
-
-Will be implemented with LibSass, but can be used with ``autoprefixer-rails`` gem.
 
 
 Bootstrap
 =========
 
-When using ``settings/_bootstrap.scss`` make sure that you have all the variables overwritten in the file, because
-overriding only some of them can lead to subtle bugs like `this <https://gist.github.com/vxsx/598a1312cd036fa94095>`_:
+When using ``settings/_bootstrap.scss`` make sure that you have all the
+variables overwritten in the file, because overriding only some of them can
+lead to subtle bugs like `this <https://gist.github.com/vxsx/598a1312cd036fa94095>`_:
 
 .. code-block:: scss
 
@@ -175,15 +181,18 @@ overriding only some of them can lead to subtle bugs like `this <https://gist.gi
     // now what we want to do is to override line-height-computed in our settings file
     $line-height-computed: 23px;
 
-Now we would expect that ``$input-height-base`` will be 37px, but it will be still 34px because computed properties are
-already calculated and won't be changed. Since bootstrap components dimensions are all interconnected to these computed
-variables we should always have the full settings file. Order matters too.
+Now we would expect that ``$input-height-base`` will be 37px, but it will be
+still 34px because computed properties are already calculated and won't
+be changed. Since bootstrap components dimensions are all interconnected
+to these computed variables we should always have the full settings file.
+Order matters too.
 
 
 Media queries
 -------------
 
-In general when using media queries with bootstrap variables, use appropriate values for appropriate type of a query.
+In general when using media queries with bootstrap variables, use appropriate
+values for appropriate type of a query.
 
 .. code-block:: scss
 

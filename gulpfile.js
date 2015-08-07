@@ -78,7 +78,7 @@ gulp.task('lint:javascript', function () {
         .on('error', function (error) {
             gutil.log('\n' + error.message);
             if (process.env.CI) {
-                // Force the process to exit with error code
+                // force the process to exit with error code
                 process.exit(1);
             }
         })
@@ -102,15 +102,15 @@ gulp.task('preprocess', ['sass', 'images', 'docs']);
 
 gulp.task('sass', function () {
     gulp.src(PROJECT_PATTERNS.sass)
-        // Sourcemaps are disabled by default to reduce filesize
+        // sourcemaps can be activated through `gulp sass --debug´
         .pipe(gulpif(DEBUG, sourcemaps.init()))
         .pipe(sass())
         .on('error', function (error) {
             gutil.log(gutil.colors.red(
                 'Error (' + error.plugin + '): ' + error.messageFormatted)
             );
-            // Used on Aldryn to inform aldryn client about the errors in
-            // sass compilation
+            // used on Aldryn to inform aldryn client about the errors in
+            // SASS compilation
             if (process.env.EXIT_ON_ERRORS) {
                 process.exit(1);
             }
@@ -120,7 +120,7 @@ gulp.task('sass', function () {
             cascade: false
         }))
         .pipe(minifyCss())
-        // Sourcemaps are disabled by default to reduce filesize
+        // sourcemaps can be activated through `gulp sass --debug´
         .pipe(gulpif(DEBUG, sourcemaps.write()))
         .pipe(gulp.dest(PROJECT_PATH.css));
 });

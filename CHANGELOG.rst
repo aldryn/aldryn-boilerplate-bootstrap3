@@ -13,6 +13,7 @@ Aldryn Boilerplate Bootstrap 3
 - updated Font Awesome to use sass library
 - updated content templates
 - updated license information
+- updated documentation
 - removed compass support
 - use @error instead of @warn in sass
 - removed `lh` from ``mixins/_functions.scss``

@@ -57,4 +57,5 @@ to your runner.
 
 It's worth to mention that the success of your project does not depend on the
 tests or the percentage of your code coverage, but it will improve maintenance
-and further development for you and other contributors. We should aim for the highest possible coverage.
+and further development for you and other contributors. We should aim for the
+highest possible coverage.

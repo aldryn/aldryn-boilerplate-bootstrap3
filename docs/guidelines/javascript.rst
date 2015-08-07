@@ -4,9 +4,10 @@ JavaScript
 
 .. note::
 
-    In addition to the :doc:`general` guidelines, the following sections describe JavaScript specific rules.
-    `Code Conventions for the JavaScript Programming Language <http://javascript.crockford.com/code.html>`_ should be
-    your Bible.
+    In addition to the :doc:`general` guidelines, the following sections
+    describe JavaScript specific rules.
+    `Code Conventions for the JavaScript Programming Language <http://javascript.crockford.com/code.html>`_
+    should be your Bible.
 
 
 Naming
@@ -22,13 +23,16 @@ Naming
     - Never use $ for variable names such as ``var $el = $('.el');``.
     - We are using the ``Cl.`` singleton for all custom JavaScript code.
 
-When using jQuery to refer to a DOM instance, always use the ``js-`` prefix to separate
-styles from JavaScript functionality. For example: ``<div class="addon addon-gallery js-addon-gallery"></div>``.
+When using jQuery to refer to a DOM instance, always use the ``js-``
+prefix to separate styles from JavaScript functionality. For example:
+``<div class="addon addon-gallery js-addon-gallery"></div>``.
 
-In this example, *addon* and *addon-gallery* have styles attached to them, *js-plugin-gallery*
-refers to the JavaScript functionality attached to the DOM element.
+In this example, *addon* and *addon-gallery* have styles attached to them,
+*js-plugin-gallery* refers to the JavaScript functionality attached to the DOM
+element.
 
-Even when removing the JS class (or just waiting for JavaScript to kick in), the addon should still look good.
+Even when removing the JS class (or just waiting for JavaScript to kick in),
+the addon should still look good.
 
 
 .. code-block:: javascript
@@ -55,7 +59,8 @@ Formatting
 .. important::
 
     - Always declare variables on top of the functions and not in between.
-    - Always use `semicolons <https://www.youtube.com/watch?v=M94ii6MVilw>`_ and full brackets, except in shorthand like
+    - Always use `semicolons <https://www.youtube.com/watch?v=M94ii6MVilw>`_
+      and full brackets, except in shorthand like
       ``var i = (true) ? 'yes' : 'no';``.
     - Use proper spaces for ``if (true) {} else {}`` or ``function () {}``.
 
@@ -128,9 +133,10 @@ Patterns
 
 .. important::
 
-    - Use the `singleton pattern
-      <http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript>`_ to avoid globals.
-    - Use the `module pattern
-      <http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript>`_ to structure code.
-    - Avoid the `functional pattern <http://1closure.com/2012/06/object-oriented-javascript-the-functional-pattern/>`_.
+    - Use the
+      `singleton pattern <http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript>`_
+      to avoid globals.
+    - Use the `module pattern <http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript>`_
+      to structure code.
+    - Avoid the `functional pattern <http://1closure.com/2012/06/object-oriented-javascript-the-functional-pattern/>`_
 

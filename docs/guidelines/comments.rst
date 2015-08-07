@@ -4,9 +4,10 @@ Comments
 
 .. note::
 
-    If peppering your code with lots of comments is good, then having zillions of comments in your code must be great,
-    right? Not quite. It doesn't make sense to comment every step your code makes, or to comment on things that don't
-    need to be explained.
+    If peppering your code with lots of comments is good, then having zillions
+    of comments in your code must be great, right? Not quite. It doesn't make
+    sense to comment every step your code makes, or to comment on things that
+    don't need to be explained.
 
 Comments in code should describe:
 
@@ -35,14 +36,16 @@ Inline Comments
 
 When using comments inline, make use of the appropriate formats:
 
-- ``{# ... #}`` or ``{% comment %} ... {% endcomment %}`` for Django templates and **never** ``<!-- ... -->``
+- ``{# ... #}`` or ``{% comment %} ... {% endcomment %}`` for Django templates
+  and **never** ``<!-- ... -->``
 - ``// ...`` and ``/* ... */`` for Sass and JavaScript
 
 
 Notes
 -----
 
-We also use several comment helpers which, if configured in your editor, add additional highlighting to your code:
+We also use several comment helpers which, if configured in your editor,
+add additional highlighting to your code:
 
 | **FIXME:**
 | to annotate problems with the code
@@ -112,6 +115,7 @@ Formatting
 YUIDoc
 ======
 
-In 3.3.0 we introduced `YUIDoc <http://yui.github.io/yuidoc/>`_ which uses syntax similar to JSDoc in order to further
-improve JavaScript documentation. We encourage using this style within your code, as shown in
+In 3.3.0 we introduced `YUIDoc <http://yui.github.io/yuidoc/>`_ which uses
+syntax similar to JSDoc in order to further improve JavaScript documentation.
+We encourage using this style within your code, as shown in
 ``/static/js/addons/cl.utils.js``.

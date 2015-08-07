@@ -153,12 +153,6 @@ colors, so you can do things like this:
     color: rgba($color, 0.85);
 
 
-Compass vs LibSass
-==================
-
-At the moment compass. In plans - dropping compass and implementing LibSass.
-
-
 Autoprefixer
 ------------
 

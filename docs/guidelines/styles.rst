@@ -114,7 +114,7 @@ Ordering
     - Use block-style, and group elements below.
     - See ``scss-lint.json`` for a comprehensive ordering example.
 
-#. includes (Compass includes)
+#. includes (mixins)
 #. extending
 #. visibility, position
 #. color, font-size, line-height, font-* (font relevant data)

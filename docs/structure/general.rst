@@ -55,7 +55,6 @@ Let's take a look at the Sass example using the compass configuration file:
     └─ config.rb
 
 .. hint::
-   The ``config.rb`` is taken from `Compass <http://compass-style.org/>`_.
    We are using ``/sass`` as folder name and not ``/scss`` as the language
    itself is called `Sass <http://sass-lang.com/>`_. Always use the full
    written acronym.

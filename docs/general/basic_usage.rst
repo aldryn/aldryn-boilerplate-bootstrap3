@@ -38,7 +38,7 @@ you like, for other Boilerplates too.
 
 At the very least, the developers who use your application will find it easier
 to create templates and static file for it that support their own frontend
-conventions if they they can start with simple ones.
+conventions if they can start with simple ones.
 
 
 Aldryn Boilerplates

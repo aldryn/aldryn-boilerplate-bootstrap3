@@ -65,12 +65,12 @@ but the same principle applies to static files::
     ├─ boilerplates/  # templates for particular Boilerplates
     │  └─ aldryn_boilerplate_bootstrap3/
     │     └─ templates/
-    │        └─ aldryn_addon/
-    │           └─ base.html
+    │        ├─ aldryn_addon/
+    │        └─ base.html
     └─ some_other_boilerplate/
        └─ templates/
-          └─ aldryn_addon/
-             └─ base.html
+          ├─ aldryn_addon/
+          └─ base.html
 
 See `Aldryn Boilerplates <https://github.com/aldryn/aldryn-boilerplates>`_
 for more.

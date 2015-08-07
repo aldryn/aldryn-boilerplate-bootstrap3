@@ -45,8 +45,6 @@ Coffee, HAML, etc). Simply create a folder within ``/private`` with appropriate
 name: ``/sass``, ``/less`` or ``/haml`` and so on as required. Always place
 required configuration files within the ``/private`` root. 
 
-Let's take a look at the Sass example using the compass configuration file:
-
 .. code-block:: text
 
     private/

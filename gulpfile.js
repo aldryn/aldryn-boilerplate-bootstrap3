@@ -24,7 +24,7 @@ var karma = require('karma').server;
 var minifyCss = require('gulp-minify-css');
 var protractor = require('gulp-protractor').protractor;
 var sass = require('gulp-sass');
-var scsslint = require('gulp-scss-lint');
+// var scsslint = require('gulp-scss-lint');
 var sourcemaps = require('gulp-sourcemaps');
 var webdriverUpdate = require('gulp-protractor').webdriver_update;
 var yuidoc = require('gulp-yuidoc');
@@ -56,7 +56,8 @@ var PROJECT_PATTERNS = {
         PROJECT_PATH.tests + '/**/*.js',
         // exclude from linting
         '!' + PROJECT_PATH.js + '/*.min.js',
-        '!' + PROJECT_PATH.js + '/**/*.min.js'
+        '!' + PROJECT_PATH.js + '/**/*.min.js',
+        '!' + PROJECT_PATH.tests + '/coverage/**/*'
     ],
     'sass': [
         PROJECT_PATH.sass + '/**/*.{scss,sass}'

@@ -20,9 +20,6 @@
         "templates/includes/menu/navigation.html",
         "templates/includes/menu/pagenav.html",
 
-        "private/sass/libs/_bootstrap.scss",
-        "private/sass/libs/_fontawesome.scss",
-
         "static/js/libs/bootstrap.min.js",
         "static/js/libs/class.min.js",
         "static/js/libs/html5shiv.min.js",

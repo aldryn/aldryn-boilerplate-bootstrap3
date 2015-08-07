@@ -4,8 +4,10 @@ Contribution
 
 .. note::
 
-    You are very welcome improving this boilerplate for Aldryn and your everyday use, especially the documentation always
-    needs love. Feel free to fork and send us pull requests and follow the guidelines from within this section.
+    You are very welcome improving this boilerplate for Aldryn and your
+    everyday use, especially the documentation always needs love. Feel free to
+    fork and send us pull requests and follow the guidelines from within this
+    section.
 
 
 ***************
@@ -21,9 +23,12 @@ Code of Conduct
 Documentation
 *************
 
-To extend and run the documentation, you will need `Python <https://www.python.org/downloads/>`_ and
-`Virtualenv <https://virtualenv.pypa.io/en/latest/installation.html>`_ installed on your computer. You also need
-`Git <http://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_ and a GitHub account obviously.
+To extend and run the documentation, you will need
+`Python <https://www.python.org/downloads/>`_ and
+`Virtualenv <https://virtualenv.pypa.io/en/latest/installation.html>`_
+installed on your computer. You also need
+`Git <http://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_
+and a GitHub account obviously.
 
 In addition, follow the steps underneath to get them running:
 
@@ -32,10 +37,12 @@ In addition, follow the steps underneath to get them running:
 #. run ``make install`` to install additional requirements
 #. run ``make run`` to let the server run
 
-Now you can open **http://localhost:8000** on your favourite browser and start changing the rst files within ``docs/``.
+Now you can open **http://localhost:8000** on your favourite browser and start
+changing the rst files within ``docs/``.
 
-You need to be aware of `reStructuredText
-<http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ to format the documentation properly.
+You need to be aware of
+`reStructuredText <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+to format the documentation properly.
 
 .. admonition:: Guidelines
     :class: `important`
@@ -57,21 +64,27 @@ Before starting to work on issues or features, please mind the branching model:
 - **master** is used for hotfix releases (1.1.x)
 - **develop** is used for features and issues (1.x.x)
 
-Everything that is merged to *develop* will be released within the next proper release (1.x.x). Major releases (x.x.x)
-will have their own branches but are always merged agains *develop*.
+Everything that is merged to *develop* will be released within the next proper
+release (1.x.x). Major releases (x.x.x) will have their own branches but are
+always merged agains *develop*.
 
-A pull request needs the consent of two developers familiar with this repository to be merged.
+A pull request needs the consent of two developers familiar with this repository
+to be merged.
 
 
 ********
 Releases
 ********
 
-Always adapt the `CHANGELOG.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_
-and `AUTHORS.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/AUTHORS.rst>`_ accordingly.
-After the release, set the correct release notes on
-`GitHub <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/releases>`_. Don't forget to update the release
-version within `boilerplate.json <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/boilerplate.json>`_
+Always adapt the
+`CHANGELOG.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_
+and
+`AUTHORS.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/AUTHORS.rst>`_
+accordingly. After the release, set the correct release notes on
+`GitHub <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/releases>`_.
+Don't forget to update the release version within
+`boilerplate.json <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/boilerplate.json>`_
+and create a GitHub tag accordingly and add the release notes there as well.
 
 Ensure to run ``bash tools/release.sh`` before releasing the package on Aldryn
 within the root path.

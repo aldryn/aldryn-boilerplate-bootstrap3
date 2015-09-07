@@ -3,6 +3,13 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
+3.4.2
+=====
+- added local development server
+- added additional documentation
+- updated documentation
+
+
 3.4.1
 =====
 - added ``button-variant-outline``mixin

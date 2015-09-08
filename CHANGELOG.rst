@@ -12,7 +12,6 @@ Aldryn Boilerplate Bootstrap 3
 - updated content templates
 - updated license information
 - updated documentation
-- updated copyright implementation
 - removed compass support
 - use @error instead of @warn in sass
 - removed `lh` from ``mixins/_functions.scss``

@@ -1,10 +1,12 @@
-############################
-Bootstrap3 Based Boilerplate
-############################
+#######################################
+Bootstrap 3 Based Boilerplate (libsass)
+#######################################
 
 |Build Status| |Coverage Status| |Code Climate| |Dependency Status|
 
 |Browser Matrix|
+
+**If you are looking for version 3** (sass/compass) please check the `support/3.x <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/tree/support/3.x>`_ branch
 
 Aldryn Boilerplate Bootstrap 3 is the most complete **django CMS** based Boilerplate for rapid development. It uses the
 full potential of the `Bootstrap <http://getbootstrap.com/>`_ framework for developing responsive, mobile-first
@@ -40,4 +42,3 @@ needs love. Feel free to fork and send us pull requests and checkout the
    :target: https://codeclimate.com/github/aldryn/aldryn-boilerplate-bootstrap3
 .. |Browser Matrix| image:: https://saucelabs.com/browser-matrix/aldryn-boilerboot3.svg
    :target: https://saucelabs.com/u/aldryn-boilerboot3
-

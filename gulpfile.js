@@ -10,6 +10,7 @@
 // IMPORTS
 var argv = require('minimist')(process.argv.slice(2));
 var autoprefixer = require('gulp-autoprefixer');
+var bower = require('gulp-bower');
 var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
 var gulp = require('gulp');
@@ -33,6 +34,7 @@ var yuidoc = require('gulp-yuidoc');
 // SETTINGS
 var PROJECT_ROOT = __dirname;
 var PROJECT_PATH = {
+    'bower': PROJECT_ROOT + '/static/vendor',
     'css': PROJECT_ROOT + '/static/css',
     'docs': PROJECT_ROOT + '/static/docs',
     'fonts':  PROJECT_ROOT + '/static/fonts',
@@ -166,6 +168,10 @@ gulp.task('icons', function () {
         .pipe(gulp.dest(PROJECT_PATH.fonts));
 });
 
+gulp.task('bower', function () {
+    return bower(gulp.dest(PROJECT_ROOT + PROJECT_PATH.bower));
+});
+
 // #############################################################################
 // SERVICES
 gulp.task('browser', function () {
@@ -228,4 +234,4 @@ gulp.task('watch', function () {
     gulp.watch(PROJECT_PATTERNS.js, ['lint']);
 });
 
-gulp.task('default', ['sass', 'lint', 'watch']);
+gulp.task('default', ['bower', 'sass', 'lint', 'watch']);

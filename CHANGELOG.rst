@@ -6,8 +6,7 @@ Aldryn Boilerplate Bootstrap 3
 4.0.0
 =====
 - added libsass support
-- added ``tools`` folder
-- added ``tools/server`` for local testing
+- added ``gulp bower`` command
 - updated ``templates/404.html`` to look better
 - updated Font Awesome to 4.4.0
 - updated Font Awesome to use sass library
@@ -21,7 +20,8 @@ Aldryn Boilerplate Bootstrap 3
 
 3.4.2
 =====
-- added local development server
+- added ``tools`` folder
+- added ``tools/server`` for local testing
 - added additional documentation
 - updated documentation
 

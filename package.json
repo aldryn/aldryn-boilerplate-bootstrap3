@@ -8,7 +8,7 @@
         "gulp-autoprefixer": "^3.0.1",
         "gulp-bower": "^0.0.10",
         "gulp-cached": "^1.1.0",
-        "gulp-iconfont": "^5.0.0",
+        "gulp-iconfont": "<5.0.0",
         "gulp-iconfont-css": "^1.0.1",
         "gulp-imagemin": "^2.3.0",
         "gulp-if": "^1.2.5",

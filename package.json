@@ -35,8 +35,5 @@
         "minimist": "^1.1.3",
         "phantomjs": "^1.9.17",
         "protractor": "^2.1.0"
-    },
-    "engines": {
-        "node": "0.9.0"
     }
 }

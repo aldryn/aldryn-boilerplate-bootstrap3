@@ -1,7 +1,7 @@
 {
     "identifier": "bootstrap3",
-    "package-name": "aldryn-bootstrap3-boilerplate",
-    "version": "3.4.2",
+    "package-name": "aldryn-boilerplate-bootstrap3-libsass",
+    "version": "4.0.0",
     "templates": [
         ["fullwidth.html", "full width"],
         ["sidebar_left.html", "sidebar left"],
@@ -19,9 +19,6 @@
         "templates/includes/menu/langnav.html",
         "templates/includes/menu/navigation.html",
         "templates/includes/menu/pagenav.html",
-
-        "private/sass/libs/_bootstrap.scss",
-        "private/sass/libs/_fontawesome.scss",
 
         "static/js/libs/bootstrap.min.js",
         "static/js/libs/class.min.js",

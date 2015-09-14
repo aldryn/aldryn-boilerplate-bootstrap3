@@ -10,46 +10,52 @@ What's inside
 Sass
 ====
 
-For CSS pre-processing, we use `Sass <http://sass-lang.com>`_. In particular, we use:
+For CSS pre-processing, we use `Sass <http://sass-lang.com>`_.
+In particular, we use:
 
-* the official `Sass port <https://github.com/twbs/bootstrap-sass>`_ of Bootstrap
-* the `Compass <http://compass-style.org>`_ framework
+* `LibSass <http://libsass.org/>`_ for fast SASS compilation
+* `Gulp JS <http://gulpjs.com/>`_ and the `gulp-sass
+  <https://github.com/dlmanning/gulp-sass>`_ plugin to compile SASS files
+* the official `Sass port <https://github.com/twbs/bootstrap-sass>`_ of
+  Bootstrap
 
-All styles should be created in ``/private/sass``, and will be compiled to ``/static/css``.
+All styles should be created in ``/private/sass``, and will be compiled to
+``/static/css``.
 
 
 Bootstrap
 =========
 
-The full `Bootstrap library <http://getbootstrap.com>`_ is imported via the `Sass component
-<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss>`_ and the
-`JavaScript component
-<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/static/js/libs/bootstrap.min.js>`_.
+The full `Bootstrap library <http://getbootstrap.com>`_ is imported via the
+`Sass component <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss>`_
+and the `JavaScript component <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/static/js/libs/bootstrap.min.js>`_.
 
-The `Glyhpicon <http://getbootstrap.com/components/#glyphicons>`_ icon set has been `disabled
-<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss#L14>`_
-in favour of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_ icon set.
+The `Glyhpicon <http://getbootstrap.com/components/#glyphicons>`_ icon set has
+been `disabled <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss#L14>`_
+in favour of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_
+icon set.
 
 
 Font Awesome
 ============
 
-The `Font Awesome library <http://fortawesome.github.io/Font-Awesome>`_ offers a larger and better `variety of icons
-<http://fortawesome.github.io/Font-Awesome/icons/>`_ than the Bootstrap defaults. Additional `utility classes
-<http://fortawesome.github.io/Font-Awesome/examples/>`_ are also available.
+The `Font Awesome library <http://fortawesome.github.io/Font-Awesome>`_
+offers a larger and better
+`variety of icons <http://fortawesome.github.io/Font-Awesome/icons/>`_
+than the Bootstrap defaults. Additional
+`utility classes <http://fortawesome.github.io/Font-Awesome/examples/>`_
+are also available.
 
-We have implemented the `library
-<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_fontawesome.scss>`_ separately
-from the `icon choices
-<https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/layout/_iconography.scss>`_. This
-allows for better customisation and integration of other icon fonts or services.
+The `library <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/fontawesome/>`_
+is similarly integrated as bootstrap-sass within the ``libs`` folder.
 
 
 JavaScript
 ==========
 
-We are implementing the latest **2.x.x** versions of `jQuery <http://jquery.com>`_ as they are
-released. In addition we encourage the use of `class.js <https://github.com/FinalAngel/classjs>`_, a simple library
+We are implementing the latest **2.x.x** versions of
+`jQuery <http://jquery.com>`_ as they are released. In addition we encourage
+the use of `class.js <https://github.com/FinalAngel/classjs>`_, a simple library
 that helps out with the modular pattern in :doc:`/guidelines/javascript`.
 
 - http://jquery.com
@@ -80,13 +86,17 @@ We use `Gulp <http://gulpjs.com/>`_ to manage our frontend workflow.
 Template Language
 =================
 
-As this is a django CMS based boilerplate, naturally we are using the `Django template language
+As this is a django CMS based boilerplate, naturally we are using the
+`Django template language
 <https://docs.djangoproject.com/en/dev/topics/templates/>`_.
 
-In order to implements assets efficiently, `django-sekizai <https://github.com/ojii/django-sekizai>`_ and
-`aldryn-snake <https://github.com/aldryn/aldryn-snake>`_ are implemented within the ``base_root.html`` template.
-This gives you the ``{% addtoblock "js" %}{% endaddtoblock %}`` and ``{% addtoblock "css" %}{% endaddtoblock %}``
-template tags in addition to the django defaults.
+In order to implements assets efficiently,
+`django-sekizai <https://github.com/ojii/django-sekizai>`_ and
+`aldryn-snake <https://github.com/aldryn/aldryn-snake>`_ are implemented within
+the ``base_root.html`` template. This gives you the
+``{% addtoblock "js" %}{% endaddtoblock %}`` and
+``{% addtoblock "css" %}{% endaddtoblock %}`` template tags in addition to the
+django defaults.
 
 
 Example

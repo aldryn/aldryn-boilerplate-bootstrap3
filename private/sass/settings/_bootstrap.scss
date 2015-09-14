@@ -1,14 +1,14 @@
 // #############################################################################
 // GLOBAL IMPORTS
-@import "compass/css3";
-@import "compass/utilities";
-@import "bootstrap/variables"; // using https://github.com/twbs/bootstrap-sass
-// Override Bootstrap variables here (defaults from bootstrap-sass v3.1.1.1):
+// using https://github.com/twbs/bootstrap-sass
+// Override Bootstrap variables
 
 // a flag to toggle asset pipeline / compass integration
-// defaults to true if twbs-font-path function is present (no function => twbs-font-path('') parsed as string == right side)
+// defaults to true if twbs-font-path function is present
+// (no function => twbs-font-path('') parsed as string == right side)
 // in Sass 3.3 this can be improved with: function-exists(twbs-font-path)
-// $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")'))
+// $bootstrap-sass-asset-helper:
+// (twbs-font-path("") != unquote('twbs-font-path("")'))
 
 $bootstrap-sass-asset-helper: false;
 
@@ -71,7 +71,8 @@ $font-size-h6:            ceil(($font-size-base * 0.85)); // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.428571429; // 20/14
-//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+//** Computed "line-height" (`font-size` * `line-height`)
+// for use with `margin`, `padding`, etc.
 $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
@@ -83,12 +84,15 @@ $headings-color:          inherit;
 
 // #############################################################################
 // Iconography
-// Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+// Specify custom location and filename of the included Glyphicons icon font.
+// Useful for those including Bootstrap via Bower.
 
 //** Load fonts from this directory.
 
-// [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
-// [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
+// [converter] If $bootstrap-sass-asset-helper if used, provide path
+// relative to the assets load path.
+// [converter] This is because some asset helpers, such as Sprockets,
+// do not work with file-relative paths.
 $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/");
 
 //** File name for all font files.
@@ -99,7 +103,8 @@ $icon-font-svg-id:        "glyphicons_halflingsregular";
 
 // #############################################################################
 // Components
-// Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+// Define common padding and border radius sizes and more. Values based on
+// 14px text and 1.428 line-height (~20px to start).
 
 $padding-base-vertical:     6px;
 $padding-base-horizontal:   12px;
@@ -133,7 +138,8 @@ $caret-width-large:         5px;
 
 // #############################################################################
 // Tables
-// Customizes the `.table` component with basic values, each used across all table variations.
+// Customizes the `.table` component with basic values,
+// each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
 $table-cell-padding:            8px;
@@ -205,7 +211,8 @@ $input-border:                   #ccc;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
-// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+// This has no effect on `<select>`s in some browsers,
+// due to the limited stylability of `<select>`s in CSS.
 $input-border-radius:            $border-radius-base;
 //** Large `.form-control` border radius
 $input-border-radius-large:      $border-radius-large;
@@ -294,7 +301,8 @@ $zindex-modal:             1040;
 
 // #############################################################################
 // Media queries breakpoints
-// Define the breakpoints at which your layout will change, adapting to different screen sizes.
+// Define the breakpoints at which your layout will change, adapting to
+// different screen sizes.
 
 // Extra small screen / phone
 //** Deprecated `$screen-xs` as of v3.0.1

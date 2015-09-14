@@ -4,16 +4,18 @@ JavaScript
 
 .. note::
 
-    This section is heavily inspired by a Airbnb JavaScript Style Guide, Yandex Codestyle, Idiomatic Javascript and lots
-    of common sense, really.
+    This section is heavily inspired by a Airbnb JavaScript Style Guide,
+    Yandex Codestyle, Idiomatic Javascript and lots of common sense, really.
 
 
 Why?
 ====
 
-    "All code in any code-base should look like a single person typed it, no matter how many people contributed." - Rick Waldron
+    "All code in any code-base should look like a single person typed it,
+    no matter how many people contributed." - Rick Waldron
 
-These are the fundamental principles we should follow when we design and develop software.
+These are the fundamental principles we should follow when we design and
+develop software.
 
 - Consistent code is easy to read.
 - Simple code is easy to maintain.
@@ -53,7 +55,8 @@ Use braces with all blocks. Don't do inline blocks.
         return false;
     }
 
-When you're using multi-line blocks with if and else, put else on the same line as your if block's closing brace.
+When you're using multi-line blocks with if and else, put else on the same
+line as your if block's closing brace.
 
 .. code-block:: javascript
 
@@ -79,8 +82,9 @@ Comments
 --------
 
 Follow the guidelines.
-Use ``//`` for single line comments. Place single line comments on a newline above the subject of the comment.
-Between the ``//`` and the text of the comment should be one space character.
+Use ``//`` for single line comments. Place single line comments on a newline
+above the subject of the comment. Between the ``//`` and the text of the
+comment should be one space character.
 
 .. code-block:: javascript
 
@@ -97,7 +101,8 @@ Most importantly, **keep comments up to date** if the code changes.
 Whitespace
 ----------
 
-With proper ``.editoconfig`` and ``jshint/jscs`` setup these will be enforced automatically, but still:
+With proper ``.editoconfig`` and ``jshint/jscs`` setup these will be enforced
+automatically, but still:
 
 - 4 spaces for tabs.
 - Place 1 space before leading curly brace.
@@ -113,8 +118,8 @@ With proper ``.editoconfig`` and ``jshint/jscs`` setup these will be enforced au
 - End files with a single newline character.
 
 
-Use indentation when making long method chains. Use a leading dot, which emphasises that the line is a method call,
-not a new statement.
+Use indentation when making long method chains. Use a leading dot, which
+emphasises that the line is a method call, not a new statement.
 
 .. code-block:: javascript
 
@@ -237,8 +242,9 @@ Yes, always.
         return name;
     })();
 
-    // good (guards against the function becoming an argument when two files with IIFEs are concatenated)
-    // this should not happen if the previous example is enforced, but sometimes we have no control over vendor code
+    // good (guards against the function becoming an argument when two files
+    // with IIFEs are concatenated) this should not happen if the previous
+    // example is enforced, but sometimes we have no control over vendor code
     ;(function () {
         var name = 'Skywalker';
         return name;
@@ -252,14 +258,15 @@ Variables
 General
 -------
 
-Always use var to declare variables. Not doing so will result in global variables. We want to avoid polluting the global
-namespace
+Always use var to declare variables. Not doing so will result in global
+variables. We want to avoid polluting the global namespace
 
-Assign variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting
-related issues.
+Assign variables at the top of their scope. This helps avoid issues with
+variable declaration and assignment hoisting related issues.
 
-Use one var declaration per variable. It's easier to add new variable declarations this way, and you never have to worry
-about swapping out a ``;`` for a ``,`` or introducing punctuation-only diffs.
+Use one var declaration per variable. It's easier to add new variable
+declarations this way, and you never have to worry about swapping out
+a ``;`` for a ``,`` or introducing punctuation-only diffs.
 
 .. code-block:: javascript
 
@@ -310,7 +317,8 @@ Don't use `reserved words <http://es5.github.io/#x7.6.1>`_ as keys.
         hidden: true
     };
 
-Do not use quotes for properties, it is only needed for screening reserved words which we are not supposed to use.
+Do not use quotes for properties, it is only needed for screening reserved
+words which we are not supposed to use.
 
 
 Arrays
@@ -338,7 +346,8 @@ Use ``Array#push`` instead of direct assignment to add items to an array.
     // good
     someStack.push('abracadabra');
 
-To convert an array-like object to an array, use ``Array#slice``. If you need to copy an array, use slice as well.
+To convert an array-like object to an array, use ``Array#slice``.
+If you need to copy an array, use slice as well.
 
 .. code-block:: javascript
 
@@ -365,8 +374,8 @@ To convert an array-like object to an array, use ``Array#slice``. If you need to
 Strings
 -------
 
-Use single-quotes for strings.
-When programmatically building a string use ``Array#join`` instead of string concatenation
+Use single-quotes for strings. When programmatically building a string
+use ``Array#join`` instead of string concatenation
 
 .. code-block:: javascript
 
@@ -382,8 +391,9 @@ When programmatically building a string use ``Array#join`` instead of string con
         '</div>'
     ].join('');
 
-If you have a complicated string buildup it's always better to use javascript templating instead.
-That way templates could have their own files with proper syntax highlighting and pre-compilation build step.
+If you have a complicated string buildup it's always better to use javascript
+templating instead. That way templates could have their own files with proper
+syntax highlighting and pre-compilation build step.
 
 
 Functions
@@ -408,11 +418,13 @@ Function expressions:
         console.log('Welcome to the Internet. Please follow me.');
     })();
 
-Tend to avoid anonymous function expressions, try to always use named ones, it will save you a lot of pain going through
-stack traces and debugging in general.
+Tend to avoid anonymous function expressions, try to always use named ones,
+it will save you a lot of pain going through stack traces and debugging in
+general.
 
-Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead.
-Browsers will allow you to do it, but they all interpret it differently, which is really bad news.
+Never declare a function in a non-function block (if, while, etc). Assign
+the function to a variable instead. Browsers will allow you to do it, but
+they all interpret it differently, which is really bad news.
 
 .. code-block:: javascript
 
@@ -431,8 +443,9 @@ Browsers will allow you to do it, but they all interpret it differently, which i
         };
     }
 
-Never name a parameter arguments. This will take precedence over the arguments object that is given to every function
-scope. It is also a `reserved word <http://es5.github.io/#x7.6.1>`_.
+Never name a parameter arguments. This will take precedence over the arguments
+object that is given to every function scope. It is also a
+`reserved word <http://es5.github.io/#x7.6.1>`_.
 
 .. code-block:: javascript
 
@@ -516,7 +529,8 @@ If the context argument is available, it is preferred.
         this.fn(number);
     }, this);
 
-If assigning the current context to a variable, the variable should be named ``that``:
+If assigning the current context to a variable, the variable should be named
+``that``:
 
 .. code-block:: javascript
 
@@ -563,7 +577,8 @@ Use subscript notation ``[]`` **only** when accessing properties with a variable
 Hoisting
 --------
 
-Variable declarations get hoisted to the top of their scope, but their assignment does not.
+Variable declarations get hoisted to the top of their scope, but their
+assignment does not.
 
 .. code-block:: javascript
 
@@ -591,7 +606,8 @@ Variable declarations get hoisted to the top of their scope, but their assignmen
         declaredButNotAssigned = true;
     }
 
-Anonymous function expressions hoist their variable name, but not the function assignment.
+Anonymous function expressions hoist their variable name, but not the
+function assignment.
 
 .. code-block:: javascript
 
@@ -605,7 +621,8 @@ Anonymous function expressions hoist their variable name, but not the function a
         };
     }
 
-Named function expressions hoist the variable name, not the function name or the function body.
+Named function expressions hoist the variable name, not the function name or
+the function body.
 
 .. code-block:: javascript
 
@@ -646,7 +663,8 @@ Function declarations hoist their name and the function body.
     }
 
 For more information on hoisting refer to `JavaScript Scoping & Hoisting
-<http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html>`_  by `Ben Cherry <http://www.adequatelygood.com>`_.
+<http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html>`_  by
+`Ben Cherry <http://www.adequatelygood.com>`_.
 
 
 Types
@@ -720,7 +738,8 @@ Comparison Operators & Equality
 
 Use ``===`` and ``!==`` over ``==`` and ``!=``.
 
-Comparison operators are evaluated using coercion with the ToBoolean method and always follow these simple rules:
+Comparison operators are evaluated using coercion with the ToBoolean method
+and always follow these simple rules:
 
 - **Objects** evaluate to **true**
 - **Undefined** evaluates to **false**
@@ -817,9 +836,10 @@ Comparison operators are evaluated using coercion with the ToBoolean method and 
         moreComplicatedB :
         moreComplicatedC;
 
-- If a statement is longer than the maximum line length, it is split into several lines and properly indented.
-- Closing parentheses should be on a new line with the indentation of the current block statement. Tend to do the same
-  with object properties.
+- If a statement is longer than the maximum line length, it is split into
+  several lines and properly indented.
+- Closing parentheses should be on a new line with the indentation of the
+  current block statement. Tend to do the same with object properties.
 
 .. code-block:: javascript
 
@@ -845,8 +865,7 @@ Use ``for-in`` only for iterating over keys in an ``Object``, never over an ``Ar
 Naming conventions
 ------------------
 
-Refer to guidelines.
-Use leading underscore to denote private methods/properties.
+Refer to guidelines. Use leading underscore to denote private methods/properties.
 The only place where it's allowed to use single letter variable is in event callbacks:
 
 .. code-block:: javascript
@@ -865,9 +884,10 @@ The only place where it's allowed to use single letter variable is in event call
 Events
 ------
 
-When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a
-hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding
-and updating every handler for the event. For example, instead of:
+When attaching data payloads to events (whether DOM events or something more
+proprietary like Backbone events), pass a hash instead of a raw value.
+This allows a subsequent contributor to add more data to the event payload
+without finding and updating every handler for the event. For example, instead of:
 
 .. code-block:: javascript
 
@@ -897,8 +917,8 @@ prefer:
 Templates
 ---------
 
-When passing data to JS templates (using underscore.js / window.tmpl by J. Resig) - always pass an object that has only
-one property, and that property is the data you need.
+When passing data to JS templates (using underscore.js / window.tmpl by J. Resig) -
+always pass an object that has only one property, and that property is the data you need.
 
 Consider this template:
 
@@ -913,8 +933,8 @@ Consider this template:
     // bad
     var markup = tmpl(template, { prop1: true, prop2: '1' });
 
-This will throw a ReferenceError because these template engines use ``with`` underneath.
-Instead do this:
+This will throw a ReferenceError because these template engines use
+``with`` underneath. Instead do this:
 
 .. code-block:: html
 
@@ -973,8 +993,9 @@ Always cache jQuery lookups.
 Classes
 -------
 
-It is a common pattern when creating javascript components to save all the ui elements under a common namespace.
-It is also a common mistake to declare an object called ``ui`` on a class.
+It is a common pattern when creating javascript components to save all the ui
+elements under a common namespace. It is also a common mistake to declare an
+object called ``ui`` on a class.
 
 .. code-block:: javascript
 
@@ -996,9 +1017,11 @@ It is also a common mistake to declare an object called ``ui`` on a class.
         }
     });
 
-There are several problems. The ``ui`` object is declared on prototype in this case, and as with all complex types is
-javascript we are working with a reference to the value. That means that the same ui object will be shared across all
-instances of the class, which in turn will mean that you won't be able to use several instances on the page.
+There are several problems. The ``ui`` object is declared on prototype in this
+case, and as with all complex types is javascript we are working with a
+reference to the value. That means that the same ui object will be shared across
+all instances of the class, which in turn will mean that you won't be able to
+use several instances on the page.
 
 .. code-block:: javascript
 
@@ -1017,19 +1040,23 @@ instances of the class, which in turn will mean that you won't be able to use se
         }
     });
 
-We do not always know how the widget will be used. Even if "it's only gonna be on this page and it's gonna be this
-particular instance" seems like a valid reason not to change - it never is. We should always strive for making components
-independent and reusable, it's usually not a big effort (especially if you think about before writing the widget) and
-it can solve a lot of problems for you in the future.
+We do not always know how the widget will be used. Even if "it's only gonna
+be on this page and it's gonna be this particular instance" seems like a valid
+reason not to change - it never is. We should always strive for making
+components independent and reusable, it's usually not a big effort
+(especially if you think about before writing the widget) and it can solve a
+lot of problems for you in the future.
 
 
 Passing data to components
 --------------------------
 
-Avoid instantiating components in inline scripts. Instead pass the data to the components through data attributes.
+Avoid instantiating components in inline scripts. Instead pass the data to
+the components through data attributes.
 
-Avoid spreading options into multiple data attributes, as it might happen that two different javascript components live
-on the same DOM node and require an option with the same name. Instead use json notation.
+Avoid spreading options into multiple data attributes, as it might happen
+that two different javascript components live on the same DOM node and require
+an option with the same name. Instead use json notation.
 
 **Bad**:
 
@@ -1042,8 +1069,9 @@ on the same DOM node and require an option with the same name. Instead use json 
         Sad panda :(
     </div>
 
-Imagine in this case component 1 functionality is significantly affected by an option that is meant for component 2.
-Also if they share the same option property name, such as value - sad panda.
+Imagine in this case component 1 functionality is significantly affected by an
+option that is meant for component 2. Also if they share the same option
+property name, such as value - sad panda.
 
 **Good**:
 
@@ -1060,8 +1088,9 @@ Also if they share the same option property name, such as value - sad panda.
         Happy panda!
     </div>
 
-Passing the data to the components is also very straightforward. This way you have the same initialisation method
-for all existing instances of the widget even if they have different options.
+Passing the data to the components is also very straightforward. This way you
+have the same initialisation method for all existing instances of the widget
+even if they have different options.
 
 .. code-block:: javascript
 
@@ -1126,8 +1155,9 @@ Magic numbers
 ECMAScript 5
 ============
 
-Use where appropriate. Use array methods for working with arrays, but don't use them when working with array-like
-objects such as jQuery collections. For them use ``$.fn.each`` instead.
+Use where appropriate. Use array methods for working with arrays, but don't
+use them when working with array-like objects such as jQuery collections.
+For them use ``$.fn.each`` instead.
 
 Prefer ``Array#forEach`` over ``for () {}`` loop.
 
@@ -1162,6 +1192,4 @@ Prefer ``Array#forEach`` over ``for () {}`` loop.
     });
 
 
-More info on ES5 compatibility `here
-<http://kangax.github.io/compat-table/es5/>`_
-
+More info on ES5 compatibility `here <http://kangax.github.io/compat-table/es5/>`_

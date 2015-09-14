@@ -1,24 +1,32 @@
-/*!
- * @author:    Divio AG
- * @copyright: http://www.divio.ch
+/*
+ * Copyright (c) 2013, Divio AG
+ * Licensed under BSD
+ * http://github.com/aldryn/aldryn-boilerplate-bootstrap3
  */
 
 'use strict';
 
 // #############################################################################
 // IMPORTS
+var argv = require('minimist')(process.argv.slice(2));
+var autoprefixer = require('gulp-autoprefixer');
+var bower = require('gulp-bower');
 var browserSync = require('browser-sync');
 var cache = require('gulp-cached');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var gulpif = require('gulp-if');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
 var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var karma = require('karma').server;
+var minifyCss = require('gulp-minify-css');
 var protractor = require('gulp-protractor').protractor;
-var scsslint = require('gulp-scss-lint');
+var sass = require('gulp-sass');
+// var scsslint = require('gulp-scss-lint');
+var sourcemaps = require('gulp-sourcemaps');
 var webdriverUpdate = require('gulp-protractor').webdriver_update;
 var yuidoc = require('gulp-yuidoc');
 
@@ -26,46 +34,44 @@ var yuidoc = require('gulp-yuidoc');
 // SETTINGS
 var PROJECT_ROOT = __dirname;
 var PROJECT_PATH = {
-    'css': PROJECT_ROOT + '/static/css/',
+    'bower': PROJECT_ROOT + '/static/vendor',
+    'css': PROJECT_ROOT + '/static/css',
     'docs': PROJECT_ROOT + '/static/docs',
-    'fonts':  PROJECT_ROOT + '/static/fonts/',
-    'html': PROJECT_ROOT + '/templates/',
-    'images': PROJECT_ROOT + '/static/img/',
-    'icons': PROJECT_ROOT + '/private/icons/',
-    'js': PROJECT_ROOT + '/static/js/',
-    'sass': PROJECT_ROOT + '/private/sass/',
-    'tests': PROJECT_ROOT + '/tests/'
+    'fonts':  PROJECT_ROOT + '/static/fonts',
+    'html': PROJECT_ROOT + '/templates',
+    'images': PROJECT_ROOT + '/static/img',
+    'icons': PROJECT_ROOT + '/private/icons',
+    'js': PROJECT_ROOT + '/static/js',
+    'sass': PROJECT_ROOT + '/private/sass',
+    'tests': PROJECT_ROOT + '/tests'
 };
 
 var PROJECT_PATTERNS = {
     'images': [
-        PROJECT_PATH.images + '*',
-        PROJECT_PATH.images + '**/*',
-        '!' + PROJECT_PATH.images + 'dummy/*/**'
+        PROJECT_PATH.images + '/**/*',
+        // exclude from preprocessing
+        '!' + PROJECT_PATH.images + '/dummy/*/**'
     ],
     'js': [
         'gulpfile.js',
-        PROJECT_PATH.js + '*.js',
-        PROJECT_PATH.js + '**/*.js',
-        PROJECT_PATH.tests + '*.js',
-        PROJECT_PATH.tests + '*/**.js',
-        '!' + PROJECT_PATH.js + '*.min.js',
-        '!' + PROJECT_PATH.js + '**/*.min.js'
+        PROJECT_PATH.js + '/**/*.js',
+        PROJECT_PATH.tests + '/**/*.js',
+        // exclude from linting
+        '!' + PROJECT_PATH.js + '/*.min.js',
+        '!' + PROJECT_PATH.js + '/**/*.min.js',
+        '!' + PROJECT_PATH.tests + '/coverage/**/*'
     ],
     'sass': [
-        PROJECT_PATH.sass + '*',
-        PROJECT_PATH.sass + '**/*',
-        '!' + PROJECT_PATH.sass + 'libs/*',
-        '!' + PROJECT_PATH.sass + 'settings/*',
-        '!' + PROJECT_PATH.sass + 'layout/_print.{scss,sass}'
+        PROJECT_PATH.sass + '/**/*.{scss,sass}'
     ]
 };
 
 var PORT = parseInt(process.env.PORT, 10) || 8000;
+var DEBUG = argv.debug;
 
 // #############################################################################
 // LINTING
-gulp.task('lint', ['lint:javascript', 'lint:sass']);
+gulp.task('lint', ['lint:javascript']);
 
 gulp.task('lint:javascript', function () {
     // DOCS: http://jshint.com/docs/
@@ -75,13 +81,14 @@ gulp.task('lint:javascript', function () {
         .on('error', function (error) {
             gutil.log('\n' + error.message);
             if (process.env.CI) {
-                // Force the process to exit with error code
+                // force the process to exit with error code
                 process.exit(1);
             }
         })
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
+/* FIXME: disabled for now
 gulp.task('lint:sass', function () {
     // DOCS: https://github.com/brigade/scss-lint/
     return gulp.src(PROJECT_PATTERNS.sass)
@@ -90,10 +97,36 @@ gulp.task('lint:sass', function () {
             config: './scss-lint.json'
         }));
 });
+*/
 
 // #############################################################################
 // PREPROCESSING
-gulp.task('preprocess', ['images', 'docs']);
+gulp.task('preprocess', ['sass', 'images', 'docs']);
+
+gulp.task('sass', function () {
+    gulp.src(PROJECT_PATTERNS.sass)
+        // sourcemaps can be activated through `gulp sass --debug´
+        .pipe(gulpif(DEBUG, sourcemaps.init()))
+        .pipe(sass())
+        .on('error', function (error) {
+            gutil.log(gutil.colors.red(
+                'Error (' + error.plugin + '): ' + error.messageFormatted)
+            );
+            // used on Aldryn to inform aldryn client about the errors in
+            // SASS compilation
+            if (process.env.EXIT_ON_ERRORS) {
+                process.exit(1);
+            }
+        })
+        .pipe(autoprefixer({
+            // browsers are coming from browserslist file
+            cascade: false
+        }))
+        .pipe(minifyCss())
+        // sourcemaps can be activated through `gulp sass --debug´
+        .pipe(gulpif(DEBUG, sourcemaps.write()))
+        .pipe(gulp.dest(PROJECT_PATH.css));
+});
 
 gulp.task('images', function () {
     var options = {
@@ -116,12 +149,14 @@ gulp.task('docs', function () {
 });
 
 gulp.task('icons', function () {
-    gulp.src(PROJECT_PATH.icons + '**/*.svg')
+    gulp.src(PROJECT_PATH.icons + '/**/*.svg')
         .pipe(iconfontCss({
             fontName: 'iconfont',
-            fontPath: 'static/fonts/iconfont/',
-            path: PROJECT_PATH.sass + 'libs/_iconfont.scss',
-            targetPath: '../../../private/sass/layout/_iconfont.scss'
+            appendUnicode: true,
+            formats: ['ttf', 'eot', 'woff', 'svg'],
+            fontPath: 'static/fonts/',
+            path: PROJECT_PATH.sass + '/libs/_iconfont.scss',
+            targetPath: '../../../private/sass/layout/_iconography.scss'
         }))
         .pipe(iconfont({
             fontName: 'iconfont',
@@ -130,7 +165,11 @@ gulp.task('icons', function () {
         .on('glyphs', function (glyphs, options) {
             gutil.log.bind(glyphs, options);
         })
-        .pipe(gulp.dest(PROJECT_PATH.fonts + 'iconfont/'));
+        .pipe(gulp.dest(PROJECT_PATH.fonts));
+});
+
+gulp.task('bower', function () {
+    return bower(gulp.dest(PROJECT_ROOT + PROJECT_PATH.bower));
 });
 
 // #############################################################################
@@ -191,7 +230,8 @@ gulp.task('tests:watch', ['tests:lint'], function () {
 // #############################################################################
 // COMMANDS
 gulp.task('watch', function () {
+    gulp.watch(PROJECT_PATTERNS.sass, ['sass']);
     gulp.watch(PROJECT_PATTERNS.js, ['lint']);
 });
 
-gulp.task('default', ['browser', 'lint', 'watch']);
+gulp.task('default', ['bower', 'sass', 'lint', 'watch']);

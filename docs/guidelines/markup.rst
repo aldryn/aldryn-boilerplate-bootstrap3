@@ -38,6 +38,11 @@ Indentation
 
     - Always add an indent after Django tags such as ``{% if %}``, ``{% forloop %}``, ``{% block %}`` and so on.
     - Use single lines within ``{% addtoblock %}`` for **files** and multilines for ``<code>``.
+      It is important because of how sekizai works. Basically if two scripts are
+      added through ``addtoblock`` and the contents of the block are the same
+      they are merged. That way you never have duplicate jQuery's on the page.
+      The caveat than is that the whitespace around that script tag must match.
+      To avoid mistakes we always do them in single line.
     - **Code readability** always wins.
 
 .. code-block:: django

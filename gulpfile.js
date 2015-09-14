@@ -234,4 +234,4 @@ gulp.task('watch', function () {
     gulp.watch(PROJECT_PATTERNS.js, ['lint']);
 });
 
-gulp.task('default', ['sass', 'lint', 'watch']);
+gulp.task('default', ['bower', 'sass', 'lint', 'watch']);

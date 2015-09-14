@@ -56,6 +56,7 @@ task runner:
 
 We also offer some standalone commands:
 
+- ``gulp bower`` to install the bower dependencies
 - ``gulp images`` optimises images within ``/static/img``
 - ``gulp icons`` to create a custom icon webfont
 - ``gulp docs`` compiles YUIDoc into ``static/docs``

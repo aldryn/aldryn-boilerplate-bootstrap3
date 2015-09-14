@@ -6,6 +6,7 @@ Aldryn Boilerplate Bootstrap 3
 4.0.0
 =====
 - added libsass support
+- added ``gulp bower`` command
 - updated ``templates/404.html`` to look better
 - updated Font Awesome to 4.4.0
 - updated Font Awesome to use sass library

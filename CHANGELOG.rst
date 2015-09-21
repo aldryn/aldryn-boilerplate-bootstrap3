@@ -3,6 +3,11 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
+4.0.1
+=====
+- fixed dependency linking for Aldryn
+
+
 4.0.0
 =====
 - added libsass support

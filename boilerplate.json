@@ -1,7 +1,7 @@
 {
     "identifier": "bootstrap3",
     "package-name": "aldryn-boilerplate-bootstrap3-libsass",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "templates": [
         ["fullwidth.html", "full width"],
         ["sidebar_left.html", "sidebar left"],
@@ -26,6 +26,15 @@
         "static/js/libs/jquery.min.js",
         "static/js/libs/outdatedBrowser.min.js",
         "static/js/libs/respond.min.js",
-        "static/js/libs/swfobject.min.js"
+        "static/js/libs/swfobject.min.js",
+
+        ".bowerrc",
+        ".editorconfig",
+        ".jscsrc",
+        ".jshintrc",
+        "bower.json",
+        "browserslist",
+        "gulpfile.js",
+        "package.json"
     ]
 }

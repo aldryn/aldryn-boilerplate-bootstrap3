@@ -6,6 +6,7 @@ Aldryn Boilerplate Bootstrap 3
 4.0.1
 =====
 - fixed dependency linking for Aldryn
+- added docs about ajax promises
 
 
 4.0.0

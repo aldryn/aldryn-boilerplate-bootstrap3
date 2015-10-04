@@ -3,6 +3,11 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
+4.0.2
+=====
+- added gitignore to Aldryn protected files
+
+
 4.0.1
 =====
 - fixed dependency linking for Aldryn

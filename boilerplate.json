@@ -28,6 +28,7 @@
         "static/js/libs/respond.min.js",
         "static/js/libs/swfobject.min.js",
 
+        ".gitignore",
         ".bowerrc",
         ".editorconfig",
         ".jscsrc",

@@ -6,6 +6,8 @@ Aldryn Boilerplate Bootstrap 3
 4.0.3
 =====
 - separate devDependencies and dependencies for aldryn
+- restructured gulp tasks
+- fixed an issue with google fonts paths being rewritten incorrectly
 
 
 4.0.2

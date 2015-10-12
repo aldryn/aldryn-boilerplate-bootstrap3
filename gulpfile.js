@@ -64,6 +64,7 @@ gulp.task('bower', task('bower'));
 gulp.task('lint:javascript', task('lint/javascript'));
 gulp.task('lint', ['lint:javascript']);
 gulp.task('sass', task('sass'));
+gulp.task('build', ['sass']);
 
 /**
  * GULP_MODE === 'production' means we have a limited

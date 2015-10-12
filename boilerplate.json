@@ -28,6 +28,17 @@
         "static/js/libs/respond.min.js",
         "static/js/libs/swfobject.min.js",
 
+        "tools/tasks/bower.js",
+        "tools/tasks/browser.js",
+        "tools/tasks/docs.js",
+        "tools/tasks/icons.js",
+        "tools/tasks/images.js",
+        "tools/tasks/lint/javascript.js",
+        "tools/tasks/sass.js",
+        "tools/tasks/tests/unit.js",
+        "tools/tasks/tests/watch.js",
+        "tools/tasks/tests/integration.js",
+
         ".gitignore",
         ".bowerrc",
         ".editorconfig",

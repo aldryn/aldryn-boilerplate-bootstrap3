@@ -122,7 +122,9 @@ gulp.task('sass', function () {
             // browsers are coming from browserslist file
             cascade: false
         }))
-        .pipe(minifyCss())
+        .pipe(minifyCss({
+            rebase: false
+        }))
         // sourcemaps can be activated through `gulp sass --debug´
         .pipe(gulpif(DEBUG, sourcemaps.write()))
         .pipe(gulp.dest(PROJECT_PATH.css));

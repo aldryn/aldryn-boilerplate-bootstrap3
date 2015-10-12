@@ -28,7 +28,9 @@ module.exports = function (gulp, opts) {
                     // browsers are coming from browserslist file
                     cascade: false
                 }))
-                .pipe(minifyCss())
+                .pipe(minifyCss({
+                    rebase: false
+                }))
                 // sourcemaps can be activated through `gulp sass --debug´
                 .pipe(gulpif(opts.DEBUG, sourcemaps.write()))
                 .pipe(gulp.dest(opts.PROJECT_PATH.css));

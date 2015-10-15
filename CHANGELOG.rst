@@ -5,7 +5,7 @@ Aldryn Boilerplate Bootstrap 3
 
 4.0.4
 =====
-- fix language template selection to use ``lang.lang``
+- fix language template selection to use ``lang.code``
 
 
 4.0.3

@@ -1,17 +1,15 @@
 {% load i18n menu_tags %}
-{% get_available_languages as languages %}
 {% get_language_info for LANGUAGE_CODE as lang %}
-{# DOCS: https://docs.djangoproject.com/en/1.5/topics/i18n/translation/#other-tags #}
 
 {% if languages|length > 1 %}
-<li class="child lang dropdown">
-    <a href="{% page_language_url lang.0 %}" class="dropdown-toggle" data-toggle="dropdown"><span>{{ lang.name }} <span class="caret"></span></span></a>
-    <ul class="dropdown-menu" role="menu">
-        {% for language in languages %}
-            {% if not language.0 == current_language %}
-                <li class="child lang"><a href="{% page_language_url language.0 %}"><span>{{ language.1 }}</span></a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-</li>
+    <li class="child lang dropdown">
+        <a href="{% page_language_url lang.code %}" class="dropdown-toggle" data-toggle="dropdown"><span>{{ lang.name }} <span class="caret"></span></span></a>
+        <ul class="dropdown-menu" role="menu">
+            {% for language in languages %}
+                {% if not language.0 == current_language %}
+                    <li class="child lang"><a href="{% page_language_url language.0 %}"><span>{{ language.1 }}</span></a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
 {% endif %}

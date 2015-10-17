@@ -35,6 +35,7 @@ var PROJECT_PATTERNS = {
     ],
     js: [
         'gulpfile.js',
+        './tools/tasks/**/*.js',
         PROJECT_PATH.js + '/**/*.js',
         PROJECT_PATH.tests + '/**/*.js',
         // exclude from linting

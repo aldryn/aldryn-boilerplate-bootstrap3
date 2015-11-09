@@ -76,13 +76,13 @@ to be merged.
 Releases
 ********
 
-- Adapt the
-`CHANGELOG.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_
+- Adapt the `CHANGELOG.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/CHANGELOG.rst>`_
 - Adapt `AUTHORS.rst <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/AUTHORS.rst>`_ if required
 - Bump version in `boilerplate.json <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/boilerplate.json>`_
 - Create a `GitHub tag <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/tags>`_
-- Add the release notes on the `GitHub tag <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/releases>`_ 
+- Add the release notes on the `GitHub tag <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/releases>`_
 - Build new tag on `readthedocs.org <https://readthedocs.org/projects/aldryn-boilerplate-bootstrap3/>`_
 - Run ``bash tools/release.sh`` before release on `Aldryn <http://control.aldryn.com>`_
 - Run ``aldryn boilerplate upload`` to release on `Aldryn <http://control.aldryn.com>`_
 - Test, inform, present
+

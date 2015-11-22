@@ -71,9 +71,7 @@ of the default bootstrap eco-system.
 We provide already some helper functions such as ``em(12px, 16px)`` that
 calculates the pixel values from a given size in relation to the parent size.
 
-Additionally we have mixins for managing `z-index` layers, `keyframes`
-rendering , `hide-content` and a simplified `micro-clearfix`.
-
+Additionally we have mixins for managing `z-index` layers and `hide-content`.
 
 settings/
 =========

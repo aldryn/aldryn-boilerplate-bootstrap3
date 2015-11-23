@@ -2,6 +2,11 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
+4.0.5 (unreleased)
+=====
+- remove outdated ``keyframes`` mixin (use plain property with autoprefixer)
+- remove ``micro-clearfix`` mixin, use ``clearfix`` class or mixin from bootstrap
+
 
 4.0.4
 =====

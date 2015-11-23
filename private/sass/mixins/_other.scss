@@ -1,14 +1,6 @@
 // #############################################################################
 // OTHER
 
-// mixins that have been taken over from compass
-// or are regularily used in any project
-
-// add micro-clearfix which doesnt add overflow:hidden
-@mixin micro-clearfix() {
-    @extend .clearfix;
-}
-
 // hides text in an element so you can see the background.
 // INFO: conflicts otherwise with hide-text from bootstrap
 @mixin hide-content() {

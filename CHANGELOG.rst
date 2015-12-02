@@ -6,7 +6,7 @@ Aldryn Boilerplate Bootstrap 3
 =====
 - remove outdated ``keyframes`` mixin (use plain property with autoprefixer)
 - remove ``micro-clearfix`` mixin, use ``clearfix`` class or mixin from bootstrap
-
+- changed JavaScript linting to ESLint instead of JSHint
 
 4.0.4
 =====

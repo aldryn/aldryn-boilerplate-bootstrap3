@@ -11,7 +11,7 @@ install:
 	##### done
 
 run:
-	. $(VENV); sphinx-autobuild . $(ALLSPHINXOPTS) _build/html --host 0.0.0.0 --port $(PORT)
+	. $(VENV); sphinx-autobuild $(ALLSPHINXOPTS) _build/html --host 0.0.0.0 --port $(PORT)
 
 ########################################################################################################################
 # Makefile for Sphinx documentation

@@ -8,6 +8,7 @@
 
 // #############################################################################
 // IMPORTS
+var webdriverUpdate;
 var argv = require('minimist')(process.argv.slice(2));
 var gulp = require('gulp');
 
@@ -18,7 +19,7 @@ var PROJECT_PATH = {
     bower: PROJECT_ROOT + '/static/vendor',
     css: PROJECT_ROOT + '/static/css',
     docs: PROJECT_ROOT + '/static/docs',
-    fonts:  PROJECT_ROOT + '/static/fonts',
+    fonts: PROJECT_ROOT + '/static/fonts',
     html: PROJECT_ROOT + '/templates',
     images: PROJECT_ROOT + '/static/img',
     icons: PROJECT_ROOT + '/private/icons',
@@ -48,10 +49,17 @@ var PROJECT_PATTERNS = {
     ]
 };
 
-var PORT = parseInt(process.env.PORT, 10) || 8000;
+var DEFAULT_PORT = 8000;
+var PORT = parseInt(process.env.PORT, 10) || DEFAULT_PORT;
 var DEBUG = argv.debug;
 
-function task(id) {
+
+/**
+ * Checks project deployment
+ * @param {String} id - task name
+ * @returns {Object} - task which finished
+ */
+function task (id) {
     return require('./tools/tasks/' + id)(gulp, {
         PROJECT_ROOT: PROJECT_ROOT,
         PROJECT_PATH: PROJECT_PATH,
@@ -85,7 +93,7 @@ if (process.env.GULP_MODE !== 'production') {
     gulp.task('tests:watch', ['tests:lint'], task('tests/watch'));
     gulp.task('tests', ['tests:unit', 'tests:integration', 'tests:lint']);
 
-    var webdriverUpdate = require('gulp-protractor').webdriver_update;
+    webdriverUpdate = require('gulp-protractor').webdriver_update;
     gulp.task('tests:webdriver', webdriverUpdate);
     gulp.task('tests:integration', ['tests:webdriver'], task('tests/integration'));
 }

@@ -118,8 +118,7 @@ There are several **configuration files** included such as:
 
 - `EditorConfig <http://editorconfig.org/>`_ within  ``.editorconfig``
 - `CSSComb <http://csscomb.com/>`_ within ``.csscomb.json``
-- `JSCS <http://jscs.info/>`_ within ``.jscsrc``
-- `JSLint <http://www.jslint.com/>`_ within ``.jshintrc``
+- `ESLint <http://eslint.org/>`_ within ``.eslintrc.json``
 - `SCSS-Lint <https://github.com/brigade/scss-lint>`_ within ``scss-lint.json``
 
 Please mind that they are ignored if your editor doesn't support them.

@@ -1,9 +1,9 @@
+'use strict';
+
 var gutil = require('gulp-util');
 var protractor = require('gulp-protractor').protractor;
 
 module.exports = function (gulp, opts) {
-    'use strict';
-
     return function () {
         return gulp.src([opts.PROJECT_PATH.tests + '/integration/specs/*.js'])
             .pipe(protractor({

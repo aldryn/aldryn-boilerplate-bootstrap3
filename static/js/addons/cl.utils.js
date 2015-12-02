@@ -83,11 +83,11 @@ var Cl = window.Cl || {};
          *
          * @method setStorage
          * @param {String} token - namespace
-         * @param {String} value-  storage value
+         * @param {String} value - storage value
          * @returns {Boolean|String} item value or negative result
          */
         setStorage: function (token, value) {
-            if (token && value && this._isStorageSupported()) {
+            if (token && value && this._isStorageSupported) {
                 localStorage.setItem(token, value);
                 return value;
             }
@@ -102,7 +102,7 @@ var Cl = window.Cl || {};
          * @returns {Object|Boolean} localStorage item or negative result
          */
         getStorage: function (token) {
-            if (token && this._isStorageSupported()) {
+            if (token && this._isStorageSupported) {
                 return localStorage.getItem(token);
             }
             return false;
@@ -115,7 +115,7 @@ var Cl = window.Cl || {};
          * @private
          * @returns {Boolean} localStorage availability
          */
-        _isStorageSupported: function () {
+        _isStorageSupported: (function localStorageCheck () {
             var mod = 'modernizr';
 
             try {
@@ -125,7 +125,7 @@ var Cl = window.Cl || {};
             } catch (e) {
                 return false;
             }
-        }
+        })()
     };
 
 })(jQuery);

@@ -47,12 +47,12 @@ describe('Cl.Utils', function () {
         });
 
         it('use the local storage of the browser', function () {
-            if (Storage === 'undefined') {
+            if (typeof Storage === 'undefined') {
                 expect(Storage).toThrowError(ReferenceError);
             } else {
                 expect(Storage).toBeDefined();
             }
-            expect(Cl.Utils._isStorageSupported()).toBe(true);
+            expect(Cl.Utils._isStorageSupported).toBe(true);
         });
 
         it('one can store a value', function () {
@@ -78,9 +78,7 @@ describe('Cl.Utils', function () {
         });
 
         it('handle exceptions as expected', function () {
-            Cl.Utils._isStorageSupported = function () {
-                return false;
-            };
+            Cl.Utils._isStorageSupported = false;
 
             expect(Cl.Utils.getStorage('test#3')).toBe(false);
             expect(Cl.Utils.getStorage()).toBe(false);

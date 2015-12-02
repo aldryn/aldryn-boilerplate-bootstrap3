@@ -101,7 +101,7 @@ Most importantly, **keep comments up to date** if the code changes.
 Whitespace
 ----------
 
-With proper ``.editoconfig`` and ``jshint/jscs`` setup these will be enforced
+With proper ``.editoconfig`` and ``eslint`` setup these will be enforced
 automatically, but still:
 
 - 4 spaces for tabs.

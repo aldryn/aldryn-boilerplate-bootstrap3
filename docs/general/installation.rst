@@ -48,7 +48,7 @@ task runner:
 
 - ``gulp`` runs the gulp defaults
 - ``gulp browser`` connects to a given server (django) and runs live reload on a separate IP
-- ``gulp lint`` starts all linting services using ``.jshintrc``, ``.jscsrc`` and ``scss-lint.json``
+- ``gulp lint`` starts all linting services using ``.eslintrc.json`` and ``scss-lint.json``
 - ``gulp preprocess`` optimises images within ``/static/img`` and compiles YUIDoc into ``static/docs``
 - ``gulp sass`` to compile the stylesheets
 - ``gulp tests`` runs the test suite

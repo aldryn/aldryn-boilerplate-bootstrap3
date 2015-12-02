@@ -8,7 +8,7 @@
 
 // #############################################################################
 // IMPORTS
-var webdriverUpdate = null;
+var webdriverUpdate;
 var argv = require('minimist')(process.argv.slice(2));
 var gulp = require('gulp');
 

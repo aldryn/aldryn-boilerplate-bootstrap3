@@ -3,7 +3,7 @@
  * Licensed under BSD
  * http://github.com/aldryn/aldryn-boilerplate-bootstrap3
  */
-
+// istanbul ignore next
 'use strict';
 
 // #############################################################################
@@ -46,6 +46,7 @@ var Cl = window.Cl || {};
          */
         _consoleWrapper: function () {
             var method;
+            // istanbul ignore next
             var noop = function () {};
             var methods = [
                 'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
@@ -54,6 +55,7 @@ var Cl = window.Cl || {};
                 'timeStamp', 'trace', 'warn'
             ];
             var length = methods.length;
+            // istanbul ignore next
             var console = window.console || {};
 
             while (length--) {
@@ -85,12 +87,11 @@ var Cl = window.Cl || {};
          * @returns {Boolean|String} item value or negative result
          */
         setStorage: function (token, value) {
-            if (token && value && this._isStorageSupported) {
+            if (token && value && this._isStorageSupported()) {
                 localStorage.setItem(token, value);
                 return value;
-            } else {
-                return false;
             }
+            return false;
         },
 
         /**
@@ -101,11 +102,10 @@ var Cl = window.Cl || {};
          * @returns {Object|Boolean} localStorage item or negative result
          */
         getStorage: function (token) {
-            if (token && this._isStorageSupported) {
+            if (token && this._isStorageSupported()) {
                 return localStorage.getItem(token);
-            } else {
-                return false;
             }
+            return false;
         },
 
         /**
@@ -115,7 +115,7 @@ var Cl = window.Cl || {};
          * @private
          * @returns {Boolean} localStorage availability
          */
-        _isStorageSupported: function localStorageCheck () {
+        _isStorageSupported: function () {
             var mod = 'modernizr';
 
             try {

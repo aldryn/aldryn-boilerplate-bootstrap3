@@ -52,8 +52,7 @@ describe('Cl.Utils', function () {
             } else {
                 expect(Storage).toBeDefined();
             }
-
-            expect(Cl.Utils._isStorageSupported).toBe(true);
+            expect(Cl.Utils._isStorageSupported()).toBe(true);
         });
 
         it('one can store a value', function () {
@@ -79,7 +78,9 @@ describe('Cl.Utils', function () {
         });
 
         it('handle exceptions as expected', function () {
-            Cl.Utils._isStorageSupported = false;
+            Cl.Utils._isStorageSupported = function () {
+                return false;
+            };
 
             expect(Cl.Utils.getStorage('test#3')).toBe(false);
             expect(Cl.Utils.getStorage()).toBe(false);

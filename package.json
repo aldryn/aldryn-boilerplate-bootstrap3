@@ -17,7 +17,6 @@
     "browser-sync": "^2.8.2",
     "browserslist-saucelabs": "^0.1.4",
     "gulp-cached": "^1.1.0",
-    "gulp-eslint": "^1.1.1",
     "gulp-iconfont": "<5.0.0",
     "gulp-iconfont-css": "^1.0.1",
     "gulp-imagemin": "^2.3.0",

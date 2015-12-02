@@ -42,7 +42,7 @@
         // Best Practices
         "accessor-pairs": 2,
         "block-scoped-var": 2,
-        "complexity": [2, 5],
+        "complexity": [2, 10],
         "consistent-return": 0,
         "curly": 2,
         "default-case": 2,

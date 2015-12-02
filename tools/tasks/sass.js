@@ -1,3 +1,5 @@
+'use strict';
+
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
@@ -6,8 +8,6 @@ var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
 
 module.exports = function (gulp, opts) {
-    'use strict';
-
     return function () {
         gulp.task('sass', function () {
             gulp.src(opts.PROJECT_PATTERNS.sass)

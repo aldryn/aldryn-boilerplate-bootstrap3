@@ -36,7 +36,8 @@ if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {
     config.sauceUser = process.env.SAUCE_USERNAME;
     config.sauceKey = process.env.SAUCE_ACCESS_KEY;
     config.multiCapabilities = browsers.map(function (browser) {
-        var browserCapability =  browser;
+        var browserCapability = browser;
+
         browserCapability.name = formatTaskName(browserCapability.browserName);
         return browserCapability;
     });

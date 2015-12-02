@@ -17,6 +17,7 @@ describe('Cl.Utils', function () {
     describe('._document()', function () {
         it('removes noscript class from body', function () {
             var body = $(document.body);
+
             expect(body.hasClass('noscript')).toBe(false);
             body.addClass('noscript');
             Cl.Utils._document();
@@ -46,28 +47,33 @@ describe('Cl.Utils', function () {
         });
 
         it('use the local storage of the browser', function () {
-            if (typeof (Storage) !== void(0)) {
-                expect(Storage).toBeDefined();
-            } else {
+            if (Storage === 'undefined') {
                 expect(Storage).toThrowError(ReferenceError);
+            } else {
+                expect(Storage).toBeDefined();
             }
 
             expect(Cl.Utils._isStorageSupported).toBe(true);
         });
 
         it('one can store a value', function () {
-            expect(localStorage.getItem('test#1')).toBeNull();
+            var returnValue = '';
 
-            var returnValue = Cl.Utils.setStorage('test#1', 'true');
+            expect(localStorage.getItem('test#1')).toBeNull();
+            returnValue = Cl.Utils.setStorage('test#1', 'true');
+
             expect(returnValue).toBe('true');
             expect(localStorage.getItem('test#1')).toBe('true');
         });
 
         it('the other retrieve a value', function () {
+            var returnValue = '';
+
             expect(localStorage.getItem('test#2')).toBeNull();
 
             Cl.Utils.setStorage('test#2', 'true');
-            var returnValue = Cl.Utils.getStorage('test#2');
+            returnValue = Cl.Utils.getStorage('test#2');
+
             expect(returnValue).toBe('true');
             expect(localStorage.getItem('test#2')).toBe('true');
         });

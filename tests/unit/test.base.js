@@ -12,7 +12,7 @@
 describe('base.js', function () {
     beforeEach(function () {
         fixture.setBase('tests/fixtures');
-        this.markup = fixture.load('outdatedBrowser.html');
+        fixture.load('outdatedBrowser.html');
     });
 
     it('loads Cl.Utils._document()', function () {

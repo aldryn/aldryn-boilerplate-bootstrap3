@@ -9,7 +9,6 @@ Aldryn Boilerplate Bootstrap 3
 - changed JavaScript linting to ESLint instead of JSHint
 - improved ``docs`` output
 
->>>>>>> develop
 
 4.0.4
 =====

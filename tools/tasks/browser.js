@@ -5,9 +5,9 @@ var browserSync = require('browser-sync');
 module.exports = function (gulp, opts) {
     return function () {
         var files = [
-            opts.PROJECT_PATH.css + '*.css',
-            opts.PROJECT_PATH.html + '**/*.html',
-            opts.PROJECT_PATH.js + '**/*.js'
+            opts.PROJECT_PATH.css + '/*.css',
+            opts.PROJECT_PATH.html + '/**/*.html',
+            opts.PROJECT_PATH.js + '/**/*.js'
         ];
         var syncTimeout = 1000;
 

@@ -8,6 +8,8 @@ Aldryn Boilerplate Bootstrap 3
 - remove ``micro-clearfix`` mixin, use ``clearfix`` class or mixin from bootstrap
 - changed JavaScript linting to ESLint instead of JSHint
 - improved ``docs`` output
+- fixed broken ``bower`` task
+- fixed some gulp task being recursive
 
 
 4.0.4

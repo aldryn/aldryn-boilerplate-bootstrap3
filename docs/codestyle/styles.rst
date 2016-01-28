@@ -39,11 +39,11 @@ there are no "easy-to-follow" rules for fixing it. But just to reiterate, main p
   selector performance may play a major role in the perceived rendering performance.
 
 - Selectors are interpreted by the browser from right to left, meaning
-``.my-class > *`` will select all the elements on the page all the time and
-check if their immediate parent has a class ``my-class``. If there would be
-no ``>`` it would traverse the tree all the way up for every element, which
-is not very good. It is true that browsers do optimize things like this, but
-you should always check for yourself.
+  ``.my-class > *`` will select all the elements on the page all the time and
+  check if their immediate parent has a class ``my-class``. If there would be
+  no ``>`` it would traverse the tree all the way up for every element, which
+  is not very good. It is true that browsers do optimize things like this, but
+  you should always check for yourself.
 
 
 JS selectors

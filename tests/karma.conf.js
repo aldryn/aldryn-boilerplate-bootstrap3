@@ -4,6 +4,8 @@
  * http://github.com/aldryn/aldryn-boilerplate-bootstrap3
  */
 
+/* eslint no-shadow: 0 */
+
 'use strict';
 
 // #############################################################################
@@ -12,8 +14,9 @@ var baseConf = require('./base.conf');
 
 module.exports = function (config) {
     var browsers = {
-        'PhantomJS': 'used for local testing'
+        PhantomJS: 'used for local testing'
     };
+    var settings = {};
 
     // Browsers to run on Sauce Labs
     // Check out https://saucelabs.com/platforms for all browser/OS combos
@@ -25,7 +28,7 @@ module.exports = function (config) {
         }, {});
     }
 
-    var settings = {
+    settings = {
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '..',
 

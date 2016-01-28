@@ -1,10 +1,10 @@
+'use strict';
+
 var gutil = require('gulp-util');
 var cache = require('gulp-cached');
 var imagemin = require('gulp-imagemin');
 
 module.exports = function (gulp, opts) {
-    'use strict';
-
     return function () {
         var options = {
             interlaced: true,

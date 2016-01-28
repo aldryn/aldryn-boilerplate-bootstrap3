@@ -7,7 +7,7 @@
 
 // BUTTONS/animation
 .btn {
-    @include transition(background, $speed-base);
+    transition: background $speed-base;
 }
 
 // BUTTONS/outline

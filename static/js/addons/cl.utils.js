@@ -3,20 +3,20 @@
  * Licensed under BSD
  * http://github.com/aldryn/aldryn-boilerplate-bootstrap3
  */
+// istanbul ignore next
+'use strict';
 
 // #############################################################################
 // NAMESPACES
 /**
  * @module Cl
  */
-// istanbul ignore next
+
 var Cl = window.Cl || {};
 
 // #############################################################################
 // UTILS
 (function ($) {
-    'use strict';
-
     /**
      * Contains various helpers, feel free to extend and adapt
      *
@@ -56,7 +56,7 @@ var Cl = window.Cl || {};
             ];
             var length = methods.length;
             // istanbul ignore next
-            var console = (window.console = window.console || {});
+            var console = window.console || {};
 
             while (length--) {
                 method = methods[length];
@@ -72,7 +72,7 @@ var Cl = window.Cl || {};
          * Simple redirection
          *
          * @method redirectTo
-         * @param url {String} URL string
+         * @param {String} url - URL string
          */
         redirectTo: function (url) {
             window.location.href = url;
@@ -82,30 +82,30 @@ var Cl = window.Cl || {};
          * Save information within local storage
          *
          * @method setStorage
-         * @param token {String} namespace
-         * @param value {String} storage value
+         * @param {String} token - namespace
+         * @param {String} value - storage value
+         * @returns {Boolean|String} item value or negative result
          */
         setStorage: function (token, value) {
             if (token && value && this._isStorageSupported) {
                 localStorage.setItem(token, value);
                 return value;
-            } else {
-                return false;
             }
+            return false;
         },
 
         /**
          * Retrieve information from local storage
          *
          * @method getStorage
-         * @param token {String} namespace
+         * @param {String} token - namespace
+         * @returns {Object|Boolean} localStorage item or negative result
          */
         getStorage: function (token) {
             if (token && this._isStorageSupported) {
                 return localStorage.getItem(token);
-            } else {
-                return false;
             }
+            return false;
         },
 
         /**
@@ -113,9 +113,11 @@ var Cl = window.Cl || {};
          *
          * @method _isStorageSupported
          * @private
+         * @returns {Boolean} localStorage availability
          */
-        _isStorageSupported: (function localStorageCheck() {
+        _isStorageSupported: (function localStorageCheck () {
             var mod = 'modernizr';
+
             try {
                 localStorage.setItem(mod, mod);
                 localStorage.removeItem(mod);
@@ -123,7 +125,7 @@ var Cl = window.Cl || {};
             } catch (e) {
                 return false;
             }
-        }())
+        })()
     };
 
 })(jQuery);

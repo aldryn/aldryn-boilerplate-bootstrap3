@@ -2,6 +2,10 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
+4.0.6
+=====
+- remove ``{% load url %}``
+
 4.0.5
 =====
 - remove outdated ``keyframes`` mixin (use plain property with autoprefixer)

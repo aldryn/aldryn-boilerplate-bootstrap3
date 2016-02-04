@@ -6,6 +6,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
+var header = require('gulp-header');
 
 module.exports = function (gulp, opts) {
     return function () {
@@ -31,6 +32,7 @@ module.exports = function (gulp, opts) {
                 rebase: false
             }))
             // sourcemaps can be activated through `gulp sass --debug´
+            .pipe(header('/* This file generated automatically on server side. All changes would be lost. */ \n\n'))
             .pipe(gulpif(opts.DEBUG, sourcemaps.write()))
             .pipe(gulp.dest(opts.PROJECT_PATH.css));
     };

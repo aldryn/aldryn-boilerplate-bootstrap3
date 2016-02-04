@@ -2,7 +2,15 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
-4.0.5 (unreleased)
+4.0.7
+=====
+- make clear that ``base.css`` is auto-generated and put it as protected file
+
+4.0.6
+=====
+- remove ``{% load url %}``
+
+4.0.5
 =====
 - remove outdated ``keyframes`` mixin (use plain property with autoprefixer)
 - remove ``micro-clearfix`` mixin, use ``clearfix`` class or mixin from bootstrap

@@ -1,7 +1,7 @@
 {
     "identifier": "bootstrap3",
     "package-name": "aldryn-boilerplate-bootstrap3-libsass",
-    "version": "4.0.4",
+    "version": "4.0.6",
     "templates": [
         ["fullwidth.html", "full width"],
         ["sidebar_left.html", "sidebar left"],
@@ -27,6 +27,8 @@
         "static/js/libs/outdatedBrowser.min.js",
         "static/js/libs/respond.min.js",
         "static/js/libs/swfobject.min.js",
+
+        "static/css/base.css",
 
         "tools/tasks/bower.js",
         "tools/tasks/browser.js",

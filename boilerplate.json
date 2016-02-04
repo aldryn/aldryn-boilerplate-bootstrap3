@@ -28,6 +28,8 @@
         "static/js/libs/respond.min.js",
         "static/js/libs/swfobject.min.js",
 
+        "static/css/base.css",
+
         "tools/tasks/bower.js",
         "tools/tasks/browser.js",
         "tools/tasks/docs.js",

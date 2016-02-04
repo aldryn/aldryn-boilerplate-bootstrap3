@@ -2,7 +2,7 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
-4.0.7 (unreleased)
+4.0.7
 =====
 - make clear that ``base.css`` is auto-generated and put it as protected file
 

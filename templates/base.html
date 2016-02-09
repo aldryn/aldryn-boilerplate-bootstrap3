@@ -13,7 +13,7 @@
             <div class="navbar-header">
                 {# INFO: the logo should be placed first for seo reasons #}
                 <h1 class="navbar-brand">
-                    <a href="/">
+                    <a href="{% url "pages-root" %}">
                         <span class="sr-only">{{ request.site.name }}</span>
                         <img src="{% static "img/logo-main@print.png" %}" alt="{{ request.site.name }}" />
                     </a>
@@ -26,7 +26,7 @@
             {# INFO: ensure the anchor names are callable #}
             <h2 class="sr-only">{% trans "Shortcuts" %}</h2>
             <ul class="skip-links">
-                <li><a href="/" title="[Alt + 0]" accesskey="0">{% trans "Go to home" %}</a></li>
+                <li><a href="{% url "pages-root" %}" title="[Alt + 0]" accesskey="0">{% trans "Go to home" %}</a></li>
                 <li><a href="#page-navigation" title="[Alt + 1]" accesskey="1">{% trans "Jump to navigation" %}</a></li>
                 <li><a href="#page-content" title="[Alt + 2]" accesskey="2">{% trans "Jump to content" %}</a></li>
                 <li><a href="#page-footer" title="[Alt + 3]" accesskey="3">{% trans "Contact" %}</a></li>

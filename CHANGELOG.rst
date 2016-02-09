@@ -2,6 +2,10 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
+UNRELEASED
+=====
+- add ``{% url "pages-root" %}`` to determine root url (home)
+
 4.0.7
 =====
 - make clear that ``base.css`` is auto-generated and put it as protected file

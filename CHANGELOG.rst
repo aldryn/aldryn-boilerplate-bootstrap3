@@ -5,6 +5,8 @@ Aldryn Boilerplate Bootstrap 3
 UNRELEASED
 =====
 - add ``{% url "pages-root" %}`` to determine root url (home)
+- remove reference to ``select2.png`` in ``_select2.scss``
+- fix automatic path to glyphicons (requires aldryn-bootstrap3)
 
 4.0.7
 =====

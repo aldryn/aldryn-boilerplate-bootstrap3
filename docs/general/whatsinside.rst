@@ -32,7 +32,7 @@ and the `JavaScript component <https://github.com/aldryn/aldryn-boilerplate-boot
 
 .. note::
 
-    We use a 24 column based grid system instead of the default 12.
+    Aldryn Bootstrap 3 uses a 24 column based grid setting instead of the default 12. You can change this setting in ``private/sass/settings/_bootstrap.scss``.
 
 
 The `Glyhpicon <http://getbootstrap.com/components/#glyphicons>`_ icon set has

@@ -30,6 +30,11 @@ The full `Bootstrap library <http://getbootstrap.com>`_ is imported via the
 `Sass component <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss>`_
 and the `JavaScript component <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/static/js/libs/bootstrap.min.js>`_.
 
+.. note::
+
+    Aldryn Bootstrap 3 uses a 24 column based grid setting instead of the default 12. You can change this setting in ``private/sass/settings/_bootstrap.scss``.
+
+
 The `Glyhpicon <http://getbootstrap.com/components/#glyphicons>`_ icon set has
 been `disabled <https://github.com/aldryn/aldryn-boilerplate-bootstrap3/blob/master/private/sass/libs/_bootstrap.scss#L14>`_
 in favour of the `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`_

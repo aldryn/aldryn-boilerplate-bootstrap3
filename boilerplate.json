@@ -8,46 +8,14 @@
         ["sidebar_right.html", "sidebar right"],
         ["tpl_home.html", "home template"]
     ],
-    "protected": [
-        "templates/base_root.html",
-        "templates/404.html",
-        "templates/500.html",
-
-        "templates/includes/analytics.html",
-        "templates/includes/messages.html",
-        "templates/includes/menu/breadcrumb.html",
-        "templates/includes/menu/langnav.html",
-        "templates/includes/menu/navigation.html",
-        "templates/includes/menu/pagenav.html",
-
-        "static/js/libs/bootstrap.min.js",
-        "static/js/libs/class.min.js",
-        "static/js/libs/html5shiv.min.js",
-        "static/js/libs/jquery.min.js",
-        "static/js/libs/outdatedBrowser.min.js",
-        "static/js/libs/respond.min.js",
-        "static/js/libs/swfobject.min.js",
-
-        "static/css/base.css",
-
-        "tools/tasks/bower.js",
-        "tools/tasks/browser.js",
-        "tools/tasks/docs.js",
-        "tools/tasks/icons.js",
-        "tools/tasks/images.js",
-        "tools/tasks/lint/javascript.js",
-        "tools/tasks/sass.js",
-        "tools/tasks/tests/unit.js",
-        "tools/tasks/tests/watch.js",
-        "tools/tasks/tests/integration.js",
-
-        ".gitignore",
-        ".bowerrc",
-        ".editorconfig",
-        ".eslintrc.json",
-        "bower.json",
-        "browserslist",
-        "gulpfile.js",
-        "package.json"
+    "excluded": [
+        "docs",
+        "node_modules",
+        "tests",
+        "tools/server",
+        "tools/release.sh",
+        ".travis.yml",
+        "*.rst",
+        "LICENSE.txt"
     ]
 }

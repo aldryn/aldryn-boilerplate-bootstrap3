@@ -2,6 +2,10 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
+4.0.9 (UNRELEASED)
+==================
+- Removed dead references to select2 images
+
 4.0.8
 =====
 - add ``{% url "pages-root" %}`` to determine root url (home)

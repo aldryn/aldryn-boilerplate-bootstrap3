@@ -5,6 +5,8 @@ Aldryn Boilerplate Bootstrap 3
 4.0.9 (UNRELEASED)
 ==================
 - Removed dead references to select2 images
+- Removed versioning query string parameters
+- Disabled glyphicons per default
 
 4.0.8
 =====

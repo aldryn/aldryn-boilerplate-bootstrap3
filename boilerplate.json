@@ -1,7 +1,7 @@
 {
     "identifier": "bootstrap3",
     "package-name": "aldryn-boilerplate-bootstrap3-libsass",
-    "version": "4.0.8",
+    "version": "4.0.9",
     "templates": [
         ["fullwidth.html", "full width"],
         ["sidebar_left.html", "sidebar left"],

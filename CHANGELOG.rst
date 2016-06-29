@@ -2,9 +2,13 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
+
 4.0.9 (UNRELEASED)
 ==================
 - Removed dead references to select2 images
+- Removed versioning query string parameters
+- Disabled glyphicons per default
+
 
 4.0.8
 =====
@@ -13,13 +17,16 @@ Aldryn Boilerplate Bootstrap 3
 - fix automatic path to glyphicons (requires aldryn-bootstrap3)
 - change from ``protected`` to ``excluded`` in ``boilerplate.json``
 
+
 4.0.7
 =====
 - make clear that ``base.css`` is auto-generated and put it as protected file
 
+
 4.0.6
 =====
 - remove ``{% load url %}``
+
 
 4.0.5
 =====

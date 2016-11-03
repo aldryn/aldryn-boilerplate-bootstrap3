@@ -3,7 +3,7 @@
     "package-name": "aldryn-boilerplate-bootstrap3-libsass",
     "version": "4.1.0",
     "templates": [
-        ["base.html", "base"],
+        ["base.html", "base"]
     ],
     "excluded": [
         "docs",

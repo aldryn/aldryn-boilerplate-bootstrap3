@@ -76,7 +76,13 @@
     {% block messages %}
         {% include "includes/messages.html" %}
     {% endblock messages %}
-    {% block content %}{% endblock %}
+    {% block content %}
+        {% with 960 as width %}
+            <div class="container">
+                {% placeholder "content" %}
+            </div>
+        {% endwith %}
+    {% endblock %}
 {% endblock extend_base %}
 <hr class="sr-only" />
 {# end: content #}

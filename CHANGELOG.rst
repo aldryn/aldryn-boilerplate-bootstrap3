@@ -3,6 +3,12 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
+4.1.0
+=====
+- Removed standard templates ``fullwidth.html``, ``sidebar_left.html``,
+  ``sidebar_right.html`` and ``tpl_home.html`` and use ``base.html`` instead
+
+
 4.0.9
 =====
 - Removed dead references to select2 images

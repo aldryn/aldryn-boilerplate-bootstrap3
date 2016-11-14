@@ -3,6 +3,13 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
+4.1.1
+=====
+
+- Fixed an issue with ``404.html`` inheriting from ``fullwidth.html``
+- Removed ``fullwidth.html`` references from documentation
+
+
 4.1.0
 =====
 - Removed standard templates ``fullwidth.html``, ``sidebar_left.html``,

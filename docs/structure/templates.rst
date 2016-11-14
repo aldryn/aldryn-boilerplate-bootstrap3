@@ -10,9 +10,7 @@ Templates
 
 From the top down the three layers are:
 
-- *user-selectable page templates* (``fullwidth.html``, ``sidebar_left.html``
-  and so on), which inherit from:
-- ``base.html``, which inherits from:
+- *user-selectable page templates* (``base.html``), which inherit from:
 - ``base_root.html``
 
 
@@ -92,13 +90,6 @@ django CMS allows you to set
 which can be chosen within the CMS by the user.
 
 .. image:: ../_static/toolbar-templates.png
-
-The following templates are provided from the start:
-
-- ``fullwidth.html`` uses the 100% span of the Bootstrap grid
-- ``sidebar_left.html`` creates a left sidebar with the content placed on the right
-- ``sidebar_right.html`` creates a right sidebar with the content placed on the left
-- ``tpl_home.html`` specific template for the landing page
 
 
 ==========

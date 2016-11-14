@@ -1,7 +1,7 @@
 {
     "identifier": "bootstrap3",
     "package-name": "aldryn-boilerplate-bootstrap3-libsass",
-    "version": "4.1.0",
+    "version": "4.1.1",
     "templates": [
         ["base.html", "base"]
     ],

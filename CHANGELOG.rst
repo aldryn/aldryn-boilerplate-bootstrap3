@@ -2,6 +2,11 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
+4.2.0
+=====
+
+- Add boilerplate-specific Dockerfile with node installation
+
 
 4.1.1
 =====

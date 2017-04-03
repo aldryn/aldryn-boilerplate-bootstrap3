@@ -1,10 +1,31 @@
+# <DEFAULT>  # Warning: text inside the DEFAULT tags is auto-generated on Divio Cloud. Manual changes will be overwritten.
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# Python
 *.pyc
 *.pyo
-*~
+
+# Aldryn
+/.env
+/.env-local
+.aldryn
+/data
+/data.tar.gz
+/static_collected
+/node_modules
+# </DEFAULT>
+
 .hg
 .git
 .svn
-.DS_Store
 .settings
 .project
 .pydevproject
@@ -21,7 +42,6 @@
 /src/settings_local*.py
 /requirements_local*.txt
 
-/node_modules
 /bower_components
 npm-debug.log
 *.css.map

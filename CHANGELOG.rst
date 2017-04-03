@@ -2,6 +2,12 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
+4.2.1
+=====
+
+- Added inherited .gitignore entries from Divio Cloud
+
+
 4.2.0
 =====
 

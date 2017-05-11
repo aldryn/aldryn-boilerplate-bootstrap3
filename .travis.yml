@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - 0.12
+  - 6
 
 sudo: false
 
@@ -16,7 +16,6 @@ env:
 
 before_install:
   - gem install scss-lint
-  - npm install -g npm
 
 before_script:
   - npm install -g gulp
